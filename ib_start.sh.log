@@ -1,0 +1,502 @@
+TSEOT2 [14/04/24 17:14:09] main function...
+
+
+
+
+TSEOT2 [14/04/24 17:14:09] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:14:09] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:14:09] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:14:09] [INFO] Need to Bind the ip:192.168.1.1 on Infiniband card
+TSEOT2 [14/04/24 17:14:09] [INFO] execute ib_ip_config function Start
+TSEOT2 [14/04/24 17:14:09] #===================ib_ip_conifg...=======================#
+TSEOT2 [14/04/24 17:14:09] [INFO] Bind ip on ib0 device from device iba0...
+TSEOT2 [14/04/24 17:14:13] Bind the ip:192.168.1.1 on ib Finished
+TSEOT2 [14/04/24 17:14:13] [INFO] execute ib_ip_config function Success
+
+
+
+
+TSEOT2 [14/04/24 17:14:13] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:14:13] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:14:13] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:14:13] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/24 17:14:13] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/24 17:14:13] #===================local_check function...============================#
+TSEOT2 [14/04/24 17:14:13] [INFO] Executing Local check
+TSEOT2 [14/04/24 17:14:13] [INFO] 192.168.1.1 on iba0 check ok, sleep for 5 seconds...
+TSEOT2 [14/04/24 17:14:13] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:14:16] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:14:19] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:14:22] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:14:25] #=====================loss_100_ib_hwstatus function...======================================#
+TSEOT2 [14/04/24 17:14:25] loss_100_ib_hwstatus:iba0 1
+TSEOT2 [14/04/24 17:14:27] [WARN] begins to swap device iba2 1 
+TSEOT2 [14/04/24 17:14:27] #===========================swap function...================================#
+TSEOT2 [14/04/24 17:14:27] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/24 17:14:29] [INFO] detach ib0 success 
+TSEOT2 [14/04/24 17:14:33] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/24 17:14:33] [INFO] Done, ib0 working on iba2
+TSEOT2 [14/04/24 17:14:33] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:14:36] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:14:39] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:14:42] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:14:45] #=====================loss_100_ib_hwstatus function...======================================#
+TSEOT2 [14/04/24 17:14:45] loss_100_ib_hwstatus:iba2 1
+TSEOT2 [14/04/24 17:14:46] [WARN] begins to swap device iba0 1 
+TSEOT2 [14/04/24 17:14:46] #===========================swap function...================================#
+TSEOT2 [14/04/24 17:14:46] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/24 17:14:47] [INFO] detach ib0 success 
+TSEOT2 [14/04/24 17:14:52] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/24 17:14:52] [INFO] Done, ib0 working on iba0
+TSEOT2 [14/04/24 17:14:52] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:14:55] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:14:58] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:15:01] #===========================ssh_check function....=========================================#
+TSEOT2 [14/04/24 17:15:03] #========================remote_check function...==============================#
+TSEOT2 [14/04/24 17:15:07] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [14/04/24 17:15:09] [INFO] detach ib0 success, begins to transfer HACMP
+TSEOT2 [14/04/24 17:15:10] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+TSEOT2 [14/04/24 17:17:58] main function...
+
+
+
+
+TSEOT2 [14/04/24 17:17:58] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:17:58] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:17:58] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:17:58] [INFO] Need to Bind the ip:192.168.1.1 on Infiniband card
+TSEOT2 [14/04/24 17:17:58] [INFO] execute ib_ip_config function Start
+TSEOT2 [14/04/24 17:17:58] #===================ib_ip_conifg...=======================#
+TSEOT2 [14/04/24 17:17:58] [INFO] Bind ip on ib0 device from device iba0...
+TSEOT2 [14/04/24 17:18:02] Bind the ip:192.168.1.1 on ib Finished
+TSEOT2 [14/04/24 17:18:02] [INFO] execute ib_ip_config function Success
+
+
+
+
+TSEOT2 [14/04/24 17:18:02] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:18:02] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:18:02] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:18:02] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/24 17:18:02] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/24 17:18:02] #===================local_check function...============================#
+TSEOT2 [14/04/24 17:18:02] [INFO] Executing Local check
+TSEOT2 [14/04/24 17:18:02] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:18:05] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:18:08] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:18:11] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:18:14] #=====================loss_100_ib_hwstatus function...======================================#
+TSEOT2 [14/04/24 17:18:14] Now IB device Card:iba0 Now IB device Port:1
+TSEOT2 [14/04/24 17:18:16] [WARN] begins to swap device iba2 1 
+TSEOT2 [14/04/24 17:18:16] #===========================swap function...================================#
+TSEOT2 [14/04/24 17:18:16] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/24 17:18:18] [INFO] detach ib0 success 
+TSEOT2 [14/04/24 17:18:22] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/24 17:18:22] [INFO] Done, ib0 working on iba2
+TSEOT2 [14/04/24 17:18:22] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:18:25] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:18:28] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:18:31] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:18:34] #=====================loss_100_ib_hwstatus function...======================================#
+TSEOT2 [14/04/24 17:18:34] Now IB device Card:iba2 Now IB device Port:1
+TSEOT2 [14/04/24 17:18:36] [WARN] begins to swap device iba0 1 
+TSEOT2 [14/04/24 17:18:36] #===========================swap function...================================#
+TSEOT2 [14/04/24 17:18:36] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/24 17:18:38] [INFO] detach ib0 success 
+TSEOT2 [14/04/24 17:18:43] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/24 17:18:43] [INFO] Done, ib0 working on iba0
+TSEOT2 [14/04/24 17:18:43] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:18:46] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:18:49] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:18:52] #===========================ssh_check function....=========================================#
+TSEOT2 [14/04/24 17:18:54] #========================remote_check function...==============================#
+TSEOT2 [14/04/24 17:18:58] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [14/04/24 17:19:00] [INFO] detach ib0 success, begins to transfer HACMP
+TSEOT2 [14/04/24 17:19:01] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+TSEOT2 [14/04/24 17:20:25] main function...
+
+
+
+
+TSEOT2 [14/04/24 17:20:25] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:20:25] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:20:25] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:20:25] [INFO] Need to Bind the ip:192.168.1.1 on Infiniband card
+TSEOT2 [14/04/24 17:20:25] [INFO] execute ib_ip_config function Start
+TSEOT2 [14/04/24 17:20:25] #===================ib_ip_conifg...=======================#
+TSEOT2 [14/04/24 17:20:25] [INFO] Bind ip on ib0 device from device iba0...
+TSEOT2 [14/04/24 17:20:30] Bind the ip:192.168.1.1 on ib Finished
+TSEOT2 [14/04/24 17:20:30] [INFO] execute ib_ip_config function Success
+
+
+
+
+TSEOT2 [14/04/24 17:20:30] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:20:30] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:20:30] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:20:30] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/24 17:20:30] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/24 17:20:30] #===================local_check function...============================#
+TSEOT2 [14/04/24 17:20:30] [INFO] Executing Local check
+TSEOT2 [14/04/24 17:20:30] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:20:32] #===========================ssh_check function....=========================================#
+TSEOT2 [14/04/24 17:20:34] [INFO] 192.168.1.1 on iba0 check ok, sleep for 5 seconds...
+TSEOT2 [14/04/24 17:20:39] [INFO] check_ib_hwstatus function Success
+TSEOT2 [14/04/24 17:20:39] [INFO] Execute check_ib_hwstatus function Finished
+
+
+
+
+TSEOT2 [14/04/24 17:20:39] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:20:39] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:20:39] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:20:39] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/24 17:20:39] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/24 17:20:39] #===================local_check function...============================#
+TSEOT2 [14/04/24 17:20:39] [INFO] Executing Local check
+TSEOT2 [14/04/24 17:20:39] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:20:41] #===========================ssh_check function....=========================================#
+TSEOT2 [14/04/24 17:20:43] [INFO] 192.168.1.1 on iba0 check ok, sleep for 5 seconds...
+TSEOT2 [14/04/24 17:20:48] [INFO] check_ib_hwstatus function Success
+TSEOT2 [14/04/24 17:20:48] [INFO] Execute check_ib_hwstatus function Finished
+
+
+
+
+TSEOT2 [14/04/24 17:20:48] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:20:48] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:20:48] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:20:49] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/24 17:20:49] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/24 17:20:49] #===================local_check function...============================#
+TSEOT2 [14/04/24 17:20:49] [INFO] Executing Local check
+TSEOT2 [14/04/24 17:20:49] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:20:51] #===========================ssh_check function....=========================================#
+TSEOT2 [14/04/24 17:20:53] [INFO] 192.168.1.1 on iba0 check ok, sleep for 5 seconds...
+TSEOT2 [14/04/24 17:20:58] [INFO] check_ib_hwstatus function Success
+TSEOT2 [14/04/24 17:20:58] [INFO] Execute check_ib_hwstatus function Finished
+
+
+
+
+TSEOT2 [14/04/24 17:20:58] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:20:58] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:20:58] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:20:58] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/24 17:20:58] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/24 17:20:58] #===================local_check function...============================#
+TSEOT2 [14/04/24 17:20:58] [INFO] Executing Local check
+TSEOT2 [14/04/24 17:20:58] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:21:00] #===========================ssh_check function....=========================================#
+TSEOT2 [14/04/24 17:21:02] [INFO] 192.168.1.1 on iba0 check ok, sleep for 5 seconds...
+TSEOT2 [14/04/24 17:21:07] [INFO] check_ib_hwstatus function Success
+TSEOT2 [14/04/24 17:21:07] [INFO] Execute check_ib_hwstatus function Finished
+
+
+
+
+TSEOT2 [14/04/24 17:21:07] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:21:07] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:21:07] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:21:07] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/24 17:21:07] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/24 17:21:07] #===================local_check function...============================#
+TSEOT2 [14/04/24 17:21:07] [INFO] Executing Local check
+TSEOT2 [14/04/24 17:21:07] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:21:09] #===========================ssh_check function....=========================================#
+TSEOT2 [14/04/24 17:21:12] [INFO] 192.168.1.1 on iba0 check ok, sleep for 5 seconds...
+TSEOT2 [14/04/24 17:21:21] main function...
+
+
+
+
+TSEOT2 [14/04/24 17:21:21] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:21:21] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:21:21] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:21:21] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/24 17:21:21] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/24 17:21:21] #===================local_check function...============================#
+TSEOT2 [14/04/24 17:21:21] [INFO] Executing Local check
+TSEOT2 [14/04/24 17:21:21] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:21:24] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:21:27] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:21:30] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:21:33] #=====================loss_100_ib_hwstatus function...======================================#
+TSEOT2 [14/04/24 17:21:33] Now IB device Card:iba0 Now IB device Port:1
+TSEOT2 [14/04/24 17:21:35] [WARN] begins to swap device iba2 1 
+TSEOT2 [14/04/24 17:21:35] #===========================swap function...================================#
+TSEOT2 [14/04/24 17:21:35] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/24 17:21:38] [INFO] detach ib0 success 
+TSEOT2 [14/04/24 17:21:42] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/24 17:21:42] [INFO] Done, ib0 working on iba2
+TSEOT2 [14/04/24 17:21:42] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:21:45] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:21:48] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:21:51] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:21:54] #=====================loss_100_ib_hwstatus function...======================================#
+TSEOT2 [14/04/24 17:21:54] Now IB device Card:iba2 Now IB device Port:1
+TSEOT2 [14/04/24 17:21:56] [WARN] begins to swap device iba0 1 
+TSEOT2 [14/04/24 17:21:56] #===========================swap function...================================#
+TSEOT2 [14/04/24 17:21:56] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/24 17:21:57] [INFO] detach ib0 success 
+TSEOT2 [14/04/24 17:22:02] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/24 17:22:02] [INFO] Done, ib0 working on iba0
+TSEOT2 [14/04/24 17:22:02] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:22:05] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:22:08] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:22:11] #===========================ssh_check function....=========================================#
+TSEOT2 [14/04/24 17:22:13] #========================remote_check function...==============================#
+TSEOT2 [14/04/24 17:22:16] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [14/04/24 17:22:17] [INFO] detach ib0 success, begins to transfer HACMP
+TSEOT2 [14/04/24 17:22:18] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+TSEOT2 [14/04/24 17:27:24] main function...
+
+
+
+
+TSEOT2 [14/04/24 17:27:24] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:27:24] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:27:24] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:27:24] [INFO] Need to Bind the ip:192.168.1.1 on Infiniband card
+TSEOT2 [14/04/24 17:27:24] [INFO] execute ib_ip_config function Start
+TSEOT2 [14/04/24 17:27:24] #===================ib_ip_conifg...=======================#
+TSEOT2 [14/04/24 17:27:24] [INFO] Bind ip on ib0 device from device iba0...
+TSEOT2 [14/04/24 17:27:28] Bind the ip:192.168.1.1 on ib Finished
+TSEOT2 [14/04/24 17:27:28] [INFO] execute ib_ip_config function Success
+
+
+
+
+TSEOT2 [14/04/24 17:27:28] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:27:28] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:27:28] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:27:28] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/24 17:27:28] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/24 17:27:28] #===================local_check function...============================#
+TSEOT2 [14/04/24 17:27:28] [INFO] Executing Local check
+TSEOT2 [14/04/24 17:27:28] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:27:31] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:27:34] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:27:37] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:27:40] #=====================loss_100_ib_hwstatus function...======================================#
+TSEOT2 [14/04/24 17:27:40] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [14/04/24 17:27:42] [WARN] begins to swap device iba2 1 
+TSEOT2 [14/04/24 17:27:42] #===========================swap function...================================#
+TSEOT2 [14/04/24 17:27:42] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/24 17:27:44] [INFO] detach ib0 success 
+TSEOT2 [14/04/24 17:27:48] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/24 17:27:48] [INFO] swap finished, ib0 network work on Card:(iba2) Port:(1)
+TSEOT2 [14/04/24 17:27:48] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:27:51] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:27:54] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:27:57] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:28:00] #=====================loss_100_ib_hwstatus function...======================================#
+TSEOT2 [14/04/24 17:28:00] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [14/04/24 17:28:02] [WARN] begins to swap device iba0 1 
+TSEOT2 [14/04/24 17:28:02] #===========================swap function...================================#
+TSEOT2 [14/04/24 17:28:02] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/24 17:28:03] [INFO] detach ib0 success 
+TSEOT2 [14/04/24 17:28:08] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/24 17:28:08] [INFO] swap finished, ib0 network work on Card:(iba0) Port:(1)
+TSEOT2 [14/04/24 17:28:08] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:28:11] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:29:19] main function...
+
+
+
+
+TSEOT2 [14/04/24 17:29:19] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:29:19] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:29:19] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:29:19] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/24 17:29:19] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/24 17:29:19] #===================local_check function...============================#
+TSEOT2 [14/04/24 17:29:19] [INFO] Executing Local check
+TSEOT2 [14/04/24 17:29:19] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:29:22] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:29:25] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:29:28] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:29:31] #=====================loss_100_ib_hwstatus function...======================================#
+TSEOT2 [14/04/24 17:29:31] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [14/04/24 17:29:33] [WARN] begins to swap device iba2 1 
+TSEOT2 [14/04/24 17:29:33] #===========================swap function...================================#
+TSEOT2 [14/04/24 17:29:33] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/24 17:29:35] [INFO] detach ib0 success 
+TSEOT2 [14/04/24 17:29:39] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/24 17:29:39] [INFO] swap finished, ib0 network work on Card:iba2 Port:1
+TSEOT2 [14/04/24 17:29:39] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:29:42] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:29:45] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:29:48] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:29:51] #=====================loss_100_ib_hwstatus function...======================================#
+TSEOT2 [14/04/24 17:29:51] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [14/04/24 17:29:53] [WARN] begins to swap device iba0 1 
+TSEOT2 [14/04/24 17:29:53] #===========================swap function...================================#
+TSEOT2 [14/04/24 17:29:53] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/24 17:29:54] [INFO] detach ib0 success 
+TSEOT2 [14/04/24 17:29:58] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/24 17:29:58] [INFO] swap finished, ib0 network work on Card:iba0 Port:1
+TSEOT2 [14/04/24 17:29:58] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:30:01] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:30:04] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:30:07] #===========================ssh_check function....=========================================#
+TSEOT2 [14/04/24 17:30:07] [ERR] Network vlan_IP:10.199.170.102 has the problem
+TSEOT2 [14/04/24 17:30:08] [ERR] ssh_check function check sshd test_ha_2 service has question
+TSEOT2 [14/04/24 17:33:30] main function...
+
+
+
+
+TSEOT2 [14/04/24 17:33:30] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/24 17:33:30] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/24 17:33:30] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/24 17:33:30] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/24 17:33:30] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/24 17:33:30] #===================local_check function...============================#
+TSEOT2 [14/04/24 17:33:30] [INFO] Executing Local check
+TSEOT2 [14/04/24 17:33:30] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:33:33] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:33:36] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:33:39] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:33:42] #=====================loss_100_ib_hwstatus function...======================================#
+TSEOT2 [14/04/24 17:33:42] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [14/04/24 17:33:44] [WARN] begins to swap device iba2 1 
+TSEOT2 [14/04/24 17:33:44] #===========================swap function...================================#
+TSEOT2 [14/04/24 17:33:44] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/24 17:33:45] [INFO] detach ib0 success 
+TSEOT2 [14/04/24 17:33:49] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/24 17:33:49] [INFO] swap finished, ib0 network work on IB_Card:iba2 IB_Port:1
+TSEOT2 [14/04/24 17:33:49] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:33:52] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:33:55] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:33:58] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:34:01] #=====================loss_100_ib_hwstatus function...======================================#
+TSEOT2 [14/04/24 17:34:01] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [14/04/24 17:34:03] [WARN] begins to swap device iba0 1 
+TSEOT2 [14/04/24 17:34:03] #===========================swap function...================================#
+TSEOT2 [14/04/24 17:34:03] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/24 17:34:04] [INFO] detach ib0 success 
+TSEOT2 [14/04/24 17:34:08] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/24 17:34:08] [INFO] swap finished, ib0 network work on IB_Card:iba0 IB_Port:1
+TSEOT2 [14/04/24 17:34:08] #==========================ping_check function...==============================#
+TSEOT2 [14/04/24 17:34:11] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:34:14] [ERR] 100% packet loss
+TSEOT2 [14/04/24 17:34:17] #===========================ssh_check function....=========================================#
+TSEOT2 [14/04/24 17:34:17] [ERR] Network vlan_IP:10.199.170.102 has the problem
+TSEOT2 [14/04/24 17:34:17] [ERR] ssh_check function check sshd test_ha_2 service has question
+
+
+
+
+
+
+
+####################################################################################################################################
+
+
+
+TSEOT2 [14/04/25 17:37:53] main function...
+
+
+TSEOT2 [14/04/25 17:37:53] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/25 17:37:53] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/25 17:37:53] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/25 17:37:53] [INFO] Need to Bind the ip:192.168.1.1 on Infiniband card
+TSEOT2 [14/04/25 17:37:53] [INFO] execute ib_ip_config function Start
+TSEOT2 [14/04/25 17:37:53] #===================ib_ip_conifg...=======================#
+TSEOT2 [14/04/25 17:37:53] [INFO] Bind ip on ib0 device from device iba0...
+TSEOT2 [14/04/25 17:37:57] Bind the ip:192.168.1.1 on ib Finished
+TSEOT2 [14/04/25 17:37:57] [INFO] execute ib_ip_config function Success
+
+
+TSEOT2 [14/04/25 17:37:57] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/25 17:37:57] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/25 17:37:57] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/25 17:37:57] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/25 17:37:57] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/25 17:37:57] #===================local_check function...============================#
+TSEOT2 [14/04/25 17:37:57] [INFO] Executing Local check
+TSEOT2 [14/04/25 17:37:57] #==========================ping_check function...====================================#
+TSEOT2 [14/04/25 17:38:00] [ERR] 100% packet loss
+TSEOT2 [14/04/25 17:38:03] [ERR] 100% packet loss
+TSEOT2 [14/04/25 17:38:06] [ERR] 100% packet loss
+TSEOT2 [14/04/25 17:38:06] #==========================loss_100_ib_hwstatus function...==========================#
+TSEOT2 [14/04/25 17:38:06] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [14/04/25 17:38:12] [WARN] begins to swap device iba0 2 
+TSEOT2 [14/04/25 17:38:12] #==========================swap function...==========================================#
+TSEOT2 [14/04/25 17:38:12] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/25 17:38:13] [INFO] detach ib0 success 
+TSEOT2 [14/04/25 17:38:17] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/25 17:38:17] [INFO] swap finished, ib0 network work on IB device Card:( iba0 ) Port:( 2 )
+TSEOT2 [14/04/25 17:38:20] [ERR] 100% packet loss
+TSEOT2 [14/04/25 17:38:23] [ERR] 100% packet loss
+TSEOT2 [14/04/25 17:38:23] [INFO] 192.168.1.1 on iba0 check ok, sleep for 5 seconds...
+TSEOT2 [14/04/25 17:38:28] [INFO] check_ib_hwstatus function Success
+TSEOT2 [14/04/25 17:38:28] [INFO] Execute check_ib_hwstatus function Finished
+
+
+
+
+TSEOT2 [14/04/25 17:38:28] **************InfiniBand monitor begins*****************
+TSEOT2 [14/04/25 17:38:28] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/25 17:38:28] #==============check_ib_ip_status function...==============#
+TSEOT2 [14/04/25 17:38:28] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/25 17:38:28] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/25 17:38:28] #===================local_check function...============================#
+TSEOT2 [14/04/25 17:38:28] [INFO] Executing Local check
+TSEOT2 [14/04/25 17:38:28] #==========================ping_check function...====================================#
+TSEOT2 [14/04/25 17:38:31] [ERR] 100% packet loss
+TSEOT2 [14/04/25 17:38:31] #===========================ssh_check function....=========================================#
+TSEOT2 [14/04/25 17:38:34] #==========================remote_check function..===================================#
+TSEOT2 [14/04/25 17:38:36] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [14/04/25 17:38:37] [INFO] detach ib0 success, begins to transfer HACMP
+TSEOT2 [14/04/25 17:38:38] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+
+
+
+
+
+#############################################################################################################################################
+
+TSEOT2 [14/04/28 17:22:57] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [14/04/28 17:22:57] [INFO] Primary host is test_ha_1, Alternative host test_ha_2 
+TSEOT2 [14/04/28 17:22:57] #==========================check_ib_ip_status function...============================#
+TSEOT2 [14/04/28 17:22:57] [INFO] execute check_ib_hwstatus function Start
+TSEOT2 [14/04/28 17:22:57] #==========================check_ib_hwstatus function...=============================#
+TSEOT2 [14/04/28 17:22:57] #============================local_check function...=================================#
+TSEOT2 [14/04/28 17:22:57] [INFO] Executing Local check
+TSEOT2 [14/04/28 17:22:57] #==========================ping_check function...====================================#
+TSEOT2 [14/04/28 17:22:57] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [14/04/28 17:23:00] [ERR] 100% packet loss
+TSEOT2 [14/04/28 17:23:00] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [14/04/28 17:23:03] [ERR] 100% packet loss
+TSEOT2 [14/04/28 17:23:03] #==========================loss_100_ib_hwstatus function...==========================#
+TSEOT2 [14/04/28 17:23:03] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [14/04/28 17:23:10] [WARN] begins to swap device iba0 2 
+TSEOT2 [14/04/28 17:23:10] #==========================swap function...==========================================#
+TSEOT2 [14/04/28 17:23:10] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/28 17:23:11] [INFO] detach ib0 success 
+TSEOT2 [14/04/28 17:23:15] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/28 17:23:15] [INFO] swap finished, ib0 network work on IB device Card:(iba0) Port:(2) 
+TSEOT2 [14/04/28 17:23:15] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [14/04/28 17:23:18] [ERR] 100% packet loss
+TSEOT2 [14/04/28 17:23:18] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [14/04/28 17:23:21] [ERR] 100% packet loss
+TSEOT2 [14/04/28 17:23:21] #==========================loss_100_ib_hwstatus function...==========================#
+TSEOT2 [14/04/28 17:23:21] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [14/04/28 17:23:28] [WARN] begins to swap device iba2 1 
+TSEOT2 [14/04/28 17:23:28] #==========================swap function...==========================================#
+TSEOT2 [14/04/28 17:23:28] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/28 17:23:29] [INFO] detach ib0 success 
+TSEOT2 [14/04/28 17:23:33] [INFO] bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [14/04/28 17:23:33] [INFO] swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [14/04/28 17:23:33] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [14/04/28 17:23:36] [ERR] 100% packet loss
+TSEOT2 [14/04/28 17:23:36] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [14/04/28 17:23:39] [ERR] 100% packet loss
+TSEOT2 [14/04/28 17:23:39] #===========================ssh_check function....===================================#
+TSEOT2 [14/04/28 17:23:42] [INFO] SSHD service check finished
+TSEOT2 [14/04/28 17:23:42] #==========================remote_check function..===================================#
+TSEOT2 [14/04/28 17:23:46] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [14/04/28 17:23:48] [INFO] detach ib0 success, begins to transfer HACMP
+TSEOT2 [14/04/28 17:23:49] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...

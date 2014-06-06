@@ -1,0 +1,12 @@
+#!/usr/bin/ksh
+./create_FIX1B.sh
+./create_FIX2P.sh
+./create_FIX3B.sh
+./create_FIX4P.sh
+./create_TSY.sh
+./create_MDS1Y.sh
+./create_DAP1Y.sh
+./create_NIM.sh
+./create_WK.sh
+./create_vios1.sh
+./create_vios2.sh

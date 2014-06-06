@@ -1,0 +1,88 @@
+###########################Start################################
+lpar_name: VIOS2
+Min_mem: 2048
+Desired_men: 4096
+Max_men: 8192
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.5
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 2
+Max_procs_VP: 4
+Virtual_eth_adapters: 912/0/1111//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 901/0/2//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 902/0/4//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 903/0/5//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 904/0/6//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 905/0/101//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 906/0/111//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 907/0/1002//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 908/0/1004//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 909/0/1005//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 910/0/1006//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 911/0/1101//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 2/server/3/MDS1/7//1
+Virtual_fc_adapters: 3/server/4/MDS2/7//1
+Virtual_fc_adapters: 4/server/5/LOG1/8//1
+Virtual_fc_adapters: 5/server/6/LOG2/8//1
+Virtual_fc_adapters: 6/server/7/DAR1-1/7//1
+Virtual_fc_adapters: 7/server/8/DAR2-1/7//1
+Virtual_fc_adapters: 8/server/9/DAP1-1/7//1
+Virtual_fc_adapters: 9/server/10/DAP2-1/7//1
+Virtual_fc_adapters: 10/server/11/NIM_Server/4//1
+Virtual_fc_adapters: 11/server/12/WORKING_LPAR/5//1
+Virtual_fc_adapters: 12/server/13/DEV1/5//0
+Virtual_fc_adapters: 13/server/14/FGW1-1/3//0
+Virtual_fc_adapters: 14/server/15/FGW2-1/3//0
+Virtual_fc_adapters: 15/server/16/TS1-1/3//0
+Virtual_fc_adapters: 17/server/17/FIXGW01/3//0
+Virtual_fc_adapters: 18/server/18/TS1/3//0
+Virtual_fc_adapters: 19/server/19/FIXGW02/3//0
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: VIOS1
+Min_mem: 2048
+Desired_men: 4096
+Max_men: 8192
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.5
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 2
+Max_procs_VP: 4
+Virtual_eth_adapters: 912/0/1111//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 901/0/2//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 902/0/4//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 903/0/5//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 904/0/6//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 905/0/101//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 906/0/111//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 907/0/1002//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 908/0/1004//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 909/0/1005//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 910/0/1006//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 911/0/1101//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 2/server/3/MDS1/6//1
+Virtual_fc_adapters: 3/server/4/MDS2/6//1
+Virtual_fc_adapters: 4/server/5/LOG1/7//1
+Virtual_fc_adapters: 5/server/6/LOG2/7//1
+Virtual_fc_adapters: 6/server/7/DAR1-1/6//1
+Virtual_fc_adapters: 7/server/8/DAR2-1/6//1
+Virtual_fc_adapters: 8/server/9/DAP1-1/6//1
+Virtual_fc_adapters: 9/server/10/DAP2-1/6//1
+Virtual_fc_adapters: 10/server/11/NIM_Server/3//1
+Virtual_fc_adapters: 11/server/12/WORKING_LPAR/4//1
+Virtual_fc_adapters: 12/server/13/DEV1/4//0
+Virtual_fc_adapters: 13/server/14/FGW1-1/2//0
+Virtual_fc_adapters: 14/server/15/FGW2-1/2//0
+Virtual_fc_adapters: 15/server/16/TS1-1/2//0
+Virtual_fc_adapters: 17/server/17/FIXGW01/2//0
+Virtual_fc_adapters: 18/server/18/TS1/2//0
+Virtual_fc_adapters: 19/server/19/FIXGW02/2//0
+###########################END##################################
+
+

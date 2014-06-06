@@ -1,0 +1,1 @@
+lssyscfg  -m `lssyscfg -r sys -F name` -r prof -F lpar_name,min_mem,desired_mem,max_mem,proc_mode,min_proc_units,desired_proc_units,max_proc_units,min_procs,desired_procs,max_procs,virtual_eth_adapters,virtual_fc_adapters  > lpar_prof.txt

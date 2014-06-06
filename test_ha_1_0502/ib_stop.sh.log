@@ -1,0 +1,21 @@
+TSEOT2 [14/05/02 15:28:12] #==========================detach_...================================================#
+TSEOT2 [14/05/02 15:28:12] [INFO] Detaching ib0 device...
+TSEOT2 [14/05/02 15:28:22] [INFO] detach ib0 success 
+TSEOT2 [14/05/02 15:28:22] [INFO] detach function execute Success
+TSEOT2 [14/05/02 15:28:22] #==========================ib_script_stop_...================================================#
+TSEOT2 [14/05/02 15:28:22] [INFO] terminated ib_start.sh script start
+TSEOT2 [14/05/02 15:28:22] [ERR] terminated ib_start.sh script Failed
+TSEOT2 [14/05/02 15:42:45] #==========================detach_...================================================#
+TSEOT2 [14/05/02 15:42:45] [INFO] Detaching ib0 device...
+TSEOT2 [14/05/02 15:42:49] [INFO] detach ib0 success 
+TSEOT2 [14/05/02 15:42:49] [INFO] detach function execute Success
+TSEOT2 [14/05/02 15:42:49] #==========================ib_script_stop_...================================================#
+TSEOT2 [14/05/02 15:42:49] [INFO] terminated ib_start.sh script start
+TSEOT2 [14/05/02 15:42:49] [INFO] terminated ib_start.sh script Success 
+TSEOT2 [14/05/02 17:12:36] #==========================detach_...================================================#
+TSEOT2 [14/05/02 17:12:36] [INFO] Detaching ib0 device...
+TSEOT2 [14/05/02 17:12:36] [INFO] detach ib0 success 
+TSEOT2 [14/05/02 17:12:36] [INFO] detach function execute Success
+TSEOT2 [14/05/02 17:12:36] #==========================ib_script_stop_...================================================#
+TSEOT2 [14/05/02 17:12:36] [INFO] terminated ib_start.sh script start
+TSEOT2 [14/05/02 17:12:36] [INFO] terminated ib_start.sh script Success 

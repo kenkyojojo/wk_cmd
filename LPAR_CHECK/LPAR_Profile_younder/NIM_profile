@@ -1,0 +1,19 @@
+###########################Start################################
+lpar_name: NIM_SERVER
+Min_mem: 8192
+Desired_men: 12288
+Max_men: 24576
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.6
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 4/client/1/VIOS1/94/c0507605d1310170,c0507605d1310171/1
+Virtual_fc_adapters: 5/client/2/VIOS2/94/c0507605d1310172,c0507605d1310173/1
+###########################END##################################
+
+

@@ -1,0 +1,197 @@
+
+
+
+
+Jul-07 15:07:51 : **************InfiniBand monitor begins***************** 
+Jul-07 15:07:51 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 15:07:52 : [INFO] Executing Local check 
+Jul-07 15:08:10 : [WARN] Local check all failed, begins to check alternate server connection... 
+Jul-07 15:08:16 : [WARN] OAT2_C2 iba0 alive, begins to transfer IP 192.168.100.50 from OAT2_C1 to OAT2_C2 ... 
+Jul-07 15:08:27 : [INFO] Assigned IP 192.168.100.50 on OAT2_C2 done, begins to transfer HACMP 
+
+
+
+
+Jul-07 15:09:30 : **************InfiniBand monitor begins***************** 
+Jul-07 15:09:30 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 15:09:30 : [INFO] Executing Local check 
+Jul-07 15:09:36 : [WARN] Local check all failed, begins to check alternate server connection... 
+Jul-07 15:09:49 : [WARN] OAT2_C2 iba0 alive, begins to transfer IP 192.168.100.50 from OAT2_C1 to OAT2_C2 ... 
+Jul-07 15:09:59 : [INFO] Assigned IP 192.168.100.50 on OAT2_C2 done, begins to transfer HACMP 
+
+
+
+
+Jul-07 15:11:02 : **************InfiniBand monitor begins***************** 
+Jul-07 15:11:02 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 15:11:02 : [INFO] Executing Local check 
+Jul-07 15:11:08 : [WARN] Local check all failed, begins to check alternate server connection... 
+Jul-07 15:11:19 : [WARN] OAT2_C2 iba0 alive, begins to transfer IP 192.168.100.50 from OAT2_C1 to OAT2_C2 ... 
+Jul-07 15:11:30 : [INFO] Assigned IP 192.168.100.50 on OAT2_C2 done, begins to transfer HACMP 
+
+
+
+
+Jul-07 15:12:26 : **************InfiniBand monitor begins***************** 
+Jul-07 15:12:26 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 15:12:26 : [INFO] Executing Local check 
+Jul-07 15:12:32 : [WARN] Local check all failed, begins to check alternate server connection... 
+Jul-07 15:12:44 : [WARN] OAT2_C2 iba0 alive, begins to transfer IP 192.168.100.50 from OAT2_C1 to OAT2_C2 ... 
+Jul-07 15:12:55 : [INFO] Assigned IP 192.168.100.50 on OAT2_C2 done, begins to transfer HACMP 
+
+
+
+
+Jul-07 15:13:51 : **************InfiniBand monitor begins***************** 
+Jul-07 15:13:51 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 15:13:51 : [INFO] Executing Local check 
+Jul-07 15:13:57 : [WARN] Local check all failed, begins to check alternate server connection... 
+Jul-07 15:14:09 : [WARN] OAT2_C2 iba0 alive, begins to transfer IP 192.168.100.50 from OAT2_C1 to OAT2_C2 ... 
+Jul-07 15:14:20 : [INFO] Assigned IP 192.168.100.50 on OAT2_C2 done, begins to transfer HACMP 
+
+
+
+
+Jul-07 15:15:15 : **************InfiniBand monitor begins***************** 
+Jul-07 15:15:15 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 15:15:15 : [INFO] Executing Local check 
+Jul-07 15:15:21 : [WARN] Local check all failed, begins to check alternate server connection... 
+Jul-07 15:15:34 : [WARN] OAT2_C2 iba0 alive, begins to transfer IP 192.168.100.50 from OAT2_C1 to OAT2_C2 ... 
+Jul-07 15:15:45 : [INFO] Assigned IP 192.168.100.50 on OAT2_C2 done, begins to transfer HACMP 
+
+
+
+
+Jul-07 15:16:39 : **************InfiniBand monitor begins***************** 
+Jul-07 15:16:39 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 15:16:39 : [INFO] Executing Local check 
+Jul-07 15:16:45 : [WARN] Local check all failed, begins to check alternate server connection... 
+Jul-07 15:16:58 : [WARN] OAT2_C2 iba0 alive, begins to transfer IP 192.168.100.50 from OAT2_C1 to OAT2_C2 ... 
+Jul-07 15:17:09 : [INFO] Assigned IP 192.168.100.50 on OAT2_C2 done, begins to transfer HACMP 
+
+
+
+
+Jul-07 15:18:04 : **************InfiniBand monitor begins***************** 
+Jul-07 15:18:04 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 15:18:04 : [INFO] Executing Local check 
+Jul-07 15:18:11 : [WARN] Local check all failed, begins to check alternate server connection... 
+Jul-07 15:18:23 : [WARN] OAT2_C2 iba0 alive, begins to transfer IP 192.168.100.50 from OAT2_C1 to OAT2_C2 ... 
+Jul-07 15:18:34 : [INFO] Assigned IP 192.168.100.50 on OAT2_C2 done, begins to transfer HACMP 
+
+
+
+
+Jul-07 15:19:30 : **************InfiniBand monitor begins***************** 
+Jul-07 15:19:30 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 15:19:30 : [INFO] Executing Local check 
+Jul-07 15:19:36 : [WARN] Local check all failed, begins to check alternate server connection... 
+Jul-07 15:19:48 : [WARN] OAT2_C2 iba0 alive, begins to transfer IP 192.168.100.50 from OAT2_C1 to OAT2_C2 ... 
+Jul-07 15:19:59 : [INFO] Assigned IP 192.168.100.50 on OAT2_C2 done, begins to transfer HACMP 
+
+
+
+
+Jul-07 15:20:54 : **************InfiniBand monitor begins***************** 
+Jul-07 15:20:54 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 15:20:54 : [INFO] Executing Local check 
+Jul-07 15:21:00 : [WARN] Local check all failed, begins to check alternate server connection... 
+Jul-07 15:21:13 : [WARN] OAT2_C2 iba0 alive, begins to transfer IP 192.168.100.50 from OAT2_C1 to OAT2_C2 ... 
+Jul-07 15:21:24 : [INFO] Assigned IP 192.168.100.50 on OAT2_C2 done, begins to transfer HACMP 
+
+
+
+
+Jul-07 15:22:18 : **************InfiniBand monitor begins***************** 
+Jul-07 15:22:18 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 15:22:18 : [INFO] Executing Local check 
+Jul-07 15:22:24 : [WARN] Local check all failed, begins to check alternate server connection... 
+Jul-07 15:22:36 : [WARN] OAT2_C2 iba0 alive, begins to transfer IP 192.168.100.50 from OAT2_C1 to OAT2_C2 ... 
+Jul-07 15:22:47 : [INFO] Assigned IP 192.168.100.50 on OAT2_C2 done, begins to transfer HACMP 
+
+
+
+
+Jul-07 15:23:43 : **************InfiniBand monitor begins***************** 
+Jul-07 15:23:43 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 15:23:43 : [INFO] Executing Local check 
+Jul-07 15:23:48 : [WARN] Local check all failed, begins to check alternate server connection... 
+Jul-07 15:24:00 : [WARN] OAT2_C2 iba0 alive, begins to transfer IP 192.168.100.50 from OAT2_C1 to OAT2_C2 ... 
+Jul-07 15:24:11 : [INFO] Assigned IP 192.168.100.50 on OAT2_C2 done, begins to transfer HACMP 
+
+
+
+
+Jul-07 16:46:21 : **************InfiniBand monitor begins***************** 
+Jul-07 16:46:21 : [INFO] Primary host is OAT2_C1, Alternative host OAT2_C2 
+Jul-07 16:46:21 : [INFO] Executing Local check 
+Jul-07 16:46:27 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:46:32 : [INFO] Executing Local check 
+Jul-07 16:46:38 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:46:43 : [INFO] Executing Local check 
+Jul-07 16:46:49 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:46:54 : [INFO] Executing Local check 
+Jul-07 16:46:59 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:47:04 : [INFO] Executing Local check 
+Jul-07 16:47:10 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:47:15 : [INFO] Executing Local check 
+Jul-07 16:47:21 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:47:27 : [INFO] Executing Local check 
+Jul-07 16:47:33 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:47:38 : [INFO] Executing Local check 
+Jul-07 16:47:43 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:47:48 : [INFO] Executing Local check 
+Jul-07 16:47:53 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:47:58 : [INFO] Executing Local check 
+Jul-07 16:48:03 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:48:08 : [INFO] Executing Local check 
+Jul-07 16:48:14 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:48:19 : [INFO] Executing Local check 
+Jul-07 16:48:24 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:48:29 : [INFO] Executing Local check 
+Jul-07 16:48:34 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:48:39 : [INFO] Executing Local check 
+Jul-07 16:48:44 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:48:49 : [INFO] Executing Local check 
+Jul-07 16:48:54 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:48:59 : [INFO] Executing Local check 
+Jul-07 16:49:04 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:49:09 : [INFO] Executing Local check 
+Jul-07 16:49:14 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:49:19 : [INFO] Executing Local check 
+Jul-07 16:49:24 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:49:29 : [INFO] Executing Local check 
+Jul-07 16:49:34 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:49:40 : [INFO] Executing Local check 
+Jul-07 16:49:45 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:49:50 : [INFO] Executing Local check 
+Jul-07 16:49:56 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:50:01 : [INFO] Executing Local check 
+Jul-07 16:50:06 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:50:11 : [INFO] Executing Local check 
+Jul-07 16:50:16 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:50:21 : [INFO] Executing Local check 
+Jul-07 16:50:26 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:50:31 : [INFO] Executing Local check 
+Jul-07 16:50:36 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:50:41 : [INFO] Executing Local check 
+Jul-07 16:50:46 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:50:51 : [INFO] Executing Local check 
+Jul-07 16:50:56 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:51:01 : [INFO] Executing Local check 
+Jul-07 16:51:06 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:51:11 : [INFO] Executing Local check 
+Jul-07 16:51:16 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:51:21 : [INFO] Executing Local check 
+Jul-07 16:51:26 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:51:31 : [INFO] Executing Local check 
+Jul-07 16:51:36 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:51:41 : [INFO] Executing Local check 
+Jul-07 16:51:46 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:51:51 : [INFO] Executing Local check 
+Jul-07 16:51:57 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:52:02 : [INFO] Executing Local check 
+Jul-07 16:52:07 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:52:12 : [INFO] Executing Local check 
+Jul-07 16:52:17 : [INFO] 192.168.100.50 on iba0 check ok, sleep for 5 seconds... 
+Jul-07 16:52:22 : [INFO] Executing Local check 

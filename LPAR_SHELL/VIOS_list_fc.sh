@@ -1,0 +1,1 @@
+for n  in ; do echo VIOS2;grep ^VIOS2, lpar_prof.txt |./verify_lpar.print.pl - | grep Virtual_fc_adapters|sed -e 's/^Virtual_fc_adapters://g'|sed -e 's/ .\/client\/.\/VIOS.\///g'|awk 'BEGIN {FS=/} {print }';echo ;done

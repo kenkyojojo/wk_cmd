@@ -1,0 +1,445 @@
+
+#================= 主機名稱資訊 ================#
+DAP2-10
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= 作業系統版本 ================#
+7100-01-05-1228
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= Java版本 ====================#
+Java5.sdk                 5.0.0.430 
+Java5_64.sdk              5.0.0.430 
+Java6.sdk                 6.0.0.280 
+Java6_64.samples.demo     6.0.0.280 
+Java6_64.samples.jnlp     6.0.0.280 
+Java6_64.sdk              6.0.0.280 
+Java6_64.source           6.0.0.280 
+Java5.sdk                 5.0.0.430 
+Java5_64.sdk              5.0.0.430 
+Java6.sdk                 6.0.0.280 
+Java6_64.sdk              6.0.0.280 
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= Memory 資訊 =================#
+Memory Size: 3072 MB
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= Page 資訊 ===================#
+Page Space      Physical Volume   Volume Group Size %Used Active  Auto  Type Chksum
+hd6             hdisk0            rootvg        5632MB     1   yes   yes    lv     0
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= 網路裝置 ====================#
+en0        Available             Standard Ethernet Network Interface
+en1        Available             Standard Ethernet Network Interface
+en2        Available             Standard Ethernet Network Interface
+en3        Available             Standard Ethernet Network Interface
+ent0       Available             Virtual I/O Ethernet Adapter (l-lan)
+ent1       Available             Virtual I/O Ethernet Adapter (l-lan)
+ent2       Available             Virtual I/O Ethernet Adapter (l-lan)
+ent3       Available             Virtual I/O Ethernet Adapter (l-lan)
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= 光纖裝置 ====================#
+fcs0       Available C6-T1       Virtual Fibre Channel Client Adapter
+fcs1       Available C7-T1       Virtual Fibre Channel Client Adapter
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= 磁碟路徑 ====================#
+Enabled hdisk0 fscsi0
+Enabled hdisk1 fscsi0
+Enabled hdisk0 fscsi0
+Enabled hdisk1 fscsi0
+Enabled hdisk0 fscsi1
+Enabled hdisk1 fscsi1
+Enabled hdisk0 fscsi1
+Enabled hdisk1 fscsi1
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= 網路位址 ====================#
+10.240.102.60
+10.204.102.60
+10.199.168.60
+10.201.3.60
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= 路由資訊 ====================#
+default	10.201.3.254
+10.71/16	10.204.102.254
+10.199.168.0	10.199.168.60
+10.199.168/24	10.199.168.60
+10.199.168.60	127.0.0.1
+10.199.168.255	10.199.168.60
+10.201.3.0	10.201.3.60
+10.201.3/24	10.201.3.60
+10.201.3.60	127.0.0.1
+10.201.3.255	10.201.3.60
+10.204.102.0	10.204.102.60
+10.204.102/24	10.204.102.60
+10.204.102.60	127.0.0.1
+10.204.102.255	10.204.102.60
+10.240.102.0	10.240.102.60
+10.240.102/24	10.240.102.60
+10.240.102.60	127.0.0.1
+10.240.102.255	10.240.102.60
+127/8	127.0.0.1
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= 檔案系統 ====================#
+GB 	Capacity
+2.00 	/
+3.00 	/usr
+1.00 	/var
+1.00 	/tmp
+4.00 	/home
+0.12 	/admin
+1.00 	/opt
+2.00 	/opt/IBM/ITM
+24.00 	/TWSE
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= Mirror狀態 ==================#
+rootvg:
+LV NAME             TYPE       LPs     PPs     PVs  LV STATE      MOUNT POINT
+hd5                 boot       1       1       1    closed/syncd  N/A
+hd6                 paging     176     176     1    open/syncd    N/A
+hd8                 jfs2log    1       1       1    open/syncd    N/A
+hd4                 jfs2       64      64      1    open/syncd    /
+hd2                 jfs2       96      96      1    open/syncd    /usr
+hd9var              jfs2       32      32      1    open/syncd    /var
+hd3                 jfs2       32      32      1    open/syncd    /tmp
+hd1                 jfs2       128     128     1    open/syncd    /home
+hd10opt             jfs2       32      32      1    open/syncd    /opt
+hd11admin           jfs2       4       4       1    open/syncd    /admin
+lg_dumplv           sysdump    64      64      1    open/syncd    N/A
+livedump            jfs2       8       8       1    open/syncd    /var/adm/ras/livedump
+ITMlv               jfs2       64      64      1    open/syncd    /opt/IBM/ITM
+datavg:
+LV NAME             TYPE       LPs     PPs     PVs  LV STATE      MOUNT POINT
+twselv              jfs2       768     768     1    open/syncd    /TWSE
+loglv00             jfs2log    1       1       1    open/syncd    N/A
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= 開機順序 ====================#
+hdisk0 blv=hd5 pathid=0
+hdisk0 blv=hd5 pathid=1
+hdisk0 blv=hd5 pathid=2
+hdisk0 blv=hd5 pathid=3
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= ITM agent狀態 ===============#
+DAP2-10 ul seadm ...running
+DAP2-10 um seadm ...running
+DAP2-10 ux seadm ...running
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= CTM agent狀態 ===============#
+twse 	 ./twse/ctm/exe/p_ctmag
+twse 	 ./twse/ctm/exe/p_ctmat
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================= 使用者限制 ==================#
+time(seconds)        unlimited
+file(blocks)         unlimited
+data(kbytes)         unlimited
+stack(kbytes)        4194304
+memory(kbytes)       unlimited
+coredump(blocks)     unlimited
+nofiles(descriptors) unlimited
+threads(per process) unlimited
+processes(per user)  unlimited
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#============== 使用者帳號與群組================#
+帳號
+root       id=0            pgrp=system     groups=system,bin,sys,security,cron,audit,lp  home=/    
+daemon     id=1            pgrp=staff      groups=staff                                  home=/etc 
+bin        id=2            pgrp=bin        groups=bin,sys,adm                            home=/bin 
+sys        id=3            pgrp=sys        groups=sys                                    home=/usr/sys
+adm        id=4            pgrp=adm        groups=adm                                    home=/var/adm
+uucp       id=5            pgrp=uucp       groups=uucp                                   home=/usr/lib/uucp
+guest      id=100          pgrp=usr        groups=usr                                    home=/home/guest
+nobody     id=4294967294   pgrp=nobody     groups=nobody                                 home=/    
+lpd        id=9            pgrp=nobody     groups=nobody                                 home=/    
+lp         id=11           pgrp=lp         groups=lp,printq                              home=/var/spool/lp
+invscout   id=6            pgrp=invscout   groups=invscout                               home=/var/adm/invscout
+snapp      id=200          pgrp=snapp      groups=snapp                                  home=/usr/sbin/snapp
+ipsec      id=201          pgrp=staff      groups=staff                                  home=/etc/ipsec
+nuucp      id=7            pgrp=uucp       groups=uucp                                   home=/var/spool/uucppublic
+pconsole   id=8            pgrp=system     groups=system,pconsole                        home=/var/adm/pconsole
+esaadmin   id=10           pgrp=system     groups=system,staff                           home=/var/esa
+seadm      id=300          pgrp=se         groups=se                                     home=/home/se/seadm
+se01       id=301          pgrp=se         groups=se                                     home=/home/se/se01
+se02       id=302          pgrp=se         groups=se                                     home=/home/se/se02
+exadm      id=600          pgrp=exc        groups=exc                                    home=/home/exc/exadm
+ex10       id=610          pgrp=exc        groups=exc                                    home=/home/exc/ex10
+ex11       id=611          pgrp=exc        groups=exc                                    home=/home/exc/ex11
+ex14       id=614          pgrp=exc        groups=exc                                    home=/home/exc/ex14
+ex15       id=615          pgrp=exc        groups=exc                                    home=/home/exc/ex15
+twse       id=800          pgrp=tse        groups=tse                                    home=/home/tse/twse
+useradm    id=390          pgrp=security   groups=security                               home=/home/security/useradm
+sshd       id=202          pgrp=sshd       groups=sshd,staff                             home=/var/empty
+群組
+system     id=0            admin=true      users=root,pconsole,esaadmin
+staff      id=1            admin=false     users=ipsec,esaadmin,sshd,daemon
+bin        id=2            admin=true      users=root,bin
+sys        id=3            admin=true      users=root,bin,sys
+adm        id=4            admin=true      users=bin,adm
+uucp       id=5            admin=true      users=uucp,nuucp
+mail       id=6            admin=true      users=    
+security   id=7            admin=true      users=root,useradm
+cron       id=8            admin=true      users=root
+printq     id=9            admin=true      users=lp  
+audit      id=10           admin=true      users=root
+ecs        id=28           admin=true      users=    
+nobody     id=4294967294   admin=false     users=nobody,lpd
+usr        id=100          admin=false     users=guest
+perf       id=20           admin=false     users=    
+shutdown   id=21           admin=true      users=    
+lp         id=11           admin=true      users=root,lp
+invscout   id=12           admin=true      users=invscout
+snapp      id=13           admin=true      users=snapp
+ipsec      id=200          admin=false     users=    
+pconsole   id=14           admin=true      users=pconsole
+se         id=300          admin=true      users=seadm,se01,se02
+exc        id=600          admin=true      users=exadm,ex10,ex11,ex14,ex15
+tse        id=800          admin=true      users=twse
+sshd       id=201          admin=false     users=sshd
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================ 帳號管控資訊 =================#
+root       logintimes=        loginretries=0       minage=0        maxage=0             maxrepeats=8       histexpire=0   
+daemon     pwdwarntime=0      account_locked=false maxexpired=-1   minalpha=0           histexpire=0       pwdchecks=     
+bin        pwdwarntime=0      account_locked=false maxexpired=-1   minalpha=0           histexpire=0       pwdchecks=     
+sys        pwdwarntime=0      account_locked=false maxexpired=-1   minalpha=0           histexpire=0       pwdchecks=     
+adm        pwdwarntime=0      account_locked=false maxexpired=-1   minalpha=0           histexpire=0       pwdchecks=     
+uucp       pwdwarntime=0      account_locked=false maxexpired=-1   minalpha=0           histexpire=0       pwdchecks=     
+guest      pwdwarntime=0      account_locked=false maxexpired=-1   minalpha=0           histexpire=0       pwdchecks=     
+nobody     pwdwarntime=0      account_locked=false maxexpired=-1   minalpha=0           histexpire=0       pwdchecks=     
+lpd        pwdwarntime=0      account_locked=false maxexpired=-1   minalpha=0           histexpire=0       pwdchecks=     
+lp         loginretries=0     pwdwarntime=0        maxage=0        maxexpired=-1        minlen=0           histsize=0     
+invscout   loginretries=0     pwdwarntime=0        maxage=0        maxexpired=-1        minlen=0           histsize=0     
+snapp      registry=files     SYSTEM=NONE          pwdwarntime=0   account_locked=false minspecialchar=0   maxrepeats=8   
+ipsec      loginretries=0     pwdwarntime=0        maxage=0        maxexpired=-1        minlen=0           histsize=0     
+nuucp      registry=files     SYSTEM=compat        pwdwarntime=0   account_locked=false minspecialchar=0   maxrepeats=8   
+pconsole   loginretries=0     pwdwarntime=0        maxage=0        maxexpired=-1        minlen=0           histsize=0     
+esaadmin   loginretries=0     pwdwarntime=0        maxage=0        maxexpired=-1        minlen=0           histsize=0     
+seadm      loginretries=10    pwdwarntime=7        maxage=7        maxexpired=1         minlen=7           histsize=6     
+se01       loginretries=10    pwdwarntime=7        maxage=7        maxexpired=1         minlen=7           histsize=6     
+se02       loginretries=10    pwdwarntime=7        maxage=7        maxexpired=1         minlen=7           histsize=6     
+exadm      loginretries=10    pwdwarntime=7        maxage=7        maxexpired=1         minlen=7           histsize=6     
+ex10       loginretries=10    pwdwarntime=7        maxage=7        maxexpired=1         minlen=7           histsize=6     
+ex11       loginretries=10    pwdwarntime=7        maxage=7        maxexpired=1         minlen=7           histsize=6     
+ex14       loginretries=10    pwdwarntime=7        maxage=7        maxexpired=1         minlen=7           histsize=6     
+ex15       loginretries=10    pwdwarntime=7        maxage=7        maxexpired=1         minlen=7           histsize=6     
+twse       loginretries=10    pwdwarntime=7        maxage=12       maxexpired=1         minlen=7           histsize=6     
+useradm    loginretries=10    pwdwarntime=7        maxage=12       maxexpired=1         minlen=7           histsize=6     
+sshd       loginretries=0     pwdwarntime=0        maxage=0        maxexpired=-1        minlen=0           histsize=0     
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================ 系統網路參數 =================#
+                 arpqsize = 1024
+               arpt_killc = 20
+              arptab_bsiz = 7
+                arptab_nb = 149
+                bcastping = 0
+      clean_partial_conns = 0
+                 delayack = 0
+            delayackports = {}
+   dgd_flush_cached_route = 0
+         dgd_packets_lost = 3
+            dgd_ping_time = 5
+           dgd_retry_time = 5
+       directed_broadcast = 0
+                 fasttimo = 200
+                    hstcp = 0
+        icmp6_errmsg_rate = 10
+          icmpaddressmask = 0
+ie5_old_multicast_mapping = 0
+                   ifsize = 256
+           igmpv2_deliver = 0
+            init_high_wat = 0
+               ip6_defttl = 64
+                ip6_prune = 1
+            ip6forwarding = 0
+       ip6srcrouteforward = 1
+       ip_ifdelete_notify = 0
+                 ip_nfrag = 200
+             ipforwarding = 0
+                ipfragttl = 2
+        ipignoreredirects = 0
+                ipqmaxlen = 100
+          ipsendredirects = 1
+        ipsrcrouteforward = 1
+           ipsrcrouterecv = 0
+           ipsrcroutesend = 1
+               limited_ss = 0
+          llsleep_timeout = 3
+                  lo_perf = 1
+                lowthresh = 90
+                 main_if6 = 0
+               main_site6 = 0
+                 maxnip6q = 20
+                   maxttl = 255
+                medthresh = 95
+               mpr_policy = 1
+              multi_homed = 1
+                nbc_limit = 393216
+            nbc_max_cache = 131072
+            nbc_min_cache = 1
+         nbc_ofile_hashsz = 12841
+                 nbc_pseg = 0
+           nbc_pseg_limit = 786432
+           ndd_event_name = {all}
+        ndd_event_tracing = 0
+              ndogthreads = 0
+            ndp_mmaxtries = 3
+            ndp_umaxtries = 3
+                 ndpqsize = 50
+                ndpt_down = 3
+                ndpt_keep = 120
+               ndpt_probe = 5
+           ndpt_reachable = 30
+             ndpt_retrans = 1
+             net_buf_size = {all}
+             net_buf_type = {all}
+     net_malloc_frag_mask = {0}
+        netm_page_promote = 1
+           nonlocsrcroute = 0
+                 nstrpush = 8
+              passive_dgd = 0
+         pmtu_default_age = 10
+              pmtu_expire = 10
+ pmtu_rediscover_interval = 30
+              psebufcalls = 20
+                 psecache = 1
+                psetimers = 20
+           rfc1122addrchk = 0
+                  rfc1323 = 0
+                  rfc2414 = 1
+             route_expire = 1
+          routerevalidate = 0
+     rtentry_lock_complex = 1
+                 rto_high = 64
+               rto_length = 13
+                rto_limit = 7
+                  rto_low = 1
+                     sack = 0
+                   sb_max = 8388608
+       send_file_duration = 300
+              site6_index = 0
+               sockthresh = 85
+                  sodebug = 0
+              sodebug_env = 0
+                somaxconn = 1024
+                 strctlsz = 1024
+                 strmsgsz = 0
+                strthresh = 85
+               strturncnt = 15
+          subnetsarelocal = 1
+       tcp_bad_port_limit = 0
+        tcp_cwnd_modified = 0
+                  tcp_ecn = 0
+       tcp_ephemeral_high = 65535
+        tcp_ephemeral_low = 32768
+               tcp_fastlo = 0
+     tcp_fastlo_crosswpar = 0
+             tcp_finwait2 = 1200
+           tcp_icmpsecure = 0
+          tcp_init_window = 0
+    tcp_inpcb_hashtab_siz = 24499
+              tcp_keepcnt = 8
+             tcp_keepidle = 14400
+             tcp_keepinit = 150
+            tcp_keepintvl = 150
+     tcp_limited_transmit = 1
+              tcp_low_rto = 0
+             tcp_maxburst = 0
+              tcp_mssdflt = 1460
+          tcp_nagle_limit = 65535
+        tcp_nagleoverride = 0
+               tcp_ndebug = 100
+              tcp_newreno = 1
+           tcp_nodelayack = 0
+        tcp_pmtu_discover = 1
+            tcp_rand_port = 0
+       tcp_rand_timestamp = 0
+            tcp_recvspace = 16384
+            tcp_sendspace = 16384
+            tcp_tcpsecure = 0
+             tcp_timewait = 1
+                  tcp_ttl = 60
+           tcprexmtthresh = 3
+             tcptr_enable = 0
+                  thewall = 1572864
+         timer_wheel_tick = 0
+                tn_filter = 1
+       udp_bad_port_limit = 0
+       udp_ephemeral_high = 65535
+        udp_ephemeral_low = 32768
+    udp_inpcb_hashtab_siz = 24499
+        udp_pmtu_discover = 1
+            udp_recvspace = 8388608
+            udp_sendspace = 9216
+                  udp_ttl = 30
+                 udpcksum = 1
+           use_sndbufpool = 1
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+
+
+#================ 系統記憶體參數 =================#
+             ame_cpus_per_pool = n/a
+               ame_maxfree_mem = n/a
+           ame_min_ucpool_size = n/a
+               ame_minfree_mem = n/a
+               ams_loan_policy = n/a
+  enhanced_affinity_affin_time = 1
+enhanced_affinity_vmpool_limit = 10
+                esid_allocator = 1
+           force_relalias_lite = 0
+             kernel_heap_psize = 65536
+                  lgpg_regions = 0
+                     lgpg_size = 0
+               low_ps_handling = 1
+                       maxfree = 1088
+                 memory_frames = 786432
+                 memplace_data = 0
+          memplace_mapped_file = 0
+        memplace_shm_anonymous = 0
+            memplace_shm_named = 0
+                memplace_stack = 0
+                 memplace_text = 0
+        memplace_unmapped_file = 0
+                       minfree = 960
+                     nokilluid = 0
+                       npskill = 11264
+                       npswarn = 45056
+           num_locks_per_semid = 1
+                     numpsblks = 1441792
+           relalias_percentage = 0
+                         scrub = 0
+                      v_pinshm = 0
+              vmm_default_pspa = 0
+                vmm_klock_mode = 2
+            wlm_memlimit_nonpg = 1
+#===== 確認上述資訊是否正確? Yes( ) NO( ) ======#
+

@@ -1,0 +1,17 @@
+#!/usr/bin/ksh
+i=0
+for HOST in `cat /tmp/host.list` ; 
+do
+#   echo "$HOST °õ¦æ¤¤..."
+   echo "$HOST Start"
+
+((i=i+1))
+   ssh -p 2222 $HOST `head -$i /tmp/host.cmd | tail -1`
+   execStatus=$?
+   if [ $execStatus -eq 0 ]; then
+      echo "$HOST OK!" >> /tmp/$0.log
+   else
+      echo "$HOST Fail!" >> /tmp/$0.log
+   fi
+done
+

@@ -1,0 +1,67 @@
+TSEOT2 [14/04/29 15:30:40] #==========================detach_...================================================#
+TSEOT2 [14/04/29 15:30:40] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/29 15:30:43] [INFO] detach ib0 success 
+TSEOT2 [14/04/29 15:30:43] [INFO] detach detach function execute  Success
+TSEOT2 [14/04/29 16:03:22] #==========================detach_...================================================#
+TSEOT2 [14/04/29 16:03:22] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/29 16:03:24] [INFO] detach ib0 success 
+TSEOT2 [14/04/29 16:03:24] [INFO] detach function execute  Success
+TSEOT2 [14/04/29 16:18:10] #==========================detach_...================================================#
+TSEOT2 [14/04/29 16:18:10] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/29 16:18:13] [INFO] detach ib0 success 
+TSEOT2 [14/04/29 16:18:13] [INFO] detach function execute Success
+TSEOT2 [14/04/29 16:18:13] #==========================ib_script_stop_...================================================#
+TSEOT2 [14/04/29 16:18:13] [INFO] terminated ib_start.sh script start
+TSEOT2 [14/04/29 16:18:13] [ERR] terminated ib_start.sh script Failed
+TSEOT2 [14/04/29 16:47:34] #==========================detach_...================================================#
+TSEOT2 [14/04/29 16:47:34] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/29 16:47:36] [INFO] detach ib0 success 
+TSEOT2 [14/04/29 16:47:36] [INFO] detach function execute Success
+TSEOT2 [14/04/29 16:47:36] #==========================ib_script_stop_...================================================#
+TSEOT2 [14/04/29 16:47:36] [INFO] terminated ib_start.sh script start
+TSEOT2 [14/04/29 16:47:36] [INFO] ib_start.sh script PID already is empty
+TSEOT2 [14/04/29 16:47:36] [INFO] terminated ib_start.sh script Success 
+TSEOT2 [14/04/30 15:11:14] #==========================detach_...================================================#
+TSEOT2 [14/04/30 15:11:14] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/30 15:11:14] [ERR] detach ib0 Failed,than ib_stop.sh script terminated
+TSEOT2 [14/04/30 15:11:14] #==========================ib_script_stop_...================================================#
+TSEOT2 [14/04/30 15:11:14] [INFO] terminated ib_start.sh script start
+TSEOT2 [14/04/30 15:11:14] [INFO] ib_start.sh script PID already is empty
+TSEOT2 [14/04/30 15:11:14] [INFO] terminated ib_start.sh script Success 
+TSEOT2 [14/04/30 15:11:31] #==========================detach_...================================================#
+TSEOT2 [14/04/30 15:11:31] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/30 15:11:33] [INFO] detach ib0 success 
+TSEOT2 [14/04/30 15:11:33] [INFO] detach function execute Success
+TSEOT2 [14/04/30 15:11:33] #==========================ib_script_stop_...================================================#
+TSEOT2 [14/04/30 15:11:33] [INFO] terminated ib_start.sh script start
+TSEOT2 [14/04/30 15:11:33] [INFO] ib_start.sh script PID already is empty
+TSEOT2 [14/04/30 15:11:34] [INFO] terminated ib_start.sh script Success 
+TSEOT2 [14/04/30 15:12:44] #==========================detach_...================================================#
+TSEOT2 [14/04/30 15:12:44] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/30 15:12:46] [INFO] detach ib0 success 
+TSEOT2 [14/04/30 15:12:46] [INFO] detach function execute Success
+TSEOT2 [14/04/30 15:12:46] #==========================ib_script_stop_...================================================#
+TSEOT2 [14/04/30 15:12:46] [INFO] terminated ib_start.sh script start
+TSEOT2 [14/04/30 15:12:46] [INFO] ib_start.sh script PID already is empty
+TSEOT2 [14/04/30 15:12:46] [INFO] terminated ib_start.sh script Success 
+TSEOT2 [14/04/30 15:13:11] #==========================detach_...================================================#
+TSEOT2 [14/04/30 15:13:11] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/30 15:13:13] [INFO] detach ib0 success 
+TSEOT2 [14/04/30 15:13:13] [INFO] detach function execute Success
+TSEOT2 [14/04/30 15:13:13] #==========================ib_script_stop_...================================================#
+TSEOT2 [14/04/30 15:13:13] [INFO] terminated ib_start.sh script start
+TSEOT2 [14/04/30 15:13:13] [INFO] terminated ib_start.sh script Success 
+TSEOT2 [14/04/30 15:17:22] #==========================detach_...================================================#
+TSEOT2 [14/04/30 15:17:22] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/30 15:17:29] [INFO] detach ib0 success 
+TSEOT2 [14/04/30 15:17:29] [INFO] detach function execute Success
+TSEOT2 [14/04/30 15:17:29] #==========================ib_script_stop_...================================================#
+TSEOT2 [14/04/30 15:17:29] [INFO] terminated ib_start.sh script start
+TSEOT2 [14/04/30 15:17:29] [ERR] terminated ib_start.sh script Failed
+TSEOT2 [14/04/30 16:15:59] #==========================detach_...================================================#
+TSEOT2 [14/04/30 16:15:59] [INFO] Detaching ib0 device...
+TSEOT2 [14/04/30 16:16:00] [INFO] detach ib0 success 
+TSEOT2 [14/04/30 16:16:00] [INFO] detach function execute Success
+TSEOT2 [14/04/30 16:16:00] #==========================ib_script_stop_...================================================#
+TSEOT2 [14/04/30 16:16:00] [INFO] terminated ib_start.sh script start
+TSEOT2 [14/04/30 16:16:00] [ERR] terminated ib_start.sh script Failed

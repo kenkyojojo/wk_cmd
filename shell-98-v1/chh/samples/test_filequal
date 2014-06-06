@@ -1,0 +1,14 @@
+#! /bin/bash
+
+shopt -s -o nounset
+
+DIFF="/usr/bin/diff"
+
+[ $# -ne 2 ] && echo "使用法: $0 檔案1 檔案2" && exit 2
+
+File1=$1
+File2=$2
+
+$DIFF $File1 $File2 &> /dev/null
+
+exit $?

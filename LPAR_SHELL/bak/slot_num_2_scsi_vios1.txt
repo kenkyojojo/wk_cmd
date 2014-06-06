@@ -1,0 +1,7 @@
+3/server//SKY1/3/1
+5/server//SKY2/3/1
+7/server//SKY3/3/1
+9/server//DOG1/3/1
+11/server//DOG2/3/1
+13/server//DOG3/3/1
+15/server//DOG4/3/1

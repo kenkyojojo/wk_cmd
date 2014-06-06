@@ -1,0 +1,98 @@
+#! /bin/bash
+#
+# 1. 將大寫檔名改成小寫檔名，或將小寫檔名改成大寫檔名。
+# 2. 至於使用那一個功能, 完全由執行時的檔名來決定。
+# 3. 這支程式本身不會被改名。
+#
+# 安裝法: 
+# 1. cp low2upper /usr/local/bin
+# 2. cd /usr/local/bin
+# 3. ln -sf low2upper upper2low
+#
+
+# 函式區：
+# low2upper : 將小寫檔名改成大寫檔名
+# upper2low : 將大寫檔名改成小寫檔名
+# ask_sure : 詢問是否確定要執行本程式
+# chk_dir_is_ok : 檢查要執行轉換的目錄是否為受到保護的目錄
+
+low2upper () {
+   for FILE in *
+   do
+      if [ "$FILE" != "$LFNAME" -a "$FILE" != "$UFNAME" ]; then
+          mv -f "$FILE" `echo "$FILE" | tr '[a-z]' '[A-Z]'` 2> /dev/null
+      fi
+   done
+}
+
+upper2low () {
+   for FILE in *
+   do
+      if [ "$FILE" != "$LFNAME" -a "$FILE" != "$UFNAME" ]; then
+          mv -f "$FILE" `echo "$FILE" | tr '[A-Z]' '[a-z]'` 2> /dev/null
+      fi
+   done
+}
+
+ask_sure() {
+   echo '警告!!! ' "這支程式會把目錄: $(pwd) 中的檔案，做大小寫檔名的轉換."
+   read -p "您確定要進行嗎？(y/n) " ANS
+   case $ANS in
+      [Yy]|[Yy][Ee][Ss])
+         return 0
+         ;;
+      *) exit 1
+         ;;
+      esac
+}
+
+chk_dir_is_ok() {
+
+   NowDir=$(pwd)
+   [ "$NowDir" = "/" ] && return 1
+
+   NowDir1=${NowDir#/}
+   NowDir2=${NowDir1#*/}
+   NowDir2=${NowDir2%%/*}
+
+   case $NowDir1 in
+     root|bin|dev|home|root|var|boot|etc|sbin|usr|lib)
+         return 2;;   
+     *) 
+        case $NowDir2 in
+             www|bin|doc|etc|games|include|info|lib|libexec|local|man|sbin|share|var|X11R6)
+                return 3;;
+        esac
+   esac
+
+   return 0
+}
+
+# -----------------------------------------------------------------------------
+#
+# 主程式區：
+#
+
+LFNAME=low2upper
+UFNAME=upper2low
+NOWFILENAME=$(basename $0)
+
+# 先詢問是否執行
+ask_sure
+
+# 執行位置不可在重要的系統目錄中
+if ! chk_dir_is_ok; then 
+  echo "$(pwd) 這個目錄受到保護，不能在此執行大小寫檔名轉換."
+  exit 1
+fi
+
+if [ "$NOWFILENAME" = "$LFNAME" ]; then
+  low2upper
+elif [ "$NOWFILENAME" = "$UFNAME" ]; then
+  upper2low
+fi
+
+echo 
+echo '轉換完成!'
+echo
+

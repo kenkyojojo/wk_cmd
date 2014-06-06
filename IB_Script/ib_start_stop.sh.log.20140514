@@ -1,0 +1,2473 @@
+TSEOB1 [2014/05/14 09:53:18] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:53:18] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:53:18] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:53:18] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:53:24] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:53:24] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=2 status
+TSEOB1 [2014/05/14 09:53:24] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=2 status no Active
+TSEOB1 [2014/05/14 09:53:24] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:1
+TSEOB1 [2014/05/14 09:53:24] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 09:53:27] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 09:53:35] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 09:53:35] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(1) 
+TSEOB1 [2014/05/14 09:53:35] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:53:35] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:53:37] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:53:37] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:53:37] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 09:53:37] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 09:53:40] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:53:40] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:53:40] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:53:40] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:53:40] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:53:40] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:53:42] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:53:42] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:53:42] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:53:42] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:53:44] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:53:44] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:53:44] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 09:53:44] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 09:53:47] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:53:47] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:53:47] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:53:47] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:53:47] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:53:47] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:04] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:56:04] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:56:05] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:05] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:56:05] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:56:05] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:07] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:56:07] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:56:07] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:56:07] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:09] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:56:09] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:56:09] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 09:56:09] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 09:56:12] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:56:12] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:56:12] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:12] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:56:12] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:56:12] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:14] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:56:14] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:56:14] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:56:14] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:16] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:56:16] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:56:16] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 09:56:16] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 09:56:19] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:56:19] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:56:19] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:19] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:56:19] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:56:19] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:21] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:56:21] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:56:21] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:56:21] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:23] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:56:23] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:56:23] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 09:56:23] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 09:56:26] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:56:26] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:56:26] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:26] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:56:26] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:56:26] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:28] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:56:28] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:56:29] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:56:29] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:31] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:56:31] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:56:31] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 09:56:31] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 09:56:34] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:56:34] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:56:34] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:34] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:56:34] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:56:34] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:36] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:56:36] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:56:36] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:56:36] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:38] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:56:38] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:56:38] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 09:56:38] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 09:56:41] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:56:41] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:56:41] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:56:41] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:56:41] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:56:41] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 09:59:37] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:59:37] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:59:37] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:59:37] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:59:39] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:59:39] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:59:39] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:59:41] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:59:41] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:59:41] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 09:59:41] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 09:59:44] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:59:44] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:59:44] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:59:44] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:59:46] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:59:46] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:59:46] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:59:48] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:59:48] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:59:48] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 09:59:48] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 09:59:51] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:59:51] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:59:51] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:59:52] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:59:54] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:59:54] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:59:54] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 09:59:56] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 09:59:56] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 09:59:56] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 09:59:56] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 09:59:59] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 09:59:59] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 09:59:59] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 09:59:59] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:00:01] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:00:01] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:00:01] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:00:03] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:00:03] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:00:03] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:00:03] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:00:06] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:00:06] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:00:06] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:00:06] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:00:08] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:00:08] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:00:08] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:00:10] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:00:10] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:00:10] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:00:10] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:00:13] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:00:13] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:00:13] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:00:13] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:00:15] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:00:15] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:00:15] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:00:17] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:00:17] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:00:17] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:00:17] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:00:20] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:00:21] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:00:21] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:00:21] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:00:23] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:00:23] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:00:23] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:00:25] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:00:25] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:00:25] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:00:25] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:00:28] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:00:28] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:00:28] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:00:28] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:00:30] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:00:30] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:00:30] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:00:32] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:00:32] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:00:32] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:00:32] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:01:41] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:01:41] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:01:41] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:01:41] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:01:43] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:01:43] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:01:43] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:01:43] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:01:46] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:01:46] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:01:46] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:01:46] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:01:48] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:01:48] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:01:48] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:01:48] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:03:39] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:03:39] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:03:39] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:03:45] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:03:45] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=2 status
+TSEOB1 [2014/05/14 10:03:45] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=2 status no Active
+TSEOB1 [2014/05/14 10:03:45] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:1
+TSEOB1 [2014/05/14 10:03:45] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:03:47] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:03:55] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:03:55] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(1) 
+TSEOB1 [2014/05/14 10:03:55] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:03:55] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:03:58] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:03:58] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:03:58] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:03:58] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:03:58] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:03:58] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:04:00] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:04:01] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:04:01] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:04:01] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:04:04] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:04:04] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:04:04] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:04:04] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:04:04] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:04:04] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:04:06] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:04:06] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:04:06] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:04:06] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:04:09] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:04:09] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:04:09] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:04:09] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:04:09] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:04:09] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:04:11] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:04:11] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:04:11] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:04:11] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:04:37] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:04:37] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:04:37] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:04:43] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:04:43] [INFO] Executing Local_check Start, To Check ib_card=iba1 ib_port=2 status
+TSEOB1 [2014/05/14 10:04:43] [INFO] Executing Local_check finished. The ib_card=iba1 ib_port=2 status no Active
+TSEOB1 [2014/05/14 10:04:43] [WARN] Local InfiniBand card check success, begins to swap Device:iba1 Port:1
+TSEOB1 [2014/05/14 10:04:43] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:04:45] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:04:53] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:04:53] [INFO] Swap finished, ib0 network work on IB device Card:(iba1) Port:(1) 
+TSEOB1 [2014/05/14 10:04:53] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:04:53] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:04:56] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:04:56] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:04:56] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:04:56] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:04:56] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:04:56] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:04:58] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:04:58] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:04:58] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:04:58] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:05:01] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:05:01] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:05:01] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:05:01] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:05:01] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:05:01] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:06:47] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:06:47] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:06:47] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:06:47] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:06:49] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:06:49] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:06:49] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:06:49] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:06:52] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:06:52] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:06:52] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:06:52] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:06:54] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:06:54] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:06:54] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:06:54] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:06:57] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:06:57] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:06:58] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:06:58] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:07:32] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:07:32] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:07:32] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:07:38] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:07:38] [INFO] Executing Local_check Start, To Check ib_card=iba1 ib_port=2 status
+TSEOB1 [2014/05/14 10:07:38] [INFO] Executing Local_check finished. The ib_card=iba1 ib_port=2 status no Active
+TSEOB1 [2014/05/14 10:07:38] [WARN] Local InfiniBand card check success, begins to swap Device:iba1 Port:1
+TSEOB1 [2014/05/14 10:07:38] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:07:41] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:07:49] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:07:49] [INFO] Swap finished, ib0 network work on IB device Card:(iba1) Port:(1) 
+TSEOB1 [2014/05/14 10:07:49] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:07:49] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:07:52] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:07:52] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:07:52] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:07:52] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:07:52] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:07:52] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:07:54] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:07:54] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:07:54] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:07:54] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:07:57] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:07:57] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:07:57] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:07:57] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:07:57] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:07:57] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:07:59] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:07:59] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:07:59] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:07:59] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:08:02] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:08:02] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:08:02] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:08:02] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:08:02] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:08:02] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:09:31] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:09:31] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:09:31] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:09:31] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:09:33] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:09:33] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:09:33] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:09:33] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:09:36] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:09:36] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:09:36] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:09:36] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:09:38] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:09:38] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:09:38] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:09:38] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:09:41] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:09:41] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:09:41] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:09:41] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:10:06] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:10:06] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:10:06] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:10:12] [INFO] Executing Local_check Start, To Check ib_card=iba1 ib_port=2 status
+TSEOB1 [2014/05/14 10:10:12] [INFO] Executing Local_check finished. The ib_card=iba1 ib_port=2 status no Active
+TSEOB1 [2014/05/14 10:10:12] [WARN] Local InfiniBand card check success, begins to swap Device:iba1 Port:1
+TSEOB1 [2014/05/14 10:10:13] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:10:15] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:10:23] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:10:23] [INFO] Swap finished, ib0 network work on IB device Card:(iba1) Port:(1) 
+TSEOB1 [2014/05/14 10:10:23] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:10:23] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:10:26] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:10:26] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:10:26] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:10:26] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:10:28] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:10:28] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:10:28] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:10:28] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:10:31] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:10:31] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:10:31] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:10:31] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:10:33] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:10:33] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:10:33] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:10:33] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:10:36] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:10:36] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:10:36] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:10:36] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:10:38] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:10:39] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:10:39] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:10:39] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:10:42] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:10:42] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:10:42] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:10:42] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:10:44] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:10:44] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:10:44] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:10:44] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:10:47] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:10:47] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:10:47] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:10:47] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:10:49] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:10:49] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:10:49] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:10:49] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:10:52] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:10:52] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:10:52] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:10:52] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:10:54] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:10:54] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:10:54] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:10:54] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:10:57] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:10:57] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:10:57] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:10:57] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:10:59] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:10:59] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:10:59] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:10:59] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:11:02] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:11:02] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:11:02] [INFO] Need to Bind the ip:10.204.5.141 on Infiniband card
+TSEOB1 [2014/05/14 10:11:02] [INFO] Execute ib_ip_config function Start
+TSEOB1 [2014/05/14 10:11:14] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:11:22] [INFO] Bind the ip:10.204.5.141 on ib Finished
+TSEOB1 [2014/05/14 10:11:22] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:11:22] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:11:24] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:11:25] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:11:25] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:11:25] [INFO] Execute ib_ip_config function Finished
+TSEOB1 [2014/05/14 10:11:25] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:11:28] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:11:28] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:11:28] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:11:28] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:11:30] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:11:30] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:11:30] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:11:30] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:11:33] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:11:33] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:11:33] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:11:33] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:11:35] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:11:35] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:11:35] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:11:35] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:11:38] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:11:38] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:11:38] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:11:38] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:11:40] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:11:40] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:11:40] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:11:40] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:11:43] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:11:43] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:11:43] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:11:43] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:11:45] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:11:45] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:11:45] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:11:45] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:11:48] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:11:48] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:11:48] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:11:48] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:11:50] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:11:50] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:11:50] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:11:50] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:11:53] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:11:53] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:11:53] [INFO] Need to Bind the ip:10.204.5.141 on Infiniband card
+TSEOB1 [2014/05/14 10:11:53] [INFO] Execute ib_ip_config function Start
+TSEOB1 [2014/05/14 10:12:00] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:12:10] [INFO] Bind the ip:10.204.5.141 on ib Finished
+TSEOB1 [2014/05/14 10:12:10] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:12:10] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:12:12] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:12:12] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:12:12] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:12:12] [INFO] Execute ib_ip_config function Finished
+TSEOB1 [2014/05/14 10:12:12] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:12:15] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:12:15] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:12:15] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:12:15] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:12:17] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:12:17] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:12:17] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:12:17] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:12:20] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:12:20] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:12:20] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:12:20] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:12:22] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:12:22] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:12:22] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:12:22] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:12:25] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:12:25] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:12:25] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:12:25] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:12:27] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:12:27] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:12:27] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:12:27] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:12:30] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:12:30] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:12:30] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:12:30] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:12:32] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:12:32] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:12:32] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:12:32] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:12:35] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:12:35] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:12:35] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:12:35] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:12:37] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:12:37] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:12:37] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:12:38] [INFO] Sleep for 3 seconds...
+
+
+
+TSEOB1 [2014/05/14 10:12:41] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:12:41] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:12:41] [INFO] Need to Bind the ip:10.204.5.141 on Infiniband card
+TSEOB1 [2014/05/14 10:12:41] [INFO] Execute ib_ip_config function Start
+TSEOB1 [2014/05/14 10:12:48] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:12:57] [INFO] Bind the ip:10.204.5.141 on ib Finished
+TSEOB1 [2014/05/14 10:12:57] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:12:57] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:12:59] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:12:59] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:12:59] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:12:59] [INFO] Execute ib_ip_config function Finished
+TSEOB1 [2014/05/14 10:12:59] [INFO] Sleep for 3 seconds...
+
+
+
+
+TSEOB1 [2014/05/14 10:13:02] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:13:02] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:13:02] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:13:02] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:13:04] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:13:04] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:13:04] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:13:04] [INFO] Sleep for 3 seconds...
+
+
+
+
+TSEOB1 [2014/05/14 10:13:07] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:13:07] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:13:07] [INFO] Need to Bind the ip:10.204.5.141 on Infiniband card
+TSEOB1 [2014/05/14 10:13:07] [INFO] Execute ib_ip_config function Start
+TSEOB1 [2014/05/14 10:13:14] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:13:19] [ERR] Bind the ip:10.204.5.141 on ib Failed,and ib_start.sh.0514 script terminated
+
+
+
+
+TSEOB1 [2014/05/14 10:13:52] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:13:52] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:13:52] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:13:58] [INFO] Executing Local_check Start, To Check ib_card=iba1 ib_port=2 status
+TSEOB1 [2014/05/14 10:13:58] [INFO] Executing Local_check finished. The ib_card=iba1 ib_port=2 status no Active
+TSEOB1 [2014/05/14 10:13:58] [WARN] Local InfiniBand card check success, begins to swap Device:iba1 Port:1
+TSEOB1 [2014/05/14 10:13:58] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:14:01] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:14:09] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:14:09] [INFO] Swap finished, ib0 network work on IB device Card:(iba1) Port:(1) 
+TSEOB1 [2014/05/14 10:14:09] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:14:09] [INFO] Sleep for 3 seconds...
+
+
+
+
+
+TSEOB1 [2014/05/14 10:14:12] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:14:12] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:14:12] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:14:12] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:14:14] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:14:14] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:14:14] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:14:14] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:14:17] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:14:17] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:14:17] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:14:17] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:14:19] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:14:19] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:14:19] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:14:19] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:14:22] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:14:22] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:14:22] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:14:22] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:14:24] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:14:24] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:14:24] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:14:24] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:14:27] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:14:27] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:14:27] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:14:27] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:14:29] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:14:29] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:14:29] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:14:29] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:14:32] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:14:32] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:14:32] [INFO] Need to Bind the ip:10.204.5.141 on Infiniband card
+TSEOB1 [2014/05/14 10:14:32] [INFO] Execute ib_ip_config function Start
+TSEOB1 [2014/05/14 10:14:45] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:14:57] [INFO] Bind the ip:10.204.5.141 on ib Finished
+TSEOB1 [2014/05/14 10:14:57] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:14:57] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:14:59] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:14:59] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:14:59] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:14:59] [INFO] Execute ib_ip_config function Finished
+TSEOB1 [2014/05/14 10:14:59] [INFO] Sleep for 3 seconds...
+
+TSEOB1 [2014/05/14 10:15:02] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:15:02] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:15:02] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:15:02] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:15:04] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:15:04] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:15:04] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:15:04] [INFO] Sleep for 3 seconds...
+
+TSEOB1 [2014/05/14 10:15:07] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:15:07] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:15:07] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:15:07] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:15:09] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:15:09] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:15:09] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:15:09] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:15:12] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:15:12] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:15:12] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:15:12] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:15:14] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:15:15] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:15:15] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:15:15] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:15:18] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:15:18] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:15:18] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:15:18] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:15:20] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:15:20] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:15:20] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:15:20] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:15:23] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:15:23] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:15:23] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:15:23] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:15:25] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:15:25] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:15:25] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:15:25] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:15:28] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:15:28] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:15:28] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:15:28] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:15:31] [ERR] InfiniBand Network ping to 10.204.5.71 33% packet loss
+TSEOB1 [2014/05/14 10:15:31] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:15:31] [INFO] Sleep for 3 seconds...
+
+
+
+###############
+TSEOB1 [2014/05/14 10:15:34] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:15:34] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:15:34] [INFO] Need to Bind the ip:10.204.5.141 on Infiniband card
+TSEOB1 [2014/05/14 10:15:34] [INFO] Execute ib_ip_config function Start
+TSEOB1 [2014/05/14 10:15:46] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:15:54] [INFO] Bind the ip:10.204.5.141 on ib Finished
+TSEOB1 [2014/05/14 10:15:54] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:15:54] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:15:56] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:15:56] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:15:56] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:15:56] [INFO] Execute ib_ip_config function Finished
+TSEOB1 [2014/05/14 10:15:56] [INFO] Sleep for 3 seconds...
+
+
+
+
+TSEOB1 [2014/05/14 10:15:59] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:15:59] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:15:59] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:15:59] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:16:01] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:16:01] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:16:02] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:16:02] [INFO] Sleep for 3 seconds...
+
+
+
+
+TSEOB1 [2014/05/14 10:16:05] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:16:05] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:16:05] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:16:05] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:16:07] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:16:07] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:16:07] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:16:07] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:16:10] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:16:10] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:16:10] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:16:10] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:16:12] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:16:12] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:16:12] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:16:12] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:16:15] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:16:15] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:16:15] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:16:15] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:16:17] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:16:17] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:16:17] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:16:17] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:16:20] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:16:20] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:16:20] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:16:20] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:16:22] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:16:22] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:16:22] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:16:22] [INFO] Sleep for 3 seconds...
+
+###########
+TSEOB1 [2014/05/14 10:16:25] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:16:25] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:16:25] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:16:25] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:16:27] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:16:28] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:16:28] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:16:28] [INFO] Sleep for 3 seconds...
+
+
+########
+TSEOB1 [2014/05/14 10:16:51] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:16:51] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:16:51] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:16:58] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=2 status
+TSEOB1 [2014/05/14 10:16:58] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=2 status no Active
+TSEOB1 [2014/05/14 10:16:58] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:1
+TSEOB1 [2014/05/14 10:16:58] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:17:00] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:17:08] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:17:08] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(1) 
+TSEOB1 [2014/05/14 10:17:08] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:17:08] [INFO] Sleep for 3 seconds...
+
+
+
+
+TSEOB1 [2014/05/14 10:17:11] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:17:11] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:17:11] [INFO] Need to Bind the ip:10.204.5.141 on Infiniband card
+TSEOB1 [2014/05/14 10:17:11] [INFO] Execute ib_ip_config function Start
+TSEOB1 [2014/05/14 10:17:22] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:17:32] [INFO] Bind the ip:10.204.5.141 on ib Finished
+TSEOB1 [2014/05/14 10:17:32] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:17:33] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:17:35] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:17:35] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:17:35] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:17:35] [INFO] Execute ib_ip_config function Finished
+TSEOB1 [2014/05/14 10:17:35] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:17:38] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:17:38] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:17:38] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:17:38] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:17:40] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:17:40] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:17:40] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:17:40] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:17:43] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:17:43] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:17:43] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:17:43] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:17:45] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:17:45] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:17:45] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:17:45] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:17:48] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:17:48] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:17:48] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:17:48] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:18:20] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:18:20] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:18:20] [INFO] Need to Bind the ip:10.204.5.141 on Infiniband card
+TSEOB1 [2014/05/14 10:18:20] [INFO] Execute ib_ip_config function Start
+TSEOB1 [2014/05/14 10:18:32] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:18:40] [INFO] Bind the ip:10.204.5.141 on ib Finished
+TSEOB1 [2014/05/14 10:18:40] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:18:40] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:18:42] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:18:42] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:18:42] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:18:42] [INFO] Execute ib_ip_config function Finished
+TSEOB1 [2014/05/14 10:18:42] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:18:45] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:18:45] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:18:45] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:18:45] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:18:47] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:18:47] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:18:47] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:18:47] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:18:50] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:18:50] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:18:50] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:18:50] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:18:52] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:18:52] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:18:52] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:18:52] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:18:55] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:18:55] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:18:55] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:18:56] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:18:58] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:18:58] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:18:58] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:18:58] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:19:01] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:19:01] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:19:01] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:19:01] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:19:03] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:19:03] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:19:03] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:19:03] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:19:06] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:19:06] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:19:06] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:19:06] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:19:08] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:19:08] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:19:08] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:19:08] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:19:11] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:19:11] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:19:11] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:19:11] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:19:13] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:19:13] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:19:13] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:19:13] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:19:16] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:19:16] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:19:16] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:19:16] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:19:18] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:19:18] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:19:18] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:19:18] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:19:21] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:19:21] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:19:21] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:19:22] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:19:24] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:19:24] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:19:24] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:19:24] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:19:27] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:19:27] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:19:27] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:19:27] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:19:29] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:19:29] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:19:29] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:19:29] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:19:32] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:19:32] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:19:32] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:19:32] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:19:34] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:19:34] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:19:34] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:19:34] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:19:37] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:19:37] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:19:37] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:19:37] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:19:39] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:19:39] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:19:39] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:19:39] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:19:42] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:19:42] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:19:42] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:19:42] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:19:44] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:19:44] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:19:44] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:19:44] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:20:07] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:20:07] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:20:07] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:20:07] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:20:09] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:20:09] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:20:09] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:20:09] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:20:12] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:20:12] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:20:12] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:20:12] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:20:14] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:20:14] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:20:14] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:20:14] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:20:17] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:20:17] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:20:17] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:20:17] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:20:19] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:20:20] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:20:20] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:20:20] [INFO] Sleep for 3 seconds...
+TSEOB1 [2014/05/14 10:20:23] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:20:23] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:20:23] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:20:23] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:21:35] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:21:35] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:21:35] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:21:35] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:21:37] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:21:37] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:21:37] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:21:37] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:21:40] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:21:40] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:21:40] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:21:40] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:21:42] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:21:42] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:21:42] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:21:42] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:21:45] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:21:45] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:21:45] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:21:45] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:21:47] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:21:47] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:21:47] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:21:47] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:21:50] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:21:50] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:21:50] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:21:50] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:21:52] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:21:52] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:21:52] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:21:52] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:21:55] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:21:55] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:21:55] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:21:55] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:21:57] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:21:57] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:21:57] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:21:57] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:22:00] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:22:00] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:22:00] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:22:01] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:22:03] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:22:03] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:22:03] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:22:03] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:22:06] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:22:06] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:22:06] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:22:06] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:22:08] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:22:08] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:22:08] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:22:08] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:22:11] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:22:11] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:22:11] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:22:11] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:22:13] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:22:13] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:22:13] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:22:13] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:22:16] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:22:16] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:22:16] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:22:16] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:22:18] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:22:18] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:22:18] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:22:18] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:22:21] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:22:21] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:22:21] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:22:21] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:22:23] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:22:23] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:22:23] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:22:23] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:22:26] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:22:26] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:22:26] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:22:26] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:22:29] [ERR] InfiniBand Network ping to 10.204.5.71 66% packet loss
+TSEOB1 [2014/05/14 10:22:29] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:22:29] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:22:32] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:22:32] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:22:32] [INFO] Need to Bind the ip:10.204.5.141 on Infiniband card
+TSEOB1 [2014/05/14 10:22:32] [INFO] Execute ib_ip_config function Start
+TSEOB1 [2014/05/14 10:22:44] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:23:27] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:23:27] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:23:27] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:23:27] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:23:30] [ERR] InfiniBand Network ping to 10.204.5.78 100% packet loss
+TSEOB1 [2014/05/14 10:23:33] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:23:36] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:23:38] [INFO] InfiniBand Network ping to 10.204.5.72 status is OK
+TSEOB1 [2014/05/14 10:23:38] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:23:38] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:23:38] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:23:41] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:23:41] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:23:41] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:23:41] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:23:44] [ERR] InfiniBand Network ping to 10.204.5.78 100% packet loss
+TSEOB1 [2014/05/14 10:23:47] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:23:50] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:23:52] [INFO] InfiniBand Network ping to 10.204.5.72 status is OK
+TSEOB1 [2014/05/14 10:23:52] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:23:52] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:23:52] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:23:55] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:23:55] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:23:55] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:23:55] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:24:16] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:24:16] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:24:16] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:24:16] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:24:19] [ERR] InfiniBand Network ping to 10.204.5.78 100% packet loss
+TSEOB1 [2014/05/14 10:24:23] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:24:26] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:24:29] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:24:35] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=1 status
+TSEOB1 [2014/05/14 10:24:35] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=1 status is Active
+TSEOB1 [2014/05/14 10:24:35] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:24:35] [ERR] ibsmon_np may be has problem,Please to check it
+TSEOB1 [2014/05/14 10:24:35] [WARN] Local InfiniBand card check success, begins to swap Device:iba1 Port:1
+TSEOB1 [2014/05/14 10:24:35] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:24:37] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:24:45] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:24:45] [INFO] Swap finished, ib0 network work on IB device Card:(iba1) Port:(1) 
+TSEOB1 [2014/05/14 10:24:45] [ERR] ibsmon_np may be has problem,Please to check it
+
+TSEOB1 [2014/05/14 10:25:22] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:25:23] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:25:23] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:25:23] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:25:26] [ERR] InfiniBand Network ping to 10.204.5.78 100% packet loss
+TSEOB1 [2014/05/14 10:25:29] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:25:32] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:25:35] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:25:41] [INFO] Executing Local_check Start, To Check ib_card=iba1 ib_port=1 status
+TSEOB1 [2014/05/14 10:25:41] [INFO] Executing Local_check finished. The ib_card=iba1 ib_port=1 status is Active
+TSEOB1 [2014/05/14 10:25:41] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:25:41] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:1
+TSEOB1 [2014/05/14 10:25:41] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:25:43] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:25:51] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:25:51] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(1) 
+TSEOB1 [2014/05/14 10:25:54] [ERR] InfiniBand Network ping to 10.204.5.78 100% packet loss
+TSEOB1 [2014/05/14 10:25:57] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:26:00] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:26:03] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:26:03] [INFO] SSHD service check finished
+
+#####
+TSEOB1 [2014/05/14 10:27:05] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:27:05] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:27:05] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:27:05] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:27:08] [ERR] InfiniBand Network ping to 10.204.5.78 100% packet loss
+TSEOB1 [2014/05/14 10:27:11] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:27:14] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:27:17] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:27:23] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=1 status
+TSEOB1 [2014/05/14 10:27:23] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=1 status is Active
+TSEOB1 [2014/05/14 10:27:23] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:27:23] [WARN] Local InfiniBand card check success, begins to swap Device:iba1 Port:1
+TSEOB1 [2014/05/14 10:27:23] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:27:25] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:27:33] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:27:33] [INFO] Swap finished, ib0 network work on IB device Card:(iba1) Port:(1) 
+TSEOB1 [2014/05/14 10:27:36] [ERR] InfiniBand Network ping to 10.204.5.78 100% packet loss
+TSEOB1 [2014/05/14 10:27:40] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:27:43] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:27:46] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:27:52] [INFO] Executing Local_check Start, To Check ib_card=iba1 ib_port=1 status
+TSEOB1 [2014/05/14 10:27:52] [INFO] Executing Local_check finished. The ib_card=iba1 ib_port=1 status is Active
+TSEOB1 [2014/05/14 10:27:52] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:27:52] [INFO] ALL IB device used
+TSEOB1 [2014/05/14 10:27:52] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:52:43] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [2014/05/06 16:52:45] [INFO] Detach ib0 success, begins to transfer HACMP
+TSEOT2 [2014/05/06 16:52:45] [INFO] HACMP transfer completed, script terminated...
+
+
+
+
+
+TSEOB1 [2014/05/14 10:30:21] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:30:21] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:30:21] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:30:21] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:30:24] [ERR] InfiniBand Network ping to 10.204.5.78 100% packet loss
+TSEOB1 [2014/05/14 10:30:27] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:30:30] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:30:33] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:30:39] [INFO] Executing Local_check Start, To Check ib_card=iba1 ib_port=1 status
+TSEOB1 [2014/05/14 10:30:39] [INFO] Executing Local_check finished. The ib_card=iba1 ib_port=1 status is Active
+TSEOB1 [2014/05/14 10:30:39] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:30:39] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:1
+TSEOB1 [2014/05/14 10:30:39] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:30:42] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:30:50] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:30:50] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(1) 
+TSEOB1 [2014/05/14 10:30:53] [ERR] InfiniBand Network ping to 10.204.5.78 100% packet loss
+TSEOB1 [2014/05/14 10:30:56] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:30:59] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:31:02] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:31:08] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=1 status
+TSEOB1 [2014/05/14 10:31:08] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=1 status is Active
+TSEOB1 [2014/05/14 10:31:08] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:31:08] [INFO] ALL IB device used
+TSEOB1 [2014/05/14 10:31:08] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:31:11] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:31:11] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:31:11] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:31:11] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:31:14] [ERR] InfiniBand Network ping to 10.204.5.78 100% packet loss
+TSEOB1 [2014/05/14 10:31:17] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:31:20] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:31:23] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:31:29] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=1 status
+TSEOB1 [2014/05/14 10:31:29] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=1 status is Active
+TSEOB1 [2014/05/14 10:31:29] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:31:29] [WARN] Local InfiniBand card check success, begins to swap Device:iba1 Port:1
+TSEOB1 [2014/05/14 10:31:29] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:31:31] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:31:39] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:31:39] [INFO] Swap finished, ib0 network work on IB device Card:(iba1) Port:(1) 
+TSEOB1 [2014/05/14 10:31:42] [ERR] InfiniBand Network ping to 10.204.5.78 100% packet loss
+TSEOB1 [2014/05/14 10:31:46] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:31:49] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:31:52] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:31:58] [INFO] Executing Local_check Start, To Check ib_card=iba1 ib_port=1 status
+TSEOB1 [2014/05/14 10:31:58] [INFO] Executing Local_check finished. The ib_card=iba1 ib_port=1 status is Active
+TSEOB1 [2014/05/14 10:31:58] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:31:58] [INFO] ALL IB device used
+TSEOB1 [2014/05/14 10:31:58] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:32:19] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:32:19] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:32:19] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:32:19] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:32:21] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:32:21] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:32:21] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:32:21] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:32:24] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:32:24] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:32:24] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:32:24] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:32:26] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:32:26] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:32:26] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:32:26] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:32:29] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:32:29] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:32:29] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:32:29] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:32:31] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:32:31] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:32:31] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:32:31] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:32:34] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:32:34] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:32:34] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:32:34] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:32:36] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:32:37] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:32:37] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:32:37] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:32:40] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:32:40] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:32:40] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:32:40] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:32:42] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:32:42] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:32:42] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:32:42] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:32:45] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:32:45] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:32:45] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:32:45] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:32:47] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:32:47] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:32:47] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:32:47] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:32:50] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:32:50] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:32:50] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:32:50] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:32:52] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:32:52] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:32:52] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:32:52] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:32:55] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:32:55] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:32:55] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:32:55] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:32:57] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:32:57] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:32:57] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:32:57] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:33:00] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:33:00] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:33:00] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:33:00] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:33:02] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:33:02] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:33:02] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:33:02] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:33:05] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:33:05] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:33:05] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:33:05] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:33:07] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:33:08] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:33:08] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:33:08] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:33:11] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:33:11] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:33:11] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:33:11] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:33:13] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:33:13] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:33:13] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:33:13] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:33:16] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:33:16] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:33:16] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:33:16] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:33:18] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:33:18] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:33:18] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:33:18] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:33:21] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:33:21] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:33:21] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:33:21] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:33:23] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:33:23] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:33:23] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:33:23] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:33:26] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:33:26] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:33:26] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:33:26] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:33:28] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:33:28] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:33:28] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:33:28] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:33:31] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:33:31] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:33:31] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:33:31] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:33:33] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:33:33] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:33:33] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:33:33] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:33:36] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:33:36] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:33:36] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:33:36] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:33:38] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:33:38] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:33:38] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:33:38] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:33:41] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:33:41] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:33:42] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:33:42] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:33:44] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:33:44] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:33:44] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:33:44] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:33:47] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:33:47] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:33:47] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:33:47] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:33:49] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:33:49] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:33:49] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:33:49] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:33:52] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:33:52] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:33:52] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:33:52] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:33:54] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:33:54] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:33:54] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:33:54] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:33:57] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:33:57] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:33:57] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:33:57] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:33:59] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:33:59] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:33:59] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:33:59] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:34:02] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:34:02] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:34:02] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:34:02] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:34:04] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:34:04] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:34:04] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:34:04] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:34:07] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:34:07] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:34:07] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:34:07] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:34:09] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:34:09] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:34:09] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:34:09] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:34:12] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:34:12] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:34:12] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:34:12] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:34:14] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:34:15] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:34:15] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:34:15] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:34:18] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:34:18] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:34:18] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:34:18] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:34:20] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:34:20] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:34:20] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:34:20] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:34:23] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:34:23] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:34:23] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:34:23] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:34:25] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:34:25] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:34:25] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:34:25] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:34:28] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:34:28] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:34:28] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:34:28] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:34:30] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:34:30] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:34:30] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:34:30] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:34:33] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:34:33] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:34:33] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:34:33] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:34:35] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:34:35] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:34:35] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:34:35] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:34:38] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:34:38] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:34:38] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:34:38] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:34:40] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:34:40] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:34:40] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:34:40] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:34:43] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:34:43] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:34:43] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:34:43] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:34:45] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:34:45] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:34:46] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:34:46] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:34:49] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:34:49] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:34:49] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:34:49] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:34:51] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:34:51] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:34:51] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:34:51] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:34:54] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:34:54] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:34:54] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:34:54] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:34:56] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:34:56] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:34:56] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:34:56] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:34:59] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:34:59] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:34:59] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:34:59] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:35:01] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:35:01] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:35:01] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:35:01] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:35:04] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:35:04] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:35:04] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:35:04] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:35:06] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:35:06] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:35:06] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:35:06] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:35:09] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:35:09] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:35:09] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:35:09] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:35:11] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:35:11] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:35:11] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:35:11] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:35:14] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:35:14] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:35:14] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:35:14] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:35:16] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:35:16] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:35:16] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:35:16] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:35:19] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:35:19] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:35:19] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:35:20] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:35:22] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:35:22] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:35:22] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:35:22] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:35:25] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:35:25] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:35:25] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:35:25] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:35:27] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:35:27] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:35:27] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:35:27] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:35:30] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:35:30] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:35:30] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:35:30] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:35:32] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:35:32] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:35:32] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:35:32] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:35:35] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:35:35] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:35:35] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:35:35] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:35:37] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:35:37] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:35:37] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:35:37] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:35:40] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:35:40] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:35:40] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:35:40] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:35:42] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:35:42] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:35:42] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:35:42] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:35:45] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:35:45] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:35:45] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:35:45] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:35:47] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:35:47] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:35:47] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:35:47] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:35:50] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:35:50] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:35:50] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:35:50] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:35:52] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:35:53] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:35:53] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:35:53] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:35:56] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:35:56] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:35:56] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:35:56] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:35:58] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:35:58] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:35:58] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:35:58] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:36:01] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:36:01] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:36:01] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:36:01] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:36:03] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:36:03] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:36:03] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:36:03] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:36:06] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:36:06] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:36:06] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:36:06] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:36:08] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:36:08] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:36:08] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:36:08] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:36:11] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:36:11] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:36:11] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:36:11] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:36:13] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:36:13] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:36:13] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:36:13] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:36:16] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:36:16] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:36:16] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:36:16] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:36:18] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:36:18] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:36:18] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:36:18] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:36:21] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:36:21] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:36:21] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:36:21] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:36:23] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:36:23] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:36:23] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:36:24] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:36:27] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:36:27] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:36:27] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:36:27] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:36:29] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:36:29] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:36:29] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:36:29] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:36:32] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:36:32] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:36:32] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:36:32] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:36:34] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:36:34] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:36:34] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:36:34] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:36:37] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:36:37] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:36:37] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:36:37] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:36:39] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:36:39] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:36:39] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:36:39] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:36:42] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:36:42] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:36:42] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:36:42] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:40:39] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:40:39] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:40:39] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:40:39] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:40:41] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:40:41] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:40:41] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:40:41] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:40:44] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:40:44] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:40:44] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:40:44] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:40:46] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:40:46] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:40:46] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:40:46] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:40:49] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:40:49] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:40:49] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:40:49] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:40:51] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:40:51] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:40:51] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:40:51] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:40:54] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:40:54] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:40:54] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:40:54] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:40:56] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:40:57] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:40:57] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:40:57] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:41:00] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:41:00] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:41:00] [INFO] Need to Bind the ip:10.204.5.141 on Infiniband card
+TSEOB1 [2014/05/14 10:41:00] [INFO] Execute ib_ip_config function Start
+TSEOB1 [2014/05/14 10:41:13] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:41:21] [INFO] Bind the ip:10.204.5.141 on ib Finished
+TSEOB1 [2014/05/14 10:41:21] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:41:21] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:41:23] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:41:23] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:41:23] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:41:23] [INFO] Execute ib_ip_config function Finished
+TSEOB1 [2014/05/14 10:41:23] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:41:26] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:41:26] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:41:26] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:41:26] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:41:28] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:41:28] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:41:28] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:41:28] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:41:31] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:41:31] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:41:31] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:41:31] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:41:33] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:41:33] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:41:33] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:41:33] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:41:36] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:41:36] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:41:36] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:41:36] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:41:38] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:41:38] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:41:38] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:41:38] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:41:41] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:41:41] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:41:41] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:41:42] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:41:44] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:41:44] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:41:44] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:41:44] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:41:47] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:41:47] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:41:47] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:41:47] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:41:49] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:41:49] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:41:49] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:41:49] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:41:52] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:41:52] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:41:52] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:41:52] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:41:54] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:41:54] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:41:54] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:41:54] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:41:57] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:41:57] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:41:57] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:41:57] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:41:59] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:41:59] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:41:59] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:41:59] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:42:02] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:42:02] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:42:02] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:42:02] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:42:04] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:42:04] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:42:04] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:42:04] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:42:07] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:42:07] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:42:07] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:42:07] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:42:09] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:42:09] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:42:09] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:42:09] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:42:12] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:42:12] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:42:12] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:42:12] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:42:14] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:42:15] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:42:15] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:42:15] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:42:18] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:42:18] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:42:18] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:42:18] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:42:20] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:42:20] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:42:20] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:42:20] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:42:23] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:42:23] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:42:23] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:42:23] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:42:25] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:42:25] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:42:25] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:42:25] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:42:28] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:42:28] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:42:28] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:42:28] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:42:30] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:42:30] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:42:30] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:42:30] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:42:33] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:42:33] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:42:33] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:42:33] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:42:35] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:42:35] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:42:35] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:42:35] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:42:38] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:42:38] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:42:38] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:42:38] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:42:40] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:42:40] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:42:40] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:42:40] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:42:43] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:42:43] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:42:43] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:42:43] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:42:45] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:42:45] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:42:45] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:42:45] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:42:49] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:42:49] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:42:49] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:42:49] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:42:51] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:42:51] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:42:51] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:42:51] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:42:54] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:42:54] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:42:54] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:42:54] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:42:56] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:42:56] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:42:56] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:42:56] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:42:59] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:42:59] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:42:59] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:42:59] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:43:01] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:43:01] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:43:01] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:43:01] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:43:04] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:43:04] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:43:04] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:43:04] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:43:06] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:43:06] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:43:06] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:43:06] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:43:09] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:43:09] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:43:09] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:43:09] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:43:11] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:43:11] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:43:11] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:43:11] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:43:14] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:43:14] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:43:14] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:43:14] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:43:16] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:43:16] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:43:16] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:43:16] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:43:19] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:43:19] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:43:19] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:43:19] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:43:22] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:43:22] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:43:22] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:43:22] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:43:25] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:43:25] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:43:25] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:43:25] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:43:27] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:43:27] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:43:27] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:43:27] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:43:30] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:43:30] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:43:30] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:43:30] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:43:32] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:43:32] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:43:32] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:43:32] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:43:35] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:43:35] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:43:35] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:43:35] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:43:37] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:43:37] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:43:37] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:43:37] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:43:40] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:43:40] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:43:40] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:43:40] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:43:42] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:43:42] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:43:42] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:43:42] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:43:45] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:43:45] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:43:45] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:43:45] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:43:47] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:43:47] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:43:47] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:43:47] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:43:50] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:43:50] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:43:50] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:43:50] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:43:52] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:43:53] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:43:53] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:43:53] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:43:56] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:43:56] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:43:56] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:43:56] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:43:58] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:43:58] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:43:58] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:43:58] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:44:01] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:44:01] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:44:01] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:44:01] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:44:03] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:44:03] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:44:03] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:44:03] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:44:06] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:44:06] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:44:06] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:44:06] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:44:08] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:44:08] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:44:08] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:44:08] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:44:11] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:44:11] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:44:11] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:44:11] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:44:13] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:44:13] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:44:13] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:44:13] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:44:16] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:44:16] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:44:16] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:44:16] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:44:18] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:44:18] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:44:18] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:44:18] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:44:21] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:44:21] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:44:21] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:44:21] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:44:23] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:44:23] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:44:23] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:44:23] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:44:26] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:44:26] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:44:27] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:44:27] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:44:29] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:44:29] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:44:29] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:44:29] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:44:32] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:44:32] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:44:32] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:44:32] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:44:34] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:44:34] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:44:34] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:44:34] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:44:37] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:44:37] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:44:37] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:44:37] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:44:39] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:44:39] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:44:39] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:44:39] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:44:42] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:44:42] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:44:42] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:44:42] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:44:44] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:44:44] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:44:44] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:44:44] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:44:47] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:44:47] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:44:47] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:44:47] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:44:49] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:44:49] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:44:49] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:44:49] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:44:52] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:44:52] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:44:52] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:44:52] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:44:54] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:44:54] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:44:54] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:44:54] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:44:57] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:44:57] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:44:57] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:44:57] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:44:59] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:45:00] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:45:00] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:45:00] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:45:03] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:45:03] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:45:03] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:45:03] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:45:05] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:45:05] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:45:05] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:45:05] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:45:08] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:45:08] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:45:08] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:45:08] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:45:10] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:45:10] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:45:10] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:45:10] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:45:13] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:45:13] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:45:13] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:45:13] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:45:15] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:45:15] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:45:15] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:45:15] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:45:18] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:45:18] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:45:18] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:45:18] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:45:20] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:45:20] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:45:20] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:45:20] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:45:23] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:45:23] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:45:23] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:45:23] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:45:25] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:45:25] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:45:25] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:45:25] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:45:28] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:45:28] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:45:28] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:45:28] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:45:30] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:45:30] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:45:30] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:45:31] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:45:34] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:45:34] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:45:34] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:45:34] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:45:36] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:45:36] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:45:36] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:45:36] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:45:39] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:45:39] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:45:39] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:45:39] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:45:41] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:45:41] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:45:41] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:45:41] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:45:44] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:45:44] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:45:44] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:45:44] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:45:46] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:45:46] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:45:46] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:45:46] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:45:49] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:45:49] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:45:49] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:45:49] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:45:51] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:45:51] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:45:51] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:45:51] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:45:54] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:45:54] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:45:54] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:45:54] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:45:56] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:45:56] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:45:56] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:45:56] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:45:59] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:45:59] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:45:59] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:45:59] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:46:01] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:46:01] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:46:01] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:46:01] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:46:04] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:46:04] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:46:04] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:46:05] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:46:07] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:46:07] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:46:07] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:46:07] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:46:10] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:46:10] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:46:10] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:46:10] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:46:12] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:46:12] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:46:12] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:46:12] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:46:15] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:46:15] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:46:15] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:46:15] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:46:17] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:46:17] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:46:17] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:46:17] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:46:20] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:46:20] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:46:20] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:46:20] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:46:23] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:46:23] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:46:23] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:46:23] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:46:26] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:46:26] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:46:26] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:46:26] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:46:28] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:46:28] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:46:28] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:46:28] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:46:31] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:46:31] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:46:31] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:46:31] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:46:33] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:46:33] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:46:33] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:46:33] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:46:36] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:46:36] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:46:36] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:46:36] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:46:38] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:46:38] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:46:38] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:46:38] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:46:41] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:46:41] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:46:41] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:46:41] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:46:43] [INFO] InfiniBand Network ping to 10.204.5.71 status is OK
+TSEOB1 [2014/05/14 10:46:43] [INFO] SSHD service check finished
+TSEOB1 [2014/05/14 10:46:43] [INFO] check_ib_hwstatus function Success
+TSEOB1 [2014/05/14 10:46:43] [INFO] Sleep for 3 seconds...
+
+
+TSEOB1 [2014/05/14 10:47:17] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:47:17] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:47:17] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:47:17] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:47:20] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:47:23] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:47:26] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:47:29] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:47:35] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=1 status
+TSEOB1 [2014/05/14 10:47:35] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=1 status is Active
+TSEOB1 [2014/05/14 10:47:35] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:47:35] [WARN] Local InfiniBand card check success, begins to swap Device:iba1 Port:1
+TSEOB1 [2014/05/14 10:47:35] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:47:38] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:47:46] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:47:46] [INFO] Swap finished, ib0 network work on IB device Card:(iba1) Port:(1) 
+TSEOB1 [2014/05/14 10:47:49] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:47:52] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:47:55] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:47:58] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:48:04] [INFO] Executing Local_check Start, To Check ib_card=iba1 ib_port=1 status
+TSEOB1 [2014/05/14 10:48:04] [INFO] Executing Local_check finished. The ib_card=iba1 ib_port=1 status is Active
+TSEOB1 [2014/05/14 10:48:04] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:48:04] [INFO] ALL IB device used
+TSEOB1 [2014/05/14 10:48:04] [INFO] SSHD service check finished
+
+
+
+
+
+TSEOB1 [2014/05/14 10:49:12] ***************************InfiniBand monitor begins**********************************
+TSEOB1 [2014/05/14 10:49:12] [INFO] Primary host is FIXGW01P, Alternative host FIXGW01B
+TSEOB1 [2014/05/14 10:49:12] [INFO] Execute check_ib_hwstatus function Start
+TSEOB1 [2014/05/14 10:49:12] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:49:15] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:49:18] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:49:21] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:49:24] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:49:30] [INFO] Executing Local_check Start, To Check ib_card=iba1 ib_port=1 status
+TSEOB1 [2014/05/14 10:49:30] [INFO] Executing Local_check finished. The ib_card=iba1 ib_port=1 status is Active
+TSEOB1 [2014/05/14 10:49:30] [INFO] Now IB device Card:(iba1) Port:(1)
+TSEOB1 [2014/05/14 10:49:30] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:1
+TSEOB1 [2014/05/14 10:49:30] [INFO] Detaching ib0 device...
+TSEOB1 [2014/05/14 10:49:32] [INFO] Detach ib0 success 
+TSEOB1 [2014/05/14 10:49:40] [INFO] Bind ip:10.204.5.141 on ib0 success 
+TSEOB1 [2014/05/14 10:49:40] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(1) 
+TSEOB1 [2014/05/14 10:49:43] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:49:47] [ERR] InfiniBand Network ping to 10.204.5.79 100% packet loss
+TSEOB1 [2014/05/14 10:49:50] [ERR] InfiniBand Network ping to 10.204.5.80 100% packet loss
+TSEOB1 [2014/05/14 10:49:53] [ERR] InfiniBand Network ping to 10.204.5.89 100% packet loss
+TSEOB1 [2014/05/14 10:49:59] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=1 status
+TSEOB1 [2014/05/14 10:49:59] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=1 status is Active
+TSEOB1 [2014/05/14 10:49:59] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOB1 [2014/05/14 10:49:59] [INFO] ALL IB device used
+TSEOB1 [2014/05/14 10:49:59] [INFO] SSHD service check finished

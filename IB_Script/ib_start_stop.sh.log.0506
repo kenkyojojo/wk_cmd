@@ -1,0 +1,698 @@
+
+
+TSEOT2 [2014/05/06 16:42:11] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:42:11] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:42:11] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:42:11] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:42:11] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:42:11] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:42:13] [INFO] InfiniBand Network status is correct
+TSEOT2 [2014/05/06 16:42:16] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:42:16] [INFO] check_ib_hwstatus function Success
+TSEOT2 [2014/05/06 16:42:16] [INFO] Execute check_ib_hwstatus function Finished
+TSEOT2 [2014/05/06 16:42:16] [INFO] Sleep for 3 seconds...
+
+
+TSEOT2 [2014/05/06 16:42:19] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:42:19] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:42:19] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:42:19] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:42:19] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:42:19] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:42:21] [INFO] InfiniBand Network status is correct
+TSEOT2 [2014/05/06 16:42:23] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:42:23] [INFO] check_ib_hwstatus function Success
+TSEOT2 [2014/05/06 16:42:23] [INFO] Execute check_ib_hwstatus function Finished
+TSEOT2 [2014/05/06 16:42:23] [INFO] Sleep for 3 seconds...
+
+
+TSEOT2 [2014/05/06 16:42:26] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:42:26] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:42:26] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:42:26] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:42:26] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:42:26] [INFO] Now IB device Card:(iba2) Port:(2)
+
+
+TSEOT2 [2014/05/06 16:42:39] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:42:39] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:42:39] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:42:39] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:42:39] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:42:39] [INFO] Now IB device Card:(iba2) Port:(2)
+
+
+TSEOT2 [2014/05/06 16:42:43] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:42:43] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:42:43] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:42:43] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:42:43] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:42:43] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:42:45] [INFO] InfiniBand Network status is correct
+TSEOT2 [2014/05/06 16:42:48] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:42:48] [INFO] check_ib_hwstatus function Success
+TSEOT2 [2014/05/06 16:42:48] [INFO] Execute check_ib_hwstatus function Finished
+TSEOT2 [2014/05/06 16:42:48] [INFO] Sleep for 3 seconds...
+
+
+TSEOT2 [2014/05/06 16:42:51] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:42:51] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:42:51] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:42:51] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:42:51] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:42:51] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:42:53] [INFO] InfiniBand Network status is correct
+
+
+TSEOT2 [2014/05/06 16:45:00] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:45:00] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+
+
+TSEOT2 [2014/05/06 16:45:20] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:45:20] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:45:20] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:45:20] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:45:20] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:45:20] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:45:22] [INFO] InfiniBand Network status is correct
+
+
+TSEOT2 [2014/05/06 16:45:48] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:45:48] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:45:48] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:45:48] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:45:50] [INFO] InfiniBand Network status is correct
+TSEOT2 [2014/05/06 16:45:52] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:45:52] [INFO] check_ib_hwstatus function Success
+TSEOT2 [2014/05/06 16:45:52] [INFO] Execute check_ib_hwstatus function Finished
+TSEOT2 [2014/05/06 16:45:52] [INFO] Sleep for 3 seconds...
+
+
+TSEOT2 [2014/05/06 16:45:55] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:45:55] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:45:55] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:45:55] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:45:57] [INFO] InfiniBand Network status is correct
+TSEOT2 [2014/05/06 16:46:00] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:46:00] [INFO] check_ib_hwstatus function Success
+TSEOT2 [2014/05/06 16:46:00] [INFO] Execute check_ib_hwstatus function Finished
+TSEOT2 [2014/05/06 16:46:00] [INFO] Sleep for 3 seconds...
+
+
+TSEOT2 [2014/05/06 16:46:03] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:46:03] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:46:03] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:46:03] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:46:05] [INFO] InfiniBand Network status is correct
+TSEOT2 [2014/05/06 16:46:07] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:46:07] [INFO] check_ib_hwstatus function Success
+TSEOT2 [2014/05/06 16:46:07] [INFO] Execute check_ib_hwstatus function Finished
+TSEOT2 [2014/05/06 16:46:07] [INFO] Sleep for 3 seconds...
+
+
+TSEOT2 [2014/05/06 16:46:10] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:46:10] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:46:10] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:46:10] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:46:12] [INFO] InfiniBand Network status is correct
+TSEOT2 [2014/05/06 16:46:15] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:46:15] [INFO] check_ib_hwstatus function Success
+TSEOT2 [2014/05/06 16:46:15] [INFO] Execute check_ib_hwstatus function Finished
+TSEOT2 [2014/05/06 16:46:15] [INFO] Sleep for 3 seconds...
+
+
+TSEOT2 [2014/05/06 16:46:58] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:46:58] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:46:58] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:46:58] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:46:58] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:46:58] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:47:00] [INFO] InfiniBand Network status is correct
+TSEOT2 [2014/05/06 16:47:03] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:47:03] [INFO] check_ib_hwstatus function Success
+TSEOT2 [2014/05/06 16:47:03] [INFO] Execute check_ib_hwstatus function Finished
+TSEOT2 [2014/05/06 16:47:03] [INFO] Sleep for 3 seconds...
+
+
+TSEOT2 [2014/05/06 16:47:06] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:47:06] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:47:06] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:47:06] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:47:06] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:47:06] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:47:08] [INFO] InfiniBand Network status is correct
+TSEOT2 [2014/05/06 16:47:10] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:47:10] [INFO] check_ib_hwstatus function Success
+TSEOT2 [2014/05/06 16:47:10] [INFO] Execute check_ib_hwstatus function Finished
+TSEOT2 [2014/05/06 16:47:10] [INFO] Sleep for 3 seconds...
+
+
+TSEOT2 [2014/05/06 16:47:13] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:47:13] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:47:13] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:47:13] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:47:13] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:47:14] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:47:16] [INFO] InfiniBand Network status is correct
+TSEOT2 [2014/05/06 16:47:18] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:47:18] [INFO] check_ib_hwstatus function Success
+TSEOT2 [2014/05/06 16:47:18] [INFO] Execute check_ib_hwstatus function Finished
+TSEOT2 [2014/05/06 16:47:18] [INFO] Sleep for 3 seconds...
+
+
+TSEOT2 [2014/05/06 16:47:21] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:47:21] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:47:21] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:47:21] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:47:21] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:47:21] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:47:23] [INFO] InfiniBand Network status is correct
+TSEOT2 [2014/05/06 16:47:25] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:47:25] [INFO] check_ib_hwstatus function Success
+TSEOT2 [2014/05/06 16:47:25] [INFO] Execute check_ib_hwstatus function Finished
+TSEOT2 [2014/05/06 16:47:25] [INFO] Sleep for 3 seconds...
+
+
+TSEOT2 [2014/05/06 16:47:28] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:47:28] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:47:28] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:47:28] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:47:28] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:47:28] [INFO] Now IB device Card:(iba2) Port:(2)
+
+
+TSEOT2 [2014/05/06 16:47:31] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:47:31] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:47:31] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:47:31] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:47:31] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:47:31] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:47:33] [INFO] InfiniBand Network status is correct
+TSEOT2 [2014/05/06 16:47:36] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:47:36] [INFO] check_ib_hwstatus function Success
+TSEOT2 [2014/05/06 16:47:36] [INFO] Execute check_ib_hwstatus function Finished
+TSEOT2 [2014/05/06 16:47:36] [INFO] Sleep for 3 seconds...
+
+
+TSEOT2 [2014/05/06 16:47:39] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:47:39] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:47:39] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:47:39] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 16:47:39] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 16:47:39] [INFO] Now IB device Card:(iba2) Port:(2)
+
+
+TSEOT2 [2014/05/06 16:51:58] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:51:58] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:51:58] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:51:58] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=1 status
+TSEOT2 [2014/05/06 16:51:58] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=1 status is Active
+TSEOT2 [2014/05/06 16:51:58] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 16:52:01] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 16:52:02] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 16:52:05] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 16:52:05] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 16:52:09] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:2
+TSEOT2 [2014/05/06 16:52:09] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 16:52:11] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 16:52:15] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 16:52:15] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(2) 
+TSEOT2 [2014/05/06 16:52:15] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:52:18] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 16:52:19] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:52:22] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 16:52:22] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:52:26] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:1
+TSEOT2 [2014/05/06 16:52:26] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 16:52:27] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 16:52:31] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 16:52:31] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [2014/05/06 16:52:31] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 16:52:34] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 16:52:34] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 16:52:37] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 16:52:40] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:52:43] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [2014/05/06 16:52:45] [INFO] Detach ib0 success, begins to transfer HACMP
+ERROR: The cluster is not stable, aborting.
+TSEOT2 [2014/05/06 16:52:46] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+
+
+TSEOT2 [2014/05/06 16:54:20] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 16:54:20] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 16:54:20] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 16:54:20] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=1 status
+TSEOT2 [2014/05/06 16:54:20] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=1 status is Active
+TSEOT2 [2014/05/06 16:54:20] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 16:54:23] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 16:54:23] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 16:54:26] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 16:54:26] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 16:54:30] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:2
+TSEOT2 [2014/05/06 16:54:30] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 16:54:33] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 16:54:37] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 16:54:37] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(2) 
+TSEOT2 [2014/05/06 16:54:37] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:54:40] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 16:54:40] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:54:43] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 16:54:43] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 16:54:46] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:1
+TSEOT2 [2014/05/06 16:54:46] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 16:54:49] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 16:54:53] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 16:54:53] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [2014/05/06 16:54:53] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 16:54:56] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 16:54:56] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 16:54:59] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 16:55:01] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 16:55:04] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [2014/05/06 16:55:05] [INFO] Detach ib0 success, begins to transfer HACMP
+ERROR: The cluster is not stable, aborting.
+TSEOT2 [2014/05/06 16:55:06] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+
+
+TSEOT2 [2014/05/06 17:02:45] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 17:02:45] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 17:02:45] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 17:02:45] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=1 status
+TSEOT2 [2014/05/06 17:02:45] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=1 status is Active
+TSEOT2 [2014/05/06 17:02:45] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:02:48] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:02:48] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:02:51] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:02:51] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:02:57] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:2
+TSEOT2 [2014/05/06 17:02:57] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:02:59] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:03:03] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:03:03] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(2) 
+TSEOT2 [2014/05/06 17:03:03] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:03:06] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:03:06] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:03:09] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:03:09] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:03:15] 1->iba0p1  0
+TSEOT2 [2014/05/06 17:03:15] 1->iba0p2  0
+TSEOT2 [2014/05/06 17:03:15] 1->iba2p1  1
+TSEOT2 [2014/05/06 17:03:15] 1->iba2p2  1
+TSEOT2 [2014/05/06 17:03:15] 2->iba0p1  0
+TSEOT2 [2014/05/06 17:03:15] 2->iba0p2  0
+TSEOT2 [2014/05/06 17:03:15] 2->iba2p1  1
+TSEOT2 [2014/05/06 17:03:15] .->iba2p2  1
+TSEOT2 [2014/05/06 17:03:15] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:1
+TSEOT2 [2014/05/06 17:03:15] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:03:16] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:03:20] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:03:20] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [2014/05/06 17:03:20] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:03:23] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:03:23] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:03:26] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:03:29] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 17:03:33] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [2014/05/06 17:03:35] [INFO] Detach ib0 success, begins to transfer HACMP
+ERROR: The cluster is not stable, aborting.
+TSEOT2 [2014/05/06 17:03:36] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+
+
+TSEOT2 [2014/05/06 17:08:28] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 17:08:28] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 17:08:28] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 17:08:28] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=1 status
+TSEOT2 [2014/05/06 17:08:28] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=1 status is Active
+TSEOT2 [2014/05/06 17:08:28] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:08:31] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:08:31] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:08:34] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:08:34] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:08:38] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:2
+TSEOT2 [2014/05/06 17:08:38] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:08:41] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:08:45] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:08:45] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(2) 
+TSEOT2 [2014/05/06 17:08:45] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:08:48] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:08:48] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:08:51] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:08:51] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:08:56] 1->iba0p1  0
+TSEOT2 [2014/05/06 17:08:56] 1->iba0p2  0
+TSEOT2 [2014/05/06 17:08:56] 1->iba2p1  1
+TSEOT2 [2014/05/06 17:08:56] 1->iba2p2  1
+TSEOT2 [2014/05/06 17:08:56] 2->iba0p1  0
+TSEOT2 [2014/05/06 17:08:56] 2->iba0p2  0
+TSEOT2 [2014/05/06 17:08:56] 2->iba2p1  1
+TSEOT2 [2014/05/06 17:08:56] .->iba2p2  1
+TSEOT2 [2014/05/06 17:08:56] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:1
+TSEOT2 [2014/05/06 17:08:56] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:08:59] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:09:03] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:09:03] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(1) 
+TSEOT2 [2014/05/06 17:09:03] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:09:06] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:09:06] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:09:09] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:09:11] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 17:09:14] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [2014/05/06 17:09:15] [INFO] Detach ib0 success, begins to transfer HACMP
+ERROR: The cluster is not stable, aborting.
+TSEOT2 [2014/05/06 17:09:16] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+
+
+TSEOT2 [2014/05/06 17:09:40] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 17:09:40] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 17:09:40] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 17:09:40] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 17:09:40] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 17:09:40] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:09:43] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:09:43] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:09:46] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:09:46] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:09:49] 1->iba0p1  0
+TSEOT2 [2014/05/06 17:09:49] 1->iba0p2  0
+TSEOT2 [2014/05/06 17:09:49] 1->iba2p1  0
+TSEOT2 [2014/05/06 17:09:49] 1->iba2p2  1
+TSEOT2 [2014/05/06 17:09:49] 2->iba0p1  0
+TSEOT2 [2014/05/06 17:09:49] 2->iba0p2  0
+TSEOT2 [2014/05/06 17:09:49] 2->iba2p1  0
+TSEOT2 [2014/05/06 17:09:49] .->iba2p2  1
+TSEOT2 [2014/05/06 17:09:49] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:1
+TSEOT2 [2014/05/06 17:09:49] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:09:52] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:09:56] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:09:56] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [2014/05/06 17:09:56] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:09:59] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:09:59] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:10:02] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:10:02] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:10:06] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:1
+TSEOT2 [2014/05/06 17:10:06] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:10:08] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:10:12] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:10:12] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(1) 
+TSEOT2 [2014/05/06 17:10:12] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:10:15] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:10:15] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:10:18] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:10:20] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 17:10:25] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [2014/05/06 17:10:26] [INFO] Detach ib0 success, begins to transfer HACMP
+ERROR: The cluster is not stable, aborting.
+TSEOT2 [2014/05/06 17:10:27] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+
+
+TSEOT2 [2014/05/06 17:11:12] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 17:11:13] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 17:11:13] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 17:11:13] [INFO] Executing Local_check Start, To Check ib_card=iba2 ib_port=2 status
+TSEOT2 [2014/05/06 17:11:13] [INFO] Executing Local_check finished. The ib_card=iba2 ib_port=2 status is Active
+TSEOT2 [2014/05/06 17:11:13] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:11:16] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:11:16] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:11:19] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:11:19] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:11:24] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:1
+TSEOT2 [2014/05/06 17:11:24] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:11:26] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:11:31] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:11:31] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [2014/05/06 17:11:31] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:11:34] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:11:34] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:11:37] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:11:37] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:11:42] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:1
+TSEOT2 [2014/05/06 17:11:42] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:11:43] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:11:47] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:11:47] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(1) 
+TSEOT2 [2014/05/06 17:11:48] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:11:51] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:11:51] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:11:54] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:11:56] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 17:11:58] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [2014/05/06 17:12:00] [INFO] Detach ib0 success, begins to transfer HACMP
+ERROR: The cluster is not stable, aborting.
+TSEOT2 [2014/05/06 17:12:01] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+
+
+TSEOT2 [2014/05/06 17:12:28] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 17:12:28] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 17:12:28] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 17:12:28] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=2 status
+TSEOT2 [2014/05/06 17:12:28] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=2 status is Active
+TSEOT2 [2014/05/06 17:12:28] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:12:32] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:12:32] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:12:35] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:12:35] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:12:40] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:1
+TSEOT2 [2014/05/06 17:12:40] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:12:42] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:12:46] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:12:46] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [2014/05/06 17:12:47] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:12:50] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:12:50] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:12:53] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:12:53] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:12:57] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:2
+TSEOT2 [2014/05/06 17:12:57] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:12:59] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:13:03] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:13:03] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(2) 
+TSEOT2 [2014/05/06 17:13:04] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:13:07] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:13:07] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:13:10] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:13:12] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 17:13:16] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [2014/05/06 17:13:18] [INFO] Detach ib0 success, begins to transfer HACMP
+ERROR: The cluster is not stable, aborting.
+TSEOT2 [2014/05/06 17:13:19] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+
+
+TSEOT2 [2014/05/06 17:14:31] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 17:14:31] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 17:14:31] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 17:14:31] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=2 status
+TSEOT2 [2014/05/06 17:14:31] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=2 status is Active
+TSEOT2 [2014/05/06 17:14:31] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:14:34] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:14:34] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:14:37] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:14:37] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:14:41] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:1
+TSEOT2 [2014/05/06 17:14:41] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:14:44] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:14:48] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:14:48] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(1) 
+TSEOT2 [2014/05/06 17:14:48] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:14:51] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:14:51] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:14:54] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:14:54] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:14:58] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:1
+TSEOT2 [2014/05/06 17:14:58] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:15:00] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:15:04] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:15:04] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [2014/05/06 17:15:04] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:15:07] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:15:07] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:15:10] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:15:12] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 17:15:15] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [2014/05/06 17:15:16] [INFO] Detach ib0 success, begins to transfer HACMP
+ERROR: The cluster is not stable, aborting.
+TSEOT2 [2014/05/06 17:15:17] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+
+
+TSEOT2 [2014/05/06 17:15:31] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 17:15:31] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 17:15:31] [INFO] Need to Bind the ip:192.168.1.1 on Infiniband card
+TSEOT2 [2014/05/06 17:15:31] [INFO] Execute ib_ip_config function Start
+TSEOT2 [2014/05/06 17:15:33] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+
+
+TSEOT2 [2014/05/06 17:16:13] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 17:16:13] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 17:16:13] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 17:16:13] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=2 status
+TSEOT2 [2014/05/06 17:16:13] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=2 status is Active
+TSEOT2 [2014/05/06 17:16:13] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:16:16] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:16:16] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:16:22] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:1
+TSEOT2 [2014/05/06 17:16:22] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:16:24] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:16:28] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:16:28] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(1) 
+TSEOT2 [2014/05/06 17:16:28] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:16:31] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:16:31] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:16:37] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:1
+TSEOT2 [2014/05/06 17:16:37] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:16:38] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:16:42] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:16:42] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [2014/05/06 17:16:42] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:16:45] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:16:45] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:16:49] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:2
+TSEOT2 [2014/05/06 17:16:49] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:16:51] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:16:55] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:16:55] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(2) 
+TSEOT2 [2014/05/06 17:16:55] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:16:58] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:17:00] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 17:17:05] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [2014/05/06 17:17:06] [INFO] Detach ib0 success, begins to transfer HACMP
+ERROR: The cluster is not stable, aborting.
+TSEOT2 [2014/05/06 17:17:07] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+
+
+TSEOT2 [2014/05/06 17:19:00] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 17:19:00] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 17:19:00] [INFO] Need to Bind the ip:192.168.1.1 on Infiniband card
+TSEOT2 [2014/05/06 17:19:00] [INFO] Execute ib_ip_config function Start
+TSEOT2 [2014/05/06 17:19:03] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:19:08] [INFO] Bind the ip:192.168.1.1 on ib Finished
+TSEOT2 [2014/05/06 17:19:08] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 17:19:08] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=1 status
+TSEOT2 [2014/05/06 17:19:08] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=1 status is Active
+TSEOT2 [2014/05/06 17:19:08] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:19:11] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:19:11] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:19:16] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:2
+TSEOT2 [2014/05/06 17:19:16] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:19:17] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:19:22] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:19:22] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(2) 
+TSEOT2 [2014/05/06 17:19:22] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:19:25] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:19:25] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:19:29] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:1
+TSEOT2 [2014/05/06 17:19:29] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:19:30] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:19:34] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:19:34] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [2014/05/06 17:19:35] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:19:38] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:19:38] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:19:43] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:2
+TSEOT2 [2014/05/06 17:19:43] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:19:44] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:19:48] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:19:48] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(2) 
+TSEOT2 [2014/05/06 17:19:48] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:19:51] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:19:51] [INFO] Now IB device Card:(iba2) Port:(2)
+TSEOT2 [2014/05/06 17:19:56] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:1
+TSEOT2 [2014/05/06 17:19:56] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:19:57] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:20:01] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:20:01] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [2014/05/06 17:20:01] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:20:04] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:20:07] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 17:20:10] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [2014/05/06 17:20:12] [INFO] Detach ib0 success, begins to transfer HACMP
+ERROR: The cluster is not stable, aborting.
+TSEOT2 [2014/05/06 17:20:13] [ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated...
+
+
+TSEOT2 [2014/05/06 17:26:25] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 17:26:25] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 17:26:25] [INFO] Need to Bind the ip:192.168.1.1 on Infiniband card
+TSEOT2 [2014/05/06 17:26:25] [INFO] Execute ib_ip_config function Start
+TSEOT2 [2014/05/06 17:26:29] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:26:33] [INFO] Bind the ip:192.168.1.1 on ib Finished
+TSEOT2 [2014/05/06 17:26:33] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 17:26:33] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=1 status
+TSEOT2 [2014/05/06 17:26:33] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=1 status is Active
+TSEOT2 [2014/05/06 17:26:33] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:26:36] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:26:36] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:26:39] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:26:39] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:26:46] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:2
+TSEOT2 [2014/05/06 17:26:46] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:26:48] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:26:52] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:26:52] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(2) 
+TSEOT2 [2014/05/06 17:26:52] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:26:55] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:26:55] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:26:59] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:26:59] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:27:05] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:1
+TSEOT2 [2014/05/06 17:27:05] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:27:07] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:27:11] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:27:11] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [2014/05/06 17:27:11] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:27:14] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:27:15] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:27:18] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:27:20] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 17:29:44] ***************************InfiniBand monitor stop************************************
+TSEOT2 [2014/05/06 17:29:44] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:29:46] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:29:46] [INFO] Detach function execute Success
+TSEOT2 [2014/05/06 17:29:46] [INFO] Terminated ib_start.sh script start
+TSEOT2 [2014/05/06 17:29:46] [INFO] The ib_start.sh script PID already is empty
+TSEOT2 [2014/05/06 17:29:46] [INFO] Terminated ib_start.sh script Success
+
+
+TSEOT2 [2014/05/06 17:31:12] ***************************InfiniBand monitor begins**********************************
+TSEOT2 [2014/05/06 17:31:12] [INFO] Primary host is test_ha_1, Alternative host test_ha_2
+TSEOT2 [2014/05/06 17:31:13] [INFO] Need to Bind the ip:192.168.1.1 on Infiniband card
+TSEOT2 [2014/05/06 17:31:13] [INFO] Execute ib_ip_config function Start
+TSEOT2 [2014/05/06 17:31:17] [INFO] Bind ip on ib0 device from device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:31:21] [INFO] Bind the ip:192.168.1.1 on ib Finished
+TSEOT2 [2014/05/06 17:31:21] [INFO] Execute check_ib_hwstatus function Start
+TSEOT2 [2014/05/06 17:31:21] [INFO] Executing Local_check Start, To Check ib_card=iba0 ib_port=1 status
+TSEOT2 [2014/05/06 17:31:21] [INFO] Executing Local_check finished. The ib_card=iba0 ib_port=1 status is Active
+TSEOT2 [2014/05/06 17:31:21] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:31:24] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:31:24] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:31:27] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:31:27] [INFO] Now IB device Card:(iba0) Port:(1)
+TSEOT2 [2014/05/06 17:31:34] [WARN] Local InfiniBand card check success, begins to swap Device:iba0 Port:2
+TSEOT2 [2014/05/06 17:31:34] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:31:36] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:31:40] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:31:40] [INFO] Swap finished, ib0 network work on IB device Card:(iba0) Port:(2) 
+TSEOT2 [2014/05/06 17:31:40] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:31:43] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:31:43] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:31:46] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:31:46] [INFO] Now IB device Card:(iba0) Port:(2)
+TSEOT2 [2014/05/06 17:31:53] [WARN] Local InfiniBand card check success, begins to swap Device:iba2 Port:1
+TSEOT2 [2014/05/06 17:31:53] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:31:55] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:31:59] [INFO] Bind ip:192.168.1.1 on ib0 success 
+TSEOT2 [2014/05/06 17:31:59] [INFO] Swap finished, ib0 network work on IB device Card:(iba2) Port:(1) 
+TSEOT2 [2014/05/06 17:31:59] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:32:02] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:32:02] [INFO] Now IB device Card:(iba2) Port:(1)
+TSEOT2 [2014/05/06 17:32:05] [ERR] InfiniBand Network 100% packet loss
+TSEOT2 [2014/05/06 17:32:08] [INFO] SSHD service check finished
+TSEOT2 [2014/05/06 17:32:10] [WARN] test_ha_2 iba0 alive, begins to transfer IP 192.168.1.1 from test_ha_1 to test_ha_2 ...
+TSEOT2 [2014/05/06 17:32:12] [INFO] Detach ib0 success, begins to transfer HACMP
+TSEOT2 [2014/05/06 17:32:14] ***************************InfiniBand monitor stop************************************
+TSEOT2 [2014/05/06 17:32:14] [INFO] Detaching ib0 device...
+TSEOT2 [2014/05/06 17:32:14] [INFO] Detach ib0 success 
+TSEOT2 [2014/05/06 17:32:14] [INFO] Detach function execute Success
+TSEOT2 [2014/05/06 17:32:14] [INFO] Terminated ib_start.sh script start
+TSEOT2 [2014/05/06 17:32:14] [INFO] The ib_start.sh script PID already is empty
+TSEOT2 [2014/05/06 17:32:14] [INFO] Terminated ib_start.sh script Success
+TSEOT2 [2014/05/06 17:32:44] [INFO] HACMP transfer completed, script terminated...

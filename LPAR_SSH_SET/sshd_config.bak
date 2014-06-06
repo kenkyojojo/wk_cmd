@@ -1,0 +1,10 @@
+AllowUsers root@10.199.168.154
+AllowUsers seadm@10.199.168.154
+AllowUsers se01@10.199.168.154
+AllowUsers se02@10.199.168.154
+AllowUsers exadm@10.199.168.154
+AllowUsers ex11@10.199.168.154
+AllowUsers ex14@10.199.168.154
+AllowUsers ex16@10.199.168.154
+AllowUsers twse@10.199.168.154
+AllowUsers useradm@10.199.168.154

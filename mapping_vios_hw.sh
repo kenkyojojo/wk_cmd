@@ -1,0 +1,1 @@
+for i in (lshwres -m Server-9179-MHB-SN06B83FP  -r io  --rsubtype slot  -F drc_index,unit_phys_loc|grep 897| cut -c1-8); do echo "chhwres -r io -m Server-9179-MHB-SN06B83FP -o a -l $i --id 1"; sleep 2; done

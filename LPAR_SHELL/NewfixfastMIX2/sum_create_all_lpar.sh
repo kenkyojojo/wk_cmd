@@ -1,0 +1,13 @@
+#!/usr/bin/ksh
+./create_FIX1B.sh
+./create_FIX2P.sh
+./create_TEMP.sh
+./create_TS2.sh
+./create_WK.sh
+./create_MDS2.sh
+./create_LOG2.sh
+./create_DAR2.sh
+./create_DAP2.sh
+#VIOS
+./create_vios1.sh
+./create_vios2.sh

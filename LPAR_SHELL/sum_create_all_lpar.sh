@@ -1,0 +1,13 @@
+#!/usr/bin/ksh
+./create_MDS1.sh
+./create_MDS2.sh
+./create_LOG1.sh
+./create_LOG2.sh
+./create_DAR1.sh
+./create_DAR2.sh
+./create_DAP1.sh
+./create_DAP2.sh
+./create_NIM.sh
+./create_WK.sh
+./create_vios1.sh
+./create_vios2.sh

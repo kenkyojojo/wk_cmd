@@ -1,0 +1,9 @@
+#!/usr/bin/ksh
+./create_FIXGW.sh
+./create_QCGW.sh
+./create_QCTS.sh
+./create_Trad.sh
+./create_NIM.sh
+./create_WK.sh
+./create_vios1.sh
+./create_vios2.sh

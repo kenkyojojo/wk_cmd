@@ -1,0 +1,14 @@
+Virtual_eth_adapters: 901/0/2//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 902/0/12//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 903/0/4//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 904/0/5//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 905/0/6//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 906/0/101//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 907/0/111//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 908/0/1002//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 909/0/1012//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 910/0/1004//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 911/0/1005//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 912/0/1006//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 913/0/1101//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 914/0/1111//0/0/ETHERNET0//all/none

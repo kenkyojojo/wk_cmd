@@ -1,0 +1,10 @@
+#!/usr/bin/ksh
+manage_disk_drivers -d DS5100 -o AIX_SDDAPPCM
+shutdown -Fr
+
+#!/usr/bin/ksh
+bootlist -m normal hdisk0 pathid=0,1 hdisk1 pathid=2,3
+bosboot -a
+
+
+/usr/sbin/mktcpip -h DAP1-28 -a 10.240.102.28 -m '255.255.255.0' -i en0;/usr/sbin/mktcpip -h DAP1-28 -a 10.204.102.28 -m '255.255.255.0' -i en1 -g '10.204.102.254';chdev -l inet0 -a route="host,-hopcount,0,,,,,,-static,10.71.0.0,10.204.102.254"

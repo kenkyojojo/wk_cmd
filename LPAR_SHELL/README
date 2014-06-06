@@ -1,0 +1,6 @@
+sum_create_all_lpar.sh
+功能：整合所有Create LPAR的SHELL，建立各LPAR 設定檔內容,並存檔為 lpar_profile.cfg, vios_profile.cfg, nv_vios_profile.cfg 三個檔案。
+執行方式：直接執行及可。
+執行SHELL順序：MDS->LOG->DAR->DAP->NIM->WK->VIOS1->VIOS2
+_____________________________
+

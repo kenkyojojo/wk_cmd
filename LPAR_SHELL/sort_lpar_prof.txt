@@ -1,0 +1,2218 @@
+###########################Start################################
+lpar_name: MDS1
+Min_mem: 12288
+Desired_men: 12288
+Max_men: 24576
+Proc_mode: shared
+Min_proc_unit: 0.5
+Desired_proc_unit: 0.5
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/101//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/2/c0507605d1310000,c0507605d1310001/1
+Virtual_fc_adapters: 7/client/2/VIOS2/2/c0507605d1310002,c0507605d1310003/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: MDS2
+Min_mem: 12288
+Desired_men: 12288
+Max_men: 24576
+Proc_mode: shared
+Min_proc_unit: 0.5
+Desired_proc_unit: 0.5
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/111//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/3/c0507605d1310004,c0507605d1310005/1
+Virtual_fc_adapters: 7/client/2/VIOS2/3/c0507605d1310006,c0507605d1310007/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: LOG1
+Min_mem: 6144
+Desired_men: 6144
+Max_men: 12288
+Proc_mode: shared
+Min_proc_unit: 0.2
+Desired_proc_unit: 0.2
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/101//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 6/0/6//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 7/client/1/VIOS1/4/c0507605d131000a,c0507605d131000b/1
+Virtual_fc_adapters: 8/client/2/VIOS2/4/c0507605d1310008,c0507605d1310009/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: LOG2
+Min_mem: 6144
+Desired_men: 6144
+Max_men: 12288
+Proc_mode: shared
+Min_proc_unit: 0.2
+Desired_proc_unit: 0.2
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/111//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 6/0/6//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 7/client/1/VIOS1/5/c0507605d131000e,c0507605d131000f/1
+Virtual_fc_adapters: 8/client/2/VIOS2/5/c0507605d131000c,c0507605d131000d/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAR1-1
+Min_mem: 12288
+Desired_men: 12288
+Max_men: 24576
+Proc_mode: shared
+Min_proc_unit: 0.5
+Desired_proc_unit: 0.5
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/6/c0507605d1310010,c0507605d1310011/1
+Virtual_fc_adapters: 7/client/2/VIOS2/6/c0507605d1310012,c0507605d1310013/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAR1-2
+Min_mem: 12288
+Desired_men: 12288
+Max_men: 24576
+Proc_mode: shared
+Min_proc_unit: 0.5
+Desired_proc_unit: 0.5
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/7/c0507605d1310014,c0507605d1310015/1
+Virtual_fc_adapters: 7/client/2/VIOS2/7/c0507605d1310016,c0507605d1310017/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAR1-3
+Min_mem: 12288
+Desired_men: 12288
+Max_men: 24576
+Proc_mode: shared
+Min_proc_unit: 0.5
+Desired_proc_unit: 0.5
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/8/c0507605d1310018,c0507605d1310019/1
+Virtual_fc_adapters: 7/client/2/VIOS2/8/c0507605d131001a,c0507605d131001b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAR1-4
+Min_mem: 12288
+Desired_men: 12288
+Max_men: 24576
+Proc_mode: shared
+Min_proc_unit: 0.5
+Desired_proc_unit: 0.5
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/9/c0507605d131001c,c0507605d131001d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/9/c0507605d131001e,c0507605d131001f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAR2-1
+Min_mem: 12288
+Desired_men: 12288
+Max_men: 24576
+Proc_mode: shared
+Min_proc_unit: 0.5
+Desired_proc_unit: 0.5
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/10/c0507605d1310020,c0507605d1310021/1
+Virtual_fc_adapters: 7/client/2/VIOS2/10/c0507605d1310022,c0507605d1310023/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAR2-2
+Min_mem: 12288
+Desired_men: 12288
+Max_men: 24576
+Proc_mode: shared
+Min_proc_unit: 0.5
+Desired_proc_unit: 0.5
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/11/c0507605d1310024,c0507605d1310025/1
+Virtual_fc_adapters: 7/client/2/VIOS2/11/c0507605d1310026,c0507605d1310027/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAR2-3
+Min_mem: 12288
+Desired_men: 12288
+Max_men: 24576
+Proc_mode: shared
+Min_proc_unit: 0.5
+Desired_proc_unit: 0.5
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/12/c0507605d1310028,c0507605d1310029/1
+Virtual_fc_adapters: 7/client/2/VIOS2/12/c0507605d131002a,c0507605d131002b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAR2-4
+Min_mem: 12288
+Desired_men: 12288
+Max_men: 24576
+Proc_mode: shared
+Min_proc_unit: 0.5
+Desired_proc_unit: 0.5
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/13/c0507605d131002c,c0507605d131002d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/13/c0507605d131002e,c0507605d131002f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-1
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/14/c0507605d1310030,c0507605d1310031/1
+Virtual_fc_adapters: 7/client/2/VIOS2/14/c0507605d1310032,c0507605d1310033/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-2
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/15/c0507605d1310034,c0507605d1310035/1
+Virtual_fc_adapters: 7/client/2/VIOS2/15/c0507605d1310036,c0507605d1310037/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-3
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/16/c0507605d1310038,c0507605d1310039/1
+Virtual_fc_adapters: 7/client/2/VIOS2/16/c0507605d131003a,c0507605d131003b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-4
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/17/c0507605d131003c,c0507605d131003d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/17/c0507605d131003e,c0507605d131003f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-5
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/18/c0507605d1310040,c0507605d1310041/1
+Virtual_fc_adapters: 7/client/2/VIOS2/18/c0507605d1310042,c0507605d1310043/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-6
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/19/c0507605d1310044,c0507605d1310045/1
+Virtual_fc_adapters: 7/client/2/VIOS2/19/c0507605d1310046,c0507605d1310047/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-7
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/20/c0507605d1310048,c0507605d1310049/1
+Virtual_fc_adapters: 7/client/2/VIOS2/20/c0507605d131004a,c0507605d131004b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-8
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/21/c0507605d131004c,c0507605d131004d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/21/c0507605d131004e,c0507605d131004f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-9
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/22/c0507605d1310050,c0507605d1310051/1
+Virtual_fc_adapters: 7/client/2/VIOS2/22/c0507605d1310052,c0507605d1310053/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-10
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/23/c0507605d1310054,c0507605d1310055/1
+Virtual_fc_adapters: 7/client/2/VIOS2/23/c0507605d1310056,c0507605d1310057/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-11
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/24/c0507605d1310058,c0507605d1310059/1
+Virtual_fc_adapters: 7/client/2/VIOS2/24/c0507605d131005a,c0507605d131005b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-12
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/25/c0507605d131005c,c0507605d131005d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/25/c0507605d131005e,c0507605d131005f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-13
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/26/c0507605d1310060,c0507605d1310061/1
+Virtual_fc_adapters: 7/client/2/VIOS2/26/c0507605d1310062,c0507605d1310063/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-14
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/27/c0507605d1310064,c0507605d1310065/1
+Virtual_fc_adapters: 7/client/2/VIOS2/27/c0507605d1310066,c0507605d1310067/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-15
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/28/c0507605d1310068,c0507605d1310069/1
+Virtual_fc_adapters: 7/client/2/VIOS2/28/c0507605d131006a,c0507605d131006b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-16
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/29/c0507605d131006c,c0507605d131006d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/29/c0507605d131006e,c0507605d131006f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-17
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/30/c0507605d1310070,c0507605d1310071/1
+Virtual_fc_adapters: 7/client/2/VIOS2/30/c0507605d1310072,c0507605d1310073/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-18
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/31/c0507605d1310074,c0507605d1310075/1
+Virtual_fc_adapters: 7/client/2/VIOS2/31/c0507605d1310076,c0507605d1310077/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-19
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/32/c0507605d1310078,c0507605d1310079/1
+Virtual_fc_adapters: 7/client/2/VIOS2/32/c0507605d131007a,c0507605d131007b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-20
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/33/c0507605d131007c,c0507605d131007d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/33/c0507605d131007e,c0507605d131007f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-21
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/34/c0507605d1310080,c0507605d1310081/1
+Virtual_fc_adapters: 7/client/2/VIOS2/34/c0507605d1310082,c0507605d1310083/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-22
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/35/c0507605d1310084,c0507605d1310085/1
+Virtual_fc_adapters: 7/client/2/VIOS2/35/c0507605d1310086,c0507605d1310087/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-23
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/36/c0507605d1310088,c0507605d1310089/1
+Virtual_fc_adapters: 7/client/2/VIOS2/36/c0507605d131008a,c0507605d131008b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-24
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/37/c0507605d131008c,c0507605d131008d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/37/c0507605d131008e,c0507605d131008f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-25
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/38/c0507605d1310090,c0507605d1310091/1
+Virtual_fc_adapters: 7/client/2/VIOS2/38/c0507605d1310092,c0507605d1310093/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-26
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/39/c0507605d1310094,c0507605d1310095/1
+Virtual_fc_adapters: 7/client/2/VIOS2/39/c0507605d1310096,c0507605d1310097/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-27
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/40/c0507605d1310098,c0507605d1310099/1
+Virtual_fc_adapters: 7/client/2/VIOS2/40/c0507605d131009a,c0507605d131009b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-28
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/41/c0507605d131009c,c0507605d131009d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/41/c0507605d131009e,c0507605d131009f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-29
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/42/c0507605d13100a0,c0507605d13100a1/1
+Virtual_fc_adapters: 7/client/2/VIOS2/42/c0507605d13100a2,c0507605d13100a3/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-30
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/43/c0507605d13100a4,c0507605d13100a5/1
+Virtual_fc_adapters: 7/client/2/VIOS2/43/c0507605d13100a6,c0507605d13100a7/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-31
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/44/c0507605d13100a8,c0507605d13100a9/1
+Virtual_fc_adapters: 7/client/2/VIOS2/44/c0507605d13100aa,c0507605d13100ab/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-32
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/45/c0507605d13100ac,c0507605d13100ad/1
+Virtual_fc_adapters: 7/client/2/VIOS2/45/c0507605d13100ae,c0507605d13100af/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-33
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/46/c0507605d13100b0,c0507605d13100b1/1
+Virtual_fc_adapters: 7/client/2/VIOS2/46/c0507605d13100b2,c0507605d13100b3/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-34
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/47/c0507605d13100b4,c0507605d13100b5/1
+Virtual_fc_adapters: 7/client/2/VIOS2/47/c0507605d13100b6,c0507605d13100b7/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-35
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/48/c0507605d13100b8,c0507605d13100b9/1
+Virtual_fc_adapters: 7/client/2/VIOS2/48/c0507605d13100ba,c0507605d13100bb/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-36
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/49/c0507605d13100bc,c0507605d13100bd/1
+Virtual_fc_adapters: 7/client/2/VIOS2/49/c0507605d13100be,c0507605d13100bf/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-37
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/50/c0507605d13100c0,c0507605d13100c1/1
+Virtual_fc_adapters: 7/client/2/VIOS2/50/c0507605d13100c2,c0507605d13100c3/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-38
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/51/c0507605d13100c4,c0507605d13100c5/1
+Virtual_fc_adapters: 7/client/2/VIOS2/51/c0507605d13100c6,c0507605d13100c7/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-39
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/52/c0507605d13100c8,c0507605d13100c9/1
+Virtual_fc_adapters: 7/client/2/VIOS2/52/c0507605d13100ca,c0507605d13100cb/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP1-40
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/2//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/53/c0507605d13100cc,c0507605d13100cd/1
+Virtual_fc_adapters: 7/client/2/VIOS2/53/c0507605d13100ce,c0507605d13100cf/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-1
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/54/c0507605d13100d0,c0507605d13100d1/1
+Virtual_fc_adapters: 7/client/2/VIOS2/54/c0507605d13100d2,c0507605d13100d3/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-2
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/55/c0507605d13100d4,c0507605d13100d5/1
+Virtual_fc_adapters: 7/client/2/VIOS2/55/c0507605d13100d6,c0507605d13100d7/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-3
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/56/c0507605d13100d8,c0507605d13100d9/1
+Virtual_fc_adapters: 7/client/2/VIOS2/56/c0507605d13100da,c0507605d13100db/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-4
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/57/c0507605d13100dc,c0507605d13100dd/1
+Virtual_fc_adapters: 7/client/2/VIOS2/57/c0507605d13100de,c0507605d13100df/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-5
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/58/c0507605d13100e0,c0507605d13100e1/1
+Virtual_fc_adapters: 7/client/2/VIOS2/58/c0507605d13100e2,c0507605d13100e3/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-6
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/59/c0507605d13100e4,c0507605d13100e5/1
+Virtual_fc_adapters: 7/client/2/VIOS2/59/c0507605d13100e6,c0507605d13100e7/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-7
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/60/c0507605d13100e8,c0507605d13100e9/1
+Virtual_fc_adapters: 7/client/2/VIOS2/60/c0507605d13100ea,c0507605d13100eb/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-8
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/61/c0507605d13100ec,c0507605d13100ed/1
+Virtual_fc_adapters: 7/client/2/VIOS2/61/c0507605d13100ee,c0507605d13100ef/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-9
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/62/c0507605d13100f0,c0507605d13100f1/1
+Virtual_fc_adapters: 7/client/2/VIOS2/62/c0507605d13100f2,c0507605d13100f3/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-10
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/63/c0507605d13100f4,c0507605d13100f5/1
+Virtual_fc_adapters: 7/client/2/VIOS2/63/c0507605d13100f6,c0507605d13100f7/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-11
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/64/c0507605d13100f8,c0507605d13100f9/1
+Virtual_fc_adapters: 7/client/2/VIOS2/64/c0507605d13100fa,c0507605d13100fb/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-12
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/65/c0507605d13100fc,c0507605d13100fd/1
+Virtual_fc_adapters: 7/client/2/VIOS2/65/c0507605d13100fe,c0507605d13100ff/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-13
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/66/c0507605d1310100,c0507605d1310101/1
+Virtual_fc_adapters: 7/client/2/VIOS2/66/c0507605d1310102,c0507605d1310103/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-14
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/67/c0507605d1310104,c0507605d1310105/1
+Virtual_fc_adapters: 7/client/2/VIOS2/67/c0507605d1310106,c0507605d1310107/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-15
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/68/c0507605d1310108,c0507605d1310109/1
+Virtual_fc_adapters: 7/client/2/VIOS2/68/c0507605d131010a,c0507605d131010b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-16
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/69/c0507605d131010c,c0507605d131010d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/69/c0507605d131010e,c0507605d131010f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-17
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/70/c0507605d1310110,c0507605d1310111/1
+Virtual_fc_adapters: 7/client/2/VIOS2/70/c0507605d1310112,c0507605d1310113/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-18
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/71/c0507605d1310114,c0507605d1310115/1
+Virtual_fc_adapters: 7/client/2/VIOS2/71/c0507605d1310116,c0507605d1310117/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-19
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/72/c0507605d1310118,c0507605d1310119/1
+Virtual_fc_adapters: 7/client/2/VIOS2/72/c0507605d131011a,c0507605d131011b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-20
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/73/c0507605d131011c,c0507605d131011d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/73/c0507605d131011e,c0507605d131011f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-21
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/74/c0507605d1310120,c0507605d1310121/1
+Virtual_fc_adapters: 7/client/2/VIOS2/74/c0507605d1310122,c0507605d1310123/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-22
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/75/c0507605d1310124,c0507605d1310125/1
+Virtual_fc_adapters: 7/client/2/VIOS2/75/c0507605d1310126,c0507605d1310127/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-23
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/76/c0507605d1310128,c0507605d1310129/1
+Virtual_fc_adapters: 7/client/2/VIOS2/76/c0507605d131012a,c0507605d131012b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-24
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/77/c0507605d131012c,c0507605d131012d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/77/c0507605d131012e,c0507605d131012f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-25
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/78/c0507605d1310130,c0507605d1310131/1
+Virtual_fc_adapters: 7/client/2/VIOS2/78/c0507605d1310132,c0507605d1310133/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-26
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/79/c0507605d1310134,c0507605d1310135/1
+Virtual_fc_adapters: 7/client/2/VIOS2/79/c0507605d1310136,c0507605d1310137/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-27
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/80/c0507605d1310138,c0507605d1310139/1
+Virtual_fc_adapters: 7/client/2/VIOS2/80/c0507605d131013a,c0507605d131013b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-28
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/81/c0507605d131013c,c0507605d131013d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/81/c0507605d131013e,c0507605d131013f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-29
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/82/c0507605d1310140,c0507605d1310141/1
+Virtual_fc_adapters: 7/client/2/VIOS2/82/c0507605d1310142,c0507605d1310143/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-30
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/83/c0507605d1310144,c0507605d1310145/1
+Virtual_fc_adapters: 7/client/2/VIOS2/83/c0507605d1310146,c0507605d1310147/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-31
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/84/c0507605d1310148,c0507605d1310149/1
+Virtual_fc_adapters: 7/client/2/VIOS2/84/c0507605d131014a,c0507605d131014b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-32
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/85/c0507605d131014c,c0507605d131014d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/85/c0507605d131014e,c0507605d131014f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-33
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/86/c0507605d1310150,c0507605d1310151/1
+Virtual_fc_adapters: 7/client/2/VIOS2/86/c0507605d1310152,c0507605d1310153/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-34
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/87/c0507605d1310154,c0507605d1310155/1
+Virtual_fc_adapters: 7/client/2/VIOS2/87/c0507605d1310156,c0507605d1310157/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-35
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/88/c0507605d1310158,c0507605d1310159/1
+Virtual_fc_adapters: 7/client/2/VIOS2/88/c0507605d131015a,c0507605d131015b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-36
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/89/c0507605d131015c,c0507605d131015d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/89/c0507605d131015e,c0507605d131015f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-37
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/90/c0507605d1310160,c0507605d1310161/1
+Virtual_fc_adapters: 7/client/2/VIOS2/90/c0507605d1310162,c0507605d1310163/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-38
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/91/c0507605d1310164,c0507605d1310165/1
+Virtual_fc_adapters: 7/client/2/VIOS2/91/c0507605d1310166,c0507605d1310167/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-39
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/92/c0507605d1310168,c0507605d1310169/1
+Virtual_fc_adapters: 7/client/2/VIOS2/92/c0507605d131016a,c0507605d131016b/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: DAP2-40
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/102//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/12//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 4/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 5/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 6/client/1/VIOS1/93/c0507605d131016c,c0507605d131016d/1
+Virtual_fc_adapters: 7/client/2/VIOS2/93/c0507605d131016e,c0507605d131016f/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: NIM_SERVER
+Min_mem: 8192
+Desired_men: 12288
+Max_men: 24576
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.6
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 4/client/1/VIOS1/94/c0507605d1310170,c0507605d1310171/1
+Virtual_fc_adapters: 5/client/2/VIOS2/94/c0507605d1310172,c0507605d1310173/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: WORKING_LPAR
+Min_mem: 3072
+Desired_men: 3072
+Max_men: 6144
+Proc_mode: shared
+Min_proc_unit: 0.3
+Desired_proc_unit: 0.3
+Max_proc_units: 1.0
+Min_procs_VP: 1
+Desired_procs_VP: 1
+Max_procs_VP: 2
+Virtual_eth_adapters: 2/0/4//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 3/0/5//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 4/client/1/VIOS1/95/c0507605d1310174,c0507605d1310175/1
+Virtual_fc_adapters: 5/client/2/VIOS2/95/c0507605d1310176,c0507605d1310177/1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: VIOS1
+Min_mem: 4096
+Desired_men: 8192
+Max_men: 16384
+Proc_mode: shared
+Min_proc_unit: 0.6
+Desired_proc_unit: 1.0
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 2
+Max_procs_VP: 4
+Virtual_eth_adapters: 901/0/2//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 902/0/12//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 903/0/4//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 904/0/5//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 905/0/6//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 906/0/101//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 907/0/111//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 908/0/1002//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 909/0/1012//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 910/0/1004//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 911/0/1005//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 912/0/1006//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 913/0/1101//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 914/0/1111//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 2/server/3/MDS1/6//1
+Virtual_fc_adapters: 3/server/4/MDS2/6//1
+Virtual_fc_adapters: 4/server/5/LOG1/7//1
+Virtual_fc_adapters: 5/server/6/LOG2/7//1
+Virtual_fc_adapters: 6/server/7/DAR1-1/6//1
+Virtual_fc_adapters: 7/server/8/DAR1-2/6//1
+Virtual_fc_adapters: 8/server/9/DAR1-3/6//1
+Virtual_fc_adapters: 9/server/10/DAR1-4/6//1
+Virtual_fc_adapters: 10/server/11/DAR2-1/6//1
+Virtual_fc_adapters: 11/server/12/DAR2-2/6//1
+Virtual_fc_adapters: 12/server/13/DAR2-3/6//1
+Virtual_fc_adapters: 13/server/14/DAR2-4/6//1
+Virtual_fc_adapters: 14/server/15/DAP1-1/6//1
+Virtual_fc_adapters: 15/server/16/DAP1-2/6//1
+Virtual_fc_adapters: 16/server/17/DAP1-3/6//1
+Virtual_fc_adapters: 17/server/18/DAP1-4/6//1
+Virtual_fc_adapters: 18/server/19/DAP1-5/6//1
+Virtual_fc_adapters: 19/server/20/DAP1-6/6//1
+Virtual_fc_adapters: 20/server/21/DAP1-7/6//1
+Virtual_fc_adapters: 21/server/22/DAP1-8/6//1
+Virtual_fc_adapters: 22/server/23/DAP1-9/6//1
+Virtual_fc_adapters: 23/server/24/DAP1-10/6//1
+Virtual_fc_adapters: 24/server/25/DAP1-11/6//1
+Virtual_fc_adapters: 25/server/26/DAP1-12/6//1
+Virtual_fc_adapters: 26/server/27/DAP1-13/6//1
+Virtual_fc_adapters: 27/server/28/DAP1-14/6//1
+Virtual_fc_adapters: 28/server/29/DAP1-15/6//1
+Virtual_fc_adapters: 29/server/30/DAP1-16/6//1
+Virtual_fc_adapters: 30/server/31/DAP1-17/6//1
+Virtual_fc_adapters: 31/server/32/DAP1-18/6//1
+Virtual_fc_adapters: 32/server/33/DAP1-19/6//1
+Virtual_fc_adapters: 33/server/34/DAP1-20/6//1
+Virtual_fc_adapters: 34/server/35/DAP1-21/6//1
+Virtual_fc_adapters: 35/server/36/DAP1-22/6//1
+Virtual_fc_adapters: 36/server/37/DAP1-23/6//1
+Virtual_fc_adapters: 37/server/38/DAP1-24/6//1
+Virtual_fc_adapters: 38/server/39/DAP1-25/6//1
+Virtual_fc_adapters: 39/server/40/DAP1-26/6//1
+Virtual_fc_adapters: 40/server/41/DAP1-27/6//1
+Virtual_fc_adapters: 41/server/42/DAP1-28/6//1
+Virtual_fc_adapters: 42/server/43/DAP1-29/6//1
+Virtual_fc_adapters: 43/server/44/DAP1-30/6//1
+Virtual_fc_adapters: 44/server/45/DAP1-31/6//1
+Virtual_fc_adapters: 45/server/46/DAP1-32/6//1
+Virtual_fc_adapters: 46/server/47/DAP1-33/6//1
+Virtual_fc_adapters: 47/server/48/DAP1-34/6//1
+Virtual_fc_adapters: 48/server/49/DAP1-35/6//1
+Virtual_fc_adapters: 49/server/50/DAP1-36/6//1
+Virtual_fc_adapters: 50/server/51/DAP1-37/6//1
+Virtual_fc_adapters: 51/server/52/DAP1-38/6//1
+Virtual_fc_adapters: 52/server/53/DAP1-39/6//1
+Virtual_fc_adapters: 53/server/54/DAP1-40/6//1
+Virtual_fc_adapters: 54/server/55/DAP2-1/6//1
+Virtual_fc_adapters: 55/server/56/DAP2-2/6//1
+Virtual_fc_adapters: 56/server/57/DAP2-3/6//1
+Virtual_fc_adapters: 57/server/58/DAP2-4/6//1
+Virtual_fc_adapters: 58/server/59/DAP2-5/6//1
+Virtual_fc_adapters: 59/server/60/DAP2-6/6//1
+Virtual_fc_adapters: 60/server/61/DAP2-7/6//1
+Virtual_fc_adapters: 61/server/62/DAP2-8/6//1
+Virtual_fc_adapters: 62/server/63/DAP2-9/6//1
+Virtual_fc_adapters: 63/server/64/DAP2-10/6//1
+Virtual_fc_adapters: 64/server/65/DAP2-11/6//1
+Virtual_fc_adapters: 65/server/66/DAP2-12/6//1
+Virtual_fc_adapters: 66/server/67/DAP2-13/6//1
+Virtual_fc_adapters: 67/server/68/DAP2-14/6//1
+Virtual_fc_adapters: 68/server/69/DAP2-15/6//1
+Virtual_fc_adapters: 69/server/70/DAP2-16/6//1
+Virtual_fc_adapters: 70/server/71/DAP2-17/6//1
+Virtual_fc_adapters: 71/server/72/DAP2-18/6//1
+Virtual_fc_adapters: 72/server/73/DAP2-19/6//1
+Virtual_fc_adapters: 73/server/74/DAP2-20/6//1
+Virtual_fc_adapters: 74/server/75/DAP2-21/6//1
+Virtual_fc_adapters: 75/server/76/DAP2-22/6//1
+Virtual_fc_adapters: 76/server/77/DAP2-23/6//1
+Virtual_fc_adapters: 77/server/78/DAP2-24/6//1
+Virtual_fc_adapters: 78/server/79/DAP2-25/6//1
+Virtual_fc_adapters: 79/server/80/DAP2-26/6//1
+Virtual_fc_adapters: 80/server/81/DAP2-27/6//1
+Virtual_fc_adapters: 81/server/82/DAP2-28/6//1
+Virtual_fc_adapters: 82/server/83/DAP2-29/6//1
+Virtual_fc_adapters: 83/server/84/DAP2-30/6//1
+Virtual_fc_adapters: 84/server/85/DAP2-31/6//1
+Virtual_fc_adapters: 85/server/86/DAP2-32/6//1
+Virtual_fc_adapters: 86/server/87/DAP2-33/6//1
+Virtual_fc_adapters: 87/server/88/DAP2-34/6//1
+Virtual_fc_adapters: 88/server/89/DAP2-35/6//1
+Virtual_fc_adapters: 89/server/90/DAP2-36/6//1
+Virtual_fc_adapters: 90/server/91/DAP2-37/6//1
+Virtual_fc_adapters: 91/server/92/DAP2-38/6//1
+Virtual_fc_adapters: 92/server/93/DAP2-39/6//1
+Virtual_fc_adapters: 93/server/94/DAP2-40/6//1
+Virtual_fc_adapters: 94/server/95/NIM_SERVER/4//1
+Virtual_fc_adapters: 95/server/96/WORKING_LPAR/4//1
+###########################END##################################
+
+
+###########################Start################################
+lpar_name: VIOS2
+Min_mem: 4096
+Desired_men: 8192
+Max_men: 16384
+Proc_mode: shared
+Min_proc_unit: 0.6
+Desired_proc_unit: 1.0
+Max_proc_units: 2.0
+Min_procs_VP: 1
+Desired_procs_VP: 2
+Max_procs_VP: 4
+Virtual_eth_adapters: 901/0/2//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 902/0/12//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 903/0/4//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 904/0/5//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 905/0/6//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 906/0/101//2/0/ETHERNET0//all/none
+Virtual_eth_adapters: 907/0/111//1/0/ETHERNET0//all/none
+Virtual_eth_adapters: 908/0/1002//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 909/0/1012//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 910/0/1004//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 911/0/1005//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 912/0/1006//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 913/0/1101//0/0/ETHERNET0//all/none
+Virtual_eth_adapters: 914/0/1111//0/0/ETHERNET0//all/none
+Virtual_fc_adapters: 2/server/3/MDS1/7//1
+Virtual_fc_adapters: 3/server/4/MDS2/7//1
+Virtual_fc_adapters: 4/server/5/LOG1/8//1
+Virtual_fc_adapters: 5/server/6/LOG2/8//1
+Virtual_fc_adapters: 6/server/7/DAR1-1/7//1
+Virtual_fc_adapters: 7/server/8/DAR1-2/7//1
+Virtual_fc_adapters: 8/server/9/DAR1-3/7//1
+Virtual_fc_adapters: 9/server/10/DAR1-4/7//1
+Virtual_fc_adapters: 10/server/11/DAR2-1/7//1
+Virtual_fc_adapters: 11/server/12/DAR2-2/7//1
+Virtual_fc_adapters: 12/server/13/DAR2-3/7//1
+Virtual_fc_adapters: 13/server/14/DAR2-4/7//1
+Virtual_fc_adapters: 14/server/15/DAP1-1/7//1
+Virtual_fc_adapters: 15/server/16/DAP1-2/7//1
+Virtual_fc_adapters: 16/server/17/DAP1-3/7//1
+Virtual_fc_adapters: 17/server/18/DAP1-4/7//1
+Virtual_fc_adapters: 18/server/19/DAP1-5/7//1
+Virtual_fc_adapters: 19/server/20/DAP1-6/7//1
+Virtual_fc_adapters: 20/server/21/DAP1-7/7//1
+Virtual_fc_adapters: 21/server/22/DAP1-8/7//1
+Virtual_fc_adapters: 22/server/23/DAP1-9/7//1
+Virtual_fc_adapters: 23/server/24/DAP1-10/7//1
+Virtual_fc_adapters: 24/server/25/DAP1-11/7//1
+Virtual_fc_adapters: 25/server/26/DAP1-12/7//1
+Virtual_fc_adapters: 26/server/27/DAP1-13/7//1
+Virtual_fc_adapters: 27/server/28/DAP1-14/7//1
+Virtual_fc_adapters: 28/server/29/DAP1-15/7//1
+Virtual_fc_adapters: 29/server/30/DAP1-16/7//1
+Virtual_fc_adapters: 30/server/31/DAP1-17/7//1
+Virtual_fc_adapters: 31/server/32/DAP1-18/7//1
+Virtual_fc_adapters: 32/server/33/DAP1-19/7//1
+Virtual_fc_adapters: 33/server/34/DAP1-20/7//1
+Virtual_fc_adapters: 34/server/35/DAP1-21/7//1
+Virtual_fc_adapters: 35/server/36/DAP1-22/7//1
+Virtual_fc_adapters: 36/server/37/DAP1-23/7//1
+Virtual_fc_adapters: 37/server/38/DAP1-24/7//1
+Virtual_fc_adapters: 38/server/39/DAP1-25/7//1
+Virtual_fc_adapters: 39/server/40/DAP1-26/7//1
+Virtual_fc_adapters: 40/server/41/DAP1-27/7//1
+Virtual_fc_adapters: 41/server/42/DAP1-28/7//1
+Virtual_fc_adapters: 42/server/43/DAP1-29/7//1
+Virtual_fc_adapters: 43/server/44/DAP1-30/7//1
+Virtual_fc_adapters: 44/server/45/DAP1-31/7//1
+Virtual_fc_adapters: 45/server/46/DAP1-32/7//1
+Virtual_fc_adapters: 46/server/47/DAP1-33/7//1
+Virtual_fc_adapters: 47/server/48/DAP1-34/7//1
+Virtual_fc_adapters: 48/server/49/DAP1-35/7//1
+Virtual_fc_adapters: 49/server/50/DAP1-36/7//1
+Virtual_fc_adapters: 50/server/51/DAP1-37/7//1
+Virtual_fc_adapters: 51/server/52/DAP1-38/7//1
+Virtual_fc_adapters: 52/server/53/DAP1-39/7//1
+Virtual_fc_adapters: 53/server/54/DAP1-40/7//1
+Virtual_fc_adapters: 54/server/55/DAP2-1/7//1
+Virtual_fc_adapters: 55/server/56/DAP2-2/7//1
+Virtual_fc_adapters: 56/server/57/DAP2-3/7//1
+Virtual_fc_adapters: 57/server/58/DAP2-4/7//1
+Virtual_fc_adapters: 58/server/59/DAP2-5/7//1
+Virtual_fc_adapters: 59/server/60/DAP2-6/7//1
+Virtual_fc_adapters: 60/server/61/DAP2-7/7//1
+Virtual_fc_adapters: 61/server/62/DAP2-8/7//1
+Virtual_fc_adapters: 62/server/63/DAP2-9/7//1
+Virtual_fc_adapters: 63/server/64/DAP2-10/7//1
+Virtual_fc_adapters: 64/server/65/DAP2-11/7//1
+Virtual_fc_adapters: 65/server/66/DAP2-12/7//1
+Virtual_fc_adapters: 66/server/67/DAP2-13/7//1
+Virtual_fc_adapters: 67/server/68/DAP2-14/7//1
+Virtual_fc_adapters: 68/server/69/DAP2-15/7//1
+Virtual_fc_adapters: 69/server/70/DAP2-16/7//1
+Virtual_fc_adapters: 70/server/71/DAP2-17/7//1
+Virtual_fc_adapters: 71/server/72/DAP2-18/7//1
+Virtual_fc_adapters: 72/server/73/DAP2-19/7//1
+Virtual_fc_adapters: 73/server/74/DAP2-20/7//1
+Virtual_fc_adapters: 74/server/75/DAP2-21/7//1
+Virtual_fc_adapters: 75/server/76/DAP2-22/7//1
+Virtual_fc_adapters: 76/server/77/DAP2-23/7//1
+Virtual_fc_adapters: 77/server/78/DAP2-24/7//1
+Virtual_fc_adapters: 78/server/79/DAP2-25/7//1
+Virtual_fc_adapters: 79/server/80/DAP2-26/7//1
+Virtual_fc_adapters: 80/server/81/DAP2-27/7//1
+Virtual_fc_adapters: 81/server/82/DAP2-28/7//1
+Virtual_fc_adapters: 82/server/83/DAP2-29/7//1
+Virtual_fc_adapters: 83/server/84/DAP2-30/7//1
+Virtual_fc_adapters: 84/server/85/DAP2-31/7//1
+Virtual_fc_adapters: 85/server/86/DAP2-32/7//1
+Virtual_fc_adapters: 86/server/87/DAP2-33/7//1
+Virtual_fc_adapters: 87/server/88/DAP2-34/7//1
+Virtual_fc_adapters: 88/server/89/DAP2-35/7//1
+Virtual_fc_adapters: 89/server/90/DAP2-36/7//1
+Virtual_fc_adapters: 90/server/91/DAP2-37/7//1
+Virtual_fc_adapters: 91/server/92/DAP2-38/7//1
+Virtual_fc_adapters: 92/server/93/DAP2-39/7//1
+Virtual_fc_adapters: 93/server/94/DAP2-40/7//1
+Virtual_fc_adapters: 94/server/95/NIM_SERVER/5//1
+Virtual_fc_adapters: 95/server/96/WORKING_LPAR/5//1
+###########################END##################################
+
+
