@@ -71,6 +71,9 @@ erlogger() {
 #{{{step:1 , main
 main () {
 
+dt1=$(date +"%Y%m%d")
+
+	print "\n\n" ${LOG}.${dt1}
 	tlog "***************************InfiniBand monitor stop************************************" $LOG
 
 	# check execute user is twse

@@ -20,5 +20,4 @@ else
 		cat ${Homedir}/.ssh/id_rsa.pub | ssh -p 2222 root@${WKLA} "cat - >> ${Homrdir}/.ssh/authorized_keys"
 		su - $user -c  ssh -p 2222 -o StrictHostKeyChecking=no $WKLA "ls -ld /tmp"
 	done
-
 fi

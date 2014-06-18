@@ -53,7 +53,7 @@
 
 SITE="TSEOT"
 HADIR="/usr/es/sbin/cluster/utilities"
-IBMON="/test/bin"
+IBMON="/TWSE/bin"
 RG_NAME_LIST=$( ${HADIR}/clRGinfo | grep RG | awk '{print $1}' 2>/dev/null )
 RG_NAME=$(echo $RG_NAME_LIST | sed 's/ /,/g')
 TYPE1A="test_ha_1"
@@ -62,8 +62,8 @@ TYPE2A="FIXGW02P"
 TYPE2B="FIXGW02B"
 IB_STATUS=""
 IBA="iba"
-IBA0="iba0"
-IBA1="iba1"
+IBA0=$(lsdev | grep iba[0-9] | head -1 | awk '{print $1}')
+IBA1=$(lsdev | grep iba[0-9] | tail -1 | awk '{print $1}')
 USER=$(whoami)
 INTERVAL="3"
 COUNT="3"
@@ -162,6 +162,8 @@ ib_moniter (){
 #{{{step:1 , main
 main () {
 #tlog "#==========================main function...==========================================#" $LOG
+
+dt1=$(date +"%Y%m%d")
 
 	while  true
 	do

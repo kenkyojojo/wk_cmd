@@ -6,7 +6,7 @@ IB_MONI_DIR="/TWSE/bin"
 HA_DIR="/home"
 EXADM_OWN="exadm:exc"
 IB_SHELL="ib_start.sh ib_stop.sh switch_ha.sh"
-HA_SHELL="start.sh stop.sh twse_rbac.sh"
+HA_SHELL="startAP.sh stopAP.sh twse_rbac.sh"
 IB_MONI="ibsmon_np_client ibsmon_np"
 #                       1        2           3
 #set -A TWSE_DIR_LIST $IB_DIR $IB_MONI_DIR $IB_MONI_DIR_RS $HA_DIR
@@ -97,11 +97,11 @@ install () {
 	do
 		if [[ -f $PG ]];then
 			tlog "cp $PG $IB_DIR" $LOG
-			cp $PG $IB_MONI_DIR_RS
-			tlog "chown $EXADM_OWN ${IB_MONI_DIR_RS}/${PG}" $LOG
-			chown $EXADM_OWN ${IB_MONI_DIR_RS}/${PG}
-			tlog "chmod 775 ${IB_MONI_DIR_RS}/${PG}" $LOG
-			chmod 775 ${IB_MONI_DIR_RS}/${PG}
+			cp $PG $IB_MONI_DIR
+			tlog "chown $EXADM_OWN ${IB_MONI_DIR}/${PG}" $LOG
+			chown $EXADM_OWN ${IB_MONI_DIR}/${PG}
+			tlog "chmod 775 ${IB_MONI_DIR}/${PG}" $LOG
+			chmod 775 ${IB_MONI_DIR}/${PG}
 		else
 			tlog "Please to check the $PG" $LOG
 		fi

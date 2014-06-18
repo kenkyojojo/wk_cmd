@@ -31,8 +31,11 @@ mk_prive_auth(){
 
 #{{{set_pv_attr
 set_pv_attr(){
-#clRGmove
+#add new command clRGmove
 	setsecattr -c innateprivs=PV_PROC_PRIV,PV_KER_ACCT,PV_NET_CNTL,PV_NET_PORT secflags=FSF_EPS accessauths=TWSE.app.exec.clRGmove  euid=0 /usr/es/sbin/cluster/utilities/clRGmove
+# add PV_ROOT privilege on chdev command 
+	setsecattr -c innateprivs=+PV_ROOT inheritprivs=+PV_ROOT /usr/sbin/chdev
+
 #mkiba
 #setsecattr -c innateprivs=PV_DAC_O,PV_PROC_PRIV,PV_KER_ACCT,PV_PROC_PRIV,PV_KER_ACCT secflags=FSF_EPS accessauths=TWSE.app.exec.mkiba  /usr/sbin/mkiba
 }
