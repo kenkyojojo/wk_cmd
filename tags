@@ -61,11 +61,25 @@ alarm	tping_1.sh	/^alarm() {$/;"	f
 allocate_read_buffer	ib_script_monitor/ibsmon_np.c	/^int allocate_read_buffer( char **p_buffer, size_t buf_len )$/;"	f
 appendfile	shell-98-v1/cha/samples/appendfile.sh	/^appendfile() {$/;"	f
 appia_start	IB_Script/start.sh	/^appia_start () {$/;"	f
-appia_start	IB_Script_T/start.sh	/^appia_start () {$/;"	f
+appia_start	IB_Script/startAP.sh	/^appia_start () {$/;"	f
+appia_start	IB_Script_T/startAP.sh	/^appia_start () {$/;"	f
+appia_start	IB_Script_T_root/startAP.sh	/^appia_start () {$/;"	f
+appia_start	IB_Script_root_version/startAP_root.sh	/^appia_start () {$/;"	f
 appia_start	IB_Script_test_ha/start.sh	/^appia_start () {$/;"	f
+appia_start	IB_Script_test_ha/startAP.sh	/^appia_start () {$/;"	f
 appia_stop	IB_Script/stop.sh	/^appia_stop () {$/;"	f
-appia_stop	IB_Script_T/stop.sh	/^appia_stop () {$/;"	f
+appia_stop	IB_Script/stopAP.sh	/^appia_stop () {$/;"	f
+appia_stop	IB_Script_T/stopAP.sh	/^appia_stop () {$/;"	f
+appia_stop	IB_Script_T_root/stopAP.sh	/^appia_stop () {$/;"	f
+appia_stop	IB_Script_root_version/stopAP_root.sh	/^appia_stop () {$/;"	f
 appia_stop	IB_Script_test_ha/stop.sh	/^appia_stop () {$/;"	f
+appia_stop	IB_Script_test_ha/stopAP.sh	/^appia_stop () {$/;"	f
+aptlog	IB_Script_T/ib_start.sh	/^aptlog() {$/;"	f
+aptlog	IB_Script_T/ib_start.sh.utf8	/^aptlog() {$/;"	f
+aptlog	IB_Script_T/ib_start_new.sh	/^aptlog() {$/;"	f
+aptlog	IB_Script_T/ib_stop.sh	/^aptlog() {$/;"	f
+aptlog	IB_Script_root_version/ib_start_root.sh	/^aptlog() {$/;"	f
+aptlog	IB_Script_root_version/ib_stop_root.sh	/^aptlog() {$/;"	f
 back_n	shell-98-v1/chl/samples/mt-tape-funs.sh	/^back_n() {$/;"	f
 begin	tping.sh	/^begin () {$/;"	f
 c_log_debug	ib_script_monitor/ibsmon_np.h	28;"	d
@@ -74,10 +88,12 @@ c_log_info	ib_script_monitor/ibsmon_np.h	27;"	d
 c_log_warn	ib_script_monitor/ibsmon_np.h	26;"	d
 ch_role	IB_Script/twse_rbac.sh	/^ch_role(){$/;"	f
 ch_role	IB_Script_T/twse_rbac.sh	/^ch_role(){$/;"	f
+ch_role	IB_Script_T_root/twse_rbac.sh	/^ch_role(){$/;"	f
 ch_role	IB_Script_test_ha/twse_rbac.sh	/^ch_role(){$/;"	f
 ch_role	twse_rbac.sh	/^ch_role(){$/;"	f
 ch_user	IB_Script/twse_rbac.sh	/^ch_user(){$/;"	f
 ch_user	IB_Script_T/twse_rbac.sh	/^ch_user(){$/;"	f
+ch_user	IB_Script_T_root/twse_rbac.sh	/^ch_user(){$/;"	f
 ch_user	IB_Script_test_ha/twse_rbac.sh	/^ch_user(){$/;"	f
 ch_user	twse_rbac.sh	/^ch_user(){$/;"	f
 check_demon	check_deamon.sh	/^check_demon (){$/;"	f
@@ -88,6 +104,10 @@ check_ib_hwstatus	IB_Script/ib_start.sh.0510	/^check_ib_hwstatus() {$/;"	f
 check_ib_hwstatus	IB_Script/ib_start.sh.0512	/^check_ib_hwstatus() {$/;"	f
 check_ib_hwstatus	IB_Script/ib_start.sh.0514	/^check_ib_hwstatus() {$/;"	f
 check_ib_hwstatus	IB_Script_T/ib_start.sh	/^check_ib_hwstatus() {$/;"	f
+check_ib_hwstatus	IB_Script_T/ib_start.sh.utf8	/^check_ib_hwstatus() {$/;"	f
+check_ib_hwstatus	IB_Script_T/ib_start_new.sh	/^check_ib_hwstatus() {$/;"	f
+check_ib_hwstatus	IB_Script_T_root/ib_start.sh	/^check_ib_hwstatus() {$/;"	f
+check_ib_hwstatus	IB_Script_root_version/ib_start_root.sh	/^check_ib_hwstatus() {$/;"	f
 check_ib_hwstatus	IB_Script_test_ha/ib_start.sh	/^check_ib_hwstatus() {$/;"	f
 check_ib_hwstatus	ib-trans.sh	/^check_ib_hwstatus() {$/;"	f
 check_ib_hwstatus	ib_start.sh	/^check_ib_hwstatus() {$/;"	f
@@ -97,20 +117,23 @@ check_ib_ip_status	IB_Script/ib_start.sh.0510	/^check_ib_ip_status () {$/;"	f
 check_ib_ip_status	IB_Script/ib_start.sh.0512	/^check_ib_ip_status () {$/;"	f
 check_ib_ip_status	IB_Script/ib_start.sh.0514	/^check_ib_ip_status () {$/;"	f
 check_ib_ip_status	IB_Script_T/ib_start.sh	/^check_ib_ip_status () {$/;"	f
+check_ib_ip_status	IB_Script_T/ib_start.sh.utf8	/^check_ib_ip_status () {$/;"	f
+check_ib_ip_status	IB_Script_T/ib_start_new.sh	/^check_ib_ip_status () {$/;"	f
+check_ib_ip_status	IB_Script_T_root/ib_start.sh	/^check_ib_ip_status () {$/;"	f
+check_ib_ip_status	IB_Script_root_version/ib_start_root.sh	/^check_ib_ip_status () {$/;"	f
 check_ib_ip_status	IB_Script_test_ha/ib_start.sh	/^check_ib_ip_status () {$/;"	f
 check_ib_ip_status	ib-trans.sh	/^check_ib_ip_status () {$/;"	f
 check_ib_ip_status	ib_start.sh	/^check_ib_ip_status () {$/;"	f
-check_status	ok-tt.sh	/^check_status() {$/;"	f
 check_status	powerHA-IB-card.sh	/^check_status() {$/;"	f
-check_status	scott/ok-tt.sh	/^check_status() {$/;"	f
-check_status	scott/tt.sh	/^check_status() {$/;"	f
 check_status	shell-98-v1/chl/samples/mt-tape-funs.sh	/^check_status() {$/;"	f
 chk_ip	shell-98-v1/chi/samples/gen_dns.sh	/^chk_ip() {$/;"	f
 chk_num	shell-98-v1/chi/samples/gen_dns.sh	/^chk_num() {$/;"	f
 chk_pv_attr	IB_Script/twse_rbac.sh	/^chk_pv_attr(){$/;"	f
 chk_pv_attr	IB_Script_T/twse_rbac.sh	/^chk_pv_attr(){$/;"	f
+chk_pv_attr	IB_Script_T_root/twse_rbac.sh	/^chk_pv_attr(){$/;"	f
 chk_pv_attr	IB_Script_test_ha/twse_rbac.sh	/^chk_pv_attr(){$/;"	f
 chk_pv_attr	twse_rbac.sh	/^chk_pv_attr(){$/;"	f
+clean_tmp	sshkey_auto_exchange_fixgw.sh	/^clean_tmp (){$/;"	f
 combind	LPAR_SHELL/B-model/create_DAP1.sh	/^combind () {$/;"	f
 combind	LPAR_SHELL/B-model/create_DAP2.sh	/^combind () {$/;"	f
 combind	LPAR_SHELL/B-model/create_DAR1.sh	/^combind () {$/;"	f
@@ -880,11 +903,19 @@ cr_run_script	shell-98-v1/chl/samples/gen_rsync.sh	/^cr_run_script() {$/;"	f
 create_fifo_if_not_exists	ib_script_monitor/ibsmon_np.c	/^int create_fifo_if_not_exists( void )$/;"	f
 create_homepage	shell-98-v1/chi/samples/ca2.sh	/^create_homepage() {$/;"	f
 ctrlm_start	IB_Script/start.sh	/^ctrlm_start () {$/;"	f
-ctrlm_start	IB_Script_T/start.sh	/^ctrlm_start () {$/;"	f
+ctrlm_start	IB_Script/startAP.sh	/^ctrlm_start () {$/;"	f
+ctrlm_start	IB_Script_T/startAP.sh	/^ctrlm_start () {$/;"	f
+ctrlm_start	IB_Script_T_root/startAP.sh	/^ctrlm_start () {$/;"	f
+ctrlm_start	IB_Script_root_version/startAP_root.sh	/^ctrlm_start () {$/;"	f
 ctrlm_start	IB_Script_test_ha/start.sh	/^ctrlm_start () {$/;"	f
+ctrlm_start	IB_Script_test_ha/startAP.sh	/^ctrlm_start () {$/;"	f
 ctrlm_stop	IB_Script/stop.sh	/^ctrlm_stop () {$/;"	f
-ctrlm_stop	IB_Script_T/stop.sh	/^ctrlm_stop () {$/;"	f
+ctrlm_stop	IB_Script/stopAP.sh	/^ctrlm_stop () {$/;"	f
+ctrlm_stop	IB_Script_T/stopAP.sh	/^ctrlm_stop () {$/;"	f
+ctrlm_stop	IB_Script_T_root/stopAP.sh	/^ctrlm_stop () {$/;"	f
+ctrlm_stop	IB_Script_root_version/stopAP_root.sh	/^ctrlm_stop () {$/;"	f
 ctrlm_stop	IB_Script_test_ha/stop.sh	/^ctrlm_stop () {$/;"	f
+ctrlm_stop	IB_Script_test_ha/stopAP.sh	/^ctrlm_stop () {$/;"	f
 d_log_debug	ib_script_monitor/ibsmon_np.h	36;"	d
 d_log_debug	ib_script_monitor/ibsmon_np.h	48;"	d
 d_log_error	ib_script_monitor/ibsmon_np.h	32;"	d
@@ -896,6 +927,8 @@ d_log_warn	ib_script_monitor/ibsmon_np.h	34;"	d
 d_log_warn	ib_script_monitor/ibsmon_np.h	46;"	d
 detach	IB_Script/ib_stop.sh	/^detach() {$/;"	f
 detach	IB_Script_T/ib_stop.sh	/^detach() {$/;"	f
+detach	IB_Script_T_root/ib_stop.sh	/^detach() {$/;"	f
+detach	IB_Script_root_version/ib_stop_root.sh	/^detach() {$/;"	f
 detach	IB_Script_test_ha/ib_stop.sh	/^detach() {$/;"	f
 detach	ib_stop.sh	/^detach() {$/;"	f
 download	ftp.sh	/^download () {$/;"	f
@@ -913,8 +946,15 @@ erlogger	IB_Script/switch_ha.sh.0521	/^erlogger() {$/;"	f
 erlogger	IB_Script/switch_ha.sh.big5	/^erlogger() {$/;"	f
 erlogger	IB_Script/switch_ha.sh.utf8	/^erlogger() {$/;"	f
 erlogger	IB_Script_T/ib_start.sh	/^erlogger() {$/;"	f
+erlogger	IB_Script_T/ib_start.sh.utf8	/^erlogger() {$/;"	f
+erlogger	IB_Script_T/ib_start_new.sh	/^erlogger() {$/;"	f
 erlogger	IB_Script_T/ib_stop.sh	/^erlogger() {$/;"	f
 erlogger	IB_Script_T/switch_ha.sh	/^erlogger() {$/;"	f
+erlogger	IB_Script_T_root/ib_start.sh	/^erlogger() {$/;"	f
+erlogger	IB_Script_T_root/ib_stop.sh	/^erlogger() {$/;"	f
+erlogger	IB_Script_T_root/switch_ha.sh	/^erlogger() {$/;"	f
+erlogger	IB_Script_root_version/ib_start_root.sh	/^erlogger() {$/;"	f
+erlogger	IB_Script_root_version/ib_stop_root.sh	/^erlogger() {$/;"	f
 erlogger	IB_Script_test_ha/ib_start.sh	/^erlogger() {$/;"	f
 erlogger	IB_Script_test_ha/ib_stop.sh	/^erlogger() {$/;"	f
 erlogger	IB_Script_test_ha/switch_ha.sh	/^erlogger() {$/;"	f
@@ -924,8 +964,15 @@ erlogger	ib_stop.sh	/^erlogger() {$/;"	f
 erlogger	switch_ha.full.sh	/^erlogger() {$/;"	f
 erlogger	switch_ha.sh	/^erlogger() {$/;"	f
 errlogchk	Backup_OSimg.sh	/^errlogchk(){$/;"	f
-exitfunc	test.sh	/^exitfunc()$/;"	f
 factor_in	shell-98-v1/cha/samples/Factor.sh	/^function factor_in () {$/;"	f
+fixgw01b	sshkey_auto_exchange_fixgw.sh	/^fixgw01b(){$/;"	f
+fixgw01b_check	sshkey_auto_exchange_fixgw.sh	/^fixgw01b_check(){$/;"	f
+fixgw01p	sshkey_auto_exchange_fixgw.sh	/^fixgw01p(){$/;"	f
+fixgw01p_check	sshkey_auto_exchange_fixgw.sh	/^fixgw01p_check(){$/;"	f
+fixgw02b	sshkey_auto_exchange_fixgw.sh	/^fixgw02b(){$/;"	f
+fixgw02b_check	sshkey_auto_exchange_fixgw.sh	/^fixgw02b_check(){$/;"	f
+fixgw02p	sshkey_auto_exchange_fixgw.sh	/^fixgw02p(){$/;"	f
+fixgw02p_check	sshkey_auto_exchange_fixgw.sh	/^fixgw02p_check(){$/;"	f
 forward_n	shell-98-v1/chl/samples/mt-tape-funs.sh	/^forward_n() {$/;"	f
 gen_boundary	shell-98-v1/chk/samples/mailattach.sh	/^gen_boundary() {$/;"	f
 gen_iptables	shell-98-v1/chk/samples/cr_iptables.sh	/^gen_iptables() {$/;"	f
@@ -955,6 +1002,10 @@ ib_ip_conifg	IB_Script/ib_start.sh.0510	/^ib_ip_conifg () {$/;"	f
 ib_ip_conifg	IB_Script/ib_start.sh.0512	/^ib_ip_conifg () {$/;"	f
 ib_ip_conifg	IB_Script/ib_start.sh.0514	/^ib_ip_conifg () {$/;"	f
 ib_ip_conifg	IB_Script_T/ib_start.sh	/^ib_ip_conifg () {$/;"	f
+ib_ip_conifg	IB_Script_T/ib_start.sh.utf8	/^ib_ip_conifg () {$/;"	f
+ib_ip_conifg	IB_Script_T/ib_start_new.sh	/^ib_ip_conifg () {$/;"	f
+ib_ip_conifg	IB_Script_T_root/ib_start.sh	/^ib_ip_conifg () {$/;"	f
+ib_ip_conifg	IB_Script_root_version/ib_start_root.sh	/^ib_ip_conifg () {$/;"	f
 ib_ip_conifg	IB_Script_test_ha/ib_start.sh	/^ib_ip_conifg () {$/;"	f
 ib_ip_conifg	ib-trans.sh	/^ib_ip_conifg () {$/;"	f
 ib_ip_conifg	ib_start.sh	/^ib_ip_conifg () {$/;"	f
@@ -962,36 +1013,62 @@ ib_moniter	IB_Script/ib_start.sh	/^ib_moniter (){$/;"	f
 ib_moniter	IB_Script/ib_start.sh.0512	/^ib_moniter (){$/;"	f
 ib_moniter	IB_Script/ib_start.sh.0514	/^ib_moniter (){$/;"	f
 ib_moniter	IB_Script_T/ib_start.sh	/^ib_moniter (){$/;"	f
+ib_moniter	IB_Script_T/ib_start.sh.utf8	/^ib_moniter (){$/;"	f
+ib_moniter	IB_Script_T/ib_start_new.sh	/^ib_moniter (){$/;"	f
+ib_moniter	IB_Script_T_root/ib_start.sh	/^ib_moniter (){$/;"	f
+ib_moniter	IB_Script_root_version/ib_start_root.sh	/^ib_moniter (){$/;"	f
 ib_moniter	IB_Script_test_ha/ib_start.sh	/^ib_moniter (){$/;"	f
 ib_script_dead_action	ib_script_monitor/ibsmon_np.c	/^void ib_script_dead_action( void )$/;"	f
 ib_script_stop	IB_Script/ib_stop.sh	/^ib_script_stop() {$/;"	f
 ib_script_stop	IB_Script_T/ib_stop.sh	/^ib_script_stop() {$/;"	f
+ib_script_stop	IB_Script_T_root/ib_stop.sh	/^ib_script_stop() {$/;"	f
+ib_script_stop	IB_Script_root_version/ib_stop_root.sh	/^ib_script_stop() {$/;"	f
 ib_script_stop	IB_Script_test_ha/ib_stop.sh	/^ib_script_stop() {$/;"	f
 ib_script_stop	ib_stop.sh	/^ib_script_stop() {$/;"	f
 ib_smon	IB_Script/start.sh	/^ib_smon() {$/;"	f
-ib_smon	IB_Script_T/start.sh	/^ib_smon() {$/;"	f
+ib_smon	IB_Script/startAP.sh	/^ib_smon() {$/;"	f
+ib_smon	IB_Script_T/startAP.sh	/^ib_smon() {$/;"	f
+ib_smon	IB_Script_T_root/startAP.sh	/^ib_smon() {$/;"	f
+ib_smon	IB_Script_root_version/startAP_root.sh	/^ib_smon() {$/;"	f
 ib_smon	IB_Script_test_ha/start.sh	/^ib_smon() {$/;"	f
+ib_smon	IB_Script_test_ha/startAP.sh	/^ib_smon() {$/;"	f
 ib_start	IB_Script/start.sh	/^ib_start () {$/;"	f
-ib_start	IB_Script_T/start.sh	/^ib_start () {$/;"	f
+ib_start	IB_Script/startAP.sh	/^ib_start () {$/;"	f
+ib_start	IB_Script_T/startAP.sh	/^ib_start () {$/;"	f
+ib_start	IB_Script_T_root/startAP.sh	/^ib_start () {$/;"	f
+ib_start	IB_Script_root_version/startAP_root.sh	/^ib_start () {$/;"	f
 ib_start	IB_Script_test_ha/start.sh	/^ib_start () {$/;"	f
+ib_start	IB_Script_test_ha/startAP.sh	/^ib_start () {$/;"	f
 ib_start	start.sh	/^ib_start () {$/;"	f
 ib_stop	IB_Script/stop.sh	/^ib_stop () {$/;"	f
-ib_stop	IB_Script_T/stop.sh	/^ib_stop () {$/;"	f
+ib_stop	IB_Script/stopAP.sh	/^ib_stop () {$/;"	f
+ib_stop	IB_Script_T/stopAP.sh	/^ib_stop () {$/;"	f
+ib_stop	IB_Script_T_root/stopAP.sh	/^ib_stop () {$/;"	f
+ib_stop	IB_Script_root_version/stopAP_root.sh	/^ib_stop () {$/;"	f
 ib_stop	IB_Script_test_ha/stop.sh	/^ib_stop () {$/;"	f
+ib_stop	IB_Script_test_ha/stopAP.sh	/^ib_stop () {$/;"	f
 ib_stop	stop.sh	/^ib_stop () {$/;"	f
 ibsmon_fifo	ib_script_monitor/ibsmon_np.c	/^char *ibsmon_fifo = NULL;$/;"	v
 ibsmon_fifo	ib_script_monitor/ibsmon_np_client.c	/^char *ibsmon_fifo = NULL;$/;"	v
 ibsmon_format_string	ib_script_monitor/ibsmon_util.c	/^char ibsmon_format_string[ IBSMON_FORMAT_STRING_SIZE ] = "";$/;"	v
 ibsmon_log_msg	ib_script_monitor/ibsmon_util.c	/^char ibsmon_log_msg[ IBSMON_LOG_MSG_SIZE ] = "";$/;"	v
 ibsmon_np	IB_Script/ib_stop.sh	/^ibsmon_np() {$/;"	f
+ibsmon_np	IB_Script_T/ib_start.sh	/^ibsmon_np() {$/;"	f
+ibsmon_np	IB_Script_T/ib_start.sh.utf8	/^ibsmon_np() {$/;"	f
+ibsmon_np	IB_Script_T/ib_start_new.sh	/^ibsmon_np() {$/;"	f
 ibsmon_np	IB_Script_T/ib_stop.sh	/^ibsmon_np() {$/;"	f
+ibsmon_np	IB_Script_T_root/ib_stop.sh	/^ibsmon_np() {$/;"	f
+ibsmon_np	IB_Script_root_version/ib_start_root.sh	/^ibsmon_np() {$/;"	f
+ibsmon_np	IB_Script_root_version/ib_stop_root.sh	/^ibsmon_np() {$/;"	f
 ibsmon_np	IB_Script_test_ha/ib_stop.sh	/^ibsmon_np() {$/;"	f
 ignore_SIGPIPE	ib_script_monitor/ibsmon_np_client.c	/^int ignore_SIGPIPE( void )$/;"	f
 ignore_signals	ib_script_monitor/ibsmon_util.c	/^int ignore_signals( const int* signums, const int size )$/;"	f
 ignore_signals_for_daemon	ib_script_monitor/ibsmon_np.c	/^int ignore_signals_for_daemon( void )$/;"	f
 init_daemon	ib_script_monitor/ibsmon_np.c	/^int init_daemon( void )$/;"	f
+init_ib_ip	IB_Script_T/initial_ib_ip.sh	/^init_ib_ip () {$/;"	f
 install	IB_Script/install.sh	/^install () {$/;"	f
 install	IB_Script_T/install.sh	/^install () {$/;"	f
+install	IB_Script_T_root/install.sh	/^install () {$/;"	f
 install	IB_Script_test_ha/install.sh	/^install () {$/;"	f
 install_to_client	shell-98-v1/chl/samples/gen_rsync.sh	/^install_to_client() {$/;"	f
 install_to_server	shell-98-v1/chl/samples/gen_rsync.sh	/^install_to_server() {$/;"	f
@@ -1001,13 +1078,14 @@ local_check	IB_Script/ib_start.sh.0510	/^local_check() {$/;"	f
 local_check	IB_Script/ib_start.sh.0512	/^local_check() {$/;"	f
 local_check	IB_Script/ib_start.sh.0514	/^local_check() {$/;"	f
 local_check	IB_Script_T/ib_start.sh	/^local_check() {$/;"	f
+local_check	IB_Script_T/ib_start.sh.utf8	/^local_check() {$/;"	f
+local_check	IB_Script_T/ib_start_new.sh	/^local_check() {$/;"	f
+local_check	IB_Script_T_root/ib_start.sh	/^local_check() {$/;"	f
+local_check	IB_Script_root_version/ib_start_root.sh	/^local_check() {$/;"	f
 local_check	IB_Script_test_ha/ib_start.sh	/^local_check() {$/;"	f
 local_check	ib-trans.sh	/^local_check() {$/;"	f
 local_check	ib_start.sh	/^local_check() {$/;"	f
-local_check	ok-tt.sh	/^local_check() {$/;"	f
 local_check	powerHA-IB-card.sh	/^local_check() {$/;"	f
-local_check	scott/ok-tt.sh	/^local_check() {$/;"	f
-local_check	scott/tt.sh	/^local_check() {$/;"	f
 log_aix_errlog	ib_script_monitor/ibsmon_util.c	/^void log_aix_errlog( const char *fmt, ... )$/;"	f
 log_debug_stderr	ib_script_monitor/ibsmon_util.c	/^void log_debug_stderr( const char *fmt, ... )$/;"	f
 log_debug_syslog	ib_script_monitor/ibsmon_util.c	/^void log_debug_syslog( const char *fmt, ... )$/;"	f
@@ -1023,16 +1101,22 @@ loss_100_ib_hwstatus	IB_Script/ib_start.sh.0510	/^loss_100_ib_hwstatus() {$/;"	f
 loss_100_ib_hwstatus	IB_Script/ib_start.sh.0512	/^loss_100_ib_hwstatus() {$/;"	f
 loss_100_ib_hwstatus	IB_Script/ib_start.sh.0514	/^loss_100_ib_hwstatus() {$/;"	f
 loss_100_ib_hwstatus	IB_Script_T/ib_start.sh	/^loss_100_ib_hwstatus() {$/;"	f
+loss_100_ib_hwstatus	IB_Script_T/ib_start.sh.utf8	/^loss_100_ib_hwstatus() {$/;"	f
+loss_100_ib_hwstatus	IB_Script_T/ib_start_new.sh	/^loss_100_ib_hwstatus() {$/;"	f
+loss_100_ib_hwstatus	IB_Script_T_root/ib_start.sh	/^loss_100_ib_hwstatus() {$/;"	f
+loss_100_ib_hwstatus	IB_Script_root_version/ib_start_root.sh	/^loss_100_ib_hwstatus() {$/;"	f
 loss_100_ib_hwstatus	IB_Script_test_ha/ib_start.sh	/^loss_100_ib_hwstatus() {$/;"	f
 loss_100_ib_hwstatus	ib-trans.sh	/^loss_100_ib_hwstatus() {$/;"	f
 loss_100_ib_hwstatus	ib_start.sh	/^loss_100_ib_hwstatus() {$/;"	f
 lpar_number	create_profile.sh	/^lpar_number () {$/;"	f
 ls_role	IB_Script/twse_rbac.sh	/^ls_role(){$/;"	f
 ls_role	IB_Script_T/twse_rbac.sh	/^ls_role(){$/;"	f
+ls_role	IB_Script_T_root/twse_rbac.sh	/^ls_role(){$/;"	f
 ls_role	IB_Script_test_ha/twse_rbac.sh	/^ls_role(){$/;"	f
 ls_role	twse_rbac.sh	/^ls_role(){$/;"	f
 ls_user	IB_Script/twse_rbac.sh	/^ls_user(){$/;"	f
 ls_user	IB_Script_T/twse_rbac.sh	/^ls_user(){$/;"	f
+ls_user	IB_Script_T_root/twse_rbac.sh	/^ls_user(){$/;"	f
 ls_user	IB_Script_test_ha/twse_rbac.sh	/^ls_user(){$/;"	f
 ls_user	twse_rbac.sh	/^ls_user(){$/;"	f
 mailto	shell-98-v1/chk/samples/chkvol.sh	/^mailto() {$/;"	f
@@ -1046,24 +1130,42 @@ main	IB_Script/ib_start.sh.0514	/^main () {$/;"	f
 main	IB_Script/ib_stop.sh	/^main () {$/;"	f
 main	IB_Script/install.sh	/^main () {$/;"	f
 main	IB_Script/start.sh	/^main () {$/;"	f
+main	IB_Script/startAP.sh	/^main () {$/;"	f
 main	IB_Script/stop.sh	/^main () {$/;"	f
+main	IB_Script/stopAP.sh	/^main () {$/;"	f
 main	IB_Script/switch_ha.sh	/^main () {$/;"	f
 main	IB_Script/switch_ha.sh.0521	/^main () {$/;"	f
 main	IB_Script/switch_ha.sh.big5	/^main () {$/;"	f
 main	IB_Script/switch_ha.sh.utf8	/^main () {$/;"	f
 main	IB_Script/twse_rbac.sh	/^main (){$/;"	f
 main	IB_Script_T/ib_start.sh	/^main () {$/;"	f
+main	IB_Script_T/ib_start.sh.utf8	/^main () {$/;"	f
+main	IB_Script_T/ib_start_new.sh	/^main () {$/;"	f
 main	IB_Script_T/ib_stop.sh	/^main () {$/;"	f
+main	IB_Script_T/initial_ib_ip.sh	/^main () {$/;"	f
 main	IB_Script_T/install.sh	/^main () {$/;"	f
-main	IB_Script_T/start.sh	/^main () {$/;"	f
-main	IB_Script_T/stop.sh	/^main () {$/;"	f
+main	IB_Script_T/startAP.sh	/^main () {$/;"	f
+main	IB_Script_T/stopAP.sh	/^main () {$/;"	f
 main	IB_Script_T/switch_ha.sh	/^main () {$/;"	f
 main	IB_Script_T/twse_rbac.sh	/^main (){$/;"	f
+main	IB_Script_T_root/ib_start.sh	/^main () {$/;"	f
+main	IB_Script_T_root/ib_stop.sh	/^main () {$/;"	f
+main	IB_Script_T_root/install.sh	/^main () {$/;"	f
+main	IB_Script_T_root/startAP.sh	/^main () {$/;"	f
+main	IB_Script_T_root/stopAP.sh	/^main () {$/;"	f
+main	IB_Script_T_root/switch_ha.sh	/^main () {$/;"	f
+main	IB_Script_T_root/twse_rbac.sh	/^main (){$/;"	f
+main	IB_Script_root_version/ib_start_root.sh	/^main () {$/;"	f
+main	IB_Script_root_version/ib_stop_root.sh	/^main () {$/;"	f
+main	IB_Script_root_version/startAP_root.sh	/^main () {$/;"	f
+main	IB_Script_root_version/stopAP_root.sh	/^main () {$/;"	f
 main	IB_Script_test_ha/ib_start.sh	/^main () {$/;"	f
 main	IB_Script_test_ha/ib_stop.sh	/^main () {$/;"	f
 main	IB_Script_test_ha/install.sh	/^main () {$/;"	f
 main	IB_Script_test_ha/start.sh	/^main () {$/;"	f
+main	IB_Script_test_ha/startAP.sh	/^main () {$/;"	f
 main	IB_Script_test_ha/stop.sh	/^main () {$/;"	f
+main	IB_Script_test_ha/stopAP.sh	/^main () {$/;"	f
 main	IB_Script_test_ha/switch_ha.sh	/^main () {$/;"	f
 main	IB_Script_test_ha/twse_rbac.sh	/^main (){$/;"	f
 main	LPAR_ACT_SHUT/HMC_menu.sh	/^main () {$/;"	f
@@ -1092,6 +1194,7 @@ main	shell-98-v1/chh/samples/A/mksock.c	/^main(int argc, char **argv)$/;"	f
 main	shell-98-v1/chh/samples/B/mksock.c	/^main(int argc, char **argv)$/;"	f
 main	shell-98-v1/chh/samples/C/mksock.c	/^main(int argc, char **argv)$/;"	f
 main	shell-98-v1/chh/samples/mksock.c	/^main(int argc, char **argv)$/;"	f
+main	sshkey_auto_exchange_fixgw.sh	/^main () {$/;"	f
 main	start.sh	/^main () {$/;"	f
 main	stop.sh	/^main () {$/;"	f
 main	switch_ha.full.sh	/^main () {$/;"	f
@@ -1099,36 +1202,39 @@ main	switch_ha.sh	/^main () {$/;"	f
 main	tping.sh	/^main() {$/;"	f
 main	twse_rbac.sh	/^main (){$/;"	f
 main	usermkdir.sh	/^main () {$/;"	f
-main	wei2.sh	/^main() {$/;"	f
 menu	IB_Script/switch_ha.sh	/^menu () {$/;"	f
 menu	IB_Script/switch_ha.sh.0521	/^menu () {$/;"	f
 menu	IB_Script/switch_ha.sh.big5	/^menu () {$/;"	f
 menu	IB_Script/switch_ha.sh.utf8	/^menu () {$/;"	f
 menu	IB_Script_T/switch_ha.sh	/^menu () {$/;"	f
+menu	IB_Script_T_root/switch_ha.sh	/^menu () {$/;"	f
 menu	IB_Script_test_ha/switch_ha.sh	/^menu () {$/;"	f
 menu	switch_ha.full.sh	/^menu () {$/;"	f
 menu	switch_ha.sh	/^menu () {$/;"	f
 missed_heartbeat_count	ib_script_monitor/ibsmon_np.c	/^int missed_heartbeat_count = 0;$/;"	v
 mk_dir	IB_Script/install.sh	/^mk_dir () {$/;"	f
 mk_dir	IB_Script_T/install.sh	/^mk_dir () {$/;"	f
+mk_dir	IB_Script_T_root/install.sh	/^mk_dir () {$/;"	f
 mk_dir	IB_Script_test_ha/install.sh	/^mk_dir () {$/;"	f
 mk_prive_auth	IB_Script/twse_rbac.sh	/^mk_prive_auth(){$/;"	f
 mk_prive_auth	IB_Script_T/twse_rbac.sh	/^mk_prive_auth(){$/;"	f
+mk_prive_auth	IB_Script_T_root/twse_rbac.sh	/^mk_prive_auth(){$/;"	f
 mk_prive_auth	IB_Script_test_ha/twse_rbac.sh	/^mk_prive_auth(){$/;"	f
 mk_prive_auth	twse_rbac.sh	/^mk_prive_auth(){$/;"	f
 mk_pubic_auth	IB_Script/twse_rbac.sh	/^mk_pubic_auth(){$/;"	f
 mk_pubic_auth	IB_Script_T/twse_rbac.sh	/^mk_pubic_auth(){$/;"	f
+mk_pubic_auth	IB_Script_T_root/twse_rbac.sh	/^mk_pubic_auth(){$/;"	f
 mk_pubic_auth	IB_Script_test_ha/twse_rbac.sh	/^mk_pubic_auth(){$/;"	f
 mk_pubic_auth	twse_rbac.sh	/^mk_pubic_auth(){$/;"	f
 mk_role	IB_Script/twse_rbac.sh	/^mk_role(){$/;"	f
 mk_role	IB_Script_T/twse_rbac.sh	/^mk_role(){$/;"	f
+mk_role	IB_Script_T_root/twse_rbac.sh	/^mk_role(){$/;"	f
 mk_role	IB_Script_test_ha/twse_rbac.sh	/^mk_role(){$/;"	f
 mk_role	twse_rbac.sh	/^mk_role(){$/;"	f
 myfun	shell-98-v1/cha/samples/myfun.sh	/^myfun()$/;"	f
 offline	shell-98-v1/chl/samples/mt-tape-funs.sh	/^offline() {$/;"	f
 open_fifo_for_read_write	ib_script_monitor/ibsmon_np.c	/^int open_fifo_for_read_write( int *p_fifo_fd )$/;"	f
 open_fifo_for_write	ib_script_monitor/ibsmon_np_client.c	/^int open_fifo_for_write( int *p_fifo_fd,$/;"	f
-p1	wei.sh	/^p1 () {$/;"	f
 pars	shell-98-v1/cha/samples/setpars3.sh	/^function pars() {$/;"	f
 parse_command_line_arguments	ib_script_monitor/ibsmon_np.c	/^int parse_command_line_arguments( int argc,$/;"	f
 parse_command_line_arguments	ib_script_monitor/ibsmon_np_client.c	/^int parse_command_line_arguments( int argc,$/;"	f
@@ -1138,21 +1244,24 @@ ping_check	IB_Script/ib_start.sh.0510	/^ping_check() {$/;"	f
 ping_check	IB_Script/ib_start.sh.0512	/^ping_check() {$/;"	f
 ping_check	IB_Script/ib_start.sh.0514	/^ping_check() {$/;"	f
 ping_check	IB_Script_T/ib_start.sh	/^ping_check() {$/;"	f
+ping_check	IB_Script_T/ib_start.sh.utf8	/^ping_check() {$/;"	f
+ping_check	IB_Script_T/ib_start_new.sh	/^ping_check() {$/;"	f
+ping_check	IB_Script_T_root/ib_start.sh	/^ping_check() {$/;"	f
+ping_check	IB_Script_root_version/ib_start_root.sh	/^ping_check() {$/;"	f
 ping_check	IB_Script_test_ha/ib_start.sh	/^ping_check() {$/;"	f
 ping_check	ib-trans.sh	/^ping_check() {$/;"	f
 ping_check	ib_start.sh	/^ping_check() {$/;"	f
-ping_check	ok-tt.sh	/^ping_check() {$/;"	f
-ping_check	scott/ok-tt.sh	/^ping_check() {$/;"	f
-ping_check	scott/tt.sh	/^ping_check() {$/;"	f
 ping_check	tping.sh	/^ping_check(){$/;"	f
 powerha_switch	IB_Script/switch_ha.sh	/^powerha_switch () {$/;"	f
 powerha_switch	IB_Script/switch_ha.sh.0521	/^powerha_switch () {$/;"	f
 powerha_switch	IB_Script/switch_ha.sh.big5	/^powerha_switch () {$/;"	f
 powerha_switch	IB_Script/switch_ha.sh.utf8	/^powerha_switch () {$/;"	f
 powerha_switch	IB_Script_T/switch_ha.sh	/^powerha_switch () {$/;"	f
+powerha_switch	IB_Script_T_root/switch_ha.sh	/^powerha_switch () {$/;"	f
 powerha_switch	IB_Script_test_ha/switch_ha.sh	/^powerha_switch () {$/;"	f
 powerha_switch	switch_ha.full.sh	/^powerha_switch () {$/;"	f
 powerha_switch	switch_ha.sh	/^powerha_switch () {$/;"	f
+print_help	check_IBM_DS_health_1.5.sh	/^print_help() {$/;"	f
 print_log	check_deamon.sh	/^print_log (){$/;"	f
 profile	LPAR_SHELL/B-model/create_vios1.sh	/^profile () {$/;"	f
 profile	LPAR_SHELL/B-model/create_vios2.sh	/^profile () {$/;"	f
@@ -1204,42 +1313,48 @@ remote_check	IB_Script/ib_start.sh.0510	/^remote_check() {$/;"	f
 remote_check	IB_Script/ib_start.sh.0512	/^remote_check() {$/;"	f
 remote_check	IB_Script/ib_start.sh.0514	/^remote_check() {$/;"	f
 remote_check	IB_Script_T/ib_start.sh	/^remote_check() {$/;"	f
+remote_check	IB_Script_T/ib_start.sh.utf8	/^remote_check() {$/;"	f
+remote_check	IB_Script_T/ib_start_new.sh	/^remote_check() {$/;"	f
+remote_check	IB_Script_T_root/ib_start.sh	/^remote_check() {$/;"	f
+remote_check	IB_Script_root_version/ib_start_root.sh	/^remote_check() {$/;"	f
 remote_check	IB_Script_test_ha/ib_start.sh	/^remote_check() {$/;"	f
 remote_check	ib-trans.sh	/^remote_check() {$/;"	f
 remote_check	ib_start.sh	/^remote_check() {$/;"	f
-remote_check	ok-tt.sh	/^remote_check() {$/;"	f
-remote_check	scott/ok-tt.sh	/^remote_check() {$/;"	f
-remote_check	scott/tt.sh	/^remote_check() {$/;"	f
-retfunc	test.sh	/^retfunc()$/;"	f
 rewind_tape	shell-98-v1/chl/samples/mt-tape-funs.sh	/^rewind_tape() {$/;"	f
 rmTMP	shell-98-v1/chk/samples/mailattach.sh	/^rmTMP() {$/;"	f
 rmTMP	shell-98-v1/chk/samples/mailto2.sh	/^rmTMP() {$/;"	f
 rmTMP	shell-98-v1/chk/samples/my_fichecker.sh	/^rmTMP() {$/;"	f
 rm_auth	IB_Script/twse_rbac.sh	/^rm_auth(){$/;"	f
 rm_auth	IB_Script_T/twse_rbac.sh	/^rm_auth(){$/;"	f
+rm_auth	IB_Script_T_root/twse_rbac.sh	/^rm_auth(){$/;"	f
 rm_auth	IB_Script_test_ha/twse_rbac.sh	/^rm_auth(){$/;"	f
 rm_auth	twse_rbac.sh	/^rm_auth(){$/;"	f
 rm_prive_auth	IB_Script/twse_rbac.sh	/^rm_prive_auth(){$/;"	f
 rm_prive_auth	IB_Script_T/twse_rbac.sh	/^rm_prive_auth(){$/;"	f
+rm_prive_auth	IB_Script_T_root/twse_rbac.sh	/^rm_prive_auth(){$/;"	f
 rm_prive_auth	IB_Script_test_ha/twse_rbac.sh	/^rm_prive_auth(){$/;"	f
 rm_prive_auth	twse_rbac.sh	/^rm_prive_auth(){$/;"	f
 rm_pv_attr	IB_Script/twse_rbac.sh	/^rm_pv_attr(){$/;"	f
 rm_pv_attr	IB_Script_T/twse_rbac.sh	/^rm_pv_attr(){$/;"	f
+rm_pv_attr	IB_Script_T_root/twse_rbac.sh	/^rm_pv_attr(){$/;"	f
 rm_pv_attr	IB_Script_test_ha/twse_rbac.sh	/^rm_pv_attr(){$/;"	f
 rm_pv_attr	twse_rbac.sh	/^rm_pv_attr(){$/;"	f
 rm_role	IB_Script/twse_rbac.sh	/^rm_role(){$/;"	f
 rm_role	IB_Script_T/twse_rbac.sh	/^rm_role(){$/;"	f
+rm_role	IB_Script_T_root/twse_rbac.sh	/^rm_role(){$/;"	f
 rm_role	IB_Script_test_ha/twse_rbac.sh	/^rm_role(){$/;"	f
 rm_role	twse_rbac.sh	/^rm_role(){$/;"	f
 runmksysb	Backup_OSimg.sh	/^runmksysb(){$/;"	f
 scan	tping_1.sh	/^scan() {$/;"	f
 scan_files	shell-98-v1/chk/samples/my_fichecker.sh	/^scan_files() {$/;"	f
+scp_file	sshkey_auto_exchange_fixgw.sh	/^scp_file (){$/;"	f
 select_REPLY	select.sh	/^select_REPLY () {$/;"	f
 select_def	select.sh	/^select_def () {$/;"	f
 set_dhcp_interface	shell-98-v1/chi/samples/gen_dhcp.sh	/^set_dhcp_interface() {$/;"	f
 set_format_string	ib_script_monitor/ibsmon_util.c	/^int set_format_string( const char *log_level,$/;"	f
 set_pv_attr	IB_Script/twse_rbac.sh	/^set_pv_attr(){$/;"	f
 set_pv_attr	IB_Script_T/twse_rbac.sh	/^set_pv_attr(){$/;"	f
+set_pv_attr	IB_Script_T_root/twse_rbac.sh	/^set_pv_attr(){$/;"	f
 set_pv_attr	IB_Script_test_ha/twse_rbac.sh	/^set_pv_attr(){$/;"	f
 set_pv_attr	twse_rbac.sh	/^set_pv_attr(){$/;"	f
 show_name	shell-98-v1/ch4/samples/test.sh	/^function show_name() {$/;"	f
@@ -1249,6 +1364,10 @@ ssh_check	IB_Script/ib_start.sh.0510	/^ssh_check() {$/;"	f
 ssh_check	IB_Script/ib_start.sh.0512	/^ssh_check() {$/;"	f
 ssh_check	IB_Script/ib_start.sh.0514	/^ssh_check() {$/;"	f
 ssh_check	IB_Script_T/ib_start.sh	/^ssh_check() {$/;"	f
+ssh_check	IB_Script_T/ib_start.sh.utf8	/^ssh_check() {$/;"	f
+ssh_check	IB_Script_T/ib_start_new.sh	/^ssh_check() {$/;"	f
+ssh_check	IB_Script_T_root/ib_start.sh	/^ssh_check() {$/;"	f
+ssh_check	IB_Script_root_version/ib_start_root.sh	/^ssh_check() {$/;"	f
 ssh_check	IB_Script_test_ha/ib_start.sh	/^ssh_check() {$/;"	f
 ssh_check	ib-trans.sh	/^ssh_check() {$/;"	f
 ssh_check	ib_start.sh	/^ssh_check() {$/;"	f
@@ -1259,15 +1378,14 @@ swap	IB_Script/ib_start.sh.0510	/^swap() {$/;"	f
 swap	IB_Script/ib_start.sh.0512	/^swap() {$/;"	f
 swap	IB_Script/ib_start.sh.0514	/^swap() {$/;"	f
 swap	IB_Script_T/ib_start.sh	/^swap() {$/;"	f
+swap	IB_Script_T/ib_start.sh.utf8	/^swap() {$/;"	f
+swap	IB_Script_T/ib_start_new.sh	/^swap() {$/;"	f
+swap	IB_Script_T_root/ib_start.sh	/^swap() {$/;"	f
+swap	IB_Script_root_version/ib_start_root.sh	/^swap() {$/;"	f
 swap	IB_Script_test_ha/ib_start.sh	/^swap() {$/;"	f
 swap	ib-trans.sh	/^swap() {$/;"	f
 swap	ib_start.sh	/^swap() {$/;"	f
-swap	ok-tt.sh	/^swap() {$/;"	f
 swap	powerHA-IB-card.sh	/^swap() {$/;"	f
-swap	scott/ok-tt.sh	/^swap() {$/;"	f
-swap	scott/tt.sh	/^swap() {$/;"	f
-swap	wei2.sh	/^swap () {$/;"	f
-t1	wei.sh	/^t1 () {$/;"	f
 tar_it	shell-98-v1/chl/samples/gen_rsync.sh	/^tar_it() {$/;"	f
 test_filequal	shell-98-v1/chh/samples/chkfile_fun.sh	/^test_filequal() {$/;"	f
 tlog	IB_Script/ib_start.sh	/^tlog() {$/;"	f
@@ -1278,44 +1396,60 @@ tlog	IB_Script/ib_start.sh.0514	/^tlog() {$/;"	f
 tlog	IB_Script/ib_stop.sh	/^tlog() {$/;"	f
 tlog	IB_Script/install.sh	/^tlog() {$/;"	f
 tlog	IB_Script/start.sh	/^tlog() {$/;"	f
+tlog	IB_Script/startAP.sh	/^tlog() {$/;"	f
 tlog	IB_Script/stop.sh	/^tlog() {$/;"	f
+tlog	IB_Script/stopAP.sh	/^tlog() {$/;"	f
 tlog	IB_Script/switch_ha.sh	/^tlog() {$/;"	f
 tlog	IB_Script/switch_ha.sh.0521	/^tlog() {$/;"	f
 tlog	IB_Script/switch_ha.sh.big5	/^tlog() {$/;"	f
 tlog	IB_Script/switch_ha.sh.utf8	/^tlog() {$/;"	f
 tlog	IB_Script/twse_rbac.sh	/^tlog() {$/;"	f
 tlog	IB_Script_T/ib_start.sh	/^tlog() {$/;"	f
+tlog	IB_Script_T/ib_start.sh.utf8	/^tlog() {$/;"	f
+tlog	IB_Script_T/ib_start_new.sh	/^tlog() {$/;"	f
 tlog	IB_Script_T/ib_stop.sh	/^tlog() {$/;"	f
+tlog	IB_Script_T/initial_ib_ip.sh	/^tlog() {$/;"	f
 tlog	IB_Script_T/install.sh	/^tlog() {$/;"	f
-tlog	IB_Script_T/start.sh	/^tlog() {$/;"	f
-tlog	IB_Script_T/stop.sh	/^tlog() {$/;"	f
+tlog	IB_Script_T/startAP.sh	/^tlog() {$/;"	f
+tlog	IB_Script_T/stopAP.sh	/^tlog() {$/;"	f
 tlog	IB_Script_T/switch_ha.sh	/^tlog() {$/;"	f
 tlog	IB_Script_T/twse_rbac.sh	/^tlog() {$/;"	f
+tlog	IB_Script_T_root/ib_start.sh	/^tlog() {$/;"	f
+tlog	IB_Script_T_root/ib_stop.sh	/^tlog() {$/;"	f
+tlog	IB_Script_T_root/install.sh	/^tlog() {$/;"	f
+tlog	IB_Script_T_root/startAP.sh	/^tlog() {$/;"	f
+tlog	IB_Script_T_root/stopAP.sh	/^tlog() {$/;"	f
+tlog	IB_Script_T_root/switch_ha.sh	/^tlog() {$/;"	f
+tlog	IB_Script_T_root/twse_rbac.sh	/^tlog() {$/;"	f
+tlog	IB_Script_root_version/ib_start_root.sh	/^tlog() {$/;"	f
+tlog	IB_Script_root_version/ib_stop_root.sh	/^tlog() {$/;"	f
+tlog	IB_Script_root_version/startAP_root.sh	/^tlog() {$/;"	f
+tlog	IB_Script_root_version/stopAP_root.sh	/^tlog() {$/;"	f
 tlog	IB_Script_test_ha/ib_start.sh	/^tlog() {$/;"	f
 tlog	IB_Script_test_ha/ib_stop.sh	/^tlog() {$/;"	f
 tlog	IB_Script_test_ha/install.sh	/^tlog() {$/;"	f
 tlog	IB_Script_test_ha/start.sh	/^tlog() {$/;"	f
+tlog	IB_Script_test_ha/startAP.sh	/^tlog() {$/;"	f
 tlog	IB_Script_test_ha/stop.sh	/^tlog() {$/;"	f
+tlog	IB_Script_test_ha/stopAP.sh	/^tlog() {$/;"	f
 tlog	IB_Script_test_ha/switch_ha.sh	/^tlog() {$/;"	f
 tlog	IB_Script_test_ha/twse_rbac.sh	/^tlog() {$/;"	f
 tlog	ib-trans.sh	/^tlog() {$/;"	f
 tlog	ib_chk_status.sh	/^tlog() {$/;"	f
 tlog	ib_start.sh	/^tlog() {$/;"	f
 tlog	ib_stop.sh	/^tlog() {$/;"	f
+tlog	sshkey_auto_exchange_fixgw.sh	/^tlog() {$/;"	f
 tlog	start.sh	/^tlog() {$/;"	f
 tlog	stop.sh	/^tlog() {$/;"	f
 tlog	switch_ha.full.sh	/^tlog() {$/;"	f
 tlog	switch_ha.sh	/^tlog() {$/;"	f
 tlog	twse_rbac.sh	/^tlog() {$/;"	f
 to_end	shell-98-v1/chl/samples/mt-tape-funs.sh	/^to_end() {$/;"	f
-to_log	aa.sh	/^to_log() {$/;"	f
-to_log	ok-tt.sh	/^to_log() {$/;"	f
-to_log	scott/aa.sh	/^to_log() {$/;"	f
-to_log	scott/ok-tt.sh	/^to_log() {$/;"	f
-to_log	scott/tt.sh	/^to_log() {$/;"	f
 trans_bits	shell-98-v1/chk/samples/cr_iptables.sh	/^trans_bits() {$/;"	f
+trans_file	sshkey_auto_exchange_fixgw.sh	/^trans_file (){$/;"	f
 update_kernel	IB_Script/twse_rbac.sh	/^update_kernel(){$/;"	f
 update_kernel	IB_Script_T/twse_rbac.sh	/^update_kernel(){$/;"	f
+update_kernel	IB_Script_T_root/twse_rbac.sh	/^update_kernel(){$/;"	f
 update_kernel	IB_Script_test_ha/twse_rbac.sh	/^update_kernel(){$/;"	f
 update_kernel	twse_rbac.sh	/^update_kernel(){$/;"	f
 upload	ftp.sh	/^upload () {$/;"	f
@@ -1332,9 +1466,18 @@ user_check	IB_Script/switch_ha.sh.0521	/^user_check (){$/;"	f
 user_check	IB_Script/switch_ha.sh.big5	/^user_check (){$/;"	f
 user_check	IB_Script/switch_ha.sh.utf8	/^user_check (){$/;"	f
 user_check	IB_Script_T/ib_start.sh	/^user_check (){$/;"	f
+user_check	IB_Script_T/ib_start.sh.utf8	/^user_check (){$/;"	f
+user_check	IB_Script_T/ib_start_new.sh	/^user_check (){$/;"	f
 user_check	IB_Script_T/ib_stop.sh	/^user_check (){$/;"	f
+user_check	IB_Script_T/initial_ib_ip.sh	/^user_check (){$/;"	f
 user_check	IB_Script_T/install.sh	/^user_check (){$/;"	f
 user_check	IB_Script_T/switch_ha.sh	/^user_check (){$/;"	f
+user_check	IB_Script_T_root/ib_start.sh	/^user_check (){$/;"	f
+user_check	IB_Script_T_root/ib_stop.sh	/^user_check (){$/;"	f
+user_check	IB_Script_T_root/install.sh	/^user_check (){$/;"	f
+user_check	IB_Script_T_root/switch_ha.sh	/^user_check (){$/;"	f
+user_check	IB_Script_root_version/ib_start_root.sh	/^user_check (){$/;"	f
+user_check	IB_Script_root_version/ib_stop_root.sh	/^user_check (){$/;"	f
 user_check	IB_Script_test_ha/ib_start.sh	/^user_check (){$/;"	f
 user_check	IB_Script_test_ha/ib_stop.sh	/^user_check (){$/;"	f
 user_check	IB_Script_test_ha/install.sh	/^user_check (){$/;"	f
