@@ -35,7 +35,6 @@
 # 2014/06/07 Bruce release
 # 2014/06/21 Bruce release
 # 2014/07/24 Bruce release
-# 2014/09/24 Bruce release
 #
 # version:
 # 1.0 release
@@ -53,9 +52,43 @@
 # 2.2 release, Use slow command ibstat to check the ib card hardware status.
 # 2.3 release, delete CMDCYCLE parameter for command.
 # 2.4 release, add aptlog function for ap program format.
-# 2.5 release, add Load paramter config.
 # 
 # set -x 
+
+SITE="TSEOA1"
+HADIR="/usr/es/sbin/cluster/utilities"
+IBMON="/TWSE/bin"
+RG_NAME_LIST=$( ${HADIR}/clRGinfo | grep RG | awk '{print $1}' 2>/dev/null )
+RG_NAME=$(echo $RG_NAME_LIST | sed 's/ /,/g')
+TYPE1A="FIXGW01P"
+TYPE1B="FIXGW01B"
+TYPE2A="FIXGW02P"
+TYPE2B="FIXGW02B"
+IB_STATUS=""
+IBA0=$(lsdev | grep iba[0-9] | head -1 | awk '{print $1}')
+IBA1=$(lsdev | grep iba[0-9] | tail -1 | awk '{print $1}')
+USER=$(whoami)
+INTERVAL="3"
+COUNT="5"
+HACYCLE="2"
+NOW_HOST=$(hostname)
+PORT="2222"
+OLDIFS=$IFS
+LOGDIR="/TWSE/IB_log"
+LOG=${LOGDIR}/ib_start_stop.sh.log
+APLOGDIR="/TWSE/IB_log"
+APLOG="${APLOGDIR}/aplog.txt"
+PGNAME=IB_MON
+haflag="0"
+swflag="0"
+iba0p1="0"
+iba0p2="0"
+iba1p1="0"
+iba1p2="0"
+TARGETIP="10.204.5.71  10.204.5.81  10.204.5.71"
+today=$(date +"%Y%m%d")
+set -A 	DESIPR $TARGETIP
+DESIP_NUM=${#DESIPR[@]}
 
 #{{{tlog ,script loger function
 tlog() {
@@ -99,12 +132,28 @@ aptlog() {
 
 #}}}
 
-#/*{{{*Load parameter config/
+if [[ $NOW_HOST = $TYPE1A ]] || [[ $NOW_HOST = $TYPE1B ]];then
+	HOSTA=$TYPE1A
+	HOSTB=$TYPE1B
+	HSOTA_VL4="10.199.168.143"
+	HSOTB_VL4="10.199.168.145"
+	IPADDR="10.204.5.141"
+# Example type and ip
+elif [[ $NOW_HOST = $TYPE2A ]] || [[ $NOW_HOST = $TYPE2B ]];then
+	HOSTA=$TYPE2A
+	HOSTB=$TYPE2B
+	HSOTA_VL4="10.199.168.144"
+	HSOTB_VL4="10.199.168.146"
+	IPADDR="10.204.5.142"
+else
+	tlog "The Host type are wrong type" ${LOG}.${today}
+	exit 1
+fi
 
-. /TWSE/cfg/ib_config
-ib_start_cfg
+set -A MUSER twse
 
-#/*}}}*/
+#-----------------------------------------------------------------------------#
+
 
 #{{{errlogger to aix errpt log 
 erlogger() {
@@ -142,8 +191,7 @@ ib_moniter (){
 		exec_status=$?
 		if [[ $exec_status -ne "0" ]]; then
 			tlog "[ERR] ibsmon_np may be has problem,Please to check it" $LOG
-#aptlog "E" "ibsmon_np服務有問題"  $APLOG
-			aptlog "E" "ibsmon_np has problem,Please to check it"  $APLOG
+			aptlog "E" "ibsmon_np服務有問題"  $APLOG
 			return 1
 		else 
 			return 0
@@ -203,9 +251,8 @@ today=$(date +"%Y%m%d")
 		if [[ $exec_status -eq "0"  ]];then	
 			check_ib_ip_status
 		else
-			print "[ERR] $USER permission denied, than $0 script terminated" ${LOG}.${today}
-#aptlog "E" "目前使用者為${USER},應為twse"  $APLOG
-			aptlog "E" "$USER permission denied, than $0 script terminated"  $APLOG
+			print "[ERR] $USER permission denied, than $0 script terminated  " ${LOG}.${today}
+			aptlog "E" "目前使用者為${USER},應為twse"  $APLOG
 			ibsmon_np	
 			exit 1
 		fi
@@ -232,9 +279,8 @@ check_ib_ip_status () {
 		if [[ $exec_status -eq "0" ]];then
 			tlog "[INFO] check_ib_hwstatus function Success" $LOG
 		else 
-			tlog "[ERR] check_ib_hwstatus function failed, $0 script terminated" $LOG
-#			aptlog "E" "執行check_ib_hwstatus失敗,程式終止"  $APLOG
-			aptlog "E" "check_ib_hwstatus function failed, $0 script terminated"  $APLOG
+			tlog "[ERR] check_ib_hwstatus function Failed" $LOG
+			aptlog "E" "執行check_ib_hwstatus失敗,程式終止"  $APLOG
 			ibsmon_np
 			exit 1
 		fi
@@ -252,8 +298,7 @@ check_ib_ip_status () {
 		else 
 			erlogger "[ERR] Bind the ip:${IPADDR} on ib Failed, and $0 script terminated"
 			tlog "[ERR] Bind the ip:${IPADDR} on ib Failed,and $0 script terminated" $LOG
-#aptlog "E" "設定IB網路IP:${IPADDR}失敗,程式終止"  $APLOG
-			aptlog "E" "Bind the ip:${IPADDR} on ib Failed, and $0 script terminated"  $APLOG
+			aptlog "E" "設定IB網路IP:${IPADDR}失敗,程式終止"  $APLOG
 			ibsmon_np	
 			exit 1
 		fi
@@ -272,30 +317,29 @@ ib_ip_conifg () {
 			DEV_IB_PORT=${DEV_IB_PORT_LIST[0]}
 			DEV_IB=${DEV_IB_PORT_LIST[1]}
 		else
-			tlog "[ERR] Local InfiniBand card check all failed,begins to check alternate server connection..." $LOG
-#aptlog "E" "本機IB網卡全失敗,檢查遠端主機"  $APLOG
-			aptlog "E" "Local InfiniBand card check all failed,begins to check alternate server connection..."  $APLOG
+			tlog "[ERR] Local check all failed, begins to check alternate server connection..." $LOG
+			aptlog "E" "本機IB網卡全失敗,檢查遠端主機"  $APLOG
 			if [[ $NOW_HOST = $HOSTA ]];then
 				ssh_check
 				exec_status=$?
 				if [[ $exec_status -eq "0" ]];then
 					remote_check
 				else
-					tlog "[ERR] ssh_check function check sshd $HOSTB service has question, and $0 script terminated" $LOG
-#aptlog "E" "SSH服務連線至備援機失敗,程式終止"  $APLOG
-					aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
+					tlog "[ERR] ssh_check function check sshd $HOSTB service has question and $0 script terminated" $LOG
+					aptlog "E" "SSH服務連線至備援機失敗,程式終止"  $APLOG
 					return 1
 				fi
 			else
-				tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated" $LOG
-#aptlog "E" "本機為備援主機,不進行RG切換"  $APLOG
-				aptlog "E" "$NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"  $APLOG
+				tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated " $LOG
+				aptlog "E" "本機為備援主機,不進行RG切換"  $APLOG
 				return 1
 			fi
 		fi
 
 		tlog "[INFO] Bind ip on ib0 device from device Card:(${DEV_IB}) Port:(${DEV_IB_PORT})" $LOG
 
+		# detch ib0
+		swrole exec.chdev "-c chdev -l ib0 -a state=detach > /dev/null 2>>${LOG}.${today}"
 		# use rbac function,set ip address on ib card
 		swrole exec.chdev "-c chdev -l ib0 -a ib_adapter=${DEV_IB} -a ib_port=${DEV_IB_PORT} -a state=up -a netaddr=${IPADDR} -a netmask=255.255.255.0 > /dev/null 2>>${LOG}.${today}"
 		exec_status=$?
@@ -370,22 +414,19 @@ check_ib_hwstatus() {
 				*)
 					tlog "[ERR] IB card number has wrong message:${DEV_IB}" $LOG
 					erlogger "[ERR] IB card number has wrong message:${DEV_IB}"
-#aptlog "E" "IB網卡資訊錯誤:${DEV_IB}"  $APLOG
-					aptlog "E" "IB card number has wrong message:${DEV_IB}"  $APLOG
+					aptlog "E" "IB網卡資訊錯誤:${DEV_IB}"  $APLOG
 					ibsmon_np
 					exit 1
 					;;
 			esac
 			tlog "[WARN] Local InfiniBand card check success, begins to swap Device:${DEV_IB} Port:${DEV_NOW_PORT}" $LOG
-#aptlog "W" "切換至Device:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
-			aptlog "W" "Begins to swap Device:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
+			aptlog "W" "切換至Device:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
 			# sample: swap iba0 2
 			swap ${DEV_IB} ${DEV_NOW_PORT}
 			return 0
 		else 
-			tlog "[ERR] Local InfiniBand card check all failed,begins to check alternate server connection..." $LOG
-#aptlog "E" "本機IB網卡全失敗,檢查遠端主機"  $APLOG
-			aptlog "E" "Local InfiniBand card check all failed,begins to check alternate server connection..."  $APLOG
+			tlog "[ERR] Local InfiniBand card check all failed, begins to check alternate server connection..." $LOG
+			aptlog "E" "本機IB網卡全失敗,檢查遠端主機"  $APLOG
 			if [[ $NOW_HOST = $HOSTA ]];then
 				ssh_check
 				exec_status=$?
@@ -394,15 +435,13 @@ check_ib_hwstatus() {
 				else
 					tlog "[ERR] ssh_check function check sshd $HOSTB service has question" $LOG
 					erlogger "[ERR] ssh_check function check sshd $HOSTB service has question"
-#aptlog "E" "SSH服務連線至備援機失敗,程式終止"  $APLOG
-					aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
+					aptlog "E" "SSH服務連線至備援機失敗,程式終止"  $APLOG
 					ibsmon_np
 					exit 1
 				fi
 			else
-				tlog "[ERR] $NOW_HOST is Backup lpar, than don't move Resource Group and $0 script terminated" $LOG
-#aptlog "E" "$NOW_HOST 本機為備援主機,不進行RG切換,程式終止"  $APLOG
-				aptlog "E" "$NOW_HOST is Backup lpar, than don't move Resource Group and $0 script terminated"  $APLOG
+				tlog "[ERR] $NOW_HOST is Backup lpar, than don't move Resource Group and $0 script terminated " $LOG
+				aptlog "E" "$NOW_HOST 本機為備援主機,不進行RG切換,程式終止"  $APLOG
 				ibsmon_np
 				exit 1
 			fi
@@ -432,8 +471,7 @@ local_check() {
 		return 0
 	else 
 		tlog "[ERR] Executing Local_check finished. The ib_card=${IB_CARD} ib_port=${IB_PORT} status not Active" $LOG
-#aptlog "E" "IBCARD:${IB_CARD} IBPORT:${IB_PORT} 失敗"  $APLOG
-		aptlog "E" "ib_card:${IB_CARD} ib_port:${IB_PORT} status not Active"  $APLOG
+		aptlog "E" "IBCARD:${IB_CARD} IBPORT:${IB_PORT} 失敗"  $APLOG
 		return $exec_status
 	fi
 }
@@ -457,8 +495,7 @@ ping_check() {
 				# if ib ping network destination is wrong , than terminate the script
 				if [[ -z $LOSS ]];then
 					tlog "[ERR] Network address local ip:${IPADDR} destination:${DESIPR[$dipflag]} has problem, to check the InfiniBand Network status " $LOG	
-#					aptlog "E" "檢查${DESIPR[$dipflag]}網路結果失敗"  $APLOG
-					aptlog "E" "Check ${DESIPR[$dipflag]} network status failed"  $APLOG
+					aptlog "E" "檢查${DESIPR[$dipflag]}網路結果失敗"  $APLOG
 					# check the ib ip status
 					check_ib_ip_status
 				fi
@@ -467,8 +504,7 @@ ping_check() {
 				if [[ $LOSS -eq "100" ]];then
 					tlog "[ERR] InfiniBand Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss" $LOG	
 					erlogger "[ERR] InfiniBand Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss"
-#					aptlog "E" "PING IP:${DESIPR[$dipflag]} 封包LOSS ${LOSS}%"  $APLOG
-					aptlog "E" "PING IP:${DESIPR[$dipflag]} LOSS ${LOSS}%"  $APLOG
+					aptlog "E" "PING IP:${DESIPR[$dipflag]} 封包LOSS ${LOSS}%"  $APLOG
 
 					dipflag=$(($dipflag+1))
 					swflag=$dipflag
@@ -484,18 +520,16 @@ ping_check() {
 									if [[ $exec_status -eq "0" ]];then
 										remote_check
 									else
-										tlog "[ERR] ssh_check function check sshd $HOSTB service has question, and $0 script terminated" $LOG
-										erlogger "[ERR] ssh_check function check sshd $HOSTB service has question, and $0 script terminated"
-#aptlog "E" "SSH服務連線至備援機失敗,程式終止"  $APLOG
-										aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
+										tlog "[ERR] ssh_check function check sshd $HOSTB service has question" $LOG
+										erlogger "[ERR] ssh_check function check sshd $HOSTB service has question"
+										aptlog "E" "SSH服務連線至備援機失敗,程式終止"  $APLOG
 										ibsmon_np
 										exit 1
 									fi
 							else
-								tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated" $LOG
-								erlogger "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"
-#								aptlog "E" "${NOW_HOST}為備援主機,不進行RG切換,程式終止"  $APLOG
-								aptlog "E" "$NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"  $APLOG
+								tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated " $LOG
+								erlogger "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated "
+								aptlog "E" "${NOW_HOST}為備援主機,不進行RG切換,程式終止"  $APLOG
 								ibsmon_np
 								exit 1
 							fi
@@ -515,16 +549,14 @@ ping_check() {
 									else
 										tlog "[ERR] ssh_check function check sshd $HOSTB service has question" $LOG
 										erlogger "[ERR] ssh_check function check sshd $HOSTB service has question"
-#aptlog "E" "SSH服務連線至備援機失敗,程式終止"  $APLOG
-										aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
+										aptlog "E" "SSH服務連線至備援機失敗,程式終止"  $APLOG
 										ibsmon_np
 										exit 1
 									fi
 							else
 								tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated " $LOG
 								erlogger "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated "
-#aptlog "E" "${NOW_HOST}為備援主機,不進行RG切換,程式終止"  $APLOG
-								aptlog "E" "$NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"  $APLOG
+								aptlog "E" "${NOW_HOST}為備援主機,不進行RG切換,程式終止"  $APLOG
 								ibsmon_np
 								exit 1
 							fi
@@ -550,13 +582,11 @@ ping_check() {
 					tlog "[WARN] InfiniBand Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss" $LOG	
 					erlogger "[WARN] InfiniBand Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss"
 
-					if [[ $LOSS -ge "20" ]] && [[ $LOSS -le "40" ]] ;then
-#aptlog "W" "PING IP:${DESIPR[$dipflag]} 封包LOSS ${LOSS}%"  $APLOG
-						aptlog "W" "PING IP:${DESIPR[$dipflag]} LOSS ${LOSS}%"  $APLOG
+					if [[ $LOSS -ge "25" ]] && [[ $LOSS -lt "50" ]] ;then
+						aptlog "W" "PING IP:${DESIPR[$dipflag]} 封包LOSS ${LOSS}%"  $APLOG
 					fi
-					if [[ $LOSS -gt "40" ]] ;then
-#aptlog "E" "PING IP:${DESIPR[$dipflag]} 封包LOSS ${LOSS}%"  $APLOG
-						aptlog "E" "PING IP:${DESIPR[$dipflag]} LOSS ${LOSS}%"  $APLOG
+					if [[ $LOSS -ge "50" ]] ;then
+						aptlog "E" "PING IP:${DESIPR[$dipflag]} 封包LOSS ${LOSS}%"  $APLOG
 					fi
 					dipflag=0
 					haflag=0
@@ -676,8 +706,7 @@ loss_100_ib_hwstatus() {
 				;;
 				 *)
 				tlog "[ERR] IB card number has wrong message:${DEV_IB} ${DEV_IB_PORT}" $LOG
-#aptlog "E" "IB網卡資訊錯誤:${DEV_IB} PORT:${DEV_IB_PORT}"  $APLOG
-				aptlog "E" "IB card number has wrong message:${DEV_IB}"  $APLOG
+				aptlog "E" "IB網卡資訊錯誤:${DEV_IB} PORT:${DEV_IB_PORT}"  $APLOG
 				ibsmon_np
 				exit 1
 			;;
@@ -689,33 +718,29 @@ loss_100_ib_hwstatus() {
 		fi
 
 		tlog "[WARN] Local InfiniBand card check success, begins to swap Device:${DEV_IB} Port:${DEV_IB_PORT}" $LOG
-#aptlog "W" "切換至Device:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
-		aptlog "W" "Begins to swap Device:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
+		aptlog "W" "切換至Device:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
 		swap ${DEV_IB} ${DEV_IB_PORT}
 #		ping_check
 		return 0
 	else
 		tlog "[ERR] Local InfiniBand card check all failed, begins to check alternate server connection..." $LOG
 		erlogger "[ERR] Local InfiniBand card check all failed, begins to check alternate server connection..." 
-#aptlog "E" "本機IB網卡全失敗,檢查遠端主機"  $APLOG
-		aptlog "E" "Local InfiniBand card check all failed,begins to check alternate server connection..."  $APLOG
+		aptlog "E" "本機IB網卡全失敗,檢查遠端主機"  $APLOG
 			if [[ $NOW_HOST = $HOSTA ]];then
 				ssh_check
 				exec_status=$?
 				if [[ $exec_status -eq "0" ]];then
 					remote_check
 				else
-					tlog "[ERR] ssh_check function check sshd $HOSTB service has question,and $0 script terminated" $LOG
-					aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
-#aptlog "E" "SSH服務連線至備援機失敗,程式終止"  $APLOG
+					tlog "[ERR] ssh_check function check sshd $HOSTB service has question" $LOG
+					aptlog "E" "SSH服務連線至備援機失敗,程式終止"  $APLOG
 					ibsmon_np
 					exit 1
 				fi
 			else
 				tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated " $LOG
 				erlogger "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated "
-#aptlog "E" "${NOW_HOST}為備援主機,不進行RG切換,程式終止"  $APLOG
-				aptlog "E" "$NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"  $APLOG
+				aptlog "E" "${NOW_HOST}為備援主機,不進行RG切換,程式終止"  $APLOG
 				ibsmon_np
 				exit 1
 			fi
@@ -735,8 +760,7 @@ ssh_check() {
 		else
 			tlog "[ERR] ${HSOTB_VL4} sshd service has question,Please to check the ${HSOTB_VL4} ssh service or ssh-key change question " $LOG
 			erlogger "[ERR] ${HSOTB_VL4} sshd service has question,Please to check the ${HSOTB_VL4} ssh service or ssh-key change question "
-#aptlog "E" "SSH服務失敗,請確認主備機援SSH連線"  $APLOG
-			aptlog "E" "${HSOTB_VL4} sshd service has question,Please to check the ${HSOTB_VL4} ssh service or ssh-key change question"  $APLOG
+			aptlog "E" "SSH服務失敗,請確認主備機援SSH連線"  $APLOG
 			return $exec_status
 		fi
 }
@@ -749,26 +773,26 @@ swap() {
 
 	NEW_IB=$1
 	NEW_IB_PORT=$2
-	tlog "[INFO] Detach ib0 device..." $LOG
-	erlogger "[INFO] Detach ib0 device..."
 
 		# detach the ib0 
 		# Use Rbac function, detach ib0
-		swrole exec.chdev "-c chdev -l ib0 -a state=detach > /dev/null 2>>${LOG}.${today}"
-		exec_status=$?
-		if [[ $exec_status -eq "0" ]];then
-			tlog "[INFO] Detach ib0 success " $LOG
-			break
-		else 
-			tlog "[ERR] Detach ib0 Failed,than $0 script terminated"  $LOG
-			erlogger "[ERR] Detach ib0 Failed,than $0 script terminated" 
-#aptlog "E" "停止IB網卡失敗,程式終止"  $APLOG
-			aptlog "E" "Detach ib0 Failed,than $0 script terminated"  $APLOG
-			ibsmon_np
-			exit 1 
-		fi
-
-
+		for ib_card_list in ib0 ib1
+		do
+			tlog "[INFO] Detach $ib_card_list  device..." $LOG
+			erlogger "[INFO] Detach $ib_card_list device..."
+			swrole exec.chdev "-c chdev -l $ib_card_list -a state=detach > /dev/null 2>>${LOG}.${today}"
+			exec_status=$?
+			if [[ $exec_status -eq "0" ]];then
+				tlog "[INFO] Detach $ib_card_list success " $LOG
+				break
+			else 
+				tlog "[ERR] Detach ib0 Failed,than $0 script terminated"  $LOG
+				erlogger "[ERR] Detach $ib_card_list Failed,than $0 script terminated" 
+				aptlog "E" "停止IB網卡失敗,程式終止"  $APLOG
+				ibsmon_np
+				exit 1 
+			fi
+		done
 
 		# Use new iba card to bind ip on ib0 
 		# Use Rbac function, bind ip on ib card
@@ -783,8 +807,7 @@ swap() {
 		else 
 			tlog "[ERR] Bind ip:${IPADDR} on ib0 Failed,than $0 script terminated"  $LOG
 			erlogger "[ERR] Bind ip:${IPADDR} on ib0 Failed,than $0 script terminated" 
-#aptlog "E" "設定IB網卡IP:${IPADDR}失敗,程式終止"  $APLOG
-			aptlog "E" "Bind ip:${IPADDR} on ib0 Failed,than $0 script terminated"  $APLOG
+			aptlog "E" "設定IB網卡IP:${IPADDR}失敗,程式終止"  $APLOG
 			ibsmon_np
 			exit 1 
 		fi
@@ -798,8 +821,7 @@ remote_check() {
 	ALT_DEV=$(ssh -p ${PORT} ${HOSTB} ibstat | grep Active | head -1 | awk '{print $3}' | tr -d "()" )
 	if [[ ${ALT_DEV} = iba[0-9] ]]; then
 		tlog "[ERR] ${HOSTB} ${ALT_DEV} alive, begins to transfer IP $IPADDR from $NOW_HOST to $HOSTB ..." $LOG
-#aptlog "E" "將${IPADDR}由${NOW_HOST}切換至${HOSTB}"  $APLOG
-		aptlog "E" "${HOSTB} ${ALT_DEV} alive, begins to transfer IP $IPADDR from $NOW_HOST to $HOSTB ..." $APLOG
+		aptlog "E" "將${IPADDR}由${NOW_HOST}切換至${HOSTB}"  $APLOG
 			# detach the ib0 
 			#  Use Rbac function , detach ib0
 			swrole exec.chdev "-c chdev -l ib0 -a state=detach > /dev/null 2>>${LOG}.${today}"
@@ -810,8 +832,7 @@ remote_check() {
 			else 
 				tlog "[ERR] Detach ib0 Failed,than $0 script terminated"  $LOG
 				erlogger "[ERR] Detach ib0 Failed,than $0 script terminated" 
-#aptlog "E" "停止IB網卡失敗,程式終止"  $APLOG
-				aptlog "E" "Detach ib0 Failed,than $0 script terminated"  $APLOG
+				aptlog "E" "停止IB網卡失敗,程式終止"  $APLOG
 				ibsmon_np
 				exit 1 
 			fi
@@ -826,14 +847,12 @@ remote_check() {
 		else
 			tlog "[ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated..." $LOG
 			erlogger "[ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated..."
-#aptlog "E" "切換HACMP失敗,程式終止"  $APLOG
-			aptlog "E" "HACMP transfer failed, please check HACMP status by cldump, script terminated..."  $APLOG
+			aptlog "E" "切換HACMP失敗,程式終止"  $APLOG
 			exit 1
 		fi
 	else
 		tlog "[ERR] We are not going to move ; $NOW_HOST and $HOSTB physical connections all fail, script terminate" $LOG
-#aptlog "E" "主備援機IB網卡全失敗,程式終止"  $APLOG
-		aptlog "E" "We are not going to move ; $NOW_HOST and $HOSTB physical connections all fail, script terminate"  $APLOG
+		aptlog "E" "主備援機IB網卡全失敗,程式終止"  $APLOG
 		ibsmon_np
 		exit 0
 	fi

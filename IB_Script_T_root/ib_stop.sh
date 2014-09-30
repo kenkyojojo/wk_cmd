@@ -22,12 +22,13 @@
 # 
 #set -x 
 
-#/*{{{*Load parameter config/
-
-. /TWSE/config/ib_config
-ib_stop_cfg
-
-#/*}}}*/
+SITE="TSEOT1"
+NOW_HOST=$(hostname)
+CMDCYCLE="2"
+LOGDIR=/tmp
+LOG=${LOGDIR}/ib_start_stop.sh.log
+set -A MUSER root
+#-----------------------------------------------------------------------------#
 
 #{{{user_check
 user_check (){
@@ -47,27 +48,14 @@ user_check (){
 }
 #}}}
 
-#{{{aptlog ,aptlog function
-aptlog() {
-
-	TYP=$1
-    MSG=$2
-    LOG=$3
-
-	DAY=$(date +"%Y%m%d")
-	TIME=$(date +"%H:%M:%S")
-
-	echo "CODE:${TYP} $PGNAME $DAY $TIME $MSG" | tee  -a $LOG
-}
-#}}}
-
 #{{{tlog ,script loger function
 tlog() {
 
     MSG=$1
     LOG=$2
 	dt=`date +"%Y/%m/%d %H:%M:%S"`
-	echo "$SITE [${dt}] $MSG" | tee  -a ${LOG}.${today}
+	dt1=$(date +"%Y%m%d")
+	echo "$SITE [${dt}] $MSG" | tee  -a ${LOG}.${dt1}
 }
 #}}}
 
@@ -76,15 +64,13 @@ erlogger() {
 
     MSG=$1
 	#use Rbac function.
-	swrole exec.errlogger "-c errlogger $MSG"
+	errlogger $MSG
 }
 #}}}
 
 #{{{step:1 , main
 main () {
-today=$(date +"%Y%m%d")
 
-	print "\n\n" ${LOG}.${today}
 	tlog "***************************InfiniBand monitor stop************************************" $LOG
 
 	# check execute user is twse
@@ -96,8 +82,8 @@ today=$(date +"%Y%m%d")
 		if [[ $exec_status -eq "0" ]];then
 			tlog "[INFO] Terminated ibsmon_np Success" $LOG
 		else 
-			tlog "[ERR] Terminated ibsmon_np failed" $LOG
-			erlogger "[ERR] Terminated ibsmon_np failed"
+			tlog "[ERR] Terminated ibsmon_np Failed" $LOG
+			erlogger "[ERR] Terminated ibsmon_np Failed"
 		fi
 
 		# kill the ib_start.sh script
@@ -106,8 +92,8 @@ today=$(date +"%Y%m%d")
 		if [[ $exec_status -eq "0" ]];then
 			tlog "[INFO] Terminated ib_start.sh script Success" $LOG
 		else 
-			tlog "[ERR] Terminated ib_start.sh script failed" $LOG
-			erlogger "[ERR] Terminated ib_start.sh script failed"
+			tlog "[ERR] Terminated ib_start.sh script Failed" $LOG
+			erlogger "[ERR] Terminated ib_start.sh script Failed"
 		fi
 
 		# deatch the ib0 card
@@ -116,11 +102,11 @@ today=$(date +"%Y%m%d")
 		if [[ $exec_status -eq "0" ]];then
 			tlog "[INFO] Detach ib0 success " $LOG
 		else 
-			tlog "[ERR] Detach ib0 failed"  $LOG
-			erlogger "[ERR] Detach ib0 failed" 
-#aptlog "E" "停止IB網卡失敗"  $APLOG
-			aptlog "E" "Detach ib0 failed"  $APLOG
+			tlog "[ERR] Detach ib0 Failed"  $LOG
+			erlogger "[ERR] Detach ib0 Failed" 
 		fi
+
+		
 	else
 		tlog "[ERR] $USER permission denied, than $0 script terminated" $LOG
 		exit 1
@@ -130,7 +116,7 @@ today=$(date +"%Y%m%d")
 }
 #}}}
 
-#{{{setp:2 , detach ib0 interface
+#{{{setp:2 , detach ib interface
 detach() {
 #set -x 
 #tlog "#==========================detach_...================================================#" $LOG
@@ -138,12 +124,20 @@ detach() {
 	tlog "[INFO] Detaching ib0 device..." $LOG
 
 	# detach the ib0 
-	# use Rbac function, detach ib0
-	swrole exec.chdev "-c chdev -l ib0 -a state=detach > /dev/null 2>>${LOG}.${today}"
-	exec_status=$?
-	if [[ $exec_status -eq "0" ]];then
-		return 0
-	else 
+	flag=1
+	while [ $flag -le $CMDCYCLE ]
+	do
+		# use Rbac function, detach ib0
+		chdev -l ib0 -a state=detach > /dev/null 2>&1
+		exec_status=$?
+		if [[ $exec_status -eq "0" ]];then
+			return 0
+		else 
+			flag=$(($flag + 1 ))
+		fi
+	done
+
+	if [[ $flag -gt $CMDCYCLE ]];then
 		return 1 
 	fi
 }
@@ -164,17 +158,25 @@ SHNAME="ibsmon_np"
 		return 0
 	fi
 	# kill the ib_start.sh process
-	# if have 2 the same process,loop to kill the process
-	for PID in $PIDNUM
+	flag=1
+	while [ $flag -le $CMDCYCLE ]
 	do
-		kill -9 $PID
-		exec_status=$?
-		if [[ $exec_status -eq "0" ]];then
-			return 0
-		else 
-			return 1
-		fi
+		# if have 2 the same process,loop to kill the process
+		for PID in $PIDNUM
+		do
+			kill -9 $PID
+			exec_status=$?
+			if [[ $exec_status -eq "0" ]];then
+				return 0
+			else 
+				flag=$(($flag + 1 ))
+			fi
+		done
 	done
+
+	if [[ $flag -gt $CMDCYCLE ]];then
+		return 1 
+	fi
 }
 #}}}
 
@@ -193,17 +195,26 @@ SHNAME="ib_start.sh"
 		return 0
 	fi
 	# kill the ib_start.sh process
-	# if have 2 the same process,loop to kill the process
-	for PID in $PIDNUM
+	flag=1
+	while [ $flag -le $CMDCYCLE ]
 	do
-		kill -9 $PID
+		# if have 2 the same process,loop to kill the process
+		for PID in $PIDNUM
+		do
+			kill -9 $PID
+		done
+
 		exec_status=$?
 		if [[ $exec_status -eq "0" ]];then
 			return 0
 		else 
-			return 1
+			flag=$(($flag + 1 ))
 		fi
 	done
+
+	if [[ $flag -gt $CMDCYCLE ]];then
+		return 1 
+	fi
 }
 #}}}
 

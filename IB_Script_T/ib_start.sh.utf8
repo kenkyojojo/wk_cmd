@@ -57,6 +57,46 @@
 # 
 # set -x 
 
+
+#{{{ Multi COMMENT
+: << 'COMMENT'
+SITE="TSEOA1"
+HADIR="/usr/es/sbin/cluster/utilities"
+IBMON="/TWSE/bin"
+RG_NAME_LIST=$( ${HADIR}/clRGinfo | grep RG | awk '{print $1}' 2>/dev/null )
+RG_NAME=$(echo $RG_NAME_LIST | sed 's/ /,/g')
+TYPE1A="FIXGW01P"
+TYPE1B="FIXGW01B"
+TYPE2A="FIXGW02P"
+TYPE2B="FIXGW02B"
+IB_STATUS=""
+IBA0=$(lsdev | grep iba[0-9] | head -1 | awk '{print $1}')
+IBA1=$(lsdev | grep iba[0-9] | tail -1 | awk '{print $1}')
+USER=$(whoami)
+INTERVAL="3"
+COUNT="5"
+HACYCLE="2"
+NOW_HOST=$(hostname)
+PORT="2222"
+OLDIFS=$IFS
+LOGDIR="/TWSE/IB_log"
+LOG=${LOGDIR}/ib_start_stop.sh.log
+APLOGDIR="/TWSE/IB_log"
+APLOG="${APLOGDIR}/aplog.txt"
+PGNAME=IB_MON
+haflag="0"
+swflag="0"
+iba0p1="0"
+iba0p2="0"
+iba1p1="0"
+iba1p2="0"
+TARGETIP="10.204.5.71  10.204.5.81  10.204.5.71"
+today=$(date +"%Y%m%d")
+set -A 	DESIPR $TARGETIP
+DESIP_NUM=${#DESIPR[@]}
+COMMENT
+#}}}
+
 #{{{tlog ,script loger function
 tlog() {
 
@@ -102,9 +142,35 @@ aptlog() {
 #/*{{{*Load parameter config/
 
 . /TWSE/cfg/ib_config
-ib_start_cfg
+ib_config
 
 #/*}}}*/
+
+#{{{ Multi COMMENT
+: << 'COMMENT'
+if [[ $NOW_HOST = $TYPE1A ]] || [[ $NOW_HOST = $TYPE1B ]];then
+	HOSTA=$TYPE1A
+	HOSTB=$TYPE1B
+	HSOTA_VL4="10.199.168.143"
+	HSOTB_VL4="10.199.168.145"
+	IPADDR="10.204.5.141"
+# Example type and ip
+elif [[ $NOW_HOST = $TYPE2A ]] || [[ $NOW_HOST = $TYPE2B ]];then
+	HOSTA=$TYPE2A
+	HOSTB=$TYPE2B
+	HSOTA_VL4="10.199.168.144"
+	HSOTB_VL4="10.199.168.146"
+	IPADDR="10.204.5.142"
+else
+	tlog "The Host type are wrong type" ${LOG}.${today}
+	exit 1
+fi
+
+set -A MUSER twse
+
+#-----------------------------------------------------------------------------#
+COMMENT
+#}}}
 
 #{{{errlogger to aix errpt log 
 erlogger() {
@@ -142,7 +208,7 @@ ib_moniter (){
 		exec_status=$?
 		if [[ $exec_status -ne "0" ]]; then
 			tlog "[ERR] ibsmon_np may be has problem,Please to check it" $LOG
-#aptlog "E" "ibsmon_npªA°È¦³°ÝÃD"  $APLOG
+#aptlog "E" "ibsmon_npæœå‹™æœ‰å•é¡Œ"  $APLOG
 			aptlog "E" "ibsmon_np has problem,Please to check it"  $APLOG
 			return 1
 		else 
@@ -204,7 +270,7 @@ today=$(date +"%Y%m%d")
 			check_ib_ip_status
 		else
 			print "[ERR] $USER permission denied, than $0 script terminated" ${LOG}.${today}
-#aptlog "E" "¥Ø«e¨Ï¥ÎªÌ¬°${USER},À³¬°twse"  $APLOG
+#aptlog "E" "ç›®å‰ä½¿ç”¨è€…ç‚º${USER},æ‡‰ç‚ºtwse"  $APLOG
 			aptlog "E" "$USER permission denied, than $0 script terminated"  $APLOG
 			ibsmon_np	
 			exit 1
@@ -233,7 +299,7 @@ check_ib_ip_status () {
 			tlog "[INFO] check_ib_hwstatus function Success" $LOG
 		else 
 			tlog "[ERR] check_ib_hwstatus function failed, $0 script terminated" $LOG
-#			aptlog "E" "°õ¦æcheck_ib_hwstatus¥¢±Ñ,µ{¦¡²×¤î"  $APLOG
+#			aptlog "E" "åŸ·è¡Œcheck_ib_hwstatuså¤±æ•—,ç¨‹å¼çµ‚æ­¢"  $APLOG
 			aptlog "E" "check_ib_hwstatus function failed, $0 script terminated"  $APLOG
 			ibsmon_np
 			exit 1
@@ -252,7 +318,7 @@ check_ib_ip_status () {
 		else 
 			erlogger "[ERR] Bind the ip:${IPADDR} on ib Failed, and $0 script terminated"
 			tlog "[ERR] Bind the ip:${IPADDR} on ib Failed,and $0 script terminated" $LOG
-#aptlog "E" "³]©wIBºô¸ôIP:${IPADDR}¥¢±Ñ,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "è¨­å®šIBç¶²è·¯IP:${IPADDR}å¤±æ•—,ç¨‹å¼çµ‚æ­¢"  $APLOG
 			aptlog "E" "Bind the ip:${IPADDR} on ib Failed, and $0 script terminated"  $APLOG
 			ibsmon_np	
 			exit 1
@@ -273,7 +339,7 @@ ib_ip_conifg () {
 			DEV_IB=${DEV_IB_PORT_LIST[1]}
 		else
 			tlog "[ERR] Local InfiniBand card check all failed,begins to check alternate server connection..." $LOG
-#aptlog "E" "¥»¾÷IBºô¥d¥þ¥¢±Ñ,ÀË¬d»·ºÝ¥D¾÷"  $APLOG
+#aptlog "E" "æœ¬æ©ŸIBç¶²å¡å…¨å¤±æ•—,æª¢æŸ¥é ç«¯ä¸»æ©Ÿ"  $APLOG
 			aptlog "E" "Local InfiniBand card check all failed,begins to check alternate server connection..."  $APLOG
 			if [[ $NOW_HOST = $HOSTA ]];then
 				ssh_check
@@ -282,13 +348,13 @@ ib_ip_conifg () {
 					remote_check
 				else
 					tlog "[ERR] ssh_check function check sshd $HOSTB service has question, and $0 script terminated" $LOG
-#aptlog "E" "SSHªA°È³s½u¦Ü³Æ´©¾÷¥¢±Ñ,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "SSHæœå‹™é€£ç·šè‡³å‚™æ´æ©Ÿå¤±æ•—,ç¨‹å¼çµ‚æ­¢"  $APLOG
 					aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
 					return 1
 				fi
 			else
 				tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated" $LOG
-#aptlog "E" "¥»¾÷¬°³Æ´©¥D¾÷,¤£¶i¦æRG¤Á´«"  $APLOG
+#aptlog "E" "æœ¬æ©Ÿç‚ºå‚™æ´ä¸»æ©Ÿ,ä¸é€²è¡ŒRGåˆ‡æ›"  $APLOG
 				aptlog "E" "$NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"  $APLOG
 				return 1
 			fi
@@ -370,21 +436,21 @@ check_ib_hwstatus() {
 				*)
 					tlog "[ERR] IB card number has wrong message:${DEV_IB}" $LOG
 					erlogger "[ERR] IB card number has wrong message:${DEV_IB}"
-#aptlog "E" "IBºô¥d¸ê°T¿ù»~:${DEV_IB}"  $APLOG
+#aptlog "E" "IBç¶²å¡è³‡è¨ŠéŒ¯èª¤:${DEV_IB}"  $APLOG
 					aptlog "E" "IB card number has wrong message:${DEV_IB}"  $APLOG
 					ibsmon_np
 					exit 1
 					;;
 			esac
 			tlog "[WARN] Local InfiniBand card check success, begins to swap Device:${DEV_IB} Port:${DEV_NOW_PORT}" $LOG
-#aptlog "W" "¤Á´«¦ÜDevice:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
+#aptlog "W" "åˆ‡æ›è‡³Device:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
 			aptlog "W" "Begins to swap Device:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
 			# sample: swap iba0 2
 			swap ${DEV_IB} ${DEV_NOW_PORT}
 			return 0
 		else 
 			tlog "[ERR] Local InfiniBand card check all failed,begins to check alternate server connection..." $LOG
-#aptlog "E" "¥»¾÷IBºô¥d¥þ¥¢±Ñ,ÀË¬d»·ºÝ¥D¾÷"  $APLOG
+#aptlog "E" "æœ¬æ©ŸIBç¶²å¡å…¨å¤±æ•—,æª¢æŸ¥é ç«¯ä¸»æ©Ÿ"  $APLOG
 			aptlog "E" "Local InfiniBand card check all failed,begins to check alternate server connection..."  $APLOG
 			if [[ $NOW_HOST = $HOSTA ]];then
 				ssh_check
@@ -394,14 +460,14 @@ check_ib_hwstatus() {
 				else
 					tlog "[ERR] ssh_check function check sshd $HOSTB service has question" $LOG
 					erlogger "[ERR] ssh_check function check sshd $HOSTB service has question"
-#aptlog "E" "SSHªA°È³s½u¦Ü³Æ´©¾÷¥¢±Ñ,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "SSHæœå‹™é€£ç·šè‡³å‚™æ´æ©Ÿå¤±æ•—,ç¨‹å¼çµ‚æ­¢"  $APLOG
 					aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
 					ibsmon_np
 					exit 1
 				fi
 			else
 				tlog "[ERR] $NOW_HOST is Backup lpar, than don't move Resource Group and $0 script terminated" $LOG
-#aptlog "E" "$NOW_HOST ¥»¾÷¬°³Æ´©¥D¾÷,¤£¶i¦æRG¤Á´«,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "$NOW_HOST æœ¬æ©Ÿç‚ºå‚™æ´ä¸»æ©Ÿ,ä¸é€²è¡ŒRGåˆ‡æ›,ç¨‹å¼çµ‚æ­¢"  $APLOG
 				aptlog "E" "$NOW_HOST is Backup lpar, than don't move Resource Group and $0 script terminated"  $APLOG
 				ibsmon_np
 				exit 1
@@ -432,7 +498,7 @@ local_check() {
 		return 0
 	else 
 		tlog "[ERR] Executing Local_check finished. The ib_card=${IB_CARD} ib_port=${IB_PORT} status not Active" $LOG
-#aptlog "E" "IBCARD:${IB_CARD} IBPORT:${IB_PORT} ¥¢±Ñ"  $APLOG
+#aptlog "E" "IBCARD:${IB_CARD} IBPORT:${IB_PORT} å¤±æ•—"  $APLOG
 		aptlog "E" "ib_card:${IB_CARD} ib_port:${IB_PORT} status not Active"  $APLOG
 		return $exec_status
 	fi
@@ -457,7 +523,7 @@ ping_check() {
 				# if ib ping network destination is wrong , than terminate the script
 				if [[ -z $LOSS ]];then
 					tlog "[ERR] Network address local ip:${IPADDR} destination:${DESIPR[$dipflag]} has problem, to check the InfiniBand Network status " $LOG	
-#					aptlog "E" "ÀË¬d${DESIPR[$dipflag]}ºô¸ôµ²ªG¥¢±Ñ"  $APLOG
+#					aptlog "E" "æª¢æŸ¥${DESIPR[$dipflag]}ç¶²è·¯çµæžœå¤±æ•—"  $APLOG
 					aptlog "E" "Check ${DESIPR[$dipflag]} network status failed"  $APLOG
 					# check the ib ip status
 					check_ib_ip_status
@@ -467,7 +533,7 @@ ping_check() {
 				if [[ $LOSS -eq "100" ]];then
 					tlog "[ERR] InfiniBand Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss" $LOG	
 					erlogger "[ERR] InfiniBand Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss"
-#					aptlog "E" "PING IP:${DESIPR[$dipflag]} «Ê¥]LOSS ${LOSS}%"  $APLOG
+#					aptlog "E" "PING IP:${DESIPR[$dipflag]} å°åŒ…LOSS ${LOSS}%"  $APLOG
 					aptlog "E" "PING IP:${DESIPR[$dipflag]} LOSS ${LOSS}%"  $APLOG
 
 					dipflag=$(($dipflag+1))
@@ -486,7 +552,7 @@ ping_check() {
 									else
 										tlog "[ERR] ssh_check function check sshd $HOSTB service has question, and $0 script terminated" $LOG
 										erlogger "[ERR] ssh_check function check sshd $HOSTB service has question, and $0 script terminated"
-#aptlog "E" "SSHªA°È³s½u¦Ü³Æ´©¾÷¥¢±Ñ,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "SSHæœå‹™é€£ç·šè‡³å‚™æ´æ©Ÿå¤±æ•—,ç¨‹å¼çµ‚æ­¢"  $APLOG
 										aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
 										ibsmon_np
 										exit 1
@@ -494,7 +560,7 @@ ping_check() {
 							else
 								tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated" $LOG
 								erlogger "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"
-#								aptlog "E" "${NOW_HOST}¬°³Æ´©¥D¾÷,¤£¶i¦æRG¤Á´«,µ{¦¡²×¤î"  $APLOG
+#								aptlog "E" "${NOW_HOST}ç‚ºå‚™æ´ä¸»æ©Ÿ,ä¸é€²è¡ŒRGåˆ‡æ›,ç¨‹å¼çµ‚æ­¢"  $APLOG
 								aptlog "E" "$NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"  $APLOG
 								ibsmon_np
 								exit 1
@@ -515,7 +581,7 @@ ping_check() {
 									else
 										tlog "[ERR] ssh_check function check sshd $HOSTB service has question" $LOG
 										erlogger "[ERR] ssh_check function check sshd $HOSTB service has question"
-#aptlog "E" "SSHªA°È³s½u¦Ü³Æ´©¾÷¥¢±Ñ,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "SSHæœå‹™é€£ç·šè‡³å‚™æ´æ©Ÿå¤±æ•—,ç¨‹å¼çµ‚æ­¢"  $APLOG
 										aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
 										ibsmon_np
 										exit 1
@@ -523,7 +589,7 @@ ping_check() {
 							else
 								tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated " $LOG
 								erlogger "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated "
-#aptlog "E" "${NOW_HOST}¬°³Æ´©¥D¾÷,¤£¶i¦æRG¤Á´«,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "${NOW_HOST}ç‚ºå‚™æ´ä¸»æ©Ÿ,ä¸é€²è¡ŒRGåˆ‡æ›,ç¨‹å¼çµ‚æ­¢"  $APLOG
 								aptlog "E" "$NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"  $APLOG
 								ibsmon_np
 								exit 1
@@ -551,11 +617,11 @@ ping_check() {
 					erlogger "[WARN] InfiniBand Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss"
 
 					if [[ $LOSS -ge "20" ]] && [[ $LOSS -le "40" ]] ;then
-#aptlog "W" "PING IP:${DESIPR[$dipflag]} «Ê¥]LOSS ${LOSS}%"  $APLOG
+#aptlog "W" "PING IP:${DESIPR[$dipflag]} å°åŒ…LOSS ${LOSS}%"  $APLOG
 						aptlog "W" "PING IP:${DESIPR[$dipflag]} LOSS ${LOSS}%"  $APLOG
 					fi
 					if [[ $LOSS -gt "40" ]] ;then
-#aptlog "E" "PING IP:${DESIPR[$dipflag]} «Ê¥]LOSS ${LOSS}%"  $APLOG
+#aptlog "E" "PING IP:${DESIPR[$dipflag]} å°åŒ…LOSS ${LOSS}%"  $APLOG
 						aptlog "E" "PING IP:${DESIPR[$dipflag]} LOSS ${LOSS}%"  $APLOG
 					fi
 					dipflag=0
@@ -676,7 +742,7 @@ loss_100_ib_hwstatus() {
 				;;
 				 *)
 				tlog "[ERR] IB card number has wrong message:${DEV_IB} ${DEV_IB_PORT}" $LOG
-#aptlog "E" "IBºô¥d¸ê°T¿ù»~:${DEV_IB} PORT:${DEV_IB_PORT}"  $APLOG
+#aptlog "E" "IBç¶²å¡è³‡è¨ŠéŒ¯èª¤:${DEV_IB} PORT:${DEV_IB_PORT}"  $APLOG
 				aptlog "E" "IB card number has wrong message:${DEV_IB}"  $APLOG
 				ibsmon_np
 				exit 1
@@ -689,7 +755,7 @@ loss_100_ib_hwstatus() {
 		fi
 
 		tlog "[WARN] Local InfiniBand card check success, begins to swap Device:${DEV_IB} Port:${DEV_IB_PORT}" $LOG
-#aptlog "W" "¤Á´«¦ÜDevice:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
+#aptlog "W" "åˆ‡æ›è‡³Device:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
 		aptlog "W" "Begins to swap Device:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
 		swap ${DEV_IB} ${DEV_IB_PORT}
 #		ping_check
@@ -697,7 +763,7 @@ loss_100_ib_hwstatus() {
 	else
 		tlog "[ERR] Local InfiniBand card check all failed, begins to check alternate server connection..." $LOG
 		erlogger "[ERR] Local InfiniBand card check all failed, begins to check alternate server connection..." 
-#aptlog "E" "¥»¾÷IBºô¥d¥þ¥¢±Ñ,ÀË¬d»·ºÝ¥D¾÷"  $APLOG
+#aptlog "E" "æœ¬æ©ŸIBç¶²å¡å…¨å¤±æ•—,æª¢æŸ¥é ç«¯ä¸»æ©Ÿ"  $APLOG
 		aptlog "E" "Local InfiniBand card check all failed,begins to check alternate server connection..."  $APLOG
 			if [[ $NOW_HOST = $HOSTA ]];then
 				ssh_check
@@ -707,14 +773,14 @@ loss_100_ib_hwstatus() {
 				else
 					tlog "[ERR] ssh_check function check sshd $HOSTB service has question,and $0 script terminated" $LOG
 					aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
-#aptlog "E" "SSHªA°È³s½u¦Ü³Æ´©¾÷¥¢±Ñ,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "SSHæœå‹™é€£ç·šè‡³å‚™æ´æ©Ÿå¤±æ•—,ç¨‹å¼çµ‚æ­¢"  $APLOG
 					ibsmon_np
 					exit 1
 				fi
 			else
 				tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated " $LOG
 				erlogger "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated "
-#aptlog "E" "${NOW_HOST}¬°³Æ´©¥D¾÷,¤£¶i¦æRG¤Á´«,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "${NOW_HOST}ç‚ºå‚™æ´ä¸»æ©Ÿ,ä¸é€²è¡ŒRGåˆ‡æ›,ç¨‹å¼çµ‚æ­¢"  $APLOG
 				aptlog "E" "$NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"  $APLOG
 				ibsmon_np
 				exit 1
@@ -735,7 +801,7 @@ ssh_check() {
 		else
 			tlog "[ERR] ${HSOTB_VL4} sshd service has question,Please to check the ${HSOTB_VL4} ssh service or ssh-key change question " $LOG
 			erlogger "[ERR] ${HSOTB_VL4} sshd service has question,Please to check the ${HSOTB_VL4} ssh service or ssh-key change question "
-#aptlog "E" "SSHªA°È¥¢±Ñ,½Ð½T»{¥D³Æ¾÷´©SSH³s½u"  $APLOG
+#aptlog "E" "SSHæœå‹™å¤±æ•—,è«‹ç¢ºèªä¸»å‚™æ©Ÿæ´SSHé€£ç·š"  $APLOG
 			aptlog "E" "${HSOTB_VL4} sshd service has question,Please to check the ${HSOTB_VL4} ssh service or ssh-key change question"  $APLOG
 			return $exec_status
 		fi
@@ -762,7 +828,7 @@ swap() {
 		else 
 			tlog "[ERR] Detach ib0 Failed,than $0 script terminated"  $LOG
 			erlogger "[ERR] Detach ib0 Failed,than $0 script terminated" 
-#aptlog "E" "°±¤îIBºô¥d¥¢±Ñ,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "åœæ­¢IBç¶²å¡å¤±æ•—,ç¨‹å¼çµ‚æ­¢"  $APLOG
 			aptlog "E" "Detach ib0 Failed,than $0 script terminated"  $APLOG
 			ibsmon_np
 			exit 1 
@@ -783,7 +849,7 @@ swap() {
 		else 
 			tlog "[ERR] Bind ip:${IPADDR} on ib0 Failed,than $0 script terminated"  $LOG
 			erlogger "[ERR] Bind ip:${IPADDR} on ib0 Failed,than $0 script terminated" 
-#aptlog "E" "³]©wIBºô¥dIP:${IPADDR}¥¢±Ñ,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "è¨­å®šIBç¶²å¡IP:${IPADDR}å¤±æ•—,ç¨‹å¼çµ‚æ­¢"  $APLOG
 			aptlog "E" "Bind ip:${IPADDR} on ib0 Failed,than $0 script terminated"  $APLOG
 			ibsmon_np
 			exit 1 
@@ -798,7 +864,7 @@ remote_check() {
 	ALT_DEV=$(ssh -p ${PORT} ${HOSTB} ibstat | grep Active | head -1 | awk '{print $3}' | tr -d "()" )
 	if [[ ${ALT_DEV} = iba[0-9] ]]; then
 		tlog "[ERR] ${HOSTB} ${ALT_DEV} alive, begins to transfer IP $IPADDR from $NOW_HOST to $HOSTB ..." $LOG
-#aptlog "E" "±N${IPADDR}¥Ñ${NOW_HOST}¤Á´«¦Ü${HOSTB}"  $APLOG
+#aptlog "E" "å°‡${IPADDR}ç”±${NOW_HOST}åˆ‡æ›è‡³${HOSTB}"  $APLOG
 		aptlog "E" "${HOSTB} ${ALT_DEV} alive, begins to transfer IP $IPADDR from $NOW_HOST to $HOSTB ..." $APLOG
 			# detach the ib0 
 			#  Use Rbac function , detach ib0
@@ -810,7 +876,7 @@ remote_check() {
 			else 
 				tlog "[ERR] Detach ib0 Failed,than $0 script terminated"  $LOG
 				erlogger "[ERR] Detach ib0 Failed,than $0 script terminated" 
-#aptlog "E" "°±¤îIBºô¥d¥¢±Ñ,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "åœæ­¢IBç¶²å¡å¤±æ•—,ç¨‹å¼çµ‚æ­¢"  $APLOG
 				aptlog "E" "Detach ib0 Failed,than $0 script terminated"  $APLOG
 				ibsmon_np
 				exit 1 
@@ -826,13 +892,13 @@ remote_check() {
 		else
 			tlog "[ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated..." $LOG
 			erlogger "[ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated..."
-#aptlog "E" "¤Á´«HACMP¥¢±Ñ,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "åˆ‡æ›HACMPå¤±æ•—,ç¨‹å¼çµ‚æ­¢"  $APLOG
 			aptlog "E" "HACMP transfer failed, please check HACMP status by cldump, script terminated..."  $APLOG
 			exit 1
 		fi
 	else
 		tlog "[ERR] We are not going to move ; $NOW_HOST and $HOSTB physical connections all fail, script terminate" $LOG
-#aptlog "E" "¥D³Æ´©¾÷IBºô¥d¥þ¥¢±Ñ,µ{¦¡²×¤î"  $APLOG
+#aptlog "E" "ä¸»å‚™æ´æ©ŸIBç¶²å¡å…¨å¤±æ•—,ç¨‹å¼çµ‚æ­¢"  $APLOG
 		aptlog "E" "We are not going to move ; $NOW_HOST and $HOSTB physical connections all fail, script terminate"  $APLOG
 		ibsmon_np
 		exit 0

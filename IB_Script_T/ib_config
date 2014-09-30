@@ -1,0 +1,77 @@
+#!/usr/bin/ksh
+
+#{{{  Start ib moni need to load config
+ib_start_cfg () {
+
+SITE="TSEOA1"
+HADIR="/usr/es/sbin/cluster/utilities"
+IBMON="/TWSE/bin"
+RG_NAME_LIST=$( ${HADIR}/clRGinfo | grep RG | awk '{print $1}' 2>/dev/null )
+RG_NAME=$(echo $RG_NAME_LIST | sed 's/ /,/g')
+TYPE1A="FIXGW01P"
+TYPE1B="FIXGW01B"
+TYPE2A="FIXGW02P"
+TYPE2B="FIXGW02B"
+IB_STATUS=""
+IBA0=$(lsdev | grep iba[0-9] | head -1 | awk '{print $1}')
+IBA1=$(lsdev | grep iba[0-9] | tail -1 | awk '{print $1}')
+USER=$(whoami)
+INTERVAL="3"
+COUNT="5"
+HACYCLE="2"
+NOW_HOST=$(hostname)
+PORT="2222"
+OLDIFS=$IFS
+LOGDIR="/TWSE/IB_log"
+LOG=${LOGDIR}/ib_start_stop.sh.log
+APLOGDIR="/TWSE/IB_log"
+APLOG="${APLOGDIR}/aplog.txt"
+PGNAME=IB_START_MONI
+haflag="0"
+swflag="0"
+iba0p1="0"
+iba0p2="0"
+iba1p1="0"
+iba1p2="0"
+TARGETIP="10.204.5.71  10.204.5.81  10.204.5.71"
+today=$(date +"%Y%m%d")
+set -A 	DESIPR $TARGETIP
+DESIP_NUM=${#DESIPR[@]}
+
+if [[ $NOW_HOST = $TYPE1A ]] || [[ $NOW_HOST = $TYPE1B ]];then
+	HOSTA=$TYPE1A
+	HOSTB=$TYPE1B
+	HSOTA_VL4="10.199.168.143"
+	HSOTB_VL4="10.199.168.145"
+	IPADDR="10.204.5.141"
+# Example type and ip
+elif [[ $NOW_HOST = $TYPE2A ]] || [[ $NOW_HOST = $TYPE2B ]];then
+	HOSTA=$TYPE2A
+	HOSTB=$TYPE2B
+	HSOTA_VL4="10.199.168.144"
+	HSOTB_VL4="10.199.168.146"
+	IPADDR="10.204.5.142"
+else
+	echo "The Host type are wrong type" ${LOG}.${today}
+	exit 1
+fi
+
+set -A MUSER twse
+
+}
+#}}}
+
+#/*{{{*Stop ib moni need to load config/
+ib_stop_cfg () {
+
+SITE="TSEOA1"
+LOGDIR=/TWSE/IB_log
+LOG=${LOGDIR}/ib_start_stop.sh.log
+APLOGDIR="/TWSE/IB_log"
+APLOG="${APLOGDIR}/aplog.txt"
+PGNAME=IB_STOP_MONI
+today=$(date +"%Y%m%d")
+set -A MUSER twse
+
+}
+#/*}}}*/

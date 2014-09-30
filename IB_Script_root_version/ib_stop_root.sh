@@ -22,12 +22,17 @@
 # 
 #set -x 
 
-#/*{{{*Load parameter config/
-
-. /TWSE/config/ib_config
-ib_stop_cfg
-
-#/*}}}*/
+SITE="TSEOA1"
+NOW_HOST=$(hostname)
+CMDCYCLE="1"
+LOGDIR=/TWSE/IB_log
+LOG=${LOGDIR}/ib_start_stop.sh.log
+APLOGDIR="/TWSE/IB_log"
+APLOG="aplog.txt"
+PGNAME=IBMONI_S.sh
+today=$(date +"%Y%m%d")
+set -A MUSER twse root
+#-----------------------------------------------------------------------------#
 
 #{{{user_check
 user_check (){
@@ -82,7 +87,6 @@ erlogger() {
 
 #{{{step:1 , main
 main () {
-today=$(date +"%Y%m%d")
 
 	print "\n\n" ${LOG}.${today}
 	tlog "***************************InfiniBand monitor stop************************************" $LOG
@@ -96,8 +100,8 @@ today=$(date +"%Y%m%d")
 		if [[ $exec_status -eq "0" ]];then
 			tlog "[INFO] Terminated ibsmon_np Success" $LOG
 		else 
-			tlog "[ERR] Terminated ibsmon_np failed" $LOG
-			erlogger "[ERR] Terminated ibsmon_np failed"
+			tlog "[ERR] Terminated ibsmon_np Failed" $LOG
+			erlogger "[ERR] Terminated ibsmon_np Failed"
 		fi
 
 		# kill the ib_start.sh script
@@ -106,8 +110,8 @@ today=$(date +"%Y%m%d")
 		if [[ $exec_status -eq "0" ]];then
 			tlog "[INFO] Terminated ib_start.sh script Success" $LOG
 		else 
-			tlog "[ERR] Terminated ib_start.sh script failed" $LOG
-			erlogger "[ERR] Terminated ib_start.sh script failed"
+			tlog "[ERR] Terminated ib_start.sh script Failed" $LOG
+			erlogger "[ERR] Terminated ib_start.sh script Failed"
 		fi
 
 		# deatch the ib0 card
@@ -116,11 +120,12 @@ today=$(date +"%Y%m%d")
 		if [[ $exec_status -eq "0" ]];then
 			tlog "[INFO] Detach ib0 success " $LOG
 		else 
-			tlog "[ERR] Detach ib0 failed"  $LOG
-			erlogger "[ERR] Detach ib0 failed" 
-#aptlog "E" "停止IB網卡失敗"  $APLOG
-			aptlog "E" "Detach ib0 failed"  $APLOG
+			tlog "[ERR] Detach ib0 Failed"  $LOG
+			erlogger "[ERR] Detach ib0 Failed" 
+			aptlog "E" "停止IB網卡失敗,程式終止"  $APLOG
 		fi
+
+		
 	else
 		tlog "[ERR] $USER permission denied, than $0 script terminated" $LOG
 		exit 1
@@ -130,7 +135,7 @@ today=$(date +"%Y%m%d")
 }
 #}}}
 
-#{{{setp:2 , detach ib0 interface
+#{{{setp:2 , detach ib interface
 detach() {
 #set -x 
 #tlog "#==========================detach_...================================================#" $LOG
@@ -138,12 +143,21 @@ detach() {
 	tlog "[INFO] Detaching ib0 device..." $LOG
 
 	# detach the ib0 
-	# use Rbac function, detach ib0
-	swrole exec.chdev "-c chdev -l ib0 -a state=detach > /dev/null 2>>${LOG}.${today}"
-	exec_status=$?
-	if [[ $exec_status -eq "0" ]];then
-		return 0
-	else 
+	flag=1
+	while [ $flag -le $CMDCYCLE ]
+	do
+		# use Rbac function, detach ib0
+#swrole exec.chdev "-c chdev -l ib0 -a state=detach > /dev/null 2>>${LOG}.${today}"
+		chdev -l ib0 -a state=detach > /dev/null 2>>${LOG}.${today}
+		exec_status=$?
+		if [[ $exec_status -eq "0" ]];then
+			return 0
+		else 
+			flag=$(($flag + 1 ))
+		fi
+	done
+
+	if [[ $flag -gt $CMDCYCLE ]];then
 		return 1 
 	fi
 }
@@ -164,17 +178,25 @@ SHNAME="ibsmon_np"
 		return 0
 	fi
 	# kill the ib_start.sh process
-	# if have 2 the same process,loop to kill the process
-	for PID in $PIDNUM
+	flag=1
+	while [ $flag -le $CMDCYCLE ]
 	do
-		kill -9 $PID
-		exec_status=$?
-		if [[ $exec_status -eq "0" ]];then
-			return 0
-		else 
-			return 1
-		fi
+		# if have 2 the same process,loop to kill the process
+		for PID in $PIDNUM
+		do
+			kill -9 $PID
+			exec_status=$?
+			if [[ $exec_status -eq "0" ]];then
+				return 0
+			else 
+				flag=$(($flag + 1 ))
+			fi
+		done
 	done
+
+	if [[ $flag -gt $CMDCYCLE ]];then
+		return 1 
+	fi
 }
 #}}}
 
@@ -193,17 +215,26 @@ SHNAME="ib_start.sh"
 		return 0
 	fi
 	# kill the ib_start.sh process
-	# if have 2 the same process,loop to kill the process
-	for PID in $PIDNUM
+	flag=1
+	while [ $flag -le $CMDCYCLE ]
 	do
-		kill -9 $PID
+		# if have 2 the same process,loop to kill the process
+		for PID in $PIDNUM
+		do
+			kill -9 $PID
+		done
+
 		exec_status=$?
 		if [[ $exec_status -eq "0" ]];then
 			return 0
 		else 
-			return 1
+			flag=$(($flag + 1 ))
 		fi
 	done
+
+	if [[ $flag -gt $CMDCYCLE ]];then
+		return 1 
+	fi
 }
 #}}}
 

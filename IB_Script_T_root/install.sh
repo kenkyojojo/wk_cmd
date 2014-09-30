@@ -1,18 +1,16 @@
 #!/usr/bin/ksh
 IB_DIR="/TWSE/shell"
-IB_LOG="/TWSE/IB_log"
-IB_CFG="/TWSE/IB_log"
 #IB_MONI_DIR="/tmp/ib_script_moniter"
 #IB_MONI_DIR_RS="${IB_MONI_DIR}/release"
 IB_MONI_DIR="/TWSE/bin"
 HA_DIR="/home"
 EXADM_OWN="exadm:exc"
 IB_SHELL="ib_start.sh ib_stop.sh switch_ha.sh"
-HA_SHELL="startAP.sh stopAP.sh twse_rbac.sh initial_ib_ip.sh"
+HA_SHELL="startAP.sh stopAP.sh twse_rbac.sh"
 IB_MONI="ibsmon_np_client ibsmon_np"
 #                       1        2           3
 #set -A TWSE_DIR_LIST $IB_DIR $IB_MONI_DIR $IB_MONI_DIR_RS $HA_DIR
-set -A TWSE_DIR_LIST $IB_DIR $IB_MONI_DIR $HA_DIR $IB_LOG
+set -A TWSE_DIR_LIST $IB_DIR $IB_MONI_DIR $HA_DIR
 LOGDIR="/tmp"
 LOG="${LOGDIR}/ib_script_install.log"
 
@@ -57,11 +55,9 @@ mk_dir () {
 			tlog "chown $EXADM_OWN $DIR" $LOG
 			chown $EXADM_OWN $DIR
 		else
-			tlog "The $DIR dir is already exist" $LOG
+			tlog "The $DIR dir is already have it" $LOG
 		fi
 	done
-	# For twse user can write log 
-	chmod 777 $IB_LOG 
 }
 #}}}
 
@@ -87,13 +83,6 @@ install () {
 	for PG in ${HA_SHELL[@]}
 	do
 		if [[ -f $PG ]];then
-			if [[ $PG = "initial_ib_ip.sh" ]];then
-				tlog "cp $PG $HA_DIR" $LOG
-				cp $PG $HA_DIR/
-				tlog "chmod 750 ${HA_DIR}/${PG}" $LOG
-				chmod 750 ${HA_DIR}/${PG}
-				continue
-			fi
 			tlog "cp $PG $HA_DIR" $LOG
 			cp $PG $HA_DIR/
 			tlog "chmod 774 ${HA_DIR}/${PG}" $LOG

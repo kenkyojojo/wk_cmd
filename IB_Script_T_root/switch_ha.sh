@@ -6,7 +6,7 @@ TYPE1B="FIXGW01B"
 TYPE2A="FIXGW02P"
 TYPE2B="FIXGW02B"
 HADIR="/usr/es/sbin/cluster/utilities"
-LOG=/TWSE/IB_log/switch_ha.sh.log
+LOG=/tmp/switch_ha.sh.log
 FIRST=1
 LAST=1
 
@@ -45,7 +45,7 @@ else
 	HOST_ALT=$HOSTA
 fi
 
-set -A MUSER twse
+set -A MUSER twse bruce
 
 
 
