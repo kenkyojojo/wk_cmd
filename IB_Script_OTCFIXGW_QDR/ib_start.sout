@@ -1,0 +1,1018 @@
+#!/usr/bin/ksh 
+#
+# Author: 
+#     Bruce Hsiao
+#
+# Email: 
+#    bruce_hsiao@win-way.com.tw
+#
+# Platform OS: 
+#        AIX 7.1
+#
+# Program:
+#   1. Collocation the Power HA. This program to detection "Infinband card" and Infiniband network status. 
+#   2. Run this script, first you need to install the Power HA filesets.
+#   3. Second you need to setting the rbac config it, for privilege to otc user.
+#   4. If the local IB card port 1 failed, than switch card 1 port 2. 
+#   5. If the local IB card are all failed, use ssh to check the hostB Infinbad card status.
+#   6. If hostB IB card status has active status,than use Power HA clRGmove command to move RG from hostA to hostsB, and hostB initial IB card.
+#   7. Detection the ib network status,if has the packet loss the record it to the log.
+#   8. If ib network packet loss 100% 2 times, than switch another ib card.
+#   9. If second ib card both loss 100% , than switch to hostB. use Power HA clRGmove command to move RG from hostA to hostB. 
+#   10. QDR IB need to Bind IP and connect the line , then it can be show the Active, so we need to Bind the Dummy IP on ib0,ib1 for status show active.
+#   11. When detach ib0 and ib1 , you need more than time for wait it become to active, almost need 15 sec,so we get the new parameter BREAK_TIME.
+#
+# History:
+# 2014/04/22 Bruce release
+# 2014/04/23 Bruce release
+# 2014/04/25 Bruce release
+# 2014/04/27 Bruce release
+# 2014/04/29 Bruce release
+# 2014/05/02 Bruce release
+# 2014/05/03 Bruce release
+# 2014/05/03 Bruce release
+# 2014/05/12 Bruce release
+# 2014/05/13 Bruce release
+# 2014/05/14 Bruce release
+# 2014/06/07 Bruce release
+# 2014/06/21 Bruce release
+# 2014/07/24 Bruce release
+# 2014/09/24 Bruce release
+# 2014/10/20 Bruce release
+# 2014/10/27 Bruce release
+# 2014/11/25 Bruce release
+#
+# version:
+# 1.0 release
+# 1.1 release, The ping function add new parameter -I for confirm source ip to destination ip path.
+# 1.2 release, The check_ib_hwstatus function change.
+# 1.3 release, The ping_check functin to fix the loop status
+# 1.4 release, The loss_100_ib_hwstatus functin to change swap IB sequence.
+# 1.5 release, The ping_check add new flag name swflag,for swap the IB count numbers.
+# 1.6 release, Fix the ping_check function bug.
+# 1.7 release, Fix the check_ib_hwstatus's local_check function bug, reduce the ibstat command execute, the command execute very slow.
+# 1.8 release, new the user_check function and add new parameter for check type1 or type2 and the ip are different.
+# 1.9 release, reduce the ibstat command execute, ib card status sotre in the variable. 
+# 2.0 release, Use IB_STATUS parameter to store ibstate command execute status.
+# 2.1 release, Use ifconifg command to check the base Ib card Status,it can be faster than ibstat to check the ib card hardware status.
+# 2.2 release, Use slow command ibstat to check the ib card hardware status.
+# 2.3 release, delete CMDCYCLE parameter for command.
+# 2.4 release, add aptlog function for ap program format.
+# 2.5 release, add Load paramter config.
+# 2.6 release, add confirm paramter config.
+# 2.7 release, add new paramter:DUMMYIP,BREAK_TIME for QDR IB.
+
+# set -x 
+
+
+#{{{Load parameter config
+CFG_DIR="/OTC/cfg/OTC/HA_script"
+CFG_NAME="ib_start.cfg"
+if [[ -e ${CFG_DIR}/${CFG_NAME} ]];then
+  #check the config lines ,correct 25 lines, exclued first char is #
+  chkline=$(cat ${CFG_DIR}/${CFG_NAME} | grep -v '^#' | wc -l)
+    if [[ $chkline -ne "26" ]];then
+      echo "Check the ${CFG_DIR}/${CFG_NAME} lines."  | tee -a /OTC/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter set,if parameter more the the LIST than exit
+    cat ${CFG_DIR}/${CFG_NAME} | grep -qvE '^SITE|^PGNAME|^IBMON|^HADIR|^INTERVAL|^COUNT|^HACYCLE|^PORT|^LOGDIR|^LOG|^APLOGDIR|^APLOG|^TARGETIP|^HSOTA_VL4|^HSOTB_VL4|^IPADDR|^DUMMYIP|^OTCFIXGW01P_ib0|^OTCFIXGW01P_ib1|^OTCFIXGW01B_ib0|^OTCFIXGW01B_ib1|^OTCFIXGW02P_ib0|^OTCFIXGW02P_ib1|^OTCFIXGW02B_ib0|^OTCFIXGW02B_ib1|^BREAK_TIME'
+    rc=$?
+    if [[ $rc -ne "1" ]];then
+      echo "Check the ${CFG_DIR}/${CFG_NAME} setting."  | tee -a /OTC/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter value,correct parameter value is 16 and exit
+    . ${CFG_DIR}/${CFG_NAME} 2>/dev/null
+    rc=$?
+    if [[ $rc -ne "0" ]];then
+      echo "Load ${CFG_DIR}/${CFG_NAME} failed,please to check it" | tee -a /OTC/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #                    1     2    3     4
+    set -A PARANUM $SITE $PGNAME $IBMON $HADIR $INTERVAL $COUNT $HACYCLE $PORT $LOGDIR $LOG $APLOGDIR $APLOG $TARGETIP $HSOTA_VL4 $HSOTB_VL4 $IPADDR $DUMMYIP $OTCFIXGW01P_ib0 $OTCFIXGW01P_ib1 $OTCFIXGW01B_ib0 $OTCFIXGW01B_ib1 $OTCFIXGW02P_ib0 $OTCFIXGW02P_ib1 $OTCFIXGW02B_ib0 $OTCFIXGW02B_ib1 $BREAK_TIME
+    if [[ ${#PARANUM[@]} -ne "28" ]];then
+      echo "Parameter value is not 27,please to check ${CFG_DIR}/${CFG_NAME}" | tee -a /OTC/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+else
+  echo "${CFG_DIR}/${CFG_NAME} is not exist" |tee -a /OTC/IB_log/ib_start_stop.sh.log
+  exit 1
+fi
+#}}}
+
+OLDIFS=$IFS
+IB_STATUS=""
+haflag="0"
+swflag="0"
+iba0p1="0"
+iba0p2="0"
+iba1p1="0"
+iba1p2="0"
+today=$(date +"%Y%m%d")
+IBA0=$(lsdev | grep iba0 | head -1 | awk '{print $1}')
+#IBA1=$(lsdev | grep iba1 | tail -1 | awk '{print $1}')
+
+set -A LOGIC_IB ib0 ib1
+set -A DESIPR $TARGETIP
+DESIP_NUM=${#DESIPR[@]}
+
+RG_NAME_LIST=$( ${HADIR}/clRGinfo | grep RG | awk '{print $1}' 2>/dev/null )
+#Regular RG1 RG2 RG3 to RG1,RG2,RG3
+RG_NAME=$(echo $RG_NAME_LIST | sed 's/ /,/g')
+
+NOW_HOST=$(hostname)
+TYPE1A="OTCFIXGW01P"
+TYPE1B="OTCFIXGW01B"
+TYPE2A="OTCFIXGW02P"
+TYPE2B="OTCFIXGW02B"
+if [[ $NOW_HOST = $TYPE1A ]] || [[ $NOW_HOST = $TYPE1B ]];then
+  HOSTA=$TYPE1A
+  HOSTB=$TYPE1B
+elif [[ $NOW_HOST = $TYPE2A ]] || [[ $NOW_HOST = $TYPE2B ]];then
+  HOSTA=$TYPE2A
+  HOSTB=$TYPE2B
+else
+  echo "The Host type are wrong type" >> ${LOG}.${today}
+  exit 1
+fi
+
+USER=$(whoami)
+set -A MUSER otc
+
+#{{{tlog ,script loger function
+tlog() {
+
+  MSG=$1
+  LOG=$2
+  dt=$(date +"%Y/%m/%d %H:%M:%S")
+  today=$(date +"%Y%m%d")
+
+  echo "$SITE [${dt}] $MSG" | tee -a ${LOG}.${today}
+  chmod o+r ${LOG}.${today}
+}
+#}}}
+
+#{{{aptlog ,aptlog function
+aptlog() {
+
+  TYP=$1
+  MSG=$2
+  LOGAP=$3
+
+  DAY=$(date +"%Y%m%d")
+  TIME=$(date +"%H:%M:%S")
+
+  echo "CODE:${TYP} $PGNAME $DAY $TIME $MSG" | tee  -a $LOGAP
+  chmod o+r $LOGAP
+}
+
+#}}}
+
+#{{{errlogger to aix errpt log 
+erlogger() {
+
+  MSG=$1
+  #use Rbac function.
+  swrole exec.errlogger "-c errlogger $MSG"
+}
+#}}}
+
+#{{{user_check
+user_check (){
+# check user information.  
+  userflag=0
+  for chkuser in ${MUSER[@]}
+  do
+    if [[ $USER = $chkuser ]];then
+      userflag=1
+      return 0
+    fi
+  done
+
+  if [[ $userflag -eq "0" ]];then 
+    return 1
+  fi
+}
+#}}}
+
+#{{{moniter ib script exec status
+ib_moniter (){
+    IFS=$OLDIFS
+    #ibsmon client to reset clock
+    #                          Notify_file    millis count
+    ${IBMON}/ibsmon_np_client  /tmp/ib_moni      0      0   >> ${LOG}.${today} 2>&1
+    exec_status=$?
+    if [[ $exec_status -ne "0" ]]; then
+      tlog "[ERR] ibsmon_np may be has problem,Please to check it" $LOG
+      aptlog "E" "ibsmon_np has problem,Please to check it"  $APLOG
+      return 1
+    else 
+      return 0
+    fi
+}
+#}}}
+
+#{{{ibsmon sever
+ib_smon() {
+
+        #               Notify_file times * sec = 1 times/30sec
+    ${IBMON}/ibsmon_np /tmp/ib_moni   1     30  >> ${LOG}.${today} 2>&1
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] ibsmon_np start success." $LOG
+      return 0
+    else
+      tlog "[ERR] ibsmon_np may be has problem,Please to check it" $LOG
+      aptlog "E" "ibsmon_np may be has problem,Please to check it"  $APLOG
+      exit 1
+    fi
+}
+#}}}
+
+#{{{ibsmon_np stop it
+ibsmon_np() {
+
+SHNAME="ibsmon_np"
+  tlog "[INFO] Terminated ibsmon_np" $LOG
+  
+  PIDNUM=$(ps -ef | grep $SHNAME | grep -v grep | awk '{print $2}')
+
+  if [[ ! -n $PIDNUM ]];then
+    tlog "[INFO] The ibsmon_np PID already is empty" $LOG
+    return 0
+  fi
+  # kill the ib_start.sh process
+  # if have 2 the same process,loop to kill the process
+  for PID in $PIDNUM
+  do
+    kill -9 $PID
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] To terminate ibsmon_np:$PID Success" $LOG
+    else 
+      tlog "[INFO] To terminate ibsmon_np failed ,Please to check the process" $LOG
+      return 1
+    fi
+  done
+
+  return 0
+}
+#}}}
+
+#{{{step:1 , main
+main () {
+today=$(date +"%Y%m%d")
+#ibsmon server to start 
+ib_smon
+
+  while  true
+  do
+    echo "\n" | tee -a ${LOG}.${today}
+    tlog "***************************InfiniBand monitor begins**********************************" $LOG
+    tlog "[INFO] Primary host is $NOW_HOST, Alternative host $HOSTB" $LOG
+
+    #ibsmon client to reset clock
+    ib_moniter
+
+    #check exec user is otc
+    user_check
+    exec_status=$?
+    if [[ $exec_status -eq "0"  ]];then  
+      check_ib_ip_status
+    else
+      print "[ERR] $USER permission denied, than $0 script terminated" ${LOG}.${today}
+      aptlog "E" "User:$USER permission denied, than $0 script terminated"  $APLOG
+      ibsmon_np  
+      exit 1
+    fi
+    tlog "[INFO] Sleep for ${INTERVAL} seconds..." $LOG
+    sleep ${INTERVAL}
+  done
+}
+#}}}
+
+#{{{step:2 , check_ib_ip_status
+check_ib_ip_status () {
+  #check the ib card does have bind the ip
+  ifconfig -a | grep ${IPADDR}[[:space:]] >/dev/null 2>>${LOG}.${today}
+
+  #if exec_status = 0 , than check ib hwstatus else no ip setting than execute the ib_ip_config to set ip address on ib card
+  exec_status=$?
+  if [[ $exec_status -eq "0" ]];then
+    tlog "[INFO] Execute check_ib_hwstatus function Start" $LOG
+    check_ib_hwstatus
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] check_ib_hwstatus function Success" $LOG
+    else 
+      tlog "[ERR] check_ib_hwstatus function failed, $0 script terminated" $LOG
+      erlogger "[ERR] check_ib_hwstatus function failed, $0 script terminated"
+      aptlog "E" "check_ib_hwstatus function failed, $0 script terminated"  $APLOG
+	  detach_ib
+	  bind_dummy_ip
+      ibsmon_np
+      exit 1
+    fi
+  else
+    tlog "[INFO] Need to Bind the ip:${IPADDR} on Infiniband card" $LOG
+    # ib_ip_config function to set ip address on ib card
+    tlog "[INFO] Execute ib_ip_config function Start" $LOG
+    ib_ip_conifg  
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      erlogger "[INFO] Bind the ip:${IPADDR} on ib Finished"
+      tlog "[INFO] Bind the ip:${IPADDR} on ib Finished" $LOG
+      # sleep 15 sec for ib status from down become to active
+      tlog "[INFO] Sleep for ${BREAK_TIME} seconds..." $LOG
+	  sleep ${BREAK_TIME}
+      # re-execute the check_ib_ip_status function
+      check_ib_ip_status
+    else 
+      tlog "[ERR] Bind the ip:${IPADDR} on ib failed,and $0 script terminated" $LOG
+      erlogger "[ERR] Bind the ip:${IPADDR} on ib failed, and $0 script terminated"
+      aptlog "E" "Bind the ip:${IPADDR} on ib failed, and $0 script terminated"  $APLOG
+      detach_ib
+	  bind_dummy_ip
+      ibsmon_np  
+      exit 1
+    fi
+  fi
+}
+#}}}
+
+#{{{step:3 , ib_ip_conifg 
+ib_ip_conifg () {
+    # search the first Active ib card and port
+    set -A DEV_IB_PORT_LIST $(ibstat | grep Active | head -2 | awk '{print $2,$3}' | tr -d '()' )
+    if [[ ${#DEV_IB_PORT_LIST[@]} -ge "2" ]];then
+      DEV_IB_PORT=${DEV_IB_PORT_LIST[0]}
+      DEV_IB=${DEV_IB_PORT_LIST[1]}
+      DEV_IB_PORT_2=${DEV_IB_PORT_LIST[2]}
+      DEV_IB_2=${DEV_IB_PORT_LIST[3]}
+    else
+      tlog "[ERR] Local InfiniBand card check all failed,begins to check alternate server connection..." $LOG
+      erlogger "[ERR] Local InfiniBand card check all failed,begins to check alternate server connection..."
+      aptlog "E" "Local InfiniBand card check all failed,begins to check alternate server connection..."  $APLOG
+      if [[ $NOW_HOST = $HOSTA ]];then
+        ssh_check
+        exec_status=$?
+        if [[ $exec_status -eq "0" ]];then
+          remote_check
+        else
+          tlog "[ERR] ssh_check function check sshd $HOSTB service has question, and $0 script terminated" $LOG
+          erlogger "[ERR] ssh_check function check sshd $HOSTB service has question, and $0 script terminated"
+          aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
+          detach_ib
+		  bind_dummy_ip
+          ibsmon_np
+          exit 1
+        fi
+      else
+        tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated" $LOG
+        erlogger "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"
+        aptlog "E" "$NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"  $APLOG
+        detach_ib
+		bind_dummy_ip
+        ibsmon_np
+        exit 1
+      fi
+    fi
+	
+    #Bind realy ip on ib0
+    tlog "[INFO] Bind ip on ib0 device from device Card:(${DEV_IB}) Port:(${DEV_IB_PORT})" $LOG
+    #Bind dumme ip on ib1
+    tlog "[INFO] Bind dummy ip on ib1 device from device Card:(${DEV_IB_2}) Port:(${DEV_IB_PORT_2})" $LOG
+    # detach ib 
+	detach_ib
+    # use rbac function,set ip address on ib card
+    swrole exec.chdev "-c chdev -l ib0 -a ib_adapter=${DEV_IB} -a ib_port=${DEV_IB_PORT} -a state=up -a netaddr=${IPADDR} -a netmask=255.255.255.0 > /dev/null 2>>${LOG}.${today}"
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      swrole exec.chdev "-c chdev -l ib1 -a ib_adapter=${DEV_IB} -a ib_port=${DEV_IB_PORT_2} -a state=up -a netaddr=${DUMMYIP} -a netmask=255.255.255.0 > /dev/null 2>>${LOG}.${today}"
+      return 0
+    else 
+      return $exec_status
+    fi
+}
+#}}}
+
+#{{{step:4 , check_ib_hwstatus
+check_ib_hwstatus() {
+
+  DEV_NOW=$(lsattr -El ib0 | grep ib_adapter | awk '{print $2}')
+  DEV_NOW_PORT=$(lsattr -El ib0 | grep ib_port | awk '{print $2}')
+
+  #check ib hardware status
+  local_check ${DEV_NOW} ${DEV_NOW_PORT}
+  #ifconfig ib0 | grep -E '.*UP.*RUNNING' > /dev/null 2>&1
+  exec_status=$?
+  if [[ $exec_status -eq "0" ]]; then
+    ping_check
+    return 0
+  else
+    # Check ib hardware status
+    #local_check ${DEV_NOW} ${DEV_NOW_PORT}
+
+    # Check ib card status is active, if don't then execute remote_check function.
+    DEVP_ACT_CUNT=$(echo $IB_STATUS | grep Active | wc -l | awk '{print $1}')
+    if [[ $DEVP_ACT_CUNT -gt "0" ]]; then
+#      Check which ib card status is failed.
+      DEV_NOW=$(lsattr -El ib0 | grep ib_adapter | awk '{print $2}')
+      # DEV_NOW = iba0 or iba1
+      case $DEV_NOW in 
+        $IBA0)
+          DEV_NOW_PORT=$(echo $IB_STATUS | grep $DEV_NOW | grep Active | awk '{print $2}')
+          # DEV_NOW_PORT = 1 or 2 , mean iba0 port 1 or port 2
+          # exec_status=$?
+          if [[ -z $DEV_NOW_PORT ]]; then
+            DEV_IB=$IBA1
+            # DEV_IB = iba1
+            DEV_NOW_PORT=$(echo $IB_STATUS | grep $DEV_IB | grep Active |head -1 | awk '{print $2}')
+            # DEV_IB_PORT = iba1 active port , maybe iba1 port 1 or port 2 
+          else 
+            DEV_IB=$DEV_NOW
+            # DEV_IB = iba0
+            DEV_IB_PORT=$DEV_NOW_PORT
+            # DEV_IB_PORT = 1 or 2 , mean iba0 port 1 or port 2
+          	DEV_NOW_PORT_DOWN=$(echo $IB_STATUS | grep $DEV_NOW | grep Dow | awk '{print $2}')
+            # DEV_IB_PORT_DOWN = 1 or 2 , mean iba0 port 1 or port 2 status is down
+          fi
+          ;;
+#        $IBA1)
+#          DEV_NOW_PORT=$(echo $IB_STATUS | grep $DEV_NOW | grep Active | awk '{print $2}')
+#          # DEV_NOW_PORT = 1 or 2 , mean iba1 port 1 or port 2
+#          if [[ -z $DEV_NOW_PORT ]]; then
+#            DEV_IB=$IBA0
+#            # DEV_IB = iba0
+#            DEV_NOW_PORT=$(echo $IB_STATUS | grep $DEV_IB | grep Active |head -1 | awk '{print $2}')
+#            # DEV_IB_PORT = iba0 active port , maybe iba0 port 1 or port 2 
+#          else 
+#            DEV_IB=$DEV_NOW
+#            # DEV_IB = iba1
+#            DEV_IB_PORT=$DEV_NOW_PORT
+#            # DEV_IB_PORT = 1 or 2 , mean iba1 port 1 or port 2
+#          	DEV_NOW_PORT_DOWN=$(echo $IB_STATUS | grep $DEV_NOW | grep Dow | awk '{print $2}')
+#            # DEV_IB_PORT_DOWN = 1 or 2 , mean iba0 port 1 or port 2 status is down
+#          fi
+#          ;;
+        *)
+          tlog "[ERR] IB card number has wrong message:${DEV_IB}" $LOG
+          erlogger "[ERR] IB card number has wrong message:${DEV_IB}"
+          aptlog "E" "IB card number has wrong message:${DEV_IB}"  $APLOG
+	      detach_ib
+		  bind_dummy_ip
+          ibsmon_np
+          exit 1
+          ;;
+      esac
+      tlog "[WARN] Local InfiniBand card check success, begins to swap Device:${DEV_IB} Port:${DEV_NOW_PORT}" $LOG
+      erlogger "[WARN] Local InfiniBand card check success, begins to swap Device:${DEV_IB} Port:${DEV_NOW_PORT}" 
+      aptlog "W" "Begins to swap Device:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
+      # detach ib 
+	  detach_ib
+      # sample: swap iba0 2 1
+      swap ${DEV_IB} ${DEV_NOW_PORT} ${DEV_NOW_PORT_DOWN}
+      return 0
+    else 
+      tlog "[ERR] Local InfiniBand card check all failed,begins to check alternate server connection..." $LOG
+      erlogger "[ERR] Local InfiniBand card check all failed,begins to check alternate server connection..."
+      aptlog "E" "Local InfiniBand card check all failed,begins to check alternate server connection..."  $APLOG
+      if [[ $NOW_HOST = $HOSTA ]];then
+        ssh_check
+        exec_status=$?
+        if [[ $exec_status -eq "0" ]];then
+          remote_check
+        else
+          tlog "[ERR] ssh_check function check sshd $HOSTB service has question" $LOG
+          erlogger "[ERR] ssh_check function check sshd $HOSTB service has question"
+          aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
+          ibsmon_np
+          exit 1
+        fi
+      else
+        tlog "[ERR] $NOW_HOST is Backup lpar, than don't move Resource Group and $0 script terminated" $LOG
+        erlogger "[ERR] $NOW_HOST is Backup lpar, than don't move Resource Group and $0 script terminated"
+        aptlog "E" "$NOW_HOST is Backup lpar, than don't move Resource Group and $0 script terminated"  $APLOG
+        detach_ib
+		bind_dummy_ip
+        ibsmon_np
+        exit 1
+      fi
+    fi
+  fi
+}
+#}}}
+
+#{{{step:5 , local_check
+local_check() {
+#set -x 
+#tlog "#============================local_check function...=================================#" $LOG
+  IB_CARD=$1
+  IB_PORT=$2
+  IFS='\n'
+  IB_STATUS=$(ibstat)
+
+  #ibsmon client to reset clock
+  #ib_moniter
+
+  tlog "[INFO] To Check ib_card=${IB_CARD} ib_port=${IB_PORT} status" $LOG
+  #ibstat "$IB_CARD" | grep "PORT $IB_PORT" | grep "Active" > /dev/null  2>>$LOG
+  echo $IB_STATUS   | grep "$IB_CARD" | grep "PORT $IB_PORT" | grep "Active" > /dev/null  2>>${LOG}.${today}
+  exec_status=$?
+  if [[ $exec_status -eq "0" ]];then
+    tlog "[INFO] The ib_card=${IB_CARD} ib_port=${IB_PORT} status is Active" $LOG
+    return 0
+  else 
+    tlog "[ERR] The ib_card=${IB_CARD} ib_port=${IB_PORT} status not Active" $LOG
+    erlogger "[ERR] The ib_card=${IB_CARD} ib_port=${IB_PORT} status not Active"
+    aptlog "E" "The ib_card:${IB_CARD} ib_port:${IB_PORT} status not Active"  $APLOG
+    return $exec_status
+  fi
+}
+#}}}
+
+#{{{step:6 , ping_check
+ping_check() {
+
+    DEV_NOW=$(lsattr -El ib0 | grep ib_adapter | awk '{print $2}')
+    DEV_NOW_PORT=$(lsattr -El ib0 | grep ib_port | awk '{print $2}')
+    tlog "[INFO] Now IB device Card:(${DEV_NOW}) Port:(${DEV_NOW_PORT})" $LOG
+
+    dipflag="0"
+    # DESIP_NUM = TARGETIP = "10.204.5.71  10.204.5.72  10.204.5.71" = 3
+    while [ $dipflag -lt $DESIP_NUM ]  
+    do
+      LOSS=$(ping -q -c $COUNT -w 1 -I $IPADDR ${DESIPR[$dipflag]} | grep loss | cut -d '%' -f 1 | awk '{print $NF}')
+
+        # if ib ping network destination is wrong , than terminate the script
+        if [[ -z $LOSS ]];then
+          tlog "[ERR] Network address local ip:${IPADDR} destination:${DESIPR[$dipflag]} has problem, to check the InfiniBand Network status " $LOG
+          erlogger "[ERR] Network address local ip:${IPADDR} destination:${DESIPR[$dipflag]} has problem, to check the InfiniBand Network status " 
+          aptlog "E" "Check ${DESIPR[$dipflag]} network status failed"  $APLOG
+          # check the ib ip status
+          check_ib_ip_status
+        fi
+
+        # if ping ib ip loss 100% ,than ping next ip address, until the ip address arrary finishd, if all 100% loss than swap ib card
+        if [[ $LOSS -eq "100" ]];then
+          tlog "[ERR] InfiniBand Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss" $LOG  
+          erlogger "[ERR] InfiniBand Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss"
+          aptlog "E" "PING IP:${DESIPR[$dipflag]} LOSS ${LOSS}%"  $APLOG
+
+          dipflag=$(($dipflag+1))
+          swflag=$dipflag
+          # DESIP_NUM = TARGETIP = "10.204.5.71  10.204.5.73  10.204.5.71" = 3
+          if [[ $swflag -eq $DESIP_NUM ]];then
+            # if 2 ib card loss are 100% , than RG move to the HOSTB
+            # HACYCLE = 2
+            haflag=$(($haflag+1))
+            if [[ $haflag -eq $HACYCLE ]];then
+              if [[ $NOW_HOST = $HOSTA ]];then
+                  ssh_check
+                  exec_status=$?
+                  if [[ $exec_status -eq "0" ]];then
+                    remote_check
+                  else
+                    tlog "[ERR] ssh_check function check sshd $HOSTB service has question,then can't move Resource Gruop , and $0 script terminated" $LOG
+                    erlogger "[ERR] ssh_check function check sshd $HOSTB service has question,then can't move Resource Gruop , and $0 script terminated"
+                    aptlog "E" "ssh_check function check sshd $HOSTB service has question,then can't move Resource Gruop , and $0 script terminated"  $APLOG
+                    detach_ib
+				    bind_dummy_ip
+                    ibsmon_np
+                    exit 1
+                  fi
+              else
+                tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated" $LOG
+                erlogger "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"
+                aptlog "E" "$NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"  $APLOG
+                detach_ib
+				bind_dummy_ip
+                ibsmon_np
+                exit 1
+              fi
+            fi
+            loss_100_ib_hwstatus
+            exec_status=$?
+            if [[ $exec_status -eq "0" ]];then
+              swflag=0
+              dipflag=0
+            else
+              if [[ $NOW_HOST = $HOSTA ]];then
+                  ssh_check
+                  exec_status=$?
+                  if [[ $exec_status -eq "0" ]];then
+                    remote_check
+                  else
+                    tlog "[ERR] ssh_check function check sshd $HOSTB service has question" $LOG
+                    erlogger "[ERR] ssh_check function check sshd $HOSTB service has question"
+                    aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
+                	detach_ib
+					bind_dummy_ip
+                    ibsmon_np
+                    exit 1
+                  fi
+              else
+                tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated " $LOG
+                erlogger "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated "
+                aptlog "E" "$NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"  $APLOG
+                detach_ib
+				bind_dummy_ip
+                ibsmon_np
+                exit 1
+              fi
+            fi
+          fi
+          continue
+        fi
+
+        if [[ $LOSS -eq "0" ]];then
+          tlog "[INFO] InfiniBand Network ping to ${DESIPR[$dipflag]} status is OK" $LOG  
+          if [[ $NOW_HOST = $HOSTA ]];then
+            ssh_check
+          fi
+          dipflag=0
+          haflag=0
+          swflag=0
+          iba0p1=0
+          iba0p2=0
+          iba1p1=0
+          iba1p2=0
+          return 0
+        else
+          tlog "[WARN] InfiniBand Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss" $LOG  
+          erlogger "[WARN] InfiniBand Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss"
+
+          if [[ $LOSS -ge "20" ]] && [[ $LOSS -le "40" ]] ;then
+            aptlog "W" "PING IP:${DESIPR[$dipflag]} LOSS ${LOSS}%"  $APLOG
+          fi
+          if [[ $LOSS -gt "40" ]] ;then
+            aptlog "E" "PING IP:${DESIPR[$dipflag]} LOSS ${LOSS}%"  $APLOG
+          fi
+          dipflag=0
+          haflag=0
+          swflag=0
+          iba0p1=0
+          iba0p2=0
+          iba1p1=0
+          iba1p2=0
+          return 0
+        fi
+    done
+
+}
+#}}}
+
+#{{{step:7 , loss_100_ib_hwstatus
+loss_100_ib_hwstatus() {
+
+  DEV_NOW=$(lsattr -El ib0 | grep ib_adapter | awk '{print $2}')
+  DEV_NOW_PORT=$(lsattr -El ib0 | grep ib_port | awk '{print $2}')
+
+  #check ib hardware status
+  local_check ${DEV_NOW} ${DEV_NOW_PORT}
+
+  tlog "[INFO] Now IB device Card:(${DEV_NOW}) Port:(${DEV_NOW_PORT})" $LOG
+
+  DEVP_ACT_CUNT=$(echo $IB_STATUS | grep Active | wc -l | awk '{print $1}')
+
+  if [[ $DEVP_ACT_CUNT -gt "0" ]]; then
+    IBA0P1_S=$(echo $IB_STATUS | grep $IBA0 | grep Active | grep "PORT 1" | wc -l |awk '{print $1}')
+    IBA0P2_S=$(echo $IB_STATUS | grep $IBA0 | grep Active | grep "PORT 2" | wc -l |awk '{print $1}')
+#    IBA1P1_S=$(echo $IB_STATUS | grep $IBA1 | grep Active | grep "PORT 1" | wc -l |awk '{print $1}')
+#    IBA1P2_S=$(echo $IB_STATUS | grep $IBA1 | grep Active | grep "PORT 2" | wc -l |awk '{print $1}')
+
+
+    #ibsmon client to reset clock
+    #IFS=$OLDIFS
+    ib_moniter
+
+    DEV_PORT="${DEV_NOW},${DEV_NOW_PORT}"
+    case $DEV_PORT in 
+      ${IBA0},1)
+        iba0p1=1
+#         iba1 , port 2
+#		 if [[ $IBA1P2_S -eq "1" ]] && [[ $iba1p2 -eq "0" ]];then
+#		  DEV_IB=$IBA1
+#		  DEV_IB_PORT="2"
+#		  DEV_IB_PORT_DOWN="1"
+#		 fi
+#         iba1 , port 1
+#		 if [[ $IBA1P1_S -eq "1" ]] && [[ $iba1p1 -eq "0" ]];then
+#		 DEV_IB=$IBA1
+#		 DEV_IB_PORT="1"
+#		 DEV_IB_PORT_DOWN="2"
+#		 fi
+#         iba0 , port 2
+        if [[ $IBA0P2_S -eq "1" ]] && [[ $iba0p2 -eq "0" ]];then
+          DEV_IB=$IBA0
+          DEV_IB_PORT="2"
+          DEV_IB_PORT_DOWN="1"
+        fi
+        ;;
+      ${IBA0},2)
+        iba0p2=1
+#         iba1 , port 2
+#		 if [[ $IBA1P2_S -eq "1" ]] && [[ $iba1p2 -eq "0" ]];then
+#		 DEV_IB=$IBA1
+#		 DEV_IB_PORT="2"
+#		 DEV_IB_PORT_DOWN="1"
+#		 fi
+#         iba1 , port 1
+#		 if [[ $IBA1P1_S -eq "1" ]] && [[ $iba1p1 -eq "0" ]];then
+#		 DEV_IB=$IBA1
+#		 DEV_IB_PORT="1"
+#		 DEV_IB_PORT_DOWN="2"
+#		 fi
+#         iba0 , port 1
+        if [[ $IBA0P1_S -eq "1" ]] && [[ $iba0p1 -eq "0" ]];then
+          DEV_IB=$IBA0
+          DEV_IB_PORT="1"
+          DEV_IB_PORT_DOWN="2"
+        fi
+        ;;
+#      ${IBA1},1)
+#        iba1p1=1
+#        # iba0 , port 2
+#        if [[ $IBA0P2_S -eq "1" ]] && [[ $iba0p2 -eq "0" ]];then
+#          DEV_IB=$IBA0
+#          DEV_IB_PORT="2"
+#          DEV_IB_PORT_DOWN="1"
+#        fi
+#        # iba0 , port 1
+#        if [[ $IBA0P1_S -eq "1" ]] && [[ $iba0p1 -eq "0" ]];then
+#          DEV_IB=$IBA0
+#          DEV_IB_PORT="1"
+#          DEV_IB_PORT_DOWN="2"
+#        fi
+#        # iba1 , port 2
+#        if [[ $IBA1P2_S -eq "1" ]] && [[ $iba1p2 -eq "0" ]];then
+#          DEV_IB=$IBA1
+#          DEV_IB_PORT="2"
+#          DEV_IB_PORT_DOWN="1"
+#        fi
+#        ;;
+#      ${IBA1},2)
+#        iba1p2=1
+#        # iba0 , port 2
+#        if [[ $IBA0P2_S -eq "1" ]] && [[ $iba0p2 -eq "0" ]];then
+#          DEV_IB=$IBA0
+#          DEV_IB_PORT="2"
+#          DEV_IB_PORT_DOWN="1"
+#        fi
+#        # iba0 , port 1
+#        if [[ $IBA0P1_S -eq "1" ]] && [[ $iba0p1 -eq "0" ]];then
+#          DEV_IB=$IBA0
+#          DEV_IB_PORT="1"
+#          DEV_IB_PORT_DOWN="2"
+#        fi
+#        # iba1 , port 1
+#        if [[ $IBA1P1_S -eq "1" ]] && [[ $iba1p1 -eq "0" ]];then
+#          DEV_IB=$IBA1
+#          DEV_IB_PORT="1"
+#          DEV_IB_PORT_DOWN="2"
+#        fi
+#        ;;
+         *)
+        tlog "[ERR] IB card number has wrong message:${DEV_IB} ${DEV_IB_PORT}" $LOG
+        erlogger "[ERR] IB card number has wrong message:${DEV_IB} ${DEV_IB_PORT}"
+        aptlog "E" "IB card number has wrong message:${DEV_IB}"  $APLOG
+        detach_ib
+	    bind_dummy_ip
+        ibsmon_np
+        exit 1
+         ;;
+    esac
+
+#	if [[ $iba0p1 -ne "0" ]] && [[ $iba0p2 -ne "0" ]] && [[ $iba1p1 -ne "0" ]] && [[ $iba1p2 -ne "0" ]] ;then
+	if [[ $iba0p1 -ne "0" ]] && [[ $iba0p2 -ne "0" ]] ;then
+      tlog "[ERR] ALL IB device used" $LOG
+      erlogger "[ERR] ALL IB device used"
+      aptlog "E" "ALL IB device used" $APLOG
+      return  1
+    fi
+
+    tlog "[WARN] Local InfiniBand card check success, begins to swap Device:${DEV_IB} Port:${DEV_IB_PORT}" $LOG
+    erlogger "[WARN] Local InfiniBand card check success, begins to swap Device:${DEV_IB} Port:${DEV_IB_PORT}"
+    aptlog "W" "Begins to swap Device:(${DEV_IB}) Port:(${DEV_NOW_PORT})"  $APLOG
+    detach_ib
+    swap ${DEV_IB} ${DEV_IB_PORT} ${DEV_IB_PORT_DOWN}
+#    ping_check
+    return 0
+  else
+    tlog "[ERR] Local InfiniBand card check all failed, begins to check alternate server connection..." $LOG
+    erlogger "[ERR] Local InfiniBand card check all failed, begins to check alternate server connection..." 
+    aptlog "E" "Local InfiniBand card check all failed,begins to check alternate server connection..."  $APLOG
+      if [[ $NOW_HOST = $HOSTA ]];then
+        ssh_check
+        exec_status=$?
+        if [[ $exec_status -eq "0" ]];then
+          remote_check
+        else
+          tlog "[ERR] ssh_check function check sshd $HOSTB service has question,and $0 script terminated" $LOG
+          erlogger "[ERR] ssh_check function check sshd $HOSTB service has question,and $0 script terminated"
+          aptlog "E" "ssh_check function check sshd $HOSTB service has question, and $0 script terminated"  $APLOG
+          detach_ib
+	      bind_dummy_ip
+          ibsmon_np
+          exit 1
+        fi
+      else
+        tlog "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated " $LOG
+        erlogger "[ERR] $NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated "
+        aptlog "E" "$NOW_HOST is Backup lpar, then don't move Resource Group and $0 script terminated"  $APLOG
+        detach_ib
+	    bind_dummy_ip
+        ibsmon_np
+        exit 1
+      fi
+  fi
+}
+#}}}
+
+#{{{step:8 , ssh_service check 
+ssh_check() {
+    ssh -p ${PORT} -o BatchMode=yes ${HSOTB_VL4} "hostname > /dev/null 2>&1"
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] SSHD service check finished" $LOG
+      return 0
+    else
+      tlog "[ERR] ${HSOTB_VL4} sshd service has question,Please to check the ${HSOTB_VL4} ssh service or ssh-key change question " $LOG
+      erlogger "[ERR] ${HSOTB_VL4} sshd service has question,Please to check the ${HSOTB_VL4} ssh service or ssh-key change question "
+      aptlog "E" "${HSOTB_VL4} sshd service has question,Please to check the ${HSOTB_VL4} ssh service or ssh-key change question"  $APLOG
+      return $exec_status
+    fi
+}
+#}}}
+
+#{{{step:9 , swap
+swap() {
+
+  NEW_IB=$1
+  NEW_IB_PORT=$2
+  NEW_IB_PORT_DOWN=$3
+
+    # Use new iba card to bind ip on ib0 
+    # Use Rbac function, bind ip on ib card , and bind dummy ip on old ib port
+    swrole exec.chdev "-c chdev -l ib0 -a ib_adapter=${NEW_IB} -a ib_port=${NEW_IB_PORT} -a state=up -a netaddr=${IPADDR} -a netmask=255.255.255.0 > /dev/null 2>>${LOG}.${today}"
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Bind ip:${IPADDR} on ib0 success " $LOG
+      tlog "[INFO] Swap finished, ib0 network work on IB device Card:(${NEW_IB}) Port:(${NEW_IB_PORT}) " $LOG
+      erlogger "[INFO] Swap finished, ib0 network work on IB device Card:\(${NEW_IB}\) Port:\(${NEW_IB_PORT}\)"
+      swrole exec.chdev "-c chdev -l ib1 -a ib_adapter=${NEW_IB} -a ib_port=${NEW_IB_PORT_DOWN} -a state=up -a netaddr=${DUMMYIP} -a netmask=255.255.255.0 > /dev/null 2>>${LOG}.${today}"
+#      ping_check
+      # sleep 15 sec for ib status from down become to active
+      tlog "[INFO] Sleep for ${BREAK_TIME} seconds..." $LOG
+	  sleep ${BREAK_TIME}
+      return 0
+    else 
+      tlog "[ERR] Bind ip:${IPADDR} on ib0 failed,than $0 script terminated"  $LOG
+      erlogger "[ERR] Bind ip:${IPADDR} on ib0 failed,than $0 script terminated" 
+      aptlog "E" "Bind ip:${IPADDR} on ib0 failed,than $0 script terminated"  $APLOG
+      ibsmon_np
+      exit 1 
+    fi
+}
+#}}}
+
+#{{{step:10 , remote_check
+remote_check() {
+  ALT_DEV=$(ssh -p ${PORT} ${HOSTB} ibstat | grep Active | head -1 | awk '{print $3}' | tr -d "()" )
+  if [[ ${ALT_DEV} = iba[0-9] ]]; then
+    tlog "[ERR] ${HOSTB} ${ALT_DEV} alive, begins to transfer IP $IPADDR from $NOW_HOST to $HOSTB ..." $LOG
+    erlogger "[ERR] ${HOSTB} ${ALT_DEV} alive, begins to transfer IP $IPADDR from $NOW_HOST to $HOSTB ..."
+    aptlog "E" "${HOSTB} ${ALT_DEV} alive, begins to transfer IP $IPADDR from $NOW_HOST to $HOSTB ..." $APLOG
+    # Detach the ib 
+    # detach_ib
+    # ibsmon_np
+
+    #use Rbac function, rg move to hostb
+    swrole exec.clRGmove "-c ${HADIR}/clRGmove -s 'false'  -m -i -g ${RG_NAME} -n ${HOSTB} > /dev/null 2>>${LOG}.${today}"
+    exec_status=$?
+    if [[ $exec_status -eq 0 ]]; then
+      tlog "[INFO] HACMP transfer completed, script terminated..." $LOG
+      erlogger "[INFO] HACMP transfer completed, script terminated..."
+      exit 0
+    else
+      tlog "[ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated..." $LOG
+      erlogger "[ERR] HACMP transfer failed, please check HACMP status by cldump, script terminated..."
+      aptlog "E" "HACMP transfer failed, please check HACMP status by cldump, script terminated..."  $APLOG
+      detach_ib
+	  bind_dummy_ip
+      ibsmon_np
+      exit 1
+    fi
+  else
+    tlog "[ERR] We are not going to move ; $NOW_HOST and $HOSTB physical connections all fail, script terminate" $LOG
+    erlogger "[ERR] We are not going to move ; $NOW_HOST and $HOSTB physical connections all fail, script terminate" 
+    aptlog "E" "We are not going to move ; $NOW_HOST and $HOSTB physical connections all fail, script terminate"  $APLOG
+    detach_ib
+	bind_dummy_ip
+    ibsmon_np
+    exit 0
+  fi
+}
+#}}}
+
+#{{{step:11 , detach ib card
+detach_ib() {
+#set -x
+  IFS=$OLDIFS
+  tlog "[INFO] Detach logic ib device..." $LOG
+  erlogger "[INFO] Detach logic ib device..."
+
+    # detach the logic ib card
+    # Use Rbac function, detach logic ib card
+  	for logic_ib in ${LOGIC_IB[@]}
+	do
+		swrole exec.chdev "-c chdev -l ${logic_ib} -a state=detach > /dev/null 2>>${LOG}.${today}"
+		exec_status=$?
+		if [[ $exec_status -eq "0" ]];then
+		  tlog "[INFO] Detach ${logic_ib} success" $LOG
+		  erlogger "[INFO] Detach ${logic_ib}  success"
+		else 
+		  tlog "[ERR] Detach ${logic_ib} failed,than $0 script terminated"  $LOG
+		  erlogger "[ERR] Detach ${logic_ib} failed,than $0 script terminated" 
+		  aptlog "E" "Detach ${logic_ib} failed,than $0 script terminated"  $APLOG
+		  ibsmon_np
+		  exit 1
+		fi
+	done
+    return 0
+}
+#}}}
+
+#{{{step:12, Bind dummy ip on ib interface
+bind_dummy_ip () {
+#set -x 
+  tlog "[INFO] Bind dummy ip on ib device..." $LOG
+
+  # Bind dummy ip 
+	case $NOW_HOST in 
+		OTCFIXGW01P)
+		  port_num=1
+		  for logic_ib in ${LOGIC_IB[@]}
+		  do
+			  eval swrole exec.chdev -c chdev -l $logic_ib -a ib_adapter=iba0 -a ib_port=${port_num} -a state=up -a netaddr=\$${NOW_HOST}_${logic_ib} -a netmask=255.255.255.0 > /dev/null 2>>${LOG}.${today}
+			  exec_status=$?
+			  if [[ $exec_status -eq "0" ]];then
+      			tlog "[INFO] Bind dummy $logic_ib success" $LOG
+			  else 
+      			tlog "[Err] Bind dummy $logic_ib failed" $LOG
+			  fi
+			  port_num=$(($port_num + 1 ))
+		  done
+  			;;
+		OTCFIXGW01B)
+		  port_num=1
+		  for logic_ib in ${LOGIC_IB[@]}
+		  do
+			  eval swrole exec.chdev -c chdev -l $logic_ib -a ib_adapter=iba0 -a ib_port=${port_num} -a state=up -a netaddr=\$${NOW_HOST}_${logic_ib} -a netmask=255.255.255.0 > /dev/null 2>>${LOG}.${today}
+			  exec_status=$?
+			  if [[ $exec_status -eq "0" ]];then
+      			tlog "[INFO] Bind dummy $logic_ib success" $LOG
+			  else 
+      			tlog "[Err] Bind dummy $logic_ib failed" $LOG
+			  fi
+			  port_num=$(($port_num + 1 ))
+		  done
+  			;;
+		OTCFIXGW02P)
+		  port_num=1
+		  for logic_ib in ${LOGIC_IB[@]}
+		  do
+			  eval swrole exec.chdev -c chdev -l $logic_ib -a ib_adapter=iba0 -a ib_port=${port_num} -a state=up -a netaddr=\$${NOW_HOST}_${logic_ib} -a netmask=255.255.255.0 > /dev/null 2>>${LOG}.${today}
+			  exec_status=$?
+			  if [[ $exec_status -eq "0" ]];then
+      			tlog "[INFO] Bind dummy $logic_ib success" $LOG
+			  else 
+      			tlog "[Err] Bind dummy $logic_ib failed" $LOG
+			  fi
+			  port_num=$(($port_num + 1 ))
+		  done
+  			;;
+		OTCFIXGW02B)
+		  port_num=1
+		  for logic_ib in ${LOGIC_IB[@]}
+		  do
+			  eval swrole exec.chdev -c chdev -l $logic_ib -a ib_adapter=iba0 -a ib_port=${port_num} -a state=up -a netaddr=\$${NOW_HOST}_${logic_ib} -a netmask=255.255.255.0 > /dev/null 2>>${LOG}.${today}
+			  exec_status=$?
+			  if [[ $exec_status -eq "0" ]];then
+      			tlog "[INFO] Bind dummy $logic_ib success" $LOG
+			  else 
+      			tlog "[Err] Bind dummy $logic_ib failed" $LOG
+			  fi
+			  port_num=$(($port_num + 1 ))
+		  done
+  			;;
+         *)
+          tlog "[ERR] LPAR Name is not correct" $LOG
+          aptlog "E" "LPAR Name is not correct" $APLOG
+         ;;
+    esac
+}
+#}}}
+
+main

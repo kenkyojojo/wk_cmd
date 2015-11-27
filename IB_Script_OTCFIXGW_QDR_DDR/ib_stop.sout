@@ -1,0 +1,711 @@
+#!/usr/bin/ksh 
+#
+# Author: 
+#     Bruce Hsiao
+#
+# Email: 
+#    bruce_hsiao@win-way.com.tw
+#
+# Platform OS: 
+#        AIX 7.1
+#
+# Program:
+#   1. This program to detach "Infinband card" and IB network status. 
+#
+# History:
+# 2014/04/29 Bruce First  release, To detach the ib0 card.
+# 2014/05/03 Bruce second release, To kill
+# 2014/10/20 Bruce release
+# 2014/10/27 Bruce release
+# 2014/11/25 Bruce release
+# 2014/12/14 Bruce release
+#
+# version:
+# 1.0 release
+# 1.1 release, if have 2 or more ib_start.sout process , loop to kill it.
+# 1.2 release, add Load paramter config.
+# 1.3 release, add confirm paramter config.
+# 1.4 release, add new paramter:DUMMYIP,BREAK_TIME for QDR IB.
+# 1.5 release, merger DDR & QDR type all in one, new paramter:PERMI_USER
+# 
+# set -x 
+
+#{{{ IB_QDR
+IB_QDR () {
+
+# TYPE：OTC or TWSE
+TYPE=$1
+# IB_TYPE：DDR or QDR
+IB_TYPE=$2
+
+#{{{Load DDR parameter config
+DDR_PARA_CONF_CHK () {
+CFG_DIR="/${TYPE}/cfg/${TYPE}/HA_script"
+CFG_NAME="ib_stop.cfg"
+if [[ -e ${CFG_DIR}/${CFG_NAME} ]];then
+  #check the config lines ,correct 9 lines, exclued #
+  chkline=$(cat ${CFG_DIR}/${CFG_NAME} | grep -v '^#' | wc -l|awk '{print $1}')
+    if [[ $chkline -ne "9" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Check the ${CFG_DIR}/${CFG_NAME} lines." | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter set,if parameter more the the LIST than exit
+    cat ${CFG_DIR}/${CFG_NAME} | grep -qvE '^SITE|^PGNAME|^LOGDIR|^LOG|^APLOGDIR|^APLOG|^PERMI_USER|^LPARTYPE_A|^LPARTYPE_B'
+    rc=$?
+    if [[ $rc -ne "1" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Check the ${CFG_DIR}/${CFG_NAME} setting." | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter value,correct parameter value is 6 and exit
+    . ${CFG_DIR}/${CFG_NAME} 2>/dev/null
+    rc=$?
+    if [[ $rc -ne "0" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Load ${CFG_DIR}/${CFG_NAME} failed,please to check it" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #                   1     2       3     4
+    set -A PARANUM $SITE $PGNAME $LOGDIR $LOG $APLOGDIR $APLOG $PERMI_USER $LPARTYPE_A $LPARTYPE_B
+    if [[ ${#PARANUM[@]} -ne "9" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Parameter value is not 9,please to check ${CFG_DIR}/${CFG_NAME}" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+else
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "[${dt}] [ERR] ${CFG_DIR}/${CFG_NAME} is not exist"  | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+  exit 1
+fi
+}
+#}}}
+
+#{{{Load QDR parameter config
+QDR_PARA_CONF_CHK () {
+CFG_DIR="/${TYPE}/cfg/${TYPE}/HA_script"
+CFG_NAME="ib_stop.cfg"
+if [[ -e ${CFG_DIR}/${CFG_NAME} ]];then
+  #check the config lines ,correct 13 lines, exclued #
+  chkline=$(cat ${CFG_DIR}/${CFG_NAME} | grep -v '^#' | wc -l|awk '{print $1}')
+    if [[ $chkline -ne "13" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Check the ${CFG_DIR}/${CFG_NAME} lines." | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter set,if parameter more the the LIST than exit
+    cat ${CFG_DIR}/${CFG_NAME} | grep -qvE '^SITE|^PGNAME|^LOGDIR|^LOG|^APLOGDIR|^APLOG|^OTCFIXGWP_ib0|^OTCFIXGWP_ib1|^OTCFIXGWB_ib0|^OTCFIXGWB_ib1|^PERMI_USER|^LPARTYPE_A|^LPARTYPE_B'
+    rc=$?
+    if [[ $rc -ne "1" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Check the ${CFG_DIR}/${CFG_NAME} setting." | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter value,correct parameter value is 12 and exit
+    . ${CFG_DIR}/${CFG_NAME} 2>/dev/null
+    rc=$?
+    if [[ $rc -ne "0" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Load ${CFG_DIR}/${CFG_NAME} failed,please to check it" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #                  1      2       3     4
+    set -A PARANUM $SITE $PGNAME $LOGDIR $LOG $APLOGDIR $APLOG $OTCFIXGWP_ib0 $OTCFIXGWP_ib1 $OTCFIXGWB_ib0 $OTCFIXGWB_ib1 $PERMI_USER $LPARTYPE_A $LPARTYPE_B
+    if [[ ${#PARANUM[@]} -ne "13" ]];then
+      echo "[${dt}] [ERR] Parameter value is not 13,please to check ${CFG_DIR}/${CFG_NAME}" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+else
+  echo "[${dt}] [ERR] ${CFG_DIR}/${CFG_NAME} is not exist"  | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+  exit 1
+fi
+}
+#}}}
+
+if [[ $IB_TYPE = "QDR" ]];then
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "[${dt}] [INFO] Use QDR function to check parameter config" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+  QDR_PARA_CONF_CHK
+elif [[ $IB_TYPE = "DDR" ]];then
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "[${dt}] [INFO] Use DDR function to check parameter config" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+  DDR_PARA_CONF_CHK
+else
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "[${dt}] [ERR]  Please to check the IB_TYPE=$IB_TYPE" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+  exit 1
+fi
+
+today=$(date +"%Y%m%d")
+USER=$(whoami)
+HOSTNAME=$(hostname)
+set -A LOGIC_IB ib0 ib1
+set -A MUSER $PERMI_USER
+
+#{{{user_check
+user_check (){
+# check user information.  
+  userflag=0
+  for chkuser in ${MUSER[@]}
+  do
+    if [[ $USER = $chkuser ]];then
+      userflag=1
+      return 0
+    fi
+  done
+
+  if [[ $userflag -eq "0" ]];then 
+    return 1
+  fi
+}
+#}}}
+
+#{{{aptlog ,aptlog function
+aptlog() {
+
+  TYP=$1
+  MSG=$2
+  LOGAP=$3
+
+  DAY=$(date +"%Y%m%d")
+  TIME=$(date +"%H:%M:%S")
+
+  echo "CODE:${TYP} $PGNAME $DAY $TIME $MSG" | tee  -a $LOGAP
+  chmod o+r $LOGAP
+}
+#}}}
+
+#{{{tlog ,script loger function
+tlog() {
+
+  MSG=$1
+  LOG=$2
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "$SITE [${dt}] $MSG" | tee  -a ${LOG}.${today}
+  chmod o+r ${LOG}.${today}
+}
+#}}}
+
+#{{{errlogger to aix errpt log 
+erlogger() {
+
+  MSG=$1
+  #use Rbac function.
+  swrole exec.errlogger "-c errlogger $MSG"
+}
+#}}}
+
+#{{{step:1 , main
+main () {
+today=$(date +"%Y%m%d")
+
+  print "\n\n" ${LOG}.${today}
+  tlog "***************************InfiniBand monitor stop************************************" $LOG
+
+  # check execute user is otc
+  user_check
+  exec_status=$?
+  if [[ $exec_status -eq "0"  ]];then  
+    # kill the ibsmon_np
+    ibsmon_np
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Terminated ibsmon_np Success" $LOG
+    else 
+      tlog "[ERR] Terminated ibsmon_np failed" $LOG
+      erlogger "[ERR] Terminated ibsmon_np failed"
+    fi
+
+    # kill the ib_start.sout script
+    ib_script_stop
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Terminated ib_start.sout script Success" $LOG
+    else 
+      tlog "[ERR] Terminated ib_start.sout script failed" $LOG
+      erlogger "[ERR] Terminated ib_start.sout script failed"
+    fi
+
+    # deatch the ib0 card
+    detach
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Detach ib success " $LOG
+    else 
+      tlog "[ERR] Detach ib failed"  $LOG
+      erlogger "[ERR] Detach ib failed" 
+      aptlog "E" "Detach ib failed"  $APLOG
+    fi
+
+  # Bind dummy ip 
+    bind_dummy_ip
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Bind dummy ip success " $LOG
+    else 
+      tlog "[ERR] Bind dummy ip failed"  $LOG
+      erlogger "[ERR] Bind dummy ip failed" 
+      aptlog "E" "Bind dummy ip  failed"  $APLOG
+    fi
+
+  else
+    tlog "[ERR] $USER permission denied, than $0 script terminated" $LOG
+    exit 1
+  fi
+
+
+  exit 0
+}
+#}}}
+
+#{{{setp:2 , ibsmon_np stop it
+ibsmon_np() {
+#set -x 
+#tlog "#==========================ib_script_stop...================================================#" $LOG
+
+SHNAME="ibsmon_np"
+  tlog "[INFO] Terminated ibsmon_np  start" $LOG
+  
+  PIDNUM=$(ps -ef | grep $SHNAME | grep -v grep | awk '{print $2}')
+
+  if [[ ! -n $PIDNUM ]];then
+    tlog "[INFO] The ibsmon_np PID already is empty" $LOG
+    return 0
+  fi
+  # kill the ib_start.sout process
+  # if have 2 the same process,loop to kill the process
+  for PID in $PIDNUM
+  do
+    kill -9 $PID
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      return 0
+    else 
+      return 1
+    fi
+  done
+}
+#}}}
+
+#{{{setp:3 , ib_script_stop
+ib_script_stop() {
+#set -x 
+#tlog "#==========================ib_script_stop...================================================#" $LOG
+SHNAME="ib_start.sout"
+
+  tlog "[INFO] Terminated ib_start.sout script start" $LOG
+  
+  PIDNUM=$(ps -ef | grep $SHNAME | grep -v grep | awk '{print $2}')
+
+  if [[ ! -n $PIDNUM ]];then
+    tlog "[INFO] The ib_start.sout script PID already is empty" $LOG
+    return 0
+  fi
+  # kill the ib_start.sout process
+  # if have 2 the same process,loop to kill the process
+  for PID in $PIDNUM
+  do
+    kill -9 $PID
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      return 0
+    else 
+      return 1
+    fi
+  done
+}
+#}}}
+
+#{{{setp:4 , detach ib interface
+detach() {
+#set -x 
+#tlog "#==========================detach_...================================================#" $LOG
+
+  tlog "[INFO] Detaching ib device..." $LOG
+
+  # detach the ib0 
+  # use Rbac function, detach ib0
+  for logic_ib in ${LOGIC_IB[@]}
+  do
+    swrole exec.chdev "-c chdev -l $logic_ib -a state=detach > /dev/null 2>>${LOG}.${today}"
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Detach $logic_ib success " $LOG
+    else 
+      tlog "[INFO] Detach $logic_ib failed" $LOG
+    fi
+  done
+}
+#}}}
+
+#{{{step:5, Bind dummy ip on ib interface
+bind_dummy_ip () {
+#set -x 
+  tlog "[INFO] Bind dummy ip on ib device..." $LOG
+
+  # Bind dummy ip 
+	case $HOSTNAME in 
+		$LPARTYPE_A)
+		  port_num=1
+		  for logic_ib in ${LOGIC_IB[@]}
+		  do
+			  eval swrole exec.chdev -c chdev -l $logic_ib -a ib_adapter=iba0 -a ib_port=${port_num} -a state=up -a netaddr=\$OTCFIXGWP_${logic_ib} -a netmask=255.255.255.0 > /dev/null 2>>${LOG}.${today}
+			  exec_status=$?
+			  if [[ $exec_status -eq "0" ]];then
+      			tlog "[INFO] Bind dummy $logic_ib success" $LOG
+			  else 
+      			tlog "[ERR] Bind dummy $logic_ib failed" $LOG
+      			erlogger "[ERR] Bind dummy $logic_ib failed"
+          		aptlog "E" "Bind dummy $logic_ib failed" $APLOG
+			  fi
+			  port_num=$(($port_num + 1 ))
+		  done
+  			;;
+		$LPARTYPE_B)
+		  port_num=1
+		  for logic_ib in ${LOGIC_IB[@]}
+		  do
+			  eval swrole exec.chdev -c chdev -l $logic_ib -a ib_adapter=iba0 -a ib_port=${port_num} -a state=up -a netaddr=\$OTCFIXGWB_${logic_ib} -a netmask=255.255.255.0 > /dev/null 2>>${LOG}.${today}
+			  exec_status=$?
+			  if [[ $exec_status -eq "0" ]];then
+      			tlog "[INFO] Bind dummy $logic_ib success" $LOG
+			  else 
+      			tlog "[ERR] Bind dummy $logic_ib failed" $LOG
+      			erlogger "[ERR] Bind dummy $logic_ib failed"
+          		aptlog "E" "Bind dummy $logic_ib failed" $APLOG
+			  fi
+			  port_num=$(($port_num + 1 ))
+		  done
+  			;;
+         *)
+          tlog "[ERR] LPAR Name is not correct" $LOG
+          erlogger "[ERR] LPAR Name is not correct"
+          aptlog "E" "LPAR Name is not correct" $APLOG
+		  exit 1
+         ;;
+    esac
+}
+
+#}}}
+
+main
+
+}
+#}}}
+
+#{{{ IB_DDR
+IB_DDR () {
+
+# TYPE：OTC or TWSE
+TYPE=$1
+# IB_TYPE：DDR or QDR
+IB_TYPE=$2
+
+#{{{Load DDR parameter config
+DDR_PARA_CONF_CHK () {
+CFG_DIR="/${TYPE}/cfg/${TYPE}/HA_script"
+CFG_NAME="ib_stop.cfg"
+if [[ -e ${CFG_DIR}/${CFG_NAME} ]];then
+  #check the config lines ,correct 9 lines, exclued #
+  chkline=$(cat ${CFG_DIR}/${CFG_NAME} | grep -v '^#' | wc -l|awk '{print $1}')
+    if [[ $chkline -ne "9" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Check the ${CFG_DIR}/${CFG_NAME} lines." | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter set,if parameter more the the LIST than exit
+    cat ${CFG_DIR}/${CFG_NAME} | grep -qvE '^SITE|^PGNAME|^LOGDIR|^LOG|^APLOGDIR|^APLOG|^PERMI_USER|^LPARTYPE_A|^LPARTYPE_B'
+    rc=$?
+    if [[ $rc -ne "1" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Check the ${CFG_DIR}/${CFG_NAME} setting." | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter value,correct parameter value is 6 and exit
+    . ${CFG_DIR}/${CFG_NAME} 2>/dev/null
+    rc=$?
+    if [[ $rc -ne "0" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Load ${CFG_DIR}/${CFG_NAME} failed,please to check it" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #                   1     2       3     4
+    set -A PARANUM $SITE $PGNAME $LOGDIR $LOG $APLOGDIR $APLOG $PERMI_USER $LPARTYPE_A $LPARTYPE_B
+    if [[ ${#PARANUM[@]} -ne "9" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Parameter value is not 9,please to check ${CFG_DIR}/${CFG_NAME}" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+else
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "[${dt}] [ERR] ${CFG_DIR}/${CFG_NAME} is not exist"  | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+  exit 1
+fi
+}
+#}}}
+
+#{{{Load QDR parameter config
+QDR_PARA_CONF_CHK () {
+CFG_DIR="/${TYPE}/cfg/${TYPE}/HA_script"
+CFG_NAME="ib_stop.cfg"
+if [[ -e ${CFG_DIR}/${CFG_NAME} ]];then
+  #check the config lines ,correct 13 lines, exclued #
+  chkline=$(cat ${CFG_DIR}/${CFG_NAME} | grep -v '^#' | wc -l|awk '{print $1}')
+    if [[ $chkline -ne "13" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Check the ${CFG_DIR}/${CFG_NAME} lines." | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter set,if parameter more the the LIST than exit
+    cat ${CFG_DIR}/${CFG_NAME} | grep -qvE '^SITE|^PGNAME|^LOGDIR|^LOG|^APLOGDIR|^APLOG|^OTCFIXGWP_ib0|^OTCFIXGWP_ib1|^OTCFIXGWB_ib0|^OTCFIXGWB_ib1|^PERMI_USER|^LPARTYPE_A|^LPARTYPE_B'
+    rc=$?
+    if [[ $rc -ne "1" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Check the ${CFG_DIR}/${CFG_NAME} setting." | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter value,correct parameter value is 12 and exit
+    . ${CFG_DIR}/${CFG_NAME} 2>/dev/null
+    rc=$?
+    if [[ $rc -ne "0" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Load ${CFG_DIR}/${CFG_NAME} failed,please to check it" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #                  1      2       3     4
+    set -A PARANUM $SITE $PGNAME $LOGDIR $LOG $APLOGDIR $APLOG $OTCFIXGWP_ib0 $OTCFIXGWP_ib1 $OTCFIXGWB_ib0 $OTCFIXGWB_ib1 $PERMI_USER $LPARTYPE_A $LPARTYPE_B
+    if [[ ${#PARANUM[@]} -ne "13" ]];then
+      echo "[${dt}] [ERR] Parameter value is not 13,please to check ${CFG_DIR}/${CFG_NAME}" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+else
+  echo "[${dt}] [ERR] ${CFG_DIR}/${CFG_NAME} is not exist"  | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+  exit 1
+fi
+}
+#}}}
+
+if [[ $IB_TYPE = "QDR" ]];then
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "[${dt}] [INFO] Use QDR function to check parameter config" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+  QDR_PARA_CONF_CHK
+elif [[ $IB_TYPE = "DDR" ]];then
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "[${dt}] [INFO] Use DDR function to check parameter config" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+  DDR_PARA_CONF_CHK
+else
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "[${dt}] [ERR]  Please to check the IB_TYPE=$IB_TYPE" | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+  exit 1
+fi
+
+today=$(date +"%Y%m%d")
+USER=$(whoami)
+set -A MUSER $PERMI_USER
+
+#{{{user_check
+user_check (){
+# check user information.  
+  userflag=0
+  for chkuser in ${MUSER[@]}
+  do
+    if [[ $USER = $chkuser ]];then
+      userflag=1
+      return 0
+    fi
+  done
+
+  if [[ $userflag -eq "0" ]];then 
+    return 1
+  fi
+}
+#}}}
+
+#{{{aptlog ,aptlog function
+aptlog() {
+
+  TYP=$1
+  MSG=$2
+  LOGAP=$3
+
+  DAY=$(date +"%Y%m%d")
+  TIME=$(date +"%H:%M:%S")
+
+  echo "CODE:${TYP} $PGNAME $DAY $TIME $MSG" | tee  -a $LOGAP
+  chmod o+r $LOGAP
+}
+#}}}
+
+#{{{tlog ,script loger function
+tlog() {
+
+  MSG=$1
+  LOG=$2
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "$SITE [${dt}] $MSG" | tee  -a ${LOG}.${today}
+  chmod o+r ${LOG}.${today}
+}
+#}}}
+
+#{{{errlogger to aix errpt log 
+erlogger() {
+
+  MSG=$1
+  #use Rbac function.
+  swrole exec.errlogger "-c errlogger $MSG"
+}
+#}}}
+
+#{{{step:1 , main
+main () {
+today=$(date +"%Y%m%d")
+
+  print "\n\n" ${LOG}.${today}
+  tlog "***************************InfiniBand monitor stop************************************" $LOG
+
+  # check execute user is twse
+  user_check
+  exec_status=$?
+  if [[ $exec_status -eq "0"  ]];then  
+    # kill the ibsmon_np
+    ibsmon_np
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Terminated ibsmon_np Success" $LOG
+    else 
+      tlog "[ERR] Terminated ibsmon_np failed" $LOG
+      erlogger "[ERR] Terminated ibsmon_np failed"
+    fi
+
+    # kill the ib_start.sout script
+    ib_script_stop
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Terminated ib_start.sout script Success" $LOG
+    else 
+      tlog "[ERR] Terminated ib_start.sout script failed" $LOG
+      erlogger "[ERR] Terminated ib_start.sout script failed"
+    fi
+
+    # deatch the ib0 card
+    detach
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Detach ib0 success " $LOG
+    else 
+      tlog "[ERR] Detach ib0 failed"  $LOG
+      erlogger "[ERR] Detach ib0 failed" 
+      aptlog "E" "Detach ib0 failed"  $APLOG
+    fi
+  else
+    tlog "[ERR] $USER permission denied, than $0 script terminated" $LOG
+    exit 1
+  fi
+
+  exit 0
+}
+#}}}
+
+#{{{step:2 , detach ib0 interface
+detach() {
+#set -x 
+#tlog "#==========================detach_...================================================#" $LOG
+
+  tlog "[INFO] Detaching ib0 device..." $LOG
+
+  # detach the ib0 
+  # use Rbac function, detach ib0
+  swrole exec.chdev "-c chdev -l ib0 -a state=detach > /dev/null 2>>${LOG}.${today}"
+  exec_status=$?
+  if [[ $exec_status -eq "0" ]];then
+    return 0
+  else 
+    return 1 
+  fi
+}
+#}}}
+
+#{{{step:3 , ibsmon_np stop it
+ibsmon_np() {
+#set -x 
+#tlog "#==========================ib_script_stop...================================================#" $LOG
+
+SHNAME="ibsmon_np"
+  tlog "[INFO] Terminated ibsmon_np  start" $LOG
+  
+  PIDNUM=$(ps -ef | grep $SHNAME | grep -v grep | awk '{print $2}')
+
+  if [[ ! -n $PIDNUM ]];then
+    tlog "[INFO] The ibsmon_np PID already is empty" $LOG
+    return 0
+  fi
+  # kill the ib_start.sout process
+  # if have 2 the same process,loop to kill the process
+  for PID in $PIDNUM
+  do
+    kill -9 $PID
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      return 0
+    else 
+      return 1
+    fi
+  done
+}
+#}}}
+
+#{{{step:4 , ib_script_stop
+ib_script_stop() {
+#set -x 
+#tlog "#==========================ib_script_stop...================================================#" $LOG
+SHNAME="ib_start.sout"
+
+  tlog "[INFO] Terminated ib_start.sout script start" $LOG
+  
+  PIDNUM=$(ps -ef | grep $SHNAME | grep -v grep | awk '{print $2}')
+
+  if [[ ! -n $PIDNUM ]];then
+    tlog "[INFO] The ib_start.sout script PID already is empty" $LOG
+    return 0
+  fi
+  # kill the ib_start.sout process
+  # if have 2 the same process,loop to kill the process
+  for PID in $PIDNUM
+  do
+    kill -9 $PID
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      return 0
+    else 
+      return 1
+    fi
+  done
+}
+#}}}
+
+main
+
+}
+#}}}
+
+#{{{Begin
+Begin () {
+
+# TYPE：OTC or TWSE
+TYPE=$1
+# IB_TYPE：DDR or QDR
+IB_TYPE=$2
+
+	if [[ $IB_TYPE = "QDR" ]];then
+      echo "[INFO] Running LPAR's $IB_TYPE type, IB's $IB_TYPE type"  | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+		IB_QDR $TYPE $IB_TYPE
+	elif [[ $IB_TYPE = "DDR" ]];then
+      echo "[INFO] Running LPAR's $IB_TYPE type, IB's $IB_TYPE type"  | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+		IB_DDR $TYPE $IB_TYPE
+	else
+      echo "[ERR] Running LPAR's $IB_TYPE type , IB's $IB_TYPE type"  | tee -a /${TYPE}/IB_log/ib_start_stop.sh.log
+	fi
+}
+#}}}
+
+# Sample: Begin OTC DDR or Begin TWSE DDR
+#       OTC   DDR
+Begin   $1    $2

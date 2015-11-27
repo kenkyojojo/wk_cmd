@@ -1,0 +1,249 @@
+#!/usr/bin/ksh 
+#
+# Author: 
+#     Bruce Hsiao
+#
+# Email: 
+#    bruce_hsiao@win-way.com.tw
+#
+# Platform OS: 
+#        AIX 7.1
+#
+# Program:
+#   1. This program to detach "Infinband card" and IB network status. 
+#
+# History:
+# 2014/04/29 Bruce First  release, To detach the ib0 card.
+# 2014/05/03 Bruce second release, To kill
+# 2014/10/20 Bruce release
+# 2014/10/27 Bruce release
+#
+# version:
+# 1.0 release
+# 1.1 release, if have 2 or more ib_start.sout process , loop to kill it.
+# 1.2 release, add Load paramter config.
+# 1.3 release, add confirm paramter config.
+# 
+#set -x 
+
+#{{{Load parameter config
+CFG_DIR="/OTC/cfg/OTC/HA_script"
+CFG_NAME="ib_stop.cfg"
+if [[ -e ${CFG_DIR}/${CFG_NAME} ]];then
+  #check the config lines ,correct 6 lines, exclued #
+  chkline=$(cat ${CFG_DIR}/${CFG_NAME} | grep -v '^#' | wc -l)
+    if [[ $chkline -ne "6" ]];then
+      echo "Check the ${CFG_DIR}/${CFG_NAME} lines." | tee -a /OTC/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter set,if parameter more the the LIST than exit
+    cat ${CFG_DIR}/${CFG_NAME} | grep -qvE '^SITE|^PGNAME|^LOGDIR|^LOG|^APLOGDIR|^APLOG'
+    rc=$?
+    if [[ $rc -ne "1" ]];then
+      echo "Check the ${CFG_DIR}/${CFG_NAME} setting." | tee -a /OTC/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter value,correct parameter value is 6 and exit
+    . ${CFG_DIR}/${CFG_NAME} 2>/dev/null
+    rc=$?
+    if [[ $rc -ne "0" ]];then
+      echo "Load ${CFG_DIR}/${CFG_NAME} failed,please to check it" | tee -a /OTC/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+  #                    1     2      3      4
+    set -A PARANUM $SITE $PGNAME $LOGDIR $LOG $APLOGDIR $APLOG
+    if [[ ${#PARANUM[@]} -ne "6" ]];then
+      echo "Parameter value is not 6,please to check ${CFG_DIR}/${CFG_NAME}" | tee -a /OTC/IB_log/ib_start_stop.sh.log
+      exit 1
+    fi
+
+else
+  echo "${CFG_DIR}/${CFG_NAME} is not exist"  | tee -a /OTC/IB_log/ib_start_stop.sh.log
+  exit 1
+fi
+#}}}
+
+today=$(date +"%Y%m%d")
+USER=$(whoami)
+set -A MUSER otc
+
+#{{{user_check
+user_check (){
+# check user information.  
+  userflag=0
+  for chkuser in ${MUSER[@]}
+  do
+    if [[ $USER = $chkuser ]];then
+      userflag=1
+      return 0
+    fi
+  done
+
+  if [[ $userflag -eq "0" ]];then 
+    return 1
+  fi
+}
+#}}}
+
+#{{{aptlog ,aptlog function
+aptlog() {
+
+  TYP=$1
+  MSG=$2
+  LOGAP=$3
+
+  DAY=$(date +"%Y%m%d")
+  TIME=$(date +"%H:%M:%S")
+
+  echo "CODE:${TYP} $PGNAME $DAY $TIME $MSG" | tee  -a $LOGAP
+  chmod o+r $LOGAP
+}
+#}}}
+
+#{{{tlog ,script loger function
+tlog() {
+
+  MSG=$1
+  LOG=$2
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "$SITE [${dt}] $MSG" | tee  -a ${LOG}.${today}
+  chmod o+r ${LOG}.${today}
+}
+#}}}
+
+#{{{errlogger to aix errpt log 
+erlogger() {
+
+  MSG=$1
+  #use Rbac function.
+  swrole exec.errlogger "-c errlogger $MSG"
+}
+#}}}
+
+#{{{step:1 , main
+main () {
+today=$(date +"%Y%m%d")
+
+  print "\n\n" ${LOG}.${today}
+  tlog "***************************InfiniBand monitor stop************************************" $LOG
+
+  # check execute user is otc
+  user_check
+  exec_status=$?
+  if [[ $exec_status -eq "0"  ]];then  
+    # kill the ibsmon_np
+    ibsmon_np
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Terminated ibsmon_np Success" $LOG
+    else 
+      tlog "[ERR] Terminated ibsmon_np failed" $LOG
+      erlogger "[ERR] Terminated ibsmon_np failed"
+    fi
+
+    # kill the ib_start.sout script
+    ib_script_stop
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Terminated ib_start.sout script Success" $LOG
+    else 
+      tlog "[ERR] Terminated ib_start.sout script failed" $LOG
+      erlogger "[ERR] Terminated ib_start.sout script failed"
+    fi
+
+    # deatch the ib0 card
+    detach
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Detach ib0 success " $LOG
+    else 
+      tlog "[ERR] Detach ib0 failed"  $LOG
+      erlogger "[ERR] Detach ib0 failed" 
+      aptlog "E" "Detach ib0 failed"  $APLOG
+    fi
+  else
+    tlog "[ERR] $USER permission denied, than $0 script terminated" $LOG
+    exit 1
+  fi
+
+  exit 0
+}
+#}}}
+
+#{{{step:2 , detach ib0 interface
+detach() {
+#set -x 
+#tlog "#==========================detach_...================================================#" $LOG
+
+  tlog "[INFO] Detaching ib0 device..." $LOG
+
+  # detach the ib0 
+  # use Rbac function, detach ib0
+  swrole exec.chdev "-c chdev -l ib0 -a state=detach > /dev/null 2>>${LOG}.${today}"
+  exec_status=$?
+  if [[ $exec_status -eq "0" ]];then
+    return 0
+  else 
+    return 1 
+  fi
+}
+#}}}
+
+#{{{step:3 , ibsmon_np stop it
+ibsmon_np() {
+#set -x 
+#tlog "#==========================ib_script_stop...================================================#" $LOG
+
+SHNAME="ibsmon_np"
+  tlog "[INFO] Terminated ibsmon_np  start" $LOG
+  
+  PIDNUM=$(ps -ef | grep $SHNAME | grep -v grep | awk '{print $2}')
+
+  if [[ ! -n $PIDNUM ]];then
+    tlog "[INFO] The ibsmon_np PID already is empty" $LOG
+    return 0
+  fi
+  # kill the ib_start.sout process
+  # if have 2 the same process,loop to kill the process
+  for PID in $PIDNUM
+  do
+    kill -9 $PID
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      return 0
+    else 
+      return 1
+    fi
+  done
+}
+#}}}
+
+#{{{step:4 , ib_script_stop
+ib_script_stop() {
+#set -x 
+#tlog "#==========================ib_script_stop...================================================#" $LOG
+SHNAME="ib_start.sout"
+
+  tlog "[INFO] Terminated ib_start.sout script start" $LOG
+  
+  PIDNUM=$(ps -ef | grep $SHNAME | grep -v grep | awk '{print $2}')
+
+  if [[ ! -n $PIDNUM ]];then
+    tlog "[INFO] The ib_start.sout script PID already is empty" $LOG
+    return 0
+  fi
+  # kill the ib_start.sout process
+  # if have 2 the same process,loop to kill the process
+  for PID in $PIDNUM
+  do
+    kill -9 $PID
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      return 0
+    else 
+      return 1
+    fi
+  done
+}
+#}}}
+
+main

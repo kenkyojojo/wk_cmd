@@ -1,20 +1,22 @@
 #!/usr/bin/ksh
-IP=localhost
-USER=bruce
-PASS=accudata
+IP=10.199.168.154
+USER=root
+PASS=root
 
 download () {
-ftp -i -n  $IP << HANDOFF
+ftp -i -n $IP << HANDOFF
 	user $USER $PASS
 	bin
-	put /tmp/m.sh /tmp/ftp/
+	cd /TWSE/ITM/
+	lcd /tmp/ITM/
+	mget *
 	quit
 HANDOFF
 }
 
 upload () {
 
-ftp -i -n  $IP << HANDOFF
+ftp -i -n $IP << HANDOFF
 	user $USER $PASS
 	bin
 	lcd /tmp
@@ -25,8 +27,8 @@ HANDOFF
 
 }
 main () {
-#download
-	upload
+	download
+#	upload
 }
 
 main

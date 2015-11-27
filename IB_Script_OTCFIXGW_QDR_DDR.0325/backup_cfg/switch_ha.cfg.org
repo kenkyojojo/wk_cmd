@@ -1,0 +1,4 @@
+SITE="TSEOT1"
+HADIR="/usr/es/sbin/cluster/utilities"
+LOGDIR="/home/otc/otc"
+LOG=${LOGDIR}/switch_ha.sh.log

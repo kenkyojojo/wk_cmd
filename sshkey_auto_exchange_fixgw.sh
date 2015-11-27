@@ -5,7 +5,6 @@ FIX1P=FIXGW01P
 FIX1B=FIXGW01B
 FIX2P=FIXGW02P
 FIX2B=FIXGW02B
-#WKLA=X230
 WKLA=WKLPARA1
 PORT=2222
 WKLB=WKLPARB1
@@ -23,7 +22,7 @@ tlog() {
 }        
 #}}}
 
-#{{{scp_file 
+#{{{scp ssh pub key from fixgw lpar to wklpar
 scp_file (){
 
 tlog "mkdir $TMPDIR" $LOG
@@ -79,7 +78,7 @@ fixgw02b(){
 }
 #}}}
 
-#{{{trans_file
+#{{{trans pub key from wklpar to fixgw 
 trans_file (){
 
 	for LPAR in ${FIX[@]}
@@ -94,11 +93,11 @@ trans_file (){
 fixgw01p_check(){
 	for LPAR in  $FIX1B $FIX2P $FIX2B $FIX1P
 	do
-		CHKLPAR=$(su - $USER -c ssh -p $PORT -o BatchMode=yes $FIX1P ssh -p $PORT -o BatchMode=yes $LPAR hostname)
+		CHKLPAR=$(su - $USER -c ssh -p $PORT -o BatchMode=yes $FIX1P ssh -p $PORT -o BatchMode=yes $LPAR hostname|tail -1)
 		if [[ $CHKLPAR = $LPAR ]];then
-			tlog "$FIX1P ssh_key exchange to $CHKLPAR  success"
+			tlog "$FIX1P ssh_key exchange to $CHKLPAR  success" $LOG
 		else
-			tlog "$FIX1P ssh_key exchange to $CHKLPAR  failed"
+			tlog "$FIX1P ssh_key exchange to $CHKLPAR  failed" $LOG
 		fi
 	done
 }
@@ -108,11 +107,11 @@ fixgw01p_check(){
 fixgw01b_check(){
 	for LPAR in $FIX1P $FIX2B $FIX2P $FIX1B
 	do
-		CHKLPAR=$(su - $USER -c ssh -p $PORT -o BatchMode=yes $FIX1B ssh -p $PORT -o BatchMode=yes $LPAR hostname)
+		CHKLPAR=$(su - $USER -c ssh -p $PORT -o BatchMode=yes $FIX1B ssh -p $PORT -o BatchMode=yes $LPAR hostname|tail -1)
 		if [[ $CHKLPAR = $LPAR ]];then
-			tlog "$FIX1B ssh_key exchange to $CHKLPAR  success"
+			tlog "$FIX1B ssh_key exchange to $CHKLPAR  success" $LOG
 		else
-			tlog "$FIX1B ssh_key exchange to $CHKLPAR  failed"
+			tlog "$FIX1B ssh_key exchange to $CHKLPAR  failed" $LOG
 		fi
 	done
 }
@@ -122,11 +121,11 @@ fixgw01b_check(){
 fixgw02p_check(){
 	for LPAR in  $FIX2B $FIX1B $FIX1P
 	do
-		CHKLPAR=$(su - $USER -c ssh -p $PORT -o BatchMode=yes $FIX2P ssh -p $PORT -o BatchMode=yes $LPAR hostname)
+		CHKLPAR=$(su - $USER -c ssh -p $PORT -o BatchMode=yes $FIX2P ssh -p $PORT -o BatchMode=yes $LPAR hostname|tail -1)
 		if [[ $CHKLPAR = $LPAR ]];then
-			tlog "$FIX2P ssh_key exchange to $CHKLPAR  success"
+			tlog "$FIX2P ssh_key exchange to $CHKLPAR  success" $LOG
 		else
-			tlog "$FIX2P ssh_key exchange to $CHKLPAR  failed"
+			tlog "$FIX2P ssh_key exchange to $CHKLPAR  failed" $LOG
 		fi
 	done
 }
@@ -136,11 +135,11 @@ fixgw02p_check(){
 fixgw02b_check(){
 	for LPAR in  $FIX2P $FIX1B $FIX1P 
 	do
-		CHKLPAR=$(su - $USER -c ssh -p $PORT -o BatchMode=yes $FIX2B ssh -p $PORT -o BatchMode=yes $LPAR hostname)
+		CHKLPAR=$(su - $USER -c ssh -p $PORT -o BatchMode=yes $FIX2B ssh -p $PORT -o BatchMode=yes $LPAR hostname|tail -1)
 		if [[ $CHKLPAR = $LPAR ]];then
-			tlog "$FIX2B ssh_key exchange to $CHKLPAR  success"
+			tlog "$FIX2B ssh_key exchange to $CHKLPAR  success" $LOG
 		else
-			tlog "$FIX2B ssh_key exchange to $CHKLPAR  failed"
+			tlog "$FIX2B ssh_key exchange to $CHKLPAR  failed" $LOG
 		fi
 	done
 }
