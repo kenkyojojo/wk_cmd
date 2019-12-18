@@ -1,0 +1,230 @@
+#!/usr/bin/ksh 
+#
+# Author: 
+#     Bruce Hsiao
+#
+# Email: 
+#    bruce_hsiao@win-way.com.tw
+#
+# Platform OS: 
+#        AIX 7.1
+#
+# Program:
+#   1. This program stop moni ethernet
+#
+# History:
+# 2016/03/16 Bruce release
+#
+# version:
+# 1.0 release
+# 
+# set -x 
+
+#{{{ IP_CHK
+IP_CHK () {
+
+# TYPE：OTC or TWSE
+TYPE=$1
+
+#{{{Load parameter config
+PARA_CONF_CHK () {
+CFG_DIR="/${TYPE}/cfg/${TYPE}/HA_script"
+CFG_NAME="eth_stop.cfg"
+if [[ -e ${CFG_DIR}/${CFG_NAME} ]];then
+  #check the config lines ,correct 7 lines, exclued #
+  chkline=$(cat ${CFG_DIR}/${CFG_NAME} | grep -v '^#' | wc -l|awk '{print $1}')
+    if [[ $chkline -ne "7" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Check the ${CFG_DIR}/${CFG_NAME} lines." | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter set,if parameter more the the LIST than exit
+    cat ${CFG_DIR}/${CFG_NAME} | grep -qvE '^SITE|^PGNAME|^LOGDIR|^LOG|^PERMI_USER|^APLOGDIR|^APLOG'
+    rc=$?
+    if [[ $rc -ne "1" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Check the ${CFG_DIR}/${CFG_NAME} setting." | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter value,correct parameter value is 5 and exit
+    . ${CFG_DIR}/${CFG_NAME} 2>/dev/null
+    rc=$?
+    if [[ $rc -ne "0" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Load ${CFG_DIR}/${CFG_NAME} failed,please to check it" | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+      exit 1
+    fi
+  #                   1     2       3     4
+    set -A PARANUM $SITE $PGNAME $LOGDIR $LOG $PERMI_USER $APLOG $APLOGDIR
+    if [[ ${#PARANUM[@]} -ne "7" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Parameter value is not 7,please to check ${CFG_DIR}/${CFG_NAME}" | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+      exit 1
+    fi
+else
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "[${dt}] [ERR] ${CFG_DIR}/${CFG_NAME} is not exist"  | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+  exit 1
+fi
+}
+#}}}
+
+dt=`date +"%Y/%m/%d %H:%M:%S"`
+echo "[${dt}] [INFO] Use function to check parameter config" | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+PARA_CONF_CHK
+
+today=$(date +"%Y%m%d")
+USER=$(whoami)
+set -A MUSER $PERMI_USER
+
+#{{{user_check
+user_check (){
+# check user information.  
+  userflag=0
+  for chkuser in ${MUSER[@]}
+  do
+    if [[ $USER = $chkuser ]];then
+      userflag=1
+      return 0
+    fi
+  done
+
+  if [[ $userflag -eq "0" ]];then 
+    return 1
+  fi
+}
+#}}}
+
+#{{{tlog ,script loger function
+tlog() {
+
+  MSG=$1
+  LOG=$2
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "$SITE [${dt}] $MSG" | tee -a ${LOG}.${today}
+  chmod o+r ${LOG}.${today}
+}
+#}}}
+
+#{{{errlogger to aix errpt log 
+erlogger() {
+
+  MSG=$1
+  #use Rbac function.
+  swrole exec.errlogger "-c errlogger $MSG"
+}
+#}}}
+
+#{{{step:1 , main
+main () {
+today=$(date +"%Y%m%d")
+
+  print "\n\n" ${LOG}.${today}
+  tlog "***************************Ethernet monitor stop************************************" $LOG
+
+  # check execute user is twse or otc
+  user_check
+  exec_status=$?
+  if [[ $exec_status -eq "0" ]];then  
+    # kill the ibsmon_np
+    ibsmon_np
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Terminated ibsmon_np Success" $LOG
+    else 
+      tlog "[ERR] Terminated ibsmon_np failed" $LOG
+      erlogger "[ERR] Terminated ibsmon_np failed"
+    fi
+
+    # kill the eth_start.sout script
+    eth_script_stop
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] Terminated eth_start.sout script Success" $LOG
+    else 
+      tlog "[ERR] Terminated eth_start.sout script failed" $LOG
+      erlogger "[ERR] Terminated eth_start.sout script failed"
+    fi
+  else
+    tlog "[ERR] $USER permission denied, than $0 script terminated" $LOG
+    exit 1
+  fi
+
+  exit 0
+}
+#}}}
+
+#{{{step:2 , ibsmon_np stop it
+ibsmon_np() {
+#set -x 
+#tlog "#==========================eth_script_stop...================================================#" $LOG
+
+SHNAME="ibsmon_np"
+  tlog "[INFO] Terminated ibsmon_np  start" $LOG
+
+  PIDNUM=$(ps -ef | grep $SHNAME | grep -v grep | awk '{print $2}')
+
+  if [[ ! -n $PIDNUM ]];then
+    tlog "[INFO] The ibsmon_np PID already is empty" $LOG
+    return 0
+  fi
+  # kill the ib_start.sout process
+  # if have 2 the same process,loop to kill the process
+  for PID in $PIDNUM
+  do
+    kill -9 $PID
+    exec_status=$?
+    if [[ $exec_status -ne "0" ]];then
+      tlog "[ERR] Kill $SHNAME process failed" $LOG
+      return 1
+    fi
+  done
+}
+#}}}
+
+#{{{step:3 , eth_script_stop
+eth_script_stop() {
+#set -x 
+#tlog "#==========================eth_script_stop...================================================#" $LOG
+SHNAME="eth_start.sout"
+
+  tlog "[INFO] Terminated eth_start.sout script start" $LOG
+  
+  PIDNUM=$(ps -ef | grep $SHNAME | grep -v grep | awk '{print $2}')
+
+  if [[ ! -n $PIDNUM ]];then
+    tlog "[INFO] The eth_start.sout script PID already is empty" $LOG
+    return 0
+  fi
+  # kill the eth_start.sout process
+  # if have 2 the same process,loop to kill the process
+  for PID in $PIDNUM
+  do
+    kill -9 $PID
+    exec_status=$?
+    if [[ $exec_status -ne "0" ]];then
+      tlog "[ERR] Kill $SHNAME process failed" $LOG
+      return 1
+    fi
+  done
+}
+#}}}
+
+main
+
+}
+#}}}
+
+#{{{Begin
+Begin () {
+
+# TYPE：OTC or TWSE
+TYPE=$1
+
+echo "[INFO] Running LPAR's $TYPE type"  | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+IP_CHK $TYPE 
+}
+#}}}
+
+# Sample: Begin OTC TWSE 
+#       OTC
+Begin   $1

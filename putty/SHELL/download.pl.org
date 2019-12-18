@@ -1,0 +1,66 @@
+#!/usr/bin/perl
+#use strict;
+use warnings;
+
+my $TARGETDIR="/home/se/safechk/selog/log";
+my $PUTTY="D:/putty/";
+my ($sec,$min,$hour,$mday,$mon,$year)=localtime(time);
+
+$year+=1900;
+$mon+=1;
+
+if (length ($mon) == 1) {$mon = '0'.$mon;}
+if (length ($mday) == 1) {$mday = '0'.$mday;}
+if (length ($hour) == 1) {$hour = '0'.$hour;}
+if (length ($min) == 1) {$min = '0'.$min;}
+if (length ($sec) == 1) {$sec = '0'.$sec;}
+
+
+#TSEOA1 download lpar fileattr err tar.gz file from WKLPAR.
+#{{{download_fileattr_err
+sub download_A1_fileattr_err{
+my $WKLPAR="10.201.3.154";
+my $SITE="TSEOA1";
+
+$FILECOUNT=`$PUTTY/PLINK.exe -P 2222 -i $PUTTY/ssh-keys/wklpar.ppk seadm\@$WKLPAR "ls -l $TARGETDIR/*.safelog.fileattr.$year$mon$mday.err.tar.gz|wc -l "`;
+	open (LOG, ">>D:/putty/LOG/${year}${mon}.download.log") || die "Can't open the download.log:$!";
+		print LOG '#'; print LOG '='x70; print LOG '#',"\n";
+		print LOG "Time:$year/$mon/$mday $hour:$min:$sec","\n";
+		print LOG "Start to running download.pl\n";
+	if ( $FILECOUNT == 1 ){
+			print LOG "Start to download $TARGETDIR/${SITE}.safelog.fileattr.$year$mon$mday.err.tar.gz\n";
+			`$PUTTY/PSCP.exe -scp -unsafe -P 2222 -i "$PUTTY/ssh-keys/wklpar.ppk" "seadm\@$WKLPAR:$TARGETDIR/*.safelog.fileattr.$year$mon$mday.err.tar.gz" "D:/fileaudit/err"`;
+			print LOG "download $TARGETDIR/${SITE}.safelog.fileattr.$year$mon$mday.err.tar.gz finished\n";
+	}
+			print LOG "download.pl finished\n";
+		close(LOG);
+}
+#}}}
+
+#TSEOB1 download lpar fileattr err tar.gz file from WKLPAR.
+#{{{download_fileattr_err
+sub download_B1_fileattr_err{
+my $WKLPAR="10.202.3.154";
+my $SITE="TSEOB1";
+
+$FILECOUNT=`$PUTTY/PLINK.exe -P 2222 -i $PUTTY/ssh-keys/wklpar.ppk seadm\@$WKLPAR "ls -l $TARGETDIR/*.safelog.fileattr.$year$mon$mday.err.tar.gz|wc -l "`;
+	open (LOG, ">>D:/putty/LOG/${year}${mon}.download.log") || die "Can't open the download.log:$!";
+		print LOG '#'; print LOG '='x70; print LOG '#',"\n";
+		print LOG "Time:$year/$mon/$mday $hour:$min:$sec","\n";
+		print LOG "Start to running download.pl\n";
+	if ( $FILECOUNT == 1 ){
+			print LOG "Start to download $TARGETDIR/${SITE}.safelog.fileattr.$year$mon$mday.err.tar.gz\n";
+			`$PUTTY/PSCP.exe -scp -unsafe -P 2222 -i "$PUTTY/ssh-keys/wklpar.ppk" "seadm\@$WKLPAR:$TARGETDIR/*.safelog.fileattr.$year$mon$mday.err.tar.gz" "D:/fileaudit/err"`;
+			print LOG "download $TARGETDIR/${SITE}.safelog.fileattr.$year$mon$mday.err.tar.gz finished\n";
+	}
+			print LOG "download.pl finished\n";
+		close(LOG);
+}
+#}}}
+
+sub main{
+	&download_A1_fileattr_err;
+	&download_B1_fileattr_err;
+}
+
+&main;

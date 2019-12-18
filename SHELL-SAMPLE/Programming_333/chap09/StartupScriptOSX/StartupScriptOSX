@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# StartupScriptOSX - Mac OS X的啟動script
+
+PATH=$PATH:/usr/libexec
+
+case $1 in
+  start)
+    # 啟動時等候十秒，然後製作檔案做為記號
+    ConsoleMessage "Running sample script for startup"
+    sleep 10
+    touch /startup-stamp
+    exit 0
+    ;;
+  stop)
+    # 在結束時等候十秒，刪除記號檔案
+    # (此時不會去執行shutdown script)
+    ConsoleMessage "Running sample script for shutdown"
+    sleep 10
+    touch /shutdown-stamp
+    exit 0
+    ;;
+esac
+
+echo "usage: initscript_osx.sh {start|stop}"
+exit 1

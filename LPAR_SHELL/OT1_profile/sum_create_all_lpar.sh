@@ -1,0 +1,15 @@
+#!/usr/bin/ksh
+./create_MIS.sh
+./create_OTCMIS.sh
+./create_FIX1P.sh
+./create_FIX1B.sh
+./create_FIX2P.sh
+./create_FIX2B.sh
+./create_OTCFIX1P.sh
+./create_OTCFIX1B.sh
+./create_OTCFIX2P.sh
+./create_OTCFIX2B.sh
+./create_NIM.sh
+./create_WKL.sh
+./create_vios1.sh
+./create_vios2.sh

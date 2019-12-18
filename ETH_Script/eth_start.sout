@@ -1,0 +1,297 @@
+#!/usr/bin/ksh 
+#
+# Author: 
+#     Bruce Hsiao
+#
+# Email: 
+#    bruce_hsiao@win-way.com.tw
+#
+# Platform OS: 
+#AIX 7.1
+#
+# Program:
+#		To check eth network ping status.
+#
+# History:
+# 2016/03/16 Bruce release
+#
+# version:
+# 1.0 release, If eth network packet loss than errlog write message 
+# set -x 
+
+#{{{IP_CHK
+IP_CHK () {
+
+# TYPE：OTC or TWSE
+TYPE=$1
+
+#{{{Load parameter config
+PARA_CONF_CHK () {
+CFG_DIR="/${TYPE}/cfg/${TYPE}/HA_script"
+CFG_NAME="eth_start.cfg"
+if [[ -e ${CFG_DIR}/${CFG_NAME} ]];then
+  #check the config lines ,correct 12 lines, exclued first char is #
+  chkline=$(cat ${CFG_DIR}/${CFG_NAME} | grep -v '^#' | wc -l | awk '{print $1}')
+    if [[ $chkline -ne "12" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Check the ${CFG_DIR}/${CFG_NAME} lines."  | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter set,if parameter more the the LIST than exit
+    cat ${CFG_DIR}/${CFG_NAME} | grep -qvE '^SITE|^PGNAME|^IBMON|^INTERVAL|^COUNT|^LOGDIR|^LOG|^TARGETIP|^BREAK_TIME|^PERMI_USER|^APLOGDIR|^APLOG'
+    rc=$?
+    if [[ $rc -ne "1" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Check the ${CFG_DIR}/${CFG_NAME} setting."  | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+      exit 1
+    fi
+  #check the config parameter value,correct parameter value is 13 and exit
+    . ${CFG_DIR}/${CFG_NAME} 2>/dev/null
+    rc=$?
+    if [[ $rc -ne "0" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Load ${CFG_DIR}/${CFG_NAME} failed,please to check it" | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+      exit 1
+    fi
+  #                   1     2       3     4
+    set -A PARANUM $SITE $PGNAME $IBMON $INTERVAL $COUNT $LOGDIR $LOG $TARGETIP $BREAK_TIME $PERMI_USER $APLOGDIR $APLOG
+    if [[ ${#PARANUM[@]} -ne "13" ]];then
+	  dt=`date +"%Y/%m/%d %H:%M:%S"`
+      echo "[${dt}] [ERR] Parameter value is not 13,please to check ${CFG_DIR}/${CFG_NAME}" | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+      exit 1
+    fi
+else
+  dt=`date +"%Y/%m/%d %H:%M:%S"`
+  echo "[${dt}] [ERR] ${CFG_DIR}/${CFG_NAME} is not exist" |tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+  exit 1
+fi
+}
+#}}}
+
+
+dt=`date +"%Y/%m/%d %H:%M:%S"`
+echo "[${dt}] [INFO] Use QDR function to check parameter config" | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+PARA_CONF_CHK
+
+today=$(date +"%Y%m%d")
+
+set -A DESIPR $TARGETIP
+DESIP_NUM=${#DESIPR[@]}
+
+NOW_HOST=$(hostname)
+
+USER=$(whoami)
+set -A MUSER $PERMI_USER
+
+#{{{tlog ,script loger function
+tlog() {
+
+  MSG=$1
+  LOG=$2
+  dt=$(date +"%Y/%m/%d %H:%M:%S")
+  today=$(date +"%Y%m%d")
+
+  echo "$SITE [${dt}] $MSG" | tee -a ${LOG}.${today}
+  chmod o+r ${LOG}.${today}
+}
+#}}}
+
+#{{{aptlog ,aptlog function
+aptlog() {
+
+  TYP=$1
+  MSG=$2
+  LOGAP=$3
+
+  DAY=$(date +"%Y%m%d")
+  TIME=$(date +"%H:%M:%S")
+
+  echo "CODE:${TYP} $PGNAME $DAY $TIME $MSG" | tee  -a $LOGAP
+  chmod o+r $LOGAP
+}
+
+#}}}
+
+#{{{errlogger to aix errpt log 
+erlogger() {
+
+  MSG=$1
+  #use Rbac function.
+  swrole exec.errlogger "-c errlogger $MSG"
+}
+#}}}
+
+#{{{user_check
+user_check (){
+# check user information.  
+  userflag=0
+  for chkuser in ${MUSER[@]}
+  do
+    if [[ $USER = $chkuser ]];then
+      userflag=1
+      return 0
+    fi
+  done
+
+  if [[ $userflag -eq "0" ]];then 
+    return 1
+  fi
+}
+#}}}
+
+#{{{moniter eth script exec status
+ib_moniter (){
+    today=$(date +"%Y%m%d")
+    #ibsmon client to reset clock
+    #                          Notify_file    millis count
+    ${IBMON}/ibsmon_np_client  /tmp/eth_moni      0      0   >> ${LOG}.${today} 2>&1
+    exec_status=$?
+    if [[ $exec_status -ne "0" ]]; then
+      tlog "[ERR] ethsmon_np may be has problem,Please to check it" $LOG
+      aptlog "E" "ethsmon_np has problem,Please to check it"  $APLOG
+      return 1
+    else
+      return 0
+    fi
+}
+#}}}
+
+#{{{ibsmon sever
+ib_smon() {
+
+    today=$(date +"%Y%m%d")
+        #               Notify_file times * sec = 1 times/30sec
+    ${IBMON}/ibsmon_np /tmp/eth_moni   1     30  >> ${LOG}.${today} 2>&1
+    exec_status=$?
+    if [[ $exec_status -eq "0" ]];then
+      tlog "[INFO] ethsmon_np start success." $LOG
+      return 0
+    else
+      tlog "[ERR] ethsmon_np may be has problem,Please to check it" $LOG
+      aptlog "E" "ethsmon_np may be has problem,Please to check it"  $APLOG
+      exit 1
+    fi
+}
+#}}}
+
+#{{{ibsmon_np stop it
+ibsmon_np() {
+
+SHNAME="ibsmon_np"
+  tlog "[INFO] Terminated ethsmon_np" $LOG
+  
+  PIDNUM=$(ps -ef | grep $SHNAME | grep -v grep | awk '{print $2}')
+
+  if [[ ! -n $PIDNUM ]];then
+    tlog "[INFO] The ethsmon_np PID already is empty" $LOG
+    return 0
+  fi
+  # kill the ib_start.sh process
+  # if have 2 the same process,loop to kill the process
+  for PID in $PIDNUM
+  do
+    kill -9 $PID
+    exec_status=$?
+    if [[ $exec_status -ne "0" ]];then
+      tlog "[INFO] To terminate ethsmon_np failed ,Please to check the process" $LOG
+      return 1
+    fi
+  done
+
+  return 0
+}
+#}}}
+
+#{{{step:1 , main
+main () {
+today=$(date +"%Y%m%d")
+#ibsmon server to start 
+ib_smon
+
+  while  true
+  do
+    echo "\n" | tee -a ${LOG}.${today}
+    tlog "***************************Ethernet monitor begins**********************************" $LOG
+    tlog "[INFO] Hostname is $NOW_HOST" $LOG
+
+    #ibsmon client to reset clock
+    ib_moniter
+
+    #check exec user is otc
+    user_check
+    exec_status=$?
+    if [[ $exec_status -eq "0"  ]];then  
+	  ping_check
+    else
+      print "[ERR] $USER permission denied, than $0 script terminated" ${LOG}.${today}
+      aptlog "E" "User:$USER permission denied, than $0 script terminated"  $APLOG
+      ibsmon_np
+      exit 1
+    fi
+
+    tlog "[INFO] Sleep for ${INTERVAL} seconds..." $LOG
+    sleep ${INTERVAL}
+  done
+}
+#}}}
+
+#{{{step:2 , ping_check
+ping_check() {
+
+    dipflag="0"
+    # DESIP_NUM = TARGETIP = "10.204.5.71  10.204.5.72  10.204.5.71  10.204.5.72" = 4
+    while [ $dipflag -lt $DESIP_NUM ]  
+    do
+	  #LOSS=$(ping -q -c $COUNT -w 1 -I $IPADDR ${DESIPR[$dipflag]} | grep loss | cut -d '%' -f 1 | awk '{print $NF}')
+      LOSS=$(ping -q -c $COUNT -w 1 ${DESIPR[$dipflag]} | grep loss | cut -d '%' -f 1 | awk '{print $NF}')
+
+        if [[ -z $LOSS ]];then
+          tlog "[ERR] Network address local ip:${IPADDR} destination:${DESIPR[$dipflag]} has problem, to check the Network status " $LOG
+          erlogger "[ERR] Network address local ip:${IPADDR} destination:${DESIPR[$dipflag]} has problem, to check the Network status " 
+		  aptlog "E" "Check ${DESIPR[$dipflag]} network status failed"  $APLOG
+        fi
+
+        if [[ $LOSS -eq "0" ]];then
+          tlog "[INFO] Network ping to ${DESIPR[$dipflag]} status is OK" $LOG  
+          dipflag=$(($dipflag+1))
+          continue
+		elif [[ $LOSS -eq "100" ]];then
+          tlog "[ERR] Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss" $LOG  
+          erlogger "[ERR] Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss"
+		  aptlog "E" "PING IP:${DESIPR[$dipflag]} LOSS ${LOSS}%"  $APLOG
+          dipflag=$(($dipflag+1))
+          continue
+        else
+          tlog "[WARN] Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss" $LOG  
+          erlogger "[WARN] Network ping to ${DESIPR[$dipflag]} ${LOSS}% packet loss"
+		  aptlog "W" "PING IP:${DESIPR[$dipflag]} LOSS ${LOSS}%"  $APLOG
+          dipflag=$(($dipflag+1))
+          continue
+        fi
+    done
+
+    return 0
+
+}
+#}}}
+
+main
+
+}
+#}}}
+
+#{{{Begin
+Begin () {
+
+# TYPE：OTC or TWSE
+TYPE=$1
+
+echo "[INFO] Running LPAR's $IB_TYPE type, IB's $IB_TYPE type"  | tee -a /${TYPE}/IB_log/eth_start_stop.sh.log
+IP_CHK $TYPE
+
+}
+#}}}
+
+# Sample: Begin OTC DDR 
+#       OTC
+Begin   $1

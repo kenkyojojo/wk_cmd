@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# ShutdownScriptOSX - 在Mac OS X中，在shutdown時執行script
+
+PATH=$PATH:/usr/libexec
+
+case $1 in
+    start)
+	# 在背景執行shutdownscriptd.sh
+	ConsoleMessage "Enabling shutdown script"
+	/Library/StartupItems/ShutdownScriptOSX/shutdownscriptd.sh &
+	exit 0
+	;;
+    *)
+	echo "unknown argument"
+	exit 1
+	;;
+esac
+

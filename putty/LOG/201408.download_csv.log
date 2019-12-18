@@ -1,0 +1,32 @@
+#======================================================================#
+Time:2014/08/12 14:15:48
+Start to running download.pl
+/home/bruce/putty/PLINK.exe -P 2222 -i /home/bruce/putty/ssh-keys/wklparA_useradm.ppk useradm@10.201.3.154 ls -l /home/se/safechk/selog/log/201408.*.csv|wc -l
+/home/bruce/putty/PLINK.exe -P 2222 -i /home/bruce/putty/ssh-keys/wklparB_useradm.ppk useradm@10.202.3.154 ls -l /home/se/safechk/selog/log/201408.*.csv|wc -l
+#======================================================================#
+Time:2014/08/12 14:31:07
+Start to running download.pl
+/home/bruce/putty/PLINK.exe -P 2222 -i /home/bruce/putty/ssh-keys/wklparA_useradm.ppk useradm@10.201.3.154 ls -l /home/se/safechk/selog/log/201408.*.csv|wc -l
+mkdir D:/CSV/TSEOA/201408
+download /home/se/safechk/selog/log directory finished
+/home/bruce/putty/PLINK.exe -P 2222 -i /home/bruce/putty/ssh-keys/wklparB_useradm.ppk useradm@10.202.3.154 ls -l /home/se/safechk/selog/log/201408.*.csv|wc -l
+mkdir D:/CSV/TSEOB/201408
+download /home/se/safechk/selog/log directory finished
+#======================================================================#
+Time:2014/08/12 15:26:06
+Start to running download.pl
+/home/bruce/putty/PLINK.exe -P 2222 -i /home/bruce/putty/ssh-keys/wklparA_useradm.ppk useradm@10.201.3.154 ls -l /home/se/safechk/selog/log/201408.*.csv|wc -l
+mkdir D:/CSV/TSEOA/201408
+download /home/se/safechk/selog/log directory finished
+/home/bruce/putty/PLINK.exe -P 2222 -i /home/bruce/putty/ssh-keys/wklparB_useradm.ppk useradm@10.202.3.154 ls -l /home/se/safechk/selog/log/201408.*.csv|wc -l
+mkdir D:/CSV/TSEOB/201408
+download /home/se/safechk/selog/log directory finished
+#======================================================================#
+Time:2014/08/12 15:29:42
+Start to running download.pl
+/home/bruce/putty/PLINK.exe -P 2222 -i /home/bruce/putty/ssh-keys/wklparA_useradm.ppk useradm@10.201.3.154 ls -l /home/se/safechk/selog/log/201408.*.csv|wc -l
+mkdir D:/CSV/TSEOA/201408
+download /home/se/safechk/selog/log directory finished
+/home/bruce/putty/PLINK.exe -P 2222 -i /home/bruce/putty/ssh-keys/wklparB_useradm.ppk useradm@10.202.3.154 ls -l /home/se/safechk/selog/log/201408.*.csv|wc -l
+mkdir D:/CSV/TSEOB/201408
+download /home/se/safechk/selog/log directory finished

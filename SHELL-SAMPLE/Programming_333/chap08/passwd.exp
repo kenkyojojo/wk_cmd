@@ -1,0 +1,21 @@
+#!/usr/bin/expect -f
+# In this script we just need 2 arguments, the username and the password
+ 
+if {[llength $argv] != 2} {
+		 
+# We give a message so the user know our syntax:
+		puts "usage: /passwd.exp username password "
+				 
+#We exit with return code = 1
+				exit 1
+}
+ 
+set username [lindex $argv 0]
+set newpass [lindex $argv 1]
+spawn passwd $username
+ 
+expect "?assword:"
+send \"$newpass\r\"
+expect "?assword:"
+send \"$newpass\r\"
+expect eof
